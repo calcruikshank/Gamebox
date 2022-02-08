@@ -12,12 +12,16 @@ public class MovableObject : MonoBehaviour
     bool lowering = false;
     Deck deck;
 
+    bool faceUp = true;
+    bool hasReachedTargetRotation = true;
+    public Vector3 targetRotation;
     private void Start()
     {
         if (GetFinalParent().GetComponent<Deck>() != null)
         {
             deck = GetFinalParent().GetComponent<Deck>();
         }
+        targetRotation = transform.GetChild(0).transform.localEulerAngles;
     }
     public void SetSelected(int id, Vector3 offset)
     {
@@ -30,6 +34,9 @@ public class MovableObject : MonoBehaviour
         lowering = false;
         TouchScript.touchMoved += FingerMoved;
         TouchScript.fingerReleased += FingerReleased;
+        TouchScript.flipObject += FlipObject;
+        TouchScript.rotateRight += RotateObject;
+        TouchScript.rotateLeft += RotateObjectLeft;
         this.offset = offset;
         Transform targetToMove = GetFinalParent();
         if (targetToMove.transform.parent == null)
@@ -46,7 +53,7 @@ public class MovableObject : MonoBehaviour
         }
     }
 
-    
+
     private void Update()
     {
         if (snappingToOneOnY)
@@ -56,6 +63,32 @@ public class MovableObject : MonoBehaviour
         if (lowering)
         {
             SnapToLowestPointHit();
+        }
+        if (!hasReachedTargetRotation)
+        {
+            Vector3 angles = transform.GetChild(0).localEulerAngles;
+           
+            if (angles.y != targetRotation.y)
+            {
+                if (targetRotation.y < 0)
+                {
+                    targetRotation = new Vector3(targetRotation.x, 270, targetRotation.z);
+                }
+                angles.y = Mathf.MoveTowards(angles.y, targetRotation.y, 1500f * Time.deltaTime);
+                
+            }
+            transform.GetChild(0).localEulerAngles = angles;
+
+            if (angles.y == targetRotation.y)
+            {
+                if (targetRotation.y >= 360)
+                {
+                    targetRotation = new Vector3(targetRotation.x, 0, targetRotation.z);
+                }
+                
+                hasReachedTargetRotation = true;
+            }
+
         }
     }
     public void FingerReleased(Vector3 position, int index)
@@ -69,6 +102,9 @@ public class MovableObject : MonoBehaviour
         }
         TouchScript.touchMoved -= FingerMoved;
         TouchScript.fingerReleased -= FingerReleased;
+        TouchScript.flipObject -= FlipObject;
+        TouchScript.rotateRight -= RotateObject;
+        TouchScript.rotateLeft -= RotateObjectLeft;
         Transform targetToMove = GetFinalParent();
         if (targetToMove.transform.parent == null)
         {
@@ -174,5 +210,32 @@ public class MovableObject : MonoBehaviour
         {
             return -.9f;
         }
+    }
+
+
+    public void FlipObject(Vector3 position, int index)
+    {
+        if (faceUp)
+        {
+            transform.GetChild(0).localEulerAngles = new Vector3(270, targetRotation.y, targetRotation.z);
+            faceUp = false;
+        }
+        else
+        {
+            transform.GetChild(0).localEulerAngles = new Vector3(90, targetRotation.y, targetRotation.z);
+            faceUp = true;
+        }
+    }
+    public void RotateObject(Vector3 position, int index)
+    {
+        targetRotation = new Vector3(targetRotation.x, targetRotation.y + 90, targetRotation.z);
+
+        hasReachedTargetRotation = false;
+    }
+    public void RotateObjectLeft(Vector3 position, int index)
+    {
+        targetRotation = new Vector3(targetRotation.x, targetRotation.y - 90, targetRotation.z);
+
+        hasReachedTargetRotation = false;
     }
 }

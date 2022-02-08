@@ -10,6 +10,9 @@ public class TouchScript : MonoBehaviour
     public static event OnTouchEvent allTouchesReleased;
     public static event OnTouchEvent fingerReleased;
     public static event OnTouchEvent shuffleInitiated;
+    public static event OnTouchEvent flipObject;
+    public static event OnTouchEvent rotateRight;
+    public static event OnTouchEvent rotateLeft;
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -62,7 +65,19 @@ public class TouchScript : MonoBehaviour
             {
                 shuffleInitiated?.Invoke(mousePosition, 0); 
             }
-            
+            if (Input.GetKeyDown("f"))
+            {
+                flipObject?.Invoke(mousePosition, 0);
+            }
+            if (Input.GetKeyDown("e"))
+            {
+                rotateRight?.Invoke(mousePosition, 0);
+            }
+            if (Input.GetKeyDown("q"))
+            {
+                rotateLeft?.Invoke(mousePosition, 0);
+            }
+
         }
 
     }
