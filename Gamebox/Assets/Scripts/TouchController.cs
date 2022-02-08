@@ -49,6 +49,7 @@ public class TouchController : MonoBehaviour
         while (targetToMove.parent != null)
         {
             targetToMove = targetToMove.transform.parent;
+            if (targetToMove.GetComponent<MovableObject>() != null) return targetToMove;
         }
         return targetToMove;
     }

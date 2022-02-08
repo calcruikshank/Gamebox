@@ -161,9 +161,9 @@ public class MovableObject : MonoBehaviour
 
         if (hitDetected)
         {
-            if (hit.transform.GetComponent<Collider>() != null && this.transform.GetComponent<Collider>() != null)
+            if (hit.transform.GetComponent<Collider>() != null && this.transform.GetComponentInChildren<Collider>() != null)
             {
-                return hit.transform.GetComponent<Collider>().bounds.extents.y + hit.transform.position.y + this.transform.GetComponent<Collider>().bounds.extents.y;
+                return hit.transform.GetComponent<Collider>().bounds.extents.y + hit.transform.position.y + this.transform.GetComponentInChildren<Collider>().bounds.extents.y;
             }
             else
             {
