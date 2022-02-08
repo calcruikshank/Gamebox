@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6613674515943111657}
   - component: {fileID: 9178429949053924844}
   m_Layer: 0
-  m_Name: Deck
+  m_Name: DeckPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,6 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d253edb2d57167d488d71b53bcefb1b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsInDeck: []
 --- !u!1001 &6613674515900435454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -173,6 +174,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6974945951290102101, guid: 8e5d4e074dd931e459896739bb3505f6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4dc6bee90d2cb0c4b9e13bbd77073c46, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e5d4e074dd931e459896739bb3505f6, type: 3}
 --- !u!4 &6648092135775136789 stripped

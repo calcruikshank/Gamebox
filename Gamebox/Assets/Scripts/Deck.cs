@@ -1,3 +1,4 @@
+using Shared.UI.Helpers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,12 +6,27 @@ using UnityEngine;
 public class Deck : MonoBehaviour
 {
     // Start is called before the first frame update
-    List<GameObject> cardsInDeck = new List<GameObject>();
+    [SerializeField]List<GameObject> cardsInDeck = new List<GameObject>();
+
+    GameObject currentCardShowing;
     void Start()
     {
-        
+        InitializeDeck();
+        UpdateDeckInfo();
     }
 
+    public void InitializeDeck()
+    {
+        currentCardShowing = this.transform.GetChild(0).gameObject;
+        Debug.Log(currentCardShowing.name);
+    }
+
+    public void UpdateDeckInfo()
+    {
+        SetSize(new Vector3(this.transform.localScale.x, cardsInDeck.Count, this.transform.localScale.z));
+        SetCurrentCardShowing(cardsInDeck[cardsInDeck.Count - 1]);
+        SetTopCard(cardsInDeck[0]);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -23,6 +39,7 @@ public class Deck : MonoBehaviour
         {
             cardsInDeck.Add(card);
         }
+        UpdateDeckInfo();
     }
 
     public void CheckToSeeIfDeckShouldBeAdded()
@@ -53,5 +70,33 @@ public class Deck : MonoBehaviour
             }
             targetToMove = null;
         }
+    }
+
+    public void SetSize(Vector3 localSizeSent)
+    {
+        this.transform.localScale = localSizeSent;
+    }
+
+    public void SetTopCard(GameObject cardSent)
+    {
+    }
+
+    public void SetCurrentCardShowing(GameObject cardSent)
+    {
+        GameObject bottomCard = Instantiate(cardSent, this.transform);
+        if (currentCardShowing != null)
+        {
+            Destroy(currentCardShowing);
+        }
+        currentCardShowing = bottomCard;
+        if (currentCardShowing.GetComponent<CardTilter>() != null)
+        {
+            currentCardShowing.GetComponent<CardTilter>().enabled = false;
+        }
+    }
+
+    public void ShuffleDeck()
+    {
+
     }
 }
