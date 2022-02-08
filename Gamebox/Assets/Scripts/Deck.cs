@@ -1,6 +1,8 @@
 using Shared.UI.Helpers;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Deck : MonoBehaviour
@@ -11,8 +13,10 @@ public class Deck : MonoBehaviour
     GameObject currentCardShowing;
     void Start()
     {
+        
         InitializeDeck();
         UpdateDeckInfo();
+        ShuffleDeck();
     }
 
     public void InitializeDeck()
@@ -30,7 +34,10 @@ public class Deck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetButtonDown("Jump"))
+        {
+            ShuffleDeck();
+        }
     }
 
     public void AddToDeck(List<GameObject> cardsSents)
@@ -97,6 +104,18 @@ public class Deck : MonoBehaviour
 
     public void ShuffleDeck()
     {
+        Shuffle(cardsInDeck);
+        SetCurrentCardShowing(cardsInDeck[cardsInDeck.Count - 1]);
+    }
 
+    public void Shuffle<GameObject>(List<GameObject> listToShuffle)
+    {
+        for (int i = 0; i < listToShuffle.Count - 1; i++)
+        {
+            GameObject temp = listToShuffle[i];
+            int rand = UnityEngine.Random.Range(i, listToShuffle.Count);
+            listToShuffle[i] = listToShuffle[rand];
+            listToShuffle[rand] = temp;
+        }
     }
 }
