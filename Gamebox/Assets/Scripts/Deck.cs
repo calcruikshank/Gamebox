@@ -8,7 +8,7 @@ using UnityEngine;
 public class Deck : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField]List<GameObject> cardsInDeck = new List<GameObject>();
+    public List<GameObject> cardsInDeck = new List<GameObject>();
 
     GameObject currentCardShowing;
     void Start()

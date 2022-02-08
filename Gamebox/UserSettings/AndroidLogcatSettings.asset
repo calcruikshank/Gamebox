@@ -1,0 +1,149 @@
+{
+    "m_SelectedDeviceId": "620102100500049",
+    "m_SelectedPackage": {
+        "deviceId": "620102100500049",
+        "name": "com.DefaultCompany.Gamebox",
+        "processId": 6348,
+        "exited": false
+    },
+    "m_SelectedPriority": 0,
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "620102100500049",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 4585,
+            "exited": false
+        },
+        {
+            "deviceId": "620102100500049",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 4723,
+            "exited": false
+        },
+        {
+            "deviceId": "620102100500049",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 4856,
+            "exited": false
+        },
+        {
+            "deviceId": "620102100500049",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 4981,
+            "exited": false
+        },
+        {
+            "deviceId": "620102100500049",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 5117,
+            "exited": false
+        },
+        {
+            "deviceId": "620102100500049",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 5250,
+            "exited": false
+        },
+        {
+            "deviceId": "620102100500049",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 5383,
+            "exited": false
+        },
+        {
+            "deviceId": "620102100500049",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 5510,
+            "exited": false
+        },
+        {
+            "deviceId": "620102100500049",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 5636,
+            "exited": false
+        },
+        {
+            "deviceId": "620102100500049",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 5765,
+            "exited": false
+        },
+        {
+            "deviceId": "620102100500049",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 5915,
+            "exited": false
+        },
+        {
+            "deviceId": "620102100500049",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 6056,
+            "exited": false
+        },
+        {
+            "deviceId": "620102100500049",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 6209,
+            "exited": false
+        },
+        {
+            "deviceId": "620102100500049",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 6348,
+            "exited": false
+        }
+    ],
+    "m_Tags": {
+        "m_Entries": [
+            {
+                "m_Name": "Filter by all listed tags",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "No Filter",
+                "m_Selected": true
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Tag Control...",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Unity",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "CRASH",
+                "m_Selected": false
+            }
+        ]
+    },
+    "m_MemoryViewerState": {
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "MemoryGroup": 2,
+        "Behavior": 0
+    },
+    "m_Filter": "",
+    "m_FilterIsRegularExpression": false,
+    "m_SymbolPaths": []
+}
