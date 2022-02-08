@@ -9,6 +9,7 @@ public class TouchScript : MonoBehaviour
     public static event OnTouchEvent touchMoved;
     public static event OnTouchEvent allTouchesReleased;
     public static event OnTouchEvent fingerReleased;
+    public static event OnTouchEvent shuffleInitiated;
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -56,6 +57,10 @@ public class TouchScript : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 fingerReleased?.Invoke(mousePosition, 0);
+            }
+            if (Input.GetButtonDown("Jump"))
+            {
+                shuffleInitiated?.Invoke(mousePosition, 0); 
             }
             
         }

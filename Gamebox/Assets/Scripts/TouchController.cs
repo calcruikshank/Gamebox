@@ -33,14 +33,23 @@ public class TouchController : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(position);
         if (Physics.Raycast(ray, out RaycastHit raycastHit, Mathf.Infinity))
         {
-            if (raycastHit.transform.GetComponent<MovableObject>() != null)
+            if (GetFinalParent(raycastHit).GetComponent<MovableObject>() != null)
             {
                 //if a movable was hit set position to target position and add movable to the dictionary
-                MovableObject movableHit = raycastHit.transform.GetComponent<MovableObject>();
+                MovableObject movableHit = GetFinalParent(raycastHit).GetComponent<MovableObject>();
                 Ray ray2 = Camera.main.ScreenPointToRay(movableHit.transform.position);
                 Vector3 offset = new Vector3(movableHit.transform.position.x - raycastHit.point.x, 0, movableHit.transform.position.z - raycastHit.point.z);
                 movableHit.SetSelected(index, offset);
             }
         }
+    }
+    public Transform GetFinalParent(RaycastHit raycastHit)
+    {
+        Transform targetToMove = raycastHit.transform;
+        while (targetToMove.parent != null)
+        {
+            targetToMove = targetToMove.transform.parent;
+        }
+        return targetToMove;
     }
 }

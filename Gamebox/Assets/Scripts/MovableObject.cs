@@ -39,8 +39,14 @@ public class MovableObject : MonoBehaviour
             {
                 targetToMove.GetComponentInChildren<CardTilter>().SetRotationToNotZero();
             }
+            if (targetToMove.GetComponentInChildren<Deck>() != null)
+            {
+                targetToMove.GetComponentInChildren<Deck>().SetSelected(id, offset);
+            }
         }
     }
+
+    
     private void Update()
     {
         if (snappingToOneOnY)
@@ -52,7 +58,7 @@ public class MovableObject : MonoBehaviour
             SnapToLowestPointHit();
         }
     }
-    private void FingerReleased(Vector3 position, int index)
+    public void FingerReleased(Vector3 position, int index)
     {
         lowering = true;
         snappingToOneOnY = false;
@@ -63,6 +69,26 @@ public class MovableObject : MonoBehaviour
         }
         TouchScript.touchMoved -= FingerMoved;
         TouchScript.fingerReleased -= FingerReleased;
+        Transform targetToMove = GetFinalParent();
+        if (targetToMove.transform.parent == null)
+        {
+            if (targetToMove.GetComponentInChildren<Deck>() != null)
+            {
+                targetToMove.GetComponentInChildren<Deck>().SetUnselected(id, offset);
+            }
+        }
+    }
+
+    public void Unsub()
+    {
+        this.id = -1;
+        TouchScript.touchMoved -= FingerMoved;
+        TouchScript.fingerReleased -= FingerReleased;
+    }
+
+    public int GetId()
+    {
+        return id;
     }
 
     private void FingerMoved(Vector3 position, int index)
@@ -129,7 +155,7 @@ public class MovableObject : MonoBehaviour
     }
     public float FindLowestPoint()
     {
-        Collider colliderHit = transform.GetComponent<Collider>();
+        Collider colliderHit = transform.GetComponentInChildren<Collider>();
         RaycastHit hit;
         bool hitDetected = Physics.BoxCast(colliderHit.bounds.center, new Vector3(colliderHit.bounds.extents.x, colliderHit.bounds.extents.y, colliderHit.bounds.extents.z), Vector3.down, out hit, Quaternion.identity, Mathf.Infinity);
 

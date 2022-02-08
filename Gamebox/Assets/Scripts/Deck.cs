@@ -16,13 +16,19 @@ public class Deck : MonoBehaviour
         
         InitializeDeck();
         UpdateDeckInfo();
-        ShuffleDeck();
     }
 
+    public void SetSelected(int id, Vector3 offset) 
+    {
+        TouchScript.shuffleInitiated += ShuffleDeck;
+    }
+    public void SetUnselected(int id, Vector3 offset)
+    {
+        TouchScript.shuffleInitiated -= ShuffleDeck;
+    }
     public void InitializeDeck()
     {
-        currentCardShowing = this.transform.GetChild(0).gameObject;
-        Debug.Log(currentCardShowing.name);
+        currentCardShowing = this.transform.GetComponentInChildren<CardFront>().gameObject;
     }
 
     public void UpdateDeckInfo()
@@ -36,7 +42,6 @@ public class Deck : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
-            ShuffleDeck();
         }
     }
 
@@ -90,19 +95,15 @@ public class Deck : MonoBehaviour
 
     public void SetCurrentCardShowing(GameObject cardSent)
     {
-        GameObject bottomCard = Instantiate(cardSent, this.transform);
-        if (currentCardShowing != null)
-        {
-            Destroy(currentCardShowing);
-        }
-        currentCardShowing = bottomCard;
+        GetComponentInChildren<CardFront>().ChangeCardFront(cardSent.GetComponentInChildren<CardFront>().gameObject);
+        
+        currentCardShowing = GetComponentInChildren<CardFront>().gameObject;
         if (currentCardShowing.GetComponent<CardTilter>() != null)
         {
             currentCardShowing.GetComponent<CardTilter>().enabled = false;
         }
     }
-
-    public void ShuffleDeck()
+    public void ShuffleDeck(Vector3 offset, int id)
     {
         Shuffle(cardsInDeck);
         SetCurrentCardShowing(cardsInDeck[cardsInDeck.Count - 1]);
@@ -118,4 +119,6 @@ public class Deck : MonoBehaviour
             listToShuffle[rand] = temp;
         }
     }
+
+
 }
