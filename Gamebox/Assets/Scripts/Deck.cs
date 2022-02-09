@@ -13,7 +13,6 @@ public class Deck : MonoBehaviour
     GameObject currentCardShowing;
     void Start()
     {
-        
         InitializeDeck();
         UpdateDeckInfo();
     }
@@ -121,4 +120,34 @@ public class Deck : MonoBehaviour
     }
 
 
+
+    public void PickUpCards(int numOfCardsToPickUp)
+    {
+        if (cardsInDeck.Count == 1)
+        {
+            return;
+        }
+        GameObject newDeck;
+        /*for (int j = (cardsInDeck.Count) - numOfCardsToPickUp; j <= cardsInDeck.Count; j++)
+        {
+            Debug.Log(j);
+            newDeck = Instantiate(this.gameObject, transform.position, Quaternion.identity);
+            newDeck.GetComponent<Deck>().cardsInDeck.Clear();
+            newDeck.GetComponent<Deck>().cardsInDeck.Add(cardsInDeck[j]);
+            cardsInDeck.Remove(cardsInDeck[j]);
+            UpdateDeckInfo();
+        }*/
+        newDeck = Instantiate(this.gameObject, transform.position, Quaternion.identity);
+        int iniatedI = cardsInDeck.Count;
+        cardsInDeck.Clear();
+        for (int i = iniatedI - numOfCardsToPickUp;  i <= iniatedI - 1; i++)
+        {
+            Debug.Log(i);
+            GameObject cardToAddThenRemove = newDeck.GetComponent<Deck>().cardsInDeck[i];
+            cardsInDeck.Add(cardToAddThenRemove);
+            newDeck.GetComponent<Deck>().cardsInDeck.Remove(cardToAddThenRemove);
+        }
+
+        UpdateDeckInfo();
+    }
 }

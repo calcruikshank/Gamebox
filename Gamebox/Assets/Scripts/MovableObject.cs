@@ -49,6 +49,7 @@ public class MovableObject : MonoBehaviour
             if (targetToMove.GetComponentInChildren<Deck>() != null)
             {
                 targetToMove.GetComponentInChildren<Deck>().SetSelected(id, offset);
+                targetToMove.GetComponentInChildren<Deck>().PickUpCards(1);
             }
         }
     }
