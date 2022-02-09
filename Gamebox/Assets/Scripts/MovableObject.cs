@@ -93,6 +93,10 @@ public class MovableObject : MonoBehaviour
     }
     public void FingerReleased(Vector3 position, int index)
     {
+        if (id != index)
+        {
+            return;
+        }
         lowering = true;
         snappingToOneOnY = false;
         this.id = -1;
@@ -145,7 +149,7 @@ public class MovableObject : MonoBehaviour
         if (targetToMove.transform.parent == null)
         {
             Vector3 targetPosition = new Vector3(rayPoint.x + offset.x, targetToMove.position.y, rayPoint.z + offset.z);
-            targetToMove.position = Vector3.MoveTowards(targetToMove.position, targetPosition, 1f);
+            targetToMove.position = targetPosition;
         }
     }
 
@@ -158,7 +162,7 @@ public class MovableObject : MonoBehaviour
             {
                 snappingToOneOnY = false;
             }
-            targetToMove.position = Vector3.MoveTowards(targetToMove.position, new Vector3(targetToMove.position.x, 3, targetToMove.position.z), .05f);
+            targetToMove.position = Vector3.MoveTowards(targetToMove.position, new Vector3(targetToMove.position.x, 3, targetToMove.position.z), .05f * 1000 * Time.deltaTime);
         }
     }
     public void SnapToLowestPointHit()
@@ -172,7 +176,7 @@ public class MovableObject : MonoBehaviour
                 targetToMove.GetComponentInChildren<CardTilter>().SetRotationToZero();
             }
             float lowestPointHit = FindLowestPoint();
-            targetToMove.position = Vector3.MoveTowards(targetToMove.position, new Vector3(targetToMove.position.x, lowestPointHit, targetToMove.position.z), .05f);
+            targetToMove.position = Vector3.MoveTowards(targetToMove.position, new Vector3(targetToMove.position.x, lowestPointHit, targetToMove.position.z), .05f * 1000 * Time.deltaTime);
             if (targetToMove.transform.position.y == lowestPointHit)
             {
                 lowering = false;
