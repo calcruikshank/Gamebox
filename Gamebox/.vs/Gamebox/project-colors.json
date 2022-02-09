@@ -10,7 +10,17 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
+    },
+    "0214d81c-1ae6-b4d8-3c70-8343c3360377": {
+      "ProjectGuid": "0214d81c-1ae6-b4d8-3c70-8343c3360377",
+      "DisplayName": "Unity.PlasticSCM.Editor",
+      "ColorIndex": 1
+    },
+    "92959cae-3484-bbd8-0f45-10eb3b8c743f": {
+      "ProjectGuid": "92959cae-3484-bbd8-0f45-10eb3b8c743f",
+      "DisplayName": "UnityEngine.UI",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 3
 }
