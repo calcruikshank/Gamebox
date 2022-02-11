@@ -9,6 +9,7 @@ public class TouchController : MonoBehaviour
     {
         TouchScript.touchedDown += FingerDown;
         TouchScript.allTouchesReleased += AllFingersReleased;
+        TouchScript.altClickDown += AltClickDown;
     }
     // Start is called before the first frame update
     void Start()
@@ -52,5 +53,21 @@ public class TouchController : MonoBehaviour
             if (targetToMove.GetComponent<MovableObject>() != null) return targetToMove;
         }
         return targetToMove;
+    }
+    private void AltClickDown(Vector3 position, int index)
+    {
+        //shoot a ray from the position sent
+        Ray ray = Camera.main.ScreenPointToRay(position);
+        if (Physics.Raycast(ray, out RaycastHit raycastHit, Mathf.Infinity))
+        {
+            if (GetFinalParent(raycastHit).GetComponent<MovableObject>() != null)
+            {
+                //if a movable was hit set position to target position and add movable to the dictionary
+                MovableObject movableHit = GetFinalParent(raycastHit).GetComponent<MovableObject>();
+                Ray ray2 = Camera.main.ScreenPointToRay(movableHit.transform.position);
+                Vector3 offset = new Vector3(movableHit.transform.position.x - raycastHit.point.x, 0, movableHit.transform.position.z - raycastHit.point.z);
+                movableHit.SetAltSelected(index, offset);
+            }
+        }
     }
 }

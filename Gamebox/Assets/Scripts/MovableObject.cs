@@ -53,6 +53,35 @@ public class MovableObject : MonoBehaviour
             }
         }
     }
+    public void SetAltSelected(int id, Vector3 offset)
+    {
+        if (this.id != -1)
+        {
+            return;
+        }
+        this.id = id;
+        snappingToOneOnY = true;
+        lowering = false;
+        TouchScript.altClickMoved += FingerMoved;
+        TouchScript.altClickReleased += FingerReleased;
+        TouchScript.flipObject += FlipObject;
+        TouchScript.rotateRight += RotateObject;
+        TouchScript.rotateLeft += RotateObjectLeft;
+        this.offset = offset;
+        Transform targetToMove = GetFinalParent();
+        if (targetToMove.transform.parent == null)
+        {
+            targetToMove.eulerAngles = new Vector3(0, targetToMove.eulerAngles.y, 0);
+            if (targetToMove.GetComponentInChildren<CardTilter>() != null)
+            {
+                targetToMove.GetComponentInChildren<CardTilter>().SetRotationToNotZero();
+            }
+            if (targetToMove.GetComponentInChildren<Deck>() != null)
+            {
+                targetToMove.GetComponentInChildren<Deck>().SetSelected(id, offset);
+            }
+        }
+    }
 
 
     private void Update()

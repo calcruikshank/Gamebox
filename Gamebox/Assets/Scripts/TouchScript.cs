@@ -13,6 +13,9 @@ public class TouchScript : MonoBehaviour
     public static event OnTouchEvent flipObject;
     public static event OnTouchEvent rotateRight;
     public static event OnTouchEvent rotateLeft;
+    public static event OnTouchEvent altClickDown;
+    public static event OnTouchEvent altClickMoved;
+    public static event OnTouchEvent altClickReleased;
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -77,7 +80,18 @@ public class TouchScript : MonoBehaviour
             {
                 rotateLeft?.Invoke(mousePosition, 0);
             }
-
+            if (Input.GetMouseButtonDown(1))
+            {
+                altClickDown?.Invoke(mousePosition, 0);
+            }
+            if (Input.GetMouseButton(1))
+            {
+                altClickMoved?.Invoke(mousePosition, 0);
+            }
+            if (Input.GetMouseButtonUp(1))
+            {
+                altClickReleased?.Invoke(mousePosition, 0);
+            }
         }
 
     }
