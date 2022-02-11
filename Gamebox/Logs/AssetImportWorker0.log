@@ -757,3 +757,73 @@ Received Import Request.
   path: Assets/Temporary
   artifactKey: Guid(954ea37203e264c4485d8adceb3e507d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Temporary using Guid(954ea37203e264c4485d8adceb3e507d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95f7b253fb1dbeed4fa0cf432091b079') in 0.010242 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 83.198093 seconds.
+  path: Assets/Prefabs
+  artifactKey: Guid(ba510bc8f1909304d80c85306d2bfd7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs using Guid(ba510bc8f1909304d80c85306d2bfd7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf1ee04b61ada51e441729f79daf04c3') in 0.005813 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.083270 seconds.
+  path: Assets/Materials
+  artifactKey: Guid(6431bed4db2e2054bb80ff61c8cd3569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials using Guid(6431bed4db2e2054bb80ff61c8cd3569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b8444400c523867e72e8aac9dcaf819') in 0.005381 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.066680 seconds.
+  path: Assets/Materials/Red.mat
+  artifactKey: Guid(bfd6a791a4c307f489d61963b0798ccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Red.mat using Guid(bfd6a791a4c307f489d61963b0798ccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '426c6961866976e5b115f0c7a70887bf') in 0.242902 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.520612 seconds.
+  path: Assets/CardImages
+  artifactKey: Guid(3bc12979e2936db45885297c31cd6dad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CardImages using Guid(3bc12979e2936db45885297c31cd6dad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3318fa9cbdca0b0e7e3182edef7c6a47') in 0.005896 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.046443 seconds.
+  path: Assets/CardImages/Card.png
+  artifactKey: Guid(b391cafb457a63b43bd74cfdfd76fe3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CardImages/Card.png using Guid(b391cafb457a63b43bd74cfdfd76fe3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c9a47e246f4dc9ec4e6cb726bede85d') in 0.057097 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/CardImages/Group 8139.png
+  artifactKey: Guid(fa7a3ccb2187d0545ba2befc2104bb09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CardImages/Group 8139.png using Guid(fa7a3ccb2187d0545ba2befc2104bb09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e59104a6452281bd2aacf5c939d7cf83') in 0.019707 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/CardImages/Group 8113.png
+  artifactKey: Guid(74d67187c42635845b375d45eac0dc23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CardImages/Group 8113.png using Guid(74d67187c42635845b375d45eac0dc23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1859bc5d3ddf2f6171a1a8813f835ae4') in 0.016674 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.522192 seconds.
+  path: Assets/CardImages/Materials/AceOfDiamonds.mat
+  artifactKey: Guid(50a9d431b56645347898eb614b2474bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CardImages/Materials/AceOfDiamonds.mat using Guid(50a9d431b56645347898eb614b2474bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16c8e69af2c5dfa6a5d64f012b95076c') in 0.015821 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/CardImages/Materials/AceOfSpades.mat
+  artifactKey: Guid(d08db6d4f479ea64f97134afd04b5ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CardImages/Materials/AceOfSpades.mat using Guid(d08db6d4f479ea64f97134afd04b5ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2c44768d792f7b0c90e94ae62a7eec9') in 0.014813 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/CardImages/Materials/CardBackMat.mat
+  artifactKey: Guid(4dc6bee90d2cb0c4b9e13bbd77073c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CardImages/Materials/CardBackMat.mat using Guid(4dc6bee90d2cb0c4b9e13bbd77073c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d4558a9e1c02514c4ce40deb8c759a8') in 0.013460 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.311863 seconds.
+  path: Assets/Prefabs/PlayingCards/AceOfHearts.prefab
+  artifactKey: Guid(e5cec2402f95dab45b772ce37e698176) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PlayingCards/AceOfHearts.prefab using Guid(e5cec2402f95dab45b772ce37e698176) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f2bdf6ca1a3b787d46944a92d39f4fe') in 0.054517 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

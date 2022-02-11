@@ -12,7 +12,7 @@ public class MovableObject : MonoBehaviour
     bool lowering = false;
     Deck deck;
 
-    bool faceUp = true;
+    public bool faceUp = true;
     bool hasReachedTargetRotation = true;
     public Vector3 targetRotation;
     private void Start()

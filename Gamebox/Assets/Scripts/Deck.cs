@@ -9,7 +9,7 @@ public class Deck : MonoBehaviour
 {
     // Start is called before the first frame update
     public List<GameObject> cardsInDeck = new List<GameObject>();
-
+    MovableObject movableObject;
     GameObject currentCardShowing;
     void Start()
     {
@@ -28,6 +28,7 @@ public class Deck : MonoBehaviour
     public void InitializeDeck()
     {
         currentCardShowing = this.transform.GetComponentInChildren<CardFront>().gameObject;
+        movableObject = this.transform.GetComponent<MovableObject>();
     }
 
     public void UpdateDeckInfo()
@@ -123,10 +124,22 @@ public class Deck : MonoBehaviour
 
     public void PickUpCards(int numOfCardsToPickUp)
     {
-        if (cardsInDeck.Count == 1)
+        if (cardsInDeck.Count == 1) //cchange thisd to say if cardsindeck.count is greater than number of cards to pick up
         {
             return;
         }
+        if (movableObject.faceUp)
+        {
+            PickUpCardsFromBottom(numOfCardsToPickUp);
+        }
+        if (!movableObject.faceUp)
+        {
+            PickUpCardsFromTop(numOfCardsToPickUp);
+        }
+    }
+
+    public void PickUpCardsFromBottom(int numOfCardsToPickUp)
+    {
         GameObject newDeck;
         /*for (int j = (cardsInDeck.Count) - numOfCardsToPickUp; j <= cardsInDeck.Count; j++)
         {
@@ -140,12 +153,39 @@ public class Deck : MonoBehaviour
         newDeck = Instantiate(this.gameObject, transform.position, Quaternion.identity);
         int iniatedI = cardsInDeck.Count;
         cardsInDeck.Clear();
-        for (int i = iniatedI - numOfCardsToPickUp;  i <= iniatedI - 1; i++)
+        for (int i = iniatedI - numOfCardsToPickUp; i <= iniatedI - 1; i++)
         {
             Debug.Log(i);
             GameObject cardToAddThenRemove = newDeck.GetComponent<Deck>().cardsInDeck[i];
             cardsInDeck.Add(cardToAddThenRemove);
-            newDeck.GetComponent<Deck>().cardsInDeck.Remove(cardToAddThenRemove);
+            newDeck.GetComponent<Deck>().cardsInDeck.RemoveAt(i);
+        }
+
+        UpdateDeckInfo();
+
+    }
+
+    public void PickUpCardsFromTop(int numOfCardsToPickUp)
+    {
+        GameObject newDeck;
+        /*for (int j = (cardsInDeck.Count) - numOfCardsToPickUp; j <= cardsInDeck.Count; j++)
+        {
+            Debug.Log(j);
+            newDeck = Instantiate(this.gameObject, transform.position, Quaternion.identity);
+            newDeck.GetComponent<Deck>().cardsInDeck.Clear();
+            newDeck.GetComponent<Deck>().cardsInDeck.Add(cardsInDeck[j]);
+            cardsInDeck.Remove(cardsInDeck[j]);
+            UpdateDeckInfo();
+        }*/
+        newDeck = Instantiate(this.gameObject, transform.position, Quaternion.identity);
+        int iniatedI = cardsInDeck.Count;
+        cardsInDeck.Clear();
+        for (int i = 0; i <= numOfCardsToPickUp - 1; i++)
+        {
+            Debug.Log(i);
+            GameObject cardToAddThenRemove = newDeck.GetComponent<Deck>().cardsInDeck[i];
+            cardsInDeck.Add(cardToAddThenRemove);
+            newDeck.GetComponent<Deck>().cardsInDeck.RemoveAt(i);
         }
 
         UpdateDeckInfo();
