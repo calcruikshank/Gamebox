@@ -11,6 +11,8 @@ public class Deck : MonoBehaviour
     public List<GameObject> cardsInDeck = new List<GameObject>();
     MovableObject movableObject;
     GameObject currentCardShowing;
+
+    [SerializeField]LayerMask playerContainerLayerMask;
     void Start()
     {
         InitializeDeck();
@@ -68,7 +70,19 @@ public class Deck : MonoBehaviour
         Collider colliderHit = transform.GetComponentInChildren<Collider>();
         RaycastHit hit;
         bool hitDetected = Physics.BoxCast(colliderHit.bounds.center, new Vector3(colliderHit.bounds.extents.x - (colliderHit.bounds.extents.x * 1.5f), colliderHit.bounds.extents.y - (colliderHit.bounds.extents.y * 1.5f), colliderHit.bounds.extents.z - (colliderHit.bounds.extents.z * 1.5f)), Vector3.down, out hit, Quaternion.identity, Mathf.Infinity);
+        RaycastHit playerContainerHit;
+        bool playerContainerHitBool = Physics.BoxCast(colliderHit.bounds.center, new Vector3(colliderHit.bounds.extents.x - (colliderHit.bounds.extents.x * 1.5f), colliderHit.bounds.extents.y - (colliderHit.bounds.extents.y * 1.5f), colliderHit.bounds.extents.z - (colliderHit.bounds.extents.z * 1.5f)), Vector3.down, out playerContainerHit, Quaternion.identity, playerContainerLayerMask);
 
+        if (playerContainerHitBool)
+        {
+            Transform targetToMove = hit.transform;
+            if (targetToMove.GetComponentInChildren<PlayerContainer>() != null)
+            {
+                PlayerContainer playerToAddCardTo = targetToMove.GetComponentInChildren<PlayerContainer>();
+                playerToAddCardTo.AddCardToHand(this.gameObject);
+                return;
+            }
+        }
         if (hitDetected)
         {
             Transform targetToMove = hit.transform;
@@ -80,21 +94,24 @@ public class Deck : MonoBehaviour
             {
                 if (targetToMove.GetComponent<Deck>() != null)
                 {
-                    if (targetToMove.GetComponent<Deck>() != this)
+                    if (!targetToMove.GetComponent<MovableObject>().isInPlayerHand)
                     {
-                        if (targetToMove.GetComponent<MovableObject>().faceUp)
+                        if (targetToMove.GetComponent<Deck>() != this)
                         {
-                            Debug.Log("Hit detected " + targetToMove.name);
-                            Deck deckToAddTo = targetToMove.GetComponent<Deck>();
-                            deckToAddTo.AddToDeck(this.cardsInDeck);
-                            Destroy(this.gameObject);
-                        }
-                        if (!targetToMove.GetComponent<MovableObject>().faceUp)
-                        {
-                            Debug.Log("Adding to front of list " + targetToMove.name);
-                            Deck deckToAddTo = targetToMove.GetComponent<Deck>();
-                            deckToAddTo.AddToFrontOfList(this.cardsInDeck);
-                            Destroy(this.gameObject);
+                            if (targetToMove.GetComponent<MovableObject>().faceUp)
+                            {
+                                Debug.Log("Hit detected " + targetToMove.name);
+                                Deck deckToAddTo = targetToMove.GetComponent<Deck>();
+                                deckToAddTo.AddToDeck(this.cardsInDeck);
+                                Destroy(this.gameObject);
+                            }
+                            if (!targetToMove.GetComponent<MovableObject>().faceUp)
+                            {
+                                Debug.Log("Adding to front of list " + targetToMove.name);
+                                Deck deckToAddTo = targetToMove.GetComponent<Deck>();
+                                deckToAddTo.AddToFrontOfList(this.cardsInDeck);
+                                Destroy(this.gameObject);
+                            }
                         }
                     }
                 }

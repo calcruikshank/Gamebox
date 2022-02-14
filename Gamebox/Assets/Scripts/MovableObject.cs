@@ -13,8 +13,11 @@ public class MovableObject : MonoBehaviour
     Deck deck;
 
     public bool faceUp = true;
+    public bool isInPlayerHand;
     bool hasReachedTargetRotation = true;
     public Vector3 targetRotation;
+
+    PlayerContainer playerOwningCard;
     private void Start()
     {
         if (GetFinalParent().GetComponent<Deck>() != null)
@@ -29,6 +32,10 @@ public class MovableObject : MonoBehaviour
         {
             return;
         }
+        if (isInPlayerHand)
+        {
+            playerOwningCard.RemoveCardFromHand(this.gameObject);
+        }
         this.id = id;
         snappingToOneOnY = true;
         lowering = false;
@@ -39,25 +46,29 @@ public class MovableObject : MonoBehaviour
         TouchScript.rotateLeft += RotateObjectLeft;
         this.offset = offset;
         Transform targetToMove = GetFinalParent();
-        if (targetToMove.transform.parent == null)
+
+        targetToMove.eulerAngles = new Vector3(0, targetToMove.eulerAngles.y, 0);
+        if (targetToMove.GetComponentInChildren<CardTilter>() != null)
         {
-            targetToMove.eulerAngles = new Vector3(0, targetToMove.eulerAngles.y, 0);
-            if (targetToMove.GetComponentInChildren<CardTilter>() != null)
-            {
-                targetToMove.GetComponentInChildren<CardTilter>().SetRotationToNotZero();
-            }
-            if (targetToMove.GetComponentInChildren<Deck>() != null)
-            {
-                targetToMove.GetComponentInChildren<Deck>().SetSelected(id, offset);
-                targetToMove.GetComponentInChildren<Deck>().PickUpCards(1);
-            }
+            targetToMove.GetComponentInChildren<CardTilter>().SetRotationToNotZero();
+        }
+        if (targetToMove.GetComponentInChildren<Deck>() != null)
+        {
+            targetToMove.GetComponentInChildren<Deck>().SetSelected(id, offset);
+            targetToMove.GetComponentInChildren<Deck>().PickUpCards(1);
         }
     }
+
+
     public void SetAltSelected(int id, Vector3 offset)
     {
         if (this.id != -1)
         {
             return;
+        }
+        if (isInPlayerHand)
+        {
+            playerOwningCard.RemoveCardFromHand(this.gameObject);
         }
         this.id = id;
         snappingToOneOnY = true;
@@ -69,21 +80,29 @@ public class MovableObject : MonoBehaviour
         TouchScript.rotateLeft += RotateObjectLeft;
         this.offset = offset;
         Transform targetToMove = GetFinalParent();
-        if (targetToMove.transform.parent == null)
+
+        targetToMove.eulerAngles = new Vector3(0, targetToMove.eulerAngles.y, 0);
+        if (targetToMove.GetComponentInChildren<CardTilter>() != null)
         {
-            targetToMove.eulerAngles = new Vector3(0, targetToMove.eulerAngles.y, 0);
-            if (targetToMove.GetComponentInChildren<CardTilter>() != null)
-            {
-                targetToMove.GetComponentInChildren<CardTilter>().SetRotationToNotZero();
-            }
-            if (targetToMove.GetComponentInChildren<Deck>() != null)
-            {
-                targetToMove.GetComponentInChildren<Deck>().SetSelected(id, offset);
-            }
+            targetToMove.GetComponentInChildren<CardTilter>().SetRotationToNotZero();
+        }
+        if (targetToMove.GetComponentInChildren<Deck>() != null)
+        {
+            targetToMove.GetComponentInChildren<Deck>().SetSelected(id, offset);
         }
     }
 
+    public void RemovePlayerOwnership(PlayerContainer playerContainer)
+    {
+        isInPlayerHand = false;
+        playerOwningCard = null;
+    }
 
+    internal void GivePlayerOwnership(PlayerContainer playerContainer)
+    {
+        isInPlayerHand = true;
+        playerOwningCard = playerContainer;
+    }
     private void Update()
     {
         if (snappingToOneOnY)
@@ -97,7 +116,7 @@ public class MovableObject : MonoBehaviour
         if (!hasReachedTargetRotation)
         {
             Vector3 angles = transform.GetChild(0).localEulerAngles;
-           
+
             if (angles.y != targetRotation.y)
             {
                 if (targetRotation.y < 0)
@@ -105,7 +124,7 @@ public class MovableObject : MonoBehaviour
                     targetRotation = new Vector3(targetRotation.x, 270, targetRotation.z);
                 }
                 angles.y = Mathf.MoveTowards(angles.y, targetRotation.y, 1500f * Time.deltaTime);
-                
+
             }
             transform.GetChild(0).localEulerAngles = angles;
 
@@ -115,7 +134,7 @@ public class MovableObject : MonoBehaviour
                 {
                     targetRotation = new Vector3(targetRotation.x, 0, targetRotation.z);
                 }
-                
+
                 hasReachedTargetRotation = true;
             }
 
@@ -140,12 +159,10 @@ public class MovableObject : MonoBehaviour
         TouchScript.rotateRight -= RotateObject;
         TouchScript.rotateLeft -= RotateObjectLeft;
         Transform targetToMove = GetFinalParent();
-        if (targetToMove.transform.parent == null)
+
+        if (targetToMove.GetComponentInChildren<Deck>() != null)
         {
-            if (targetToMove.GetComponentInChildren<Deck>() != null)
-            {
-                targetToMove.GetComponentInChildren<Deck>().SetUnselected(id, offset);
-            }
+            targetToMove.GetComponentInChildren<Deck>().SetUnselected(id, offset);
         }
     }
 
@@ -176,51 +193,44 @@ public class MovableObject : MonoBehaviour
     public void Move(Vector3 rayPoint)
     {
         Transform targetToMove = GetFinalParent();
-        if (targetToMove.transform.parent == null)
-        {
-            Vector3 targetPosition = new Vector3(rayPoint.x + offset.x, targetToMove.position.y, rayPoint.z + offset.z);
-            targetToMove.position = targetPosition;
-        }
+
+        Vector3 targetPosition = new Vector3(rayPoint.x + offset.x, targetToMove.position.y, rayPoint.z + offset.z);
+        targetToMove.position = targetPosition;
     }
 
     public void SnapPositionToOneOnY()
     {
         Transform targetToMove = GetFinalParent();
-        if (targetToMove.transform.parent == null)
+        if (targetToMove.transform.position.y == 3)
         {
-            if (targetToMove.transform.position.y == 3)
-            {
-                snappingToOneOnY = false;
-            }
-            targetToMove.position = Vector3.MoveTowards(targetToMove.position, new Vector3(targetToMove.position.x, 3, targetToMove.position.z), .05f * 1000 * Time.deltaTime);
+            snappingToOneOnY = false;
         }
+        targetToMove.position = Vector3.MoveTowards(targetToMove.position, new Vector3(targetToMove.position.x, 3, targetToMove.position.z), .05f * 1000 * Time.deltaTime);
     }
     public void SnapToLowestPointHit()
     {
         Transform targetToMove = GetFinalParent();
-        if (targetToMove.transform.parent == null)
+        
+        targetToMove.eulerAngles = new Vector3(0, targetToMove.eulerAngles.y, 0);
+        if (targetToMove.GetComponentInChildren<CardTilter>() != null)
         {
-            targetToMove.eulerAngles = new Vector3(0, targetToMove.eulerAngles.y, 0);
-            if (targetToMove.GetComponentInChildren<CardTilter>() != null)
-            {
-                targetToMove.GetComponentInChildren<CardTilter>().SetRotationToZero();
-            }
-            float lowestPointHit = FindLowestPoint();
-            targetToMove.position = Vector3.MoveTowards(targetToMove.position, new Vector3(targetToMove.position.x, lowestPointHit, targetToMove.position.z), .05f * 1000 * Time.deltaTime);
-            if (targetToMove.transform.position.y == lowestPointHit)
-            {
-                lowering = false;
-            }
+            targetToMove.GetComponentInChildren<CardTilter>().SetRotationToZero();
+        }
+        float lowestPointHit = FindLowestPoint();
+        targetToMove.position = Vector3.MoveTowards(targetToMove.position, new Vector3(targetToMove.position.x, lowestPointHit, targetToMove.position.z), .05f * 1000 * Time.deltaTime);
+        if (targetToMove.transform.position.y == lowestPointHit)
+        {
+            lowering = false;
         }
     }
 
     public Transform GetFinalParent()
     {
         Transform targetToMove = this.transform;
-        while (targetToMove.parent != null)
+        /*while (targetToMove.parent != null)
         {
             targetToMove = targetToMove.transform.parent;
-        }
+        }*/
         return targetToMove;
     }
     public float FindLowestPoint()
