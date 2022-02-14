@@ -25,8 +25,10 @@ public class TouchScript : MonoBehaviour
         {
             for (int i = 0; i < Input.touchCount; ++i)
             {
+                
                 var finger = Input.GetTouch(i);
                 var fingerId = finger.fingerId;
+                
                 Vector3 touchPoint = finger.position;
 
                 if (finger.phase == TouchPhase.Began)
