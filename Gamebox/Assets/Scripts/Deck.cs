@@ -53,6 +53,15 @@ public class Deck : MonoBehaviour
         }
         UpdateDeckInfo();
     }
+    public void AddToFrontOfList(List<GameObject> cardsSents)
+    {
+        for (int i = 0; i < cardsSents.Count; i++)
+        {
+            cardsInDeck.Add(cardsInDeck[i]);
+            cardsInDeck[i] = cardsSents[i];
+        }
+        UpdateDeckInfo();
+    }
 
     public void CheckToSeeIfDeckShouldBeAdded()
     {
@@ -73,10 +82,20 @@ public class Deck : MonoBehaviour
                 {
                     if (targetToMove.GetComponent<Deck>() != this)
                     {
-                        Debug.Log("Hit detected " + targetToMove.name);
-                        Deck deckToAddTo = targetToMove.GetComponent<Deck>();
-                        deckToAddTo.AddToDeck(this.cardsInDeck);
-                        Destroy(this.gameObject);
+                        if (targetToMove.GetComponent<MovableObject>().faceUp)
+                        {
+                            Debug.Log("Hit detected " + targetToMove.name);
+                            Deck deckToAddTo = targetToMove.GetComponent<Deck>();
+                            deckToAddTo.AddToDeck(this.cardsInDeck);
+                            Destroy(this.gameObject);
+                        }
+                        if (!targetToMove.GetComponent<MovableObject>().faceUp)
+                        {
+                            Debug.Log("Adding to front of list " + targetToMove.name);
+                            Deck deckToAddTo = targetToMove.GetComponent<Deck>();
+                            deckToAddTo.AddToFrontOfList(this.cardsInDeck);
+                            Destroy(this.gameObject);
+                        }
                     }
                 }
             }
