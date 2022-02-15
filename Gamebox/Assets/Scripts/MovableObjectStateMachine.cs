@@ -47,6 +47,8 @@ public class MovableObjectStateMachine : MonoBehaviour
             deck = this.GetComponentInChildren<Deck>();
         }
         faceUp = true;
+        lowering = true;
+        doubleTapTimer = doubleTapThreshold;
     }
 
     protected virtual void Update()
@@ -69,35 +71,44 @@ public class MovableObjectStateMachine : MonoBehaviour
                 HandleRaising();
                 break;
         }
+
+        HandleFlipCard();
     }
 
+    void HandleFlipCard()
+    {
+        if (doubleTapTimer > doubleTapThreshold)
+        {
+            return;
+        }
+        doubleTapTimer += Time.deltaTime;
+    }
     public void HandleIdle()
     {
     }
 
     void HandleSelected()
     {
-        doubleTapTimer += Time.deltaTime;
-        
     }
 
 
     public void SetTouched(int id, Vector3 positionSent)
     {
         numOfFingersOnCard++;
-        
+        if (doubleTapTimer < doubleTapThreshold)
+        {
+            FlipObject();
+        }
+        doubleTapTimer = 0f;
+        if (state == State.Selected)
+        {
+            state = State.Idle;
+            return;
+        }
         if (this.id != -1)
             return;
 
-        if (state == State.Selected)
-        {
-            if (doubleTapTimer < doubleTapThreshold)
-            {
-                FlipObject();
-            }
-        }
-
-        if (state != State.Idle && state != State.Selected)
+        if (state != State.Idle)
             return;
         this.id = id;
         if (playerOwningCard != null)
@@ -241,7 +252,6 @@ public class MovableObjectStateMachine : MonoBehaviour
 
     void QuickRelease()
     {
-        doubleTapTimer = 0f;
         state = State.Selected;
         Debug.Log(state);
     }

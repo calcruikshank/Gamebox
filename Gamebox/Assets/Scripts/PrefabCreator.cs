@@ -16,16 +16,4 @@ public class PrefabCreator : MonoBehaviour
     {
         
     }
-
-    [MenuItem("My Project/Create Simple Prefab")]
-    [System.Obsolete]
-    static void DoCreateSimplePrefab()
-    {
-        Transform[] transforms = Selection.transforms;
-        foreach (Transform t in transforms)
-        {
-            Object prefab = EditorUtility.CreateEmptyPrefab("Assets/Temporary/" + t.gameObject.name + ".prefab");
-            EditorUtility.ReplacePrefab(t.gameObject, prefab, ReplacePrefabOptions.ConnectToPrefab);
-        }
-    }
 }
