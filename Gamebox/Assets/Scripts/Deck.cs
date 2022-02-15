@@ -9,17 +9,17 @@ public class Deck : MonoBehaviour
 {
     // Start is called before the first frame update
     public List<GameObject> cardsInDeck = new List<GameObject>();
-    MovableObject movableObject;
+    MovableObjectStateMachine movableObject;
     GameObject currentCardShowing;
 
-    [SerializeField]LayerMask playerContainerLayerMask;
+    [SerializeField] LayerMask playerContainerLayerMask;
     void Start()
     {
         InitializeDeck();
         UpdateDeckInfo();
     }
 
-    public void SetSelected(int id, Vector3 offset) 
+    public void SetSelected(int id, Vector3 offset)
     {
         TouchScript.shuffleInitiated += ShuffleDeck;
     }
@@ -30,7 +30,7 @@ public class Deck : MonoBehaviour
     public void InitializeDeck()
     {
         currentCardShowing = this.transform.GetComponentInChildren<CardFront>().gameObject;
-        movableObject = this.transform.GetComponent<MovableObject>();
+        movableObject = this.transform.GetComponent<MovableObjectStateMachine>();
     }
 
     public void UpdateDeckInfo()
@@ -38,13 +38,6 @@ public class Deck : MonoBehaviour
         SetSize(new Vector3(this.transform.localScale.x, cardsInDeck.Count, this.transform.localScale.z));
         SetCurrentCardShowing(cardsInDeck[cardsInDeck.Count - 1]);
         SetTopCard(cardsInDeck[0]);
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetButtonDown("Jump"))
-        {
-        }
     }
 
     public void AddToDeck(List<GameObject> cardsSents)
@@ -90,29 +83,24 @@ public class Deck : MonoBehaviour
             {
                 targetToMove = targetToMove.transform.parent;
             }
-            if (targetToMove.parent == null)
+
+            if (targetToMove.GetComponent<Deck>() != null)
             {
-                if (targetToMove.GetComponent<Deck>() != null)
+                if (targetToMove.GetComponent<Deck>() != this)
                 {
-                    if (!targetToMove.GetComponent<MovableObject>().isInPlayerHand)
+                    if (targetToMove.GetComponent<MovableObjectStateMachine>().faceUp)
                     {
-                        if (targetToMove.GetComponent<Deck>() != this)
-                        {
-                            if (targetToMove.GetComponent<MovableObject>().faceUp)
-                            {
-                                Debug.Log("Hit detected " + targetToMove.name);
-                                Deck deckToAddTo = targetToMove.GetComponent<Deck>();
-                                deckToAddTo.AddToDeck(this.cardsInDeck);
-                                Destroy(this.gameObject);
-                            }
-                            if (!targetToMove.GetComponent<MovableObject>().faceUp)
-                            {
-                                Debug.Log("Adding to front of list " + targetToMove.name);
-                                Deck deckToAddTo = targetToMove.GetComponent<Deck>();
-                                deckToAddTo.AddToFrontOfList(this.cardsInDeck);
-                                Destroy(this.gameObject);
-                            }
-                        }
+                        Debug.Log("Hit detected " + targetToMove.name);
+                        Deck deckToAddTo = targetToMove.GetComponent<Deck>();
+                        deckToAddTo.AddToDeck(this.cardsInDeck);
+                        Destroy(this.gameObject);
+                    }
+                    if (!targetToMove.GetComponent<MovableObjectStateMachine>().faceUp)
+                    {
+                        Debug.Log("Adding to front of list " + targetToMove.name);
+                        Deck deckToAddTo = targetToMove.GetComponent<Deck>();
+                        deckToAddTo.AddToFrontOfList(this.cardsInDeck);
+                        Destroy(this.gameObject);
                     }
                 }
             }
@@ -132,7 +120,7 @@ public class Deck : MonoBehaviour
     public void SetCurrentCardShowing(GameObject cardSent)
     {
         GetComponentInChildren<CardFront>().ChangeCardFront(cardSent.GetComponentInChildren<CardFront>().gameObject);
-        
+
         currentCardShowing = GetComponentInChildren<CardFront>().gameObject;
         if (currentCardShowing.GetComponent<CardTilter>() != null)
         {
@@ -160,7 +148,7 @@ public class Deck : MonoBehaviour
 
     public void PickUpCards(int numOfCardsToPickUp)
     {
-        if (cardsInDeck.Count == 1) //cchange thisd to say if cardsindeck.count is greater than number of cards to pick up
+        if (cardsInDeck.Count == 1) //change thisd to say if cardsindeck.count is greater than number of cards to pick up
         {
             return;
         }
@@ -182,7 +170,6 @@ public class Deck : MonoBehaviour
         cardsInDeck.Clear();
         for (int i = iniatedI - numOfCardsToPickUp; i <= iniatedI - 1; i++)
         {
-            Debug.Log(i);
             GameObject cardToAddThenRemove = newDeck.GetComponent<Deck>().cardsInDeck[i];
             cardsInDeck.Add(cardToAddThenRemove);
             newDeck.GetComponent<Deck>().cardsInDeck.RemoveAt(i);

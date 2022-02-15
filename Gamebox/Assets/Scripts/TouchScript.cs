@@ -82,18 +82,6 @@ public class TouchScript : MonoBehaviour
             {
                 rotateLeft?.Invoke(mousePosition, 0);
             }
-            if (Input.GetMouseButtonDown(1))
-            {
-                altClickDown?.Invoke(mousePosition, 0);
-            }
-            if (Input.GetMouseButton(1))
-            {
-                altClickMoved?.Invoke(mousePosition, 0);
-            }
-            if (Input.GetMouseButtonUp(1))
-            {
-                altClickReleased?.Invoke(mousePosition, 0);
-            }
         }
 
     }

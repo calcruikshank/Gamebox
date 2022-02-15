@@ -12,13 +12,13 @@ public class PlayerContainer : MonoBehaviour
         //position = (this.transform.bounds.x - this.transform.bounds.x + padding)
         cardToAdd.transform.position = new Vector3(((this.transform.position.x + 2f - (this.transform.GetComponent<Collider>().bounds.size.x / 2)) + (cardToAdd.transform.GetComponentInChildren<Collider>().bounds.size.x * cardsInHand.Count) + movableObjectPadding * cardsInHand.Count), cardToAdd.transform.position.y, this.transform.position.z);
         cardsInHand.Add(cardToAdd);
-        cardToAdd.GetComponent<MovableObject>().GivePlayerOwnership(this);
+        cardToAdd.GetComponent<MovableObjectStateMachine>().GivePlayerOwnership(this);
     }
     public void RemoveCardFromHand(GameObject cardToRemove)
     {
         Debug.Log("Removing Card " + cardToRemove);
         cardsInHand.Remove(cardToRemove);
-        cardToRemove.GetComponent<MovableObject>().RemovePlayerOwnership(this);
+        cardToRemove.GetComponent<MovableObjectStateMachine>().RemovePlayerOwnership(this);
         UpdateCardPositions();
     }
 

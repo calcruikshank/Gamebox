@@ -5,9 +5,11 @@ using UnityEngine;
 public class TouchCommands : MonoBehaviour
 {
     //time held down
-
+    float timeHeldDown;
     //vector3 direction moved
-
+    Vector3 startingPoint;
+    Vector3 directionMoved;
+    
     //time between clicks
 
     //num of fingers touched down

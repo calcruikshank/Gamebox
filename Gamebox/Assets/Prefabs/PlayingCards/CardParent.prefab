@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6613674515943111656}
   - component: {fileID: 6613674515943111657}
-  - component: {fileID: 5352504323855160388}
+  - component: {fileID: 715537002911808914}
+  - component: {fileID: 2484061236763542194}
   m_Layer: 0
   m_Name: CardParent
   m_TagString: Untagged
@@ -50,7 +51,7 @@ MonoBehaviour:
   _maxDragTilt: 10
   _dragTiltRestTime: 0.15
   BaseRotation: {x: 0, y: 0, z: 0}
---- !u!114 &5352504323855160388
+--- !u!114 &715537002911808914
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,9 +60,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 6613674515943111671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 877ecb81dcf2f4c4ea28b7290e458219, type: 3}
+  m_Script: {fileID: 11500000, guid: efa6cd86e7a9fd046bd09320f2ffdde3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  id: 0
+  distanceThreshold: 1
+  faceUp: 0
+--- !u!114 &2484061236763542194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6613674515943111671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efa6cd86e7a9fd046bd09320f2ffdde3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  id: 0
+  distanceThreshold: 1
+  faceUp: 0
 --- !u!1001 &6613674515900435454
 PrefabInstance:
   m_ObjectHideFlags: 0
