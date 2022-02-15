@@ -137,7 +137,6 @@ public class MovableObject : MonoBehaviour
 
                 hasReachedTargetRotation = true;
             }
-
         }
     }
     public void FingerReleased(Vector3 position, int index)

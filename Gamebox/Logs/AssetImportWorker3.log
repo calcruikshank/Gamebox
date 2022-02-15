@@ -1,0 +1,925 @@
+Using pre-set license
+Built from '2021.2/staging' branch; Version is '2021.2.9f1 (921b45a28ab6) revision 9575237'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19043) 64bit Core' Language: 'en' Physical Memory: 32718 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.2.9f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker3
+-projectPath
+C:/Users/calcr/Documents/GitHub/Gamebox/Gamebox
+-logFile
+Logs/AssetImportWorker3.log
+-srvPort
+55770
+Successfully changed project path to: C:/Users/calcr/Documents/GitHub/Gamebox/Gamebox
+C:/Users/calcr/Documents/GitHub/Gamebox/Gamebox
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 196.27 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.95 ms.
+Initialize engine version: 2021.2.9f1 (921b45a28ab6)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/calcr/Documents/GitHub/Gamebox/Gamebox/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon RX 5600 XT (ID=0x731f)
+    Vendor:   ATI
+    VRAM:     6103 MB
+    Driver:   30.0.13023.1012
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56096
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.022125 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 287.51 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.17 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.456 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1456ms)
+		BeginReloadAssembly (145ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (1108ms)
+			LoadAssemblies (141ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (236ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (746ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (70ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (288ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (299ms)
+				ProcessInitializeOnLoadMethodAttributes (86ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.024915 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\calcr\Documents\GitHub\Gamebox\Gamebox\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\calcr\Documents\GitHub\Gamebox\Gamebox\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 220.11 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.11 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.222 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3242ms)
+		BeginReloadAssembly (203ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (45ms)
+		EndReloadAssembly (2760ms)
+			LoadAssemblies (105ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (794ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (120ms)
+			SetupLoadedEditorAssemblies (1581ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (26ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (220ms)
+				BeforeProcessingInitializeOnLoad (391ms)
+				ProcessInitializeOnLoadAttributes (874ms)
+				ProcessInitializeOnLoadMethodAttributes (63ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.87 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 5220 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 43 unused Assets / (0.7 MB). Loaded Objects now: 5664.
+Memory consumption went from 201.6 MB to 200.9 MB.
+Total: 3.561200 ms (FindLiveObjects: 0.416100 ms CreateObjectMapping: 0.164900 ms MarkObjects: 2.729400 ms  DeleteObjects: 0.250100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 5.36 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.04 ms.
+Unloading 35 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 35 unused Assets / (0.7 MB). Loaded Objects now: 5664.
+Memory consumption went from 91.7 MB to 91.1 MB.
+Total: 3.530500 ms (FindLiveObjects: 0.413100 ms CreateObjectMapping: 0.137700 ms MarkObjects: 2.717300 ms  DeleteObjects: 0.261900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 4241.101907 seconds.
+  path: Assets/URP_Renderer.asset
+  artifactKey: Guid(b03ba569b7d278a41996b636df6f1f64) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/URP_Renderer.asset using Guid(b03ba569b7d278a41996b636df6f1f64) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '771aa512b319bec474fc91109fa9465c') in 0.172730 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/gameboardSDK/CompanionErrors/CompanionDiceRollErrorResponse.cs
+  artifactKey: Guid(3421399180707d944859ff6d42d1eb8e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/CompanionErrors/CompanionDiceRollErrorResponse.cs using Guid(3421399180707d944859ff6d42d1eb8e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b9b6597ba8b6f6d27aa7952f3f09c986') in 0.016607 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/gameboardSDK/Interfaces/IAndroidContext.cs
+  artifactKey: Guid(37f08b03b1864db469b3c7ae9e974e73) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/Interfaces/IAndroidContext.cs using Guid(37f08b03b1864db469b3c7ae9e974e73) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e9b8e20d652863911248cc5ac7228ba1') in 0.008032 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Settings/Very High_PipelineAsset_ForwardRenderer.asset
+  artifactKey: Guid(c5605e3b352abb04aae0fe24b7db226a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Settings/Very High_PipelineAsset_ForwardRenderer.asset using Guid(c5605e3b352abb04aae0fe24b7db226a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '65d8952432e9d9f49efc987d1d72ffbb') in 0.026390 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/gameboardSDK/Objects/GameboardQueuedEvent.cs
+  artifactKey: Guid(7cb55dec90c84284bbb9305d76698de0) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/Objects/GameboardQueuedEvent.cs using Guid(7cb55dec90c84284bbb9305d76698de0) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3d39a1057d0b94c5a77db5abc052e0ea') in 0.008520 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/gameboardSDK/TUIO/TUIOObject.cs
+  artifactKey: Guid(6429a53b104502d0f973662fd694b1dc) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/TUIO/TUIOObject.cs using Guid(6429a53b104502d0f973662fd694b1dc) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6e1e3a28a19c54ad6a37eca2cca8bf64') in 0.008082 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/gameboardSDK/GameboardUtility.cs
+  artifactKey: Guid(58dd6baba863d8846acb5d6a61a5b299) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/GameboardUtility.cs using Guid(58dd6baba863d8846acb5d6a61a5b299) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '94095c8c149771ba2858369e934fb77c') in 0.007697 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/gameboardSDK/Utilities/GameboardTouchHandlerUtility.cs
+  artifactKey: Guid(381fa5e893872e14ca6c78609a3d135e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/Utilities/GameboardTouchHandlerUtility.cs using Guid(381fa5e893872e14ca6c78609a3d135e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6e8c61898693277de7c0167ef4ee5c23') in 0.008936 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/gameboardSDK/Utilities/JsonUtility.cs
+  artifactKey: Guid(57aecd134042c6e4ca4a540c212569e1) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/Utilities/JsonUtility.cs using Guid(57aecd134042c6e4ca4a540c212569e1) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '15ab3c4f2218223e7743818a353167f3') in 0.009400 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/GameboardTools/BoardInputTool/BoardInputTool.cs
+  artifactKey: Guid(e112e25cdb72ffc418efcb3f8d0e2d2d) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/GameboardTools/BoardInputTool/BoardInputTool.cs using Guid(e112e25cdb72ffc418efcb3f8d0e2d2d) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd97cb670b19e0b88fad7cf63cbf75e89') in 0.008923 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/gameboardSDK/MethodResponseTypes/JsonUtilitySerializeResponse.cs
+  artifactKey: Guid(1cd9fdb9ac58b9a48a53307f1cdb90e6) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/MethodResponseTypes/JsonUtilitySerializeResponse.cs using Guid(1cd9fdb9ac58b9a48a53307f1cdb90e6) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8013ec75c5bd3246ada1edaf7952d619') in 0.009263 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/gameboardSDK/CompanionErrors/CompanionDisplayMessageErrorResponse.cs
+  artifactKey: Guid(6d7f2ac074dc0bb4899a8812cdd427d1) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/CompanionErrors/CompanionDisplayMessageErrorResponse.cs using Guid(6d7f2ac074dc0bb4899a8812cdd427d1) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '693df3e4ab0746c3c4e60c7ffeeb9615') in 0.009204 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/gameboardSDK/GameboardServiceManager.cs
+  artifactKey: Guid(e7fde3a280b4ebb48908c03d0b0d2267) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/GameboardServiceManager.cs using Guid(e7fde3a280b4ebb48908c03d0b0d2267) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6ae05beb281403448be91f53897266d2') in 0.010156 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Scripts/TouchController.cs
+  artifactKey: Guid(92dc5a5520bf8aa4cb54f292744e52aa) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Scripts/TouchController.cs using Guid(92dc5a5520bf8aa4cb54f292744e52aa) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a3556e837350c1fbfab20f8d273ebecf') in 0.007192 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Settings/Very Low_PipelineAsset_ForwardRenderer.asset
+  artifactKey: Guid(9bed5cd9cfc083a4584d7c84c8497736) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Settings/Very Low_PipelineAsset_ForwardRenderer.asset using Guid(9bed5cd9cfc083a4584d7c84c8497736) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2773bbc1e4deca7a14532c819f91c176') in 0.021291 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/gameboardSDK/GameboardConfig.cs
+  artifactKey: Guid(a27700fb35decd246a884721db7789b0) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/GameboardConfig.cs using Guid(a27700fb35decd246a884721db7789b0) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ed7671b367e7418e1602b12185b9c655') in 0.007921 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/gameboardSDK/Objects/QueuedEvent.cs
+  artifactKey: Guid(c44c44162b428e3468fd1f6c3fb392fa) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/Objects/QueuedEvent.cs using Guid(c44c44162b428e3468fd1f6c3fb392fa) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'afd43eecee177294c9d1358f393247b2') in 0.007507 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/gameboardSDK/Objects/ServerMessageCompletionObject.cs
+  artifactKey: Guid(e66f9d09ae84c4444ba2076fdb20a65c) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/Objects/ServerMessageCompletionObject.cs using Guid(e66f9d09ae84c4444ba2076fdb20a65c) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4e5921c207f23420ed94c28964feb1f5') in 0.007644 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Scripts/CardFront.cs
+  artifactKey: Guid(0310b926912be2e4fb21bf84e6a8f933) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Scripts/CardFront.cs using Guid(0310b926912be2e4fb21bf84e6a8f933) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'af58180849b745ce63c185bbae862c1c') in 0.009126 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/CardImages/Card.png
+  artifactKey: Guid(b391cafb457a63b43bd74cfdfd76fe3e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/CardImages/Card.png using Guid(b391cafb457a63b43bd74cfdfd76fe3e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0ffaa68d0169acdda0b16c35d8e9f8cf') in 0.092825 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/gameboardSDK/CompanionErrors/CompanionMatErrorResponse.cs
+  artifactKey: Guid(bd1a48f122b27844dbd04cdedb3d2ca7) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/CompanionErrors/CompanionMatErrorResponse.cs using Guid(bd1a48f122b27844dbd04cdedb3d2ca7) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6e9b51b5869bfae0a6ce1e42f931e166') in 0.008660 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/gameboardSDK/Utilities/TouchUtility.cs
+  artifactKey: Guid(4290a631cff5d9d4f85bab01046e7cb2) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/Utilities/TouchUtility.cs using Guid(4290a631cff5d9d4f85bab01046e7cb2) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '11bd3b4d7e496649746e447a89cb5a3d') in 0.009516 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/gameboardSDK/CompanionErrors/CompanionAssetErrorResponse.cs
+  artifactKey: Guid(02ebb8cff60bdbf43bb5920c61b78dc1) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/CompanionErrors/CompanionAssetErrorResponse.cs using Guid(02ebb8cff60bdbf43bb5920c61b78dc1) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '08ee3d2988e22955ca0ab438353496a9') in 0.009643 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Dactilardesign/4k materials/materials/tiles4.mat
+  artifactKey: Guid(dfc88dd4850fe374986a0c0621374caf) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/materials/tiles4.mat using Guid(dfc88dd4850fe374986a0c0621374caf) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '150eda503910e8724d302538531c8d65') in 0.014139 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/gameboardSDK/EventArgs/CompanionEventArgObjects/EventArgAddObjectToDialog.cs
+  artifactKey: Guid(a1b24e27a72a9634b86013b2b2b65aa3) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/EventArgs/CompanionEventArgObjects/EventArgAddObjectToDialog.cs using Guid(a1b24e27a72a9634b86013b2b2b65aa3) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3776a8951ddaeaadd4c9bb29f200fd20') in 0.007737 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/GameboardTools/HelperTools/ScreenTouchInput.cs
+  artifactKey: Guid(e9de751331ed64943871d89b4fe70832) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/GameboardTools/HelperTools/ScreenTouchInput.cs using Guid(e9de751331ed64943871d89b4fe70832) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5ebff860bbf27139ba8048e0cfd0ef69') in 0.008028 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Dactilardesign/4k materials/materials/tiles3.mat
+  artifactKey: Guid(68808bace581a0044b5b2075c4eef4b7) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/materials/tiles3.mat using Guid(68808bace581a0044b5b2075c4eef4b7) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '091afd2faeb25b996a214dde943e03b0') in 0.010158 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/GameboardTools/HelperTools/ScreenTouchButton.cs
+  artifactKey: Guid(d4058f3395c3f0b44842a8dc98258ae8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/GameboardTools/HelperTools/ScreenTouchButton.cs using Guid(d4058f3395c3f0b44842a8dc98258ae8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '13ec3f7744f5041a8721617a1ce24dc5') in 0.007683 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/GameboardTools/HelperTools/ScreenTouchPullTab.cs
+  artifactKey: Guid(f386ede16691bee429afdf739c833d97) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/GameboardTools/HelperTools/ScreenTouchPullTab.cs using Guid(f386ede16691bee429afdf739c833d97) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9a33d3a0226a6373116c57d3853ce837') in 0.008901 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Dactilardesign/4k materials/materials/limestone1gy.mat
+  artifactKey: Guid(08a873803ed7cd04b87e3a5162ceac10) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/materials/limestone1gy.mat using Guid(08a873803ed7cd04b87e3a5162ceac10) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a020455a5ece4118a32c297fd01c732d') in 0.014260 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Dactilardesign/4k materials/materials/limestone3y.mat
+  artifactKey: Guid(1f1dae67c14572744b9f87a406b56043) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/materials/limestone3y.mat using Guid(1f1dae67c14572744b9f87a406b56043) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cf1a66e0561fdeee06cab038ea02498a') in 0.010851 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Dactilardesign/4k materials/materials/corten_steel4.mat
+  artifactKey: Guid(5ada3fc7a01a34b42a87c9148d5b2b9a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/materials/corten_steel4.mat using Guid(5ada3fc7a01a34b42a87c9148d5b2b9a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bdd2e1c04ddcbb43bba8168840a0354c') in 0.012117 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Prefabs/DeckExamples/DeckPrefab.prefab
+  artifactKey: Guid(ae11daa020aaec04abe0adeb8bf68274) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Prefabs/DeckExamples/DeckPrefab.prefab using Guid(ae11daa020aaec04abe0adeb8bf68274) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2a1c0eca8029ae76c51ce2b6023cc72f') in 0.048102 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/GameboardTools/UserPresence/UserPresenceTool.cs
+  artifactKey: Guid(fa57260c6c4b9f54c82633fd4556b22b) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/GameboardTools/UserPresence/UserPresenceTool.cs using Guid(fa57260c6c4b9f54c82633fd4556b22b) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c84aee4cd19b7c4b0470daf6cb30d8b2') in 0.008313 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Dactilardesign/4k materials/materials/tech_pannels.mat
+  artifactKey: Guid(d04fc25acee369842b627fba247b3cca) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/materials/tech_pannels.mat using Guid(d04fc25acee369842b627fba247b3cca) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0df82e103b07c5326fec372b5c72a034') in 0.010841 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/gameboardSDK/EventArgs/CompanionEventArgObjects/EventArgAddZoneToMat.cs
+  artifactKey: Guid(14176bd9f65592241b92e6defa3c348c) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/EventArgs/CompanionEventArgObjects/EventArgAddZoneToMat.cs using Guid(14176bd9f65592241b92e6defa3c348c) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '980cba9cfe949ca6fbd979da5d8b2e77') in 0.007811 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/gameboardSDK/EventArgs/CompanionEventArgObjects/EventArgPlaceObjectInContainer.cs
+  artifactKey: Guid(cde67edc9790f854e9bde578dff515d8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/EventArgs/CompanionEventArgObjects/EventArgPlaceObjectInContainer.cs using Guid(cde67edc9790f854e9bde578dff515d8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '79d1695a555adc45e74d4a2eb3d22c92') in 0.008169 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Dactilardesign/4k materials/materials/metal_blind3.mat
+  artifactKey: Guid(9d119e612c00e0f4b9d0cf568387790a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/materials/metal_blind3.mat using Guid(9d119e612c00e0f4b9d0cf568387790a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2b0c5d34378598c682fb6330ee8b2eec') in 0.011437 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Dactilardesign/4k materials/materials/metal_blind1.mat
+  artifactKey: Guid(f5233027c5e5fa442b3bb2c6ae88eb88) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/materials/metal_blind1.mat using Guid(f5233027c5e5fa442b3bb2c6ae88eb88) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'df0ba2e3471fb09319c91bbc1c78d09c') in 0.011851 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Dactilardesign/4k materials/materials/limestone3w.mat
+  artifactKey: Guid(df77d3369b88a8d4f81a996540e8240e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/materials/limestone3w.mat using Guid(df77d3369b88a8d4f81a996540e8240e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '23b5b8b9c356fb613423a3f777b1d85b') in 0.012232 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/gameboardSDK/Utilities/CompanionHandlerUtility.cs
+  artifactKey: Guid(cd4f91b5a3fe9e54ea05c249c7896dd8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/Utilities/CompanionHandlerUtility.cs using Guid(cd4f91b5a3fe9e54ea05c249c7896dd8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '421da02405e9d036ac98100f323a1002') in 0.008282 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/gameboardSDK/EventArgs/CompanionEventArgObjects/EventArgCreateCompanionLabel.cs
+  artifactKey: Guid(6b14823dfaa21154bbba50fc09674803) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/EventArgs/CompanionEventArgObjects/EventArgCreateCompanionLabel.cs using Guid(6b14823dfaa21154bbba50fc09674803) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '806c2a0649913cf643d09cbd070f50d2') in 0.009152 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/CardImages/Group 8100.png
+  artifactKey: Guid(f4e7e08f0557c2046b518b0eba7fcc77) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/CardImages/Group 8100.png using Guid(f4e7e08f0557c2046b518b0eba7fcc77) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3f4e84aff2924f5d96abc4f9a0e7c0c6') in 0.023303 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/gameboardSDK/TUIO/TUIOClient.cs
+  artifactKey: Guid(3a46f9cf36814f69abf43808ab1b65c1) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/TUIO/TUIOClient.cs using Guid(3a46f9cf36814f69abf43808ab1b65c1) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8d1160d3630166236cf858ff27089422') in 0.007864 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/gameboardSDK/Utilities/CompanionCommunicationsUtility.cs
+  artifactKey: Guid(eab6133cb61dcec4f93bab0743e96aa6) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/Utilities/CompanionCommunicationsUtility.cs using Guid(eab6133cb61dcec4f93bab0743e96aa6) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c8545c4430069cd42b9e6db9ede432a5') in 0.009081 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/gameboardSDK/EventArgs/CompanionEventArgObjects/EventArgDeleteAsset.cs
+  artifactKey: Guid(a203f3677c02b704bb2235f1a2bd57ee) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/EventArgs/CompanionEventArgObjects/EventArgDeleteAsset.cs using Guid(a203f3677c02b704bb2235f1a2bd57ee) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '44525b77c2876f526a4788f0e8f2c695') in 0.008477 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Settings/High_PipelineAsset_ForwardRenderer.asset
+  artifactKey: Guid(e8723cb774c979147a8db1e0ca2861b7) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Settings/High_PipelineAsset_ForwardRenderer.asset using Guid(e8723cb774c979147a8db1e0ca2861b7) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '928d6db365b2c75aab99fca62e7350af') in 0.024597 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/CardImages/Materials/CardBackMat.mat
+  artifactKey: Guid(4dc6bee90d2cb0c4b9e13bbd77073c46) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/CardImages/Materials/CardBackMat.mat using Guid(4dc6bee90d2cb0c4b9e13bbd77073c46) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cdc0b91e5b4ce901499278104de87a3c') in 0.025195 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Dactilardesign/4k materials/materials/concrete_tiles.mat
+  artifactKey: Guid(ab6a931e90dde54499f28c2904c1cc85) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/materials/concrete_tiles.mat using Guid(ab6a931e90dde54499f28c2904c1cc85) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8d3993b0ceabcc214b3e381b1819c09c') in 0.010698 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/gameboardSDK/Notifications.cs
+  artifactKey: Guid(4cc975c00e730554297f1b7ddb233f15) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/Notifications.cs using Guid(4cc975c00e730554297f1b7ddb233f15) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '06d0d8e17ad5f72161ba0058499dd712') in 0.008075 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Prefabs/DeckExamples/PlayingCards.prefab
+  artifactKey: Guid(44213774fc5c28b41bab59ce53a880f1) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Prefabs/DeckExamples/PlayingCards.prefab using Guid(44213774fc5c28b41bab59ce53a880f1) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4b42a6547c6947630a8092b5b968863e') in 0.039912 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/concrete/concrete3_normal.png
+  artifactKey: Guid(e901fbeec7100e247bf845fee58dbc59) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/concrete/concrete3_normal.png using Guid(e901fbeec7100e247bf845fee58dbc59) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f9d6bb2c52ca2f99ab7b5e19dc8a9a61') in 0.299282 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/ground/cobblestone1_Height.png
+  artifactKey: Guid(7fd1399de494acc48aca0f5c889c0148) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/ground/cobblestone1_Height.png using Guid(7fd1399de494acc48aca0f5c889c0148) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fbe31b30cf25196e8ba6402ba758193d') in 0.289399 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/ground/Red_Cobblestone2_Height.png
+  artifactKey: Guid(a93d7e0766eda2f478fa256fe39afe72) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/ground/Red_Cobblestone2_Height.png using Guid(a93d7e0766eda2f478fa256fe39afe72) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4ee1db5305a5c3618d5729986c1647d9') in 0.326128 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000374 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/asphalt/Asphalt_1_section_MaskMap.png
+  artifactKey: Guid(6222cfdfd0b9b064081ed616f0dbadd6) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/asphalt/Asphalt_1_section_MaskMap.png using Guid(6222cfdfd0b9b064081ed616f0dbadd6) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0f6c546e55ecf984956572cb08d80d50') in 0.382379 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/limestone/limestone2_Mask_Map.png
+  artifactKey: Guid(e0c878ea9c2d141468132a3b5b996261) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/limestone/limestone2_Mask_Map.png using Guid(e0c878ea9c2d141468132a3b5b996261) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '232bc09163eb2efaefc66e40ccdb684c') in 0.360648 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/sidewalk/Side_Walk_1_Height.png
+  artifactKey: Guid(54235669d65446045adba21803f38749) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/sidewalk/Side_Walk_1_Height.png using Guid(54235669d65446045adba21803f38749) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '945ec8a8d9143a25bd11fbb8b57ba873') in 0.461327 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/limestone/limestone1_normal.png
+  artifactKey: Guid(187810f40365e6a4db7e844ca647345b) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/limestone/limestone1_normal.png using Guid(187810f40365e6a4db7e844ca647345b) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '54048496f20ad68117e5e92bb15029ed') in 0.208890 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/limestone/limestone3w_Mask_Map.png
+  artifactKey: Guid(59c7e685d4d9b9e4db1d60b78af031b4) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/limestone/limestone3w_Mask_Map.png using Guid(59c7e685d4d9b9e4db1d60b78af031b4) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '17faacb14e8034ec7c63a309a97ee848') in 0.154686 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/gameboardSDK/EventArgs/CompanionResponseEventArgs/CompanionButtonPressedEventArgs.cs
+  artifactKey: Guid(6c6562670f637bb47a3dc22306a33dcb) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/EventArgs/CompanionResponseEventArgs/CompanionButtonPressedEventArgs.cs using Guid(6c6562670f637bb47a3dc22306a33dcb) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3a07432be8913c038875886f1d9b0c2e') in 0.024699 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000459 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/metals/Corten_Steel2_Mask_Map.png
+  artifactKey: Guid(b35ffc2d8190da24c971eb98f0fe1ec0) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/metals/Corten_Steel2_Mask_Map.png using Guid(b35ffc2d8190da24c971eb98f0fe1ec0) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5ab414456d70359b60fc2ec59d451dbd') in 0.117511 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/ground/Tiles3_basecolor.png
+  artifactKey: Guid(f97326fdb4027214db70db4e702d7937) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/ground/Tiles3_basecolor.png using Guid(f97326fdb4027214db70db4e702d7937) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '74d41f411d264dd1b8ac711f75a8d955') in 0.255734 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/limestone/limestone3_basecolor.png
+  artifactKey: Guid(63e7821e62e292f4fbb55eab9e17a4ec) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/limestone/limestone3_basecolor.png using Guid(63e7821e62e292f4fbb55eab9e17a4ec) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b1bdca9b9e133217eb70bfcb0dfb2cb5') in 0.150009 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/gameboardSDK/Plugins/x64/sioclient.dll
+  artifactKey: Guid(4b071152425dde046bee1e6ff678c9a5) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/Plugins/x64/sioclient.dll using Guid(4b071152425dde046bee1e6ff678c9a5) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '107218125ccd3024fbda9d0dddf9b71f') in 0.073163 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/sidewalk/Side_Walk_1_basecolor.png
+  artifactKey: Guid(9697c7ed21b01f3428f31f1d3a356b10) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/sidewalk/Side_Walk_1_basecolor.png using Guid(9697c7ed21b01f3428f31f1d3a356b10) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '917000a6ddd27d791bfc68ca40ed6788') in 0.134832 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/gameboardSDK/EventArgs/CompanionResponseEventArgs/CompanionCommunicationsEventArg.cs
+  artifactKey: Guid(580a21bb36ca03444a9712bd1b988cf4) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/EventArgs/CompanionResponseEventArgs/CompanionCommunicationsEventArg.cs using Guid(580a21bb36ca03444a9712bd1b988cf4) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f0125d18c7b6d075859adf566706c3f4') in 0.029573 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/limestone/limestone3_normal.png
+  artifactKey: Guid(167f22d4f265dbc4eaa4715a3ddc7725) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/limestone/limestone3_normal.png using Guid(167f22d4f265dbc4eaa4715a3ddc7725) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fe982a87732898372fd2ba6ea7ebf1a9') in 0.179186 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/gameboardSDK/Plugins/Android/libs/Arm/libsioclient.so
+  artifactKey: Guid(38dd4041da6846b4baa922e02a73fb3a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/Plugins/Android/libs/Arm/libsioclient.so using Guid(38dd4041da6846b4baa922e02a73fb3a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '871edad23f1ba81f210ea9e1f183fb32') in 0.010979 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/gameboardSDK/Plugins/JsonDotNet/Assemblies/AOT/Newtonsoft.Json.dll
+  artifactKey: Guid(6a3c684705042f345975d924f6983e36) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/Plugins/JsonDotNet/Assemblies/AOT/Newtonsoft.Json.dll using Guid(6a3c684705042f345975d924f6983e36) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b962bc5bc59bd3a74c6f6363ae4cbd61') in 0.011635 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Game/Assets/Art/UI/PlayerHUD/UI_Border01_Corners02.png
+  artifactKey: Guid(753a9bca4984cfa46afeb7abb31759fe) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Game/Assets/Art/UI/PlayerHUD/UI_Border01_Corners02.png using Guid(753a9bca4984cfa46afeb7abb31759fe) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bd7f9d80c027cfe8412a16507c6d71a5') in 0.046007 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/ground/Tiles1_Mask_Map.png
+  artifactKey: Guid(be86fc1312efbc646b24da0711a160ee) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/ground/Tiles1_Mask_Map.png using Guid(be86fc1312efbc646b24da0711a160ee) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ea555db0c4eb36cdfaff44f562ac748e') in 0.295159 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/ground/cobblestone1_Mask_Map.png
+  artifactKey: Guid(1596b2c559974a3419ce9852b40ccba9) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/ground/cobblestone1_Mask_Map.png using Guid(1596b2c559974a3419ce9852b40ccba9) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bcb9298b6770e93e421b0cb448d87c21') in 0.144085 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001780 seconds.
+  path: Assets/gameboardSDK/EventArgs/GameboardEventArgs/GameboardTickBoxStateChangedEventArgs.cs
+  artifactKey: Guid(10a1bec9a817ca54a9fbb65583316a29) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/EventArgs/GameboardEventArgs/GameboardTickBoxStateChangedEventArgs.cs using Guid(10a1bec9a817ca54a9fbb65583316a29) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0cd9e957e7138c1e071868bb1aa240b8') in 0.018056 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/pannels/tech_pannels2_Mask_Map.png
+  artifactKey: Guid(eb037814d177339488b4bf607b782520) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/pannels/tech_pannels2_Mask_Map.png using Guid(eb037814d177339488b4bf607b782520) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7a975b53d345892ca12ef89ab57e1117') in 0.112222 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/asphalt/Asphalt_1_section_normal.png
+  artifactKey: Guid(e1ef8496eb96c3248a14e681e65cd0e8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/asphalt/Asphalt_1_section_normal.png using Guid(e1ef8496eb96c3248a14e681e65cd0e8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e086849de1555be8a521efd60253230d') in 0.253170 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/gameboardSDK/EventArgs/GameboardEventArgs/GameboardCardPlayedEventArgs.cs
+  artifactKey: Guid(4260a6546a90b1d4991406a61bb52d0d) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/EventArgs/GameboardEventArgs/GameboardCardPlayedEventArgs.cs using Guid(4260a6546a90b1d4991406a61bb52d0d) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b4d800a0666643744a551d39beb8b993') in 0.012919 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/gameboardSDK/EventArgs/CompanionResponseEventArgs/CompanionTickboxChangedEventArgs.cs
+  artifactKey: Guid(945d5b5fe566cd94c875b15a4c203a27) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/EventArgs/CompanionResponseEventArgs/CompanionTickboxChangedEventArgs.cs using Guid(945d5b5fe566cd94c875b15a4c203a27) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3361a34594e09955fc19a76d2d845f81') in 0.079329 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/sidewalk/Side_Walk_2_Height.png
+  artifactKey: Guid(7c88ae9af9e4a124f8fa550a874a3285) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/sidewalk/Side_Walk_2_Height.png using Guid(7c88ae9af9e4a124f8fa550a874a3285) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'da72b744d322ffe4c81daf5e9b107f9c') in 0.166259 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/asphalt/Detail_Asphalt_diffuse.png
+  artifactKey: Guid(4eb48340d21807b43a651b898515515d) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/asphalt/Detail_Asphalt_diffuse.png using Guid(4eb48340d21807b43a651b898515515d) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '30adc6720e4ba47b6cbe72c0b3c10b29') in 0.055656 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/gameboardSDK/Plugins/JsonDotNet/link.xml
+  artifactKey: Guid(06314f49bdda26043963578d60a0a7ee) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/Plugins/JsonDotNet/link.xml using Guid(06314f49bdda26043963578d60a0a7ee) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7b0993fcfe763b203b6fc5a050640a3d') in 0.064277 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/gameboardSDK/Plugins/JsonDotNet/Assemblies/Windows/Newtonsoft.Json.XML
+  artifactKey: Guid(36f7323c55864364d8bb88c736e4bca6) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/Plugins/JsonDotNet/Assemblies/Windows/Newtonsoft.Json.XML using Guid(36f7323c55864364d8bb88c736e4bca6) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '40a9d520d919641cd330e7805ea5a516') in 0.025409 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/gameboardSDK/TUIO/OSCsharp/Data/OscBundle.cs
+  artifactKey: Guid(7c7ae3c4103b29674bb47585b5620669) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/TUIO/OSCsharp/Data/OscBundle.cs using Guid(7c7ae3c4103b29674bb47585b5620669) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '46d5d4a6760e39dc737ae3c73f9fa609') in 0.010163 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/sidewalk/Side_Walk_2_normal.png
+  artifactKey: Guid(acdf1e577209cbd46b9ff9479bf47d97) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/sidewalk/Side_Walk_2_normal.png using Guid(acdf1e577209cbd46b9ff9479bf47d97) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '55f5803d7c423de4fa6e556cc0aaf557') in 0.175605 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/metal blind/metal_blind2_normal.png
+  artifactKey: Guid(ee967ed35fb7eea4aa8c3dc352262c5d) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/metal blind/metal_blind2_normal.png using Guid(ee967ed35fb7eea4aa8c3dc352262c5d) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '21f98ccedaafc103dee6fbffff08c632') in 0.217246 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/wall/old_plaster_Diffuse.png
+  artifactKey: Guid(63303b02b49f8954c95181f738f4f339) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/wall/old_plaster_Diffuse.png using Guid(63303b02b49f8954c95181f738f4f339) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '612d96fbc751b1a6af339164f882e195') in 0.197925 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/metal blind/metal_blind1_Height.png
+  artifactKey: Guid(92da68ac8eb0d464c8caa0de98bfa46f) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/metal blind/metal_blind1_Height.png using Guid(92da68ac8eb0d464c8caa0de98bfa46f) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1b9936a9a0efbebec0c5ba80be24bf27') in 0.192658 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/gameboardSDK/TUIO/Messages/PtrMessage.cs
+  artifactKey: Guid(eba4c5a0d020881848e2cd7db32143cf) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/TUIO/Messages/PtrMessage.cs using Guid(eba4c5a0d020881848e2cd7db32143cf) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a8516ff1a8ca979d2b2a022903dd42f6') in 0.009599 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/gameboardSDK/EventArgs/GameboardEventArgs/GameboardUserPresenceEventArgs.cs
+  artifactKey: Guid(142d9219c0fdc3948b8f529bbbb0c399) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/EventArgs/GameboardEventArgs/GameboardUserPresenceEventArgs.cs using Guid(142d9219c0fdc3948b8f529bbbb0c399) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '72bf90ac61ec7f958c53ea55910141da') in 0.028637 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/gameboardSDK/TUIO/OSCsharp/Data/OscMessage.cs
+  artifactKey: Guid(fcba9df2e8f103cc791eede29e84b19b) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/TUIO/OSCsharp/Data/OscMessage.cs using Guid(fcba9df2e8f103cc791eede29e84b19b) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5d08f2e669d512c7b551be94f2c53aa0') in 0.009170 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/ground/cobblestone1_basecolor.png
+  artifactKey: Guid(28def3860cc9ec342920dcfc43b2baef) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/ground/cobblestone1_basecolor.png using Guid(28def3860cc9ec342920dcfc43b2baef) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'af22a6fc7a8a3fb02f66bdc6b4aeafa6') in 0.252452 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.006804 seconds.
+  path: Assets/gameboardSDK/TUIO/OSCsharp/Properties/AssemblyInfo.cs
+  artifactKey: Guid(3056c858d8118a981be8e0ae476716f7) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/TUIO/OSCsharp/Properties/AssemblyInfo.cs using Guid(3056c858d8118a981be8e0ae476716f7) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '61edfbf903986792ad1210f9c96d8b31') in 0.009541 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/gameboardSDK/EventArgs/CompanionEventArgObjects/EventArgResetPlayPanel.cs
+  artifactKey: Guid(22d27d76b9e972e439ca067c6fe7c9b5) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/EventArgs/CompanionEventArgObjects/EventArgResetPlayPanel.cs using Guid(22d27d76b9e972e439ca067c6fe7c9b5) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bca253644c9d93945d2627b56920b849') in 0.011649 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/ground/Tiles5_basecolor.png
+  artifactKey: Guid(0967391166f481a469fc228d4adbe34f) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/ground/Tiles5_basecolor.png using Guid(0967391166f481a469fc228d4adbe34f) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '631c0af38b02f0e18434439a1a8fec3b') in 0.195794 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.008618 seconds.
+  path: Assets/gameboardSDK/Utilities/UtilityInterfaces/ITouchUtility.cs
+  artifactKey: Guid(f1a430e5f9f099d4f96a034dd965c1b4) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/Utilities/UtilityInterfaces/ITouchUtility.cs using Guid(f1a430e5f9f099d4f96a034dd965c1b4) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b6e96e880c17faf3e21992958f7060e4') in 0.013959 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/metals/Corten_Steel3_Mask_Map.png
+  artifactKey: Guid(50a5023931941df469563797490fe219) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/metals/Corten_Steel3_Mask_Map.png using Guid(50a5023931941df469563797490fe219) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b84a8d98219c42ccb6bca226f162a101') in 0.140652 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/gameboardSDK/EventArgs/CompanionEventArgObjects/EventArgRemoveAllCardsFromHand.cs
+  artifactKey: Guid(796322d9f6a52cf488cbc59b8e1c81d5) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/EventArgs/CompanionEventArgObjects/EventArgRemoveAllCardsFromHand.cs using Guid(796322d9f6a52cf488cbc59b8e1c81d5) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '219a1ef174fb54607bcd8c14ce5d045e') in 0.011498 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/gameboardSDK/EventArgs/JsonEventArgs/JsonErrorEventArgs.cs
+  artifactKey: Guid(2dc71e88672e6b448af53e515f7fec46) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/EventArgs/JsonEventArgs/JsonErrorEventArgs.cs using Guid(2dc71e88672e6b448af53e515f7fec46) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f9bd45e1345cc6653a208d7811b9f43a') in 0.010942 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/ground/Tiles2_Mask_Map.png
+  artifactKey: Guid(da61d24afbbe03645b9092cbf34d61cd) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/ground/Tiles2_Mask_Map.png using Guid(da61d24afbbe03645b9092cbf34d61cd) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'eff9d83e1d074c3240cae9d612c253e2') in 0.163741 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/metals/Corten_Steel4_normal.png
+  artifactKey: Guid(42b2ed7e91a15864e99faa7b3ceb07d5) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/metals/Corten_Steel4_normal.png using Guid(42b2ed7e91a15864e99faa7b3ceb07d5) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f670c7d39a49d246701d812ebe4ea24d') in 0.215949 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/metal blind/metal_blind1_normal.png
+  artifactKey: Guid(e923e11237ec2c14280c7fbae7ae25f5) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/metal blind/metal_blind1_normal.png using Guid(e923e11237ec2c14280c7fbae7ae25f5) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b0498014d6aa330de88ce227f101e25e') in 0.142308 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/gameboardSDK/Utilities/UtilityInterfaces/IGameboardTouchHandlerUtility.cs
+  artifactKey: Guid(800f16270c4764e4291bc26ff5462026) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/Utilities/UtilityInterfaces/IGameboardTouchHandlerUtility.cs using Guid(800f16270c4764e4291bc26ff5462026) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '25afcefc1803ee96ed322694a625ce8e') in 0.014083 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/limestone/limestone3y_Mask_Map.png
+  artifactKey: Guid(9947148ebf8cd524c9fe6d1c239cc8a6) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/limestone/limestone3y_Mask_Map.png using Guid(9947148ebf8cd524c9fe6d1c239cc8a6) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bfb6b3a77cf9d38b794582a7c94ed46e') in 0.155949 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.019963 seconds.
+  path: Assets/Dactilardesign/4k materials/textures/limestone/limestone1y_Mask_Map.png
+  artifactKey: Guid(9d4e28e5c77754f4aa8b3e816b0548e0) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Dactilardesign/4k materials/textures/limestone/limestone1y_Mask_Map.png using Guid(9d4e28e5c77754f4aa8b3e816b0548e0) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a857a4b809d4aea16a4073061fd663ba') in 0.165023 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/gameboardSDK/EventArgs/CompanionResponseEventArgs/CompanionCardPlayedEventArgs.cs
+  artifactKey: Guid(6cbdb5e4c8b2cbd4287a8ad3af5e0162) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/EventArgs/CompanionResponseEventArgs/CompanionCardPlayedEventArgs.cs using Guid(6cbdb5e4c8b2cbd4287a8ad3af5e0162) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7082a476eb10faf24e739de6bb76bfdd') in 0.043362 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/gameboardSDK/TUIO/OSCsharp/Net/OscBundleReceivedEventArgs.cs
+  artifactKey: Guid(77d0853c5c59c2cfb8689150ddea7010) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/TUIO/OSCsharp/Net/OscBundleReceivedEventArgs.cs using Guid(77d0853c5c59c2cfb8689150ddea7010) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '07cff3ad4ffc4ca557cdc15fe31ed919') in 0.035601 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001652 seconds.
+  path: Assets/gameboardSDK/TUIO/EventArgs/ObjectCreateEventArgs.cs
+  artifactKey: Guid(4ab8a54680babefacb54bb5de4fbbab0) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/gameboardSDK/TUIO/EventArgs/ObjectCreateEventArgs.cs using Guid(4ab8a54680babefacb54bb5de4fbbab0) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '52c26c57f0da6ceb090afd10c29a3f5f') in 0.013281 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

@@ -7,7 +7,7 @@ using UnityEngine;
 public class MovableObjectStateMachine : MonoBehaviour
 {
     public State state;
-    public int id;
+    public List<int> idList = new List<int>();
     Vector3 startingTouchPosition;
     Vector3 fingerMovePosition;
     Vector3 offset;
@@ -41,7 +41,7 @@ public class MovableObjectStateMachine : MonoBehaviour
     private void InitializeMovableObject()
     {
         this.state = State.Idle;
-        this.id = -1;
+        this.idList.Clear();
         if (this.GetComponentInChildren<Deck>() != null)
         {
             deck = this.GetComponentInChildren<Deck>();
@@ -94,7 +94,14 @@ public class MovableObjectStateMachine : MonoBehaviour
 
     public void SetTouched(int id, Vector3 positionSent)
     {
-        numOfFingersOnCard++;
+        if (!this.idList.Contains(id))
+        {
+            this.idList.Add(id);
+        }
+        if (idList.Count >= 2)
+        {
+            FlipObject();
+        }
         if (doubleTapTimer < doubleTapThreshold)
         {
             FlipObject();
@@ -105,22 +112,21 @@ public class MovableObjectStateMachine : MonoBehaviour
             state = State.Idle;
             return;
         }
-        if (this.id != -1)
-            return;
 
         if (state != State.Idle)
             return;
-        this.id = id;
+
         if (playerOwningCard != null)
         {
             playerOwningCard.RemoveCardFromHand(this.gameObject);
         }
+
+        SubscribeToDelegates();
         startingTouchPosition = positionSent;
         offset = new Vector3(this.transform.position.x - positionSent.x, 0, this.transform.position.z - positionSent.z);
         heldDownTimer = 0f;
         lowering = false;
         snappingToThreeOnY = true;
-        SubscribeToDelegates();
         state = State.Indeterminate;
     }
     public void FlipObject()
@@ -138,6 +144,10 @@ public class MovableObjectStateMachine : MonoBehaviour
     }
     public void CheckForInputCommands()
     {
+        if (fingerMovePosition == Vector3.zero)
+        {
+            return;
+        }
         heldDownTimer += Time.deltaTime;
         Vector3 differenceBetweenStartingPositionAndMovePosition = startingTouchPosition - fingerMovePosition;
 
@@ -223,10 +233,6 @@ public class MovableObjectStateMachine : MonoBehaviour
         }
     }
 
-    void SetStateToIdle()
-    {
-
-    }
     public void LongPress()
     {
         state = State.Moving;
@@ -240,14 +246,6 @@ public class MovableObjectStateMachine : MonoBehaviour
             deck.PickUpCards(1);
             state = State.Moving;
         }
-    }
-
-    public void MeasureDistanceUntilRelease(int id, Vector3 offset)
-    {
-        if (this.id != -1)
-            return;
-        if (state != State.Idle)
-            return;
     }
 
     void QuickRelease()
@@ -269,16 +267,17 @@ public class MovableObjectStateMachine : MonoBehaviour
     }
     private void FingerReleased(Vector3 position, int index)
     {
-        numOfFingersOnCard--;
-        if (id != index) return;
+        Debug.Log(idList.Count);
+        if (!idList.Contains(index)) return;
         if (deck != null)
         {
             deck.CheckToSeeIfDeckShouldBeAdded();
         }
+
+        UnsubscribeToDelegates();
         lowering = true;
         snappingToThreeOnY = false;
-        this.id = -1;
-        UnsubscribeToDelegates();
+        idList.Remove(index);
         if (state == State.Indeterminate)
         {
             QuickRelease();
@@ -291,7 +290,8 @@ public class MovableObjectStateMachine : MonoBehaviour
 
     private void FingerMoved(Vector3 position, int index)
     {
-        if (id != index) return;
+        if (idList[0] != index) return;
+       
         Ray ray = Camera.main.ScreenPointToRay(position);
         if (Physics.Raycast(ray, out RaycastHit raycastHit))
         {
