@@ -77,7 +77,6 @@ public class Deck : MonoBehaviour
                 playerToAddCardTo.AddCardToHand(this.gameObject);
                 return;
             }
-            return;
         }
         if (hitDetected)
         {
