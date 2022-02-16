@@ -60,7 +60,56 @@ public class Deck : MonoBehaviour
 
     public void CheckToSeeIfDeckShouldBeAdded()
     {
-        Collider colliderHit = transform.GetComponentInChildren<Collider>();
+        RaycastHit[] hits;
+        hits = Physics.RaycastAll(transform.position, Vector3.down, 100.0F);
+
+        //this for loop is to check for any player containers hit
+        for (int i = 0; i < hits.Length; i++)
+        {
+            if (hits[i].transform.GetComponentInChildren<PlayerContainer>() != null)
+            {
+                PlayerContainer playerToAddCardTo = hits[i].transform.GetComponentInChildren<PlayerContainer>();
+                playerToAddCardTo.AddCardToHand(this.gameObject);
+                return;
+            }
+        }
+
+        //this for loop is to check for any decks hit to add to
+        for (int j = 0; j < hits.Length; j++)
+        {
+            Transform targetHit = hits[j].transform;
+
+            while (targetHit.parent != null)
+            {
+                targetHit = targetHit.transform.parent;
+            }
+            if (targetHit.GetComponentInChildren<Deck>() != null)
+            {
+                if (targetHit.GetComponent<Deck>() != this)
+                {
+                    if (targetHit.GetComponent<MovableObjectStateMachine>().faceUp)
+                    {
+                        Debug.Log("Hit detected " + targetHit.name);
+                        Deck deckToAddTo = targetHit.GetComponent<Deck>();
+                        deckToAddTo.AddToDeck(this.cardsInDeck);
+                        Destroy(this.gameObject);
+                    }
+                    if (!targetHit.GetComponent<MovableObjectStateMachine>().faceUp)
+                    {
+                        Debug.Log("Adding to front of list " + targetHit.name);
+                        Deck deckToAddTo = targetHit.GetComponent<Deck>();
+                        deckToAddTo.AddToFrontOfList(this.cardsInDeck);
+                        Destroy(this.gameObject);
+                    }
+                }
+                targetHit = null;
+                PlayerContainer playerToAddCardTo = hits[j].transform.GetComponentInChildren<PlayerContainer>();
+                return;
+            }
+        }
+
+        #region commented
+        /*Collider colliderHit = transform.GetComponentInChildren<Collider>();
         
         RaycastHit playerContainerHit;
         bool playerContainerHitBool = Physics.BoxCast(colliderHit.bounds.center, new Vector3(colliderHit.bounds.extents.x, colliderHit.bounds.extents.y, colliderHit.bounds.extents.z), Vector3.down, out playerContainerHit, Quaternion.identity, playerContainerLayerMask);
@@ -107,7 +156,8 @@ public class Deck : MonoBehaviour
                 }
             }
             targetToMove = null;
-        }
+        }*/
+        #endregion
     }
 
     public void SetSize(Vector3 localSizeSent)

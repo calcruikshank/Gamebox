@@ -305,6 +305,7 @@ public class MovableObjectStateMachine : MonoBehaviour
     {
         TouchScript.touchMoved -= FingerMoved;
         TouchScript.fingerReleased -= FingerReleased;
+        TouchScript.rotateRight -= RotateRight;
     }
     private void FingerReleased(Vector3 position, int index)
     {
