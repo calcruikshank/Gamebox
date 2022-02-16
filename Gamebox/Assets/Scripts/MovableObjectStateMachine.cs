@@ -21,13 +21,17 @@ public class MovableObjectStateMachine : MonoBehaviour
     bool lowering;
     bool snappingToThreeOnY;
     int numOfFingersOnCard = 0;
+
+    Vector3 startingTouchPositionFinger2;
+    Vector3 fingerMovePosition2;
     PlayerContainer playerOwningCard;
     public enum State
     {
         Idle,
         Indeterminate,
         Selected,
-        Moving
+        Moving,
+        Rotating
     }
     private void Awake()
     {
@@ -61,6 +65,7 @@ public class MovableObjectStateMachine : MonoBehaviour
                 break;
             case State.Indeterminate:
                 CheckForInputCommands();
+                CheckToSeeIfShouldBeginRotating();
                 break;
             case State.Selected:
                 HandleSelected();
@@ -69,10 +74,32 @@ public class MovableObjectStateMachine : MonoBehaviour
             case State.Moving:
                 Move();
                 HandleRaising();
+                CheckToSeeIfShouldBeginRotating();
+                break;
+            case State.Rotating:
+                Move();
+                HandleRaising();
+                HandleRotating();
                 break;
         }
 
         HandleFlipCard();
+    }
+
+    private void CheckToSeeIfShouldBeginRotating()
+    {
+        if (idList.Count >= 2)
+        {
+            state = State.Rotating;
+        }
+    }
+
+    private void HandleRotating()
+    {
+        Vector3 targetDirection = new Vector3(transform.GetChild(0).localEulerAngles.x, fingerMovePosition2.x, transform.GetChild(0).localEulerAngles.z) - new Vector3(0, fingerMovePosition.x, 0);
+        
+        transform.GetChild(0).localEulerAngles = fingerMovePosition;
+        Debug.Log(targetDirection);
     }
 
     void HandleFlipCard()
@@ -97,10 +124,10 @@ public class MovableObjectStateMachine : MonoBehaviour
         if (!this.idList.Contains(id))
         {
             this.idList.Add(id);
-        }
-        if (idList.Count >= 2)
-        {
-            FlipObject();
+            if (this.idList.Count == 2)
+            {
+                startingTouchPositionFinger2 = positionSent;
+            }
         }
         if (doubleTapTimer < doubleTapThreshold)
         {
@@ -179,6 +206,7 @@ public class MovableObjectStateMachine : MonoBehaviour
     }
     void Move()
     {
+        
         Vector3 targetPosition = new Vector3(fingerMovePosition.x, this.transform.position.y, fingerMovePosition.z);
         targetPosition = targetPosition + offset;
         this.transform.position = targetPosition;
@@ -269,27 +297,38 @@ public class MovableObjectStateMachine : MonoBehaviour
     {
         Debug.Log(idList.Count);
         if (!idList.Contains(index)) return;
-        if (deck != null)
+        if (idList[0] == index)
         {
-            deck.CheckToSeeIfDeckShouldBeAdded();
+            UnsubscribeToDelegates();
+            lowering = true;
+            snappingToThreeOnY = false;
+            if (state == State.Indeterminate)
+            {
+                QuickRelease();
+            }
+            if (state == State.Moving)
+            {
+                state = State.Idle;
+            }
+            if (deck != null)
+            {
+                deck.CheckToSeeIfDeckShouldBeAdded();
+            }
         }
 
-        UnsubscribeToDelegates();
-        lowering = true;
-        snappingToThreeOnY = false;
+
         idList.Remove(index);
-        if (state == State.Indeterminate)
-        {
-            QuickRelease();
-        }
-        if (state == State.Moving)
-        {
-            state = State.Idle;
-        }
     }
 
     private void FingerMoved(Vector3 position, int index)
     {
+        if (idList.Count >= 2)
+        {
+            if (index == idList[1])
+            {
+                fingerMovePosition2 = position;
+            }
+        }
         if (idList[0] != index) return;
        
         Ray ray = Camera.main.ScreenPointToRay(position);

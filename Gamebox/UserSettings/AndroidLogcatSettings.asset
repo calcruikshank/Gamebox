@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "620102100500049",
         "name": "com.DefaultCompany.Gamebox",
-        "processId": 4708,
+        "processId": 4848,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -11,139 +11,49 @@
         {
             "deviceId": "620102100500049",
             "name": "com.DefaultCompany.Gamebox",
-            "processId": 4585,
+            "processId": 8203,
+            "exited": true
+        },
+        {
+            "deviceId": "620102100500049",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 8329,
+            "exited": true
+        },
+        {
+            "deviceId": "620102100500049",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 8454,
+            "exited": true
+        },
+        {
+            "deviceId": "620102100500049",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 8581,
+            "exited": true
+        },
+        {
+            "deviceId": "620102100500049",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 8702,
+            "exited": true
+        },
+        {
+            "deviceId": "620102100500049",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 4589,
             "exited": false
         },
         {
             "deviceId": "620102100500049",
             "name": "com.DefaultCompany.Gamebox",
-            "processId": 4723,
+            "processId": 4721,
             "exited": false
         },
         {
             "deviceId": "620102100500049",
             "name": "com.DefaultCompany.Gamebox",
-            "processId": 4856,
-            "exited": false
-        },
-        {
-            "deviceId": "620102100500049",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 4981,
-            "exited": false
-        },
-        {
-            "deviceId": "620102100500049",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 5117,
-            "exited": false
-        },
-        {
-            "deviceId": "620102100500049",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 5250,
-            "exited": false
-        },
-        {
-            "deviceId": "620102100500049",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 5383,
-            "exited": false
-        },
-        {
-            "deviceId": "620102100500049",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 5510,
-            "exited": false
-        },
-        {
-            "deviceId": "620102100500049",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 5636,
-            "exited": false
-        },
-        {
-            "deviceId": "620102100500049",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 5765,
-            "exited": false
-        },
-        {
-            "deviceId": "620102100500049",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 5915,
-            "exited": false
-        },
-        {
-            "deviceId": "620102100500049",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 6056,
-            "exited": false
-        },
-        {
-            "deviceId": "620102100500049",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 6209,
-            "exited": false
-        },
-        {
-            "deviceId": "620102100500049",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 6348,
-            "exited": false
-        },
-        {
-            "deviceId": "620102100500049",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 4577,
-            "exited": false
-        },
-        {
-            "deviceId": "620102100500049",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 5537,
-            "exited": false
-        },
-        {
-            "deviceId": "620102100500049",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 4994,
-            "exited": false
-        },
-        {
-            "deviceId": "620102100500049",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 4586,
-            "exited": false
-        },
-        {
-            "deviceId": "620102100500049",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 4567,
-            "exited": false
-        },
-        {
-            "deviceId": "620102100500049",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 4700,
-            "exited": false
-        },
-        {
-            "deviceId": "620102100500049",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 4822,
-            "exited": false
-        },
-        {
-            "deviceId": "620102100500049",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 4569,
-            "exited": false
-        },
-        {
-            "deviceId": "620102100500049",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 4708,
+            "processId": 4848,
             "exited": false
         }
     ],
