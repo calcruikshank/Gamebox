@@ -12,10 +12,10 @@ public class MovableObjectStateMachine : MonoBehaviour
     Vector3 fingerMovePosition;
     Vector3 offset;
     float heldDownTimer = 0f;
-    float heldDownThreshold = .5f;
+    float heldDownThreshold = .25f;
     float doubleTapTimer = 0f;
     float doubleTapThreshold = .25f;
-    [SerializeField] float distanceThreshold = 1f;
+    float distanceThreshold = .25f;
     Deck deck;
     public bool faceUp;
     bool lowering;
@@ -25,6 +25,7 @@ public class MovableObjectStateMachine : MonoBehaviour
     Vector3 startingTouchPositionFinger2;
     Vector3 fingerMovePosition2;
     PlayerContainer playerOwningCard;
+    Vector3 targetRotation;
     public enum State
     {
         Idle,
@@ -96,10 +97,12 @@ public class MovableObjectStateMachine : MonoBehaviour
 
     private void HandleRotating()
     {
-        Vector3 targetDirection = new Vector3(transform.GetChild(0).localEulerAngles.x, fingerMovePosition2.x, transform.GetChild(0).localEulerAngles.z) - new Vector3(0, fingerMovePosition.x, 0);
-        
-        transform.GetChild(0).localEulerAngles = fingerMovePosition;
-        Debug.Log(targetDirection);
+        if (idList.Count >= 2)
+        {
+            targetRotation = new Vector3(transform.GetChild(0).localEulerAngles.x, fingerMovePosition2.x, transform.GetChild(0).localEulerAngles.z) - new Vector3(0, fingerMovePosition.x, 0);
+        }
+        transform.GetChild(0).localEulerAngles = targetRotation;
+        Debug.Log(targetRotation);
     }
 
     void HandleFlipCard()
@@ -129,16 +132,15 @@ public class MovableObjectStateMachine : MonoBehaviour
                 startingTouchPositionFinger2 = positionSent;
             }
         }
+        if (state == State.Selected)
+        {
+            state = State.Idle;
+        }
         if (doubleTapTimer < doubleTapThreshold)
         {
             FlipObject();
         }
         doubleTapTimer = 0f;
-        if (state == State.Selected)
-        {
-            state = State.Idle;
-            return;
-        }
 
         if (state != State.Idle)
             return;
@@ -148,6 +150,10 @@ public class MovableObjectStateMachine : MonoBehaviour
             playerOwningCard.RemoveCardFromHand(this.gameObject);
         }
 
+        if (this.transform.GetComponentInChildren<CardTilter>() != null)
+        {
+            this.transform.GetComponentInChildren<CardTilter>().SetRotationToNotZero();
+        }
         SubscribeToDelegates();
         startingTouchPosition = positionSent;
         offset = new Vector3(this.transform.position.x - positionSent.x, 0, this.transform.position.z - positionSent.z);
@@ -206,7 +212,6 @@ public class MovableObjectStateMachine : MonoBehaviour
     }
     void Move()
     {
-        
         Vector3 targetPosition = new Vector3(fingerMovePosition.x, this.transform.position.y, fingerMovePosition.z);
         targetPosition = targetPosition + offset;
         this.transform.position = targetPosition;
@@ -287,7 +292,15 @@ public class MovableObjectStateMachine : MonoBehaviour
     {
         TouchScript.touchMoved += FingerMoved;
         TouchScript.fingerReleased += FingerReleased;
+        TouchScript.rotateRight += RotateRight;
     }
+
+    private void RotateRight(Vector3 position, int index)
+    {
+        targetRotation = new Vector3(transform.GetChild(0).localEulerAngles.x, transform.GetChild(0).localEulerAngles.y + 90, transform.GetChild(0).localEulerAngles.z);
+        state = State.Rotating;
+    }
+
     private void UnsubscribeToDelegates()
     {
         TouchScript.touchMoved -= FingerMoved;
@@ -300,14 +313,14 @@ public class MovableObjectStateMachine : MonoBehaviour
         if (idList[0] == index)
         {
             UnsubscribeToDelegates();
-            lowering = true;
-            snappingToThreeOnY = false;
             if (state == State.Indeterminate)
             {
                 QuickRelease();
             }
-            if (state == State.Moving)
+            if (state == State.Moving || state == State.Rotating)
             {
+                lowering = true;
+                snappingToThreeOnY = false;
                 state = State.Idle;
             }
             if (deck != null)

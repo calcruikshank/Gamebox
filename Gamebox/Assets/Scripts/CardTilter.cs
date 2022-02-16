@@ -38,7 +38,6 @@ namespace Shared.UI.Helpers
 
 		private void Update()
 		{
-            
 			var pos = transform.position;
 			var posDelta = pos - _prevPos;
 

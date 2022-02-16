@@ -61,11 +61,13 @@ public class Deck : MonoBehaviour
     public void CheckToSeeIfDeckShouldBeAdded()
     {
         Collider colliderHit = transform.GetComponentInChildren<Collider>();
-        RaycastHit hit;
-        bool hitDetected = Physics.BoxCast(colliderHit.bounds.center, new Vector3(colliderHit.bounds.extents.x - (colliderHit.bounds.extents.x * 1.5f), colliderHit.bounds.extents.y - (colliderHit.bounds.extents.y * 1.5f), colliderHit.bounds.extents.z - (colliderHit.bounds.extents.z * 1.5f)), Vector3.down, out hit, Quaternion.identity, Mathf.Infinity);
+        
         RaycastHit playerContainerHit;
-        bool playerContainerHitBool = Physics.BoxCast(colliderHit.bounds.center, new Vector3(colliderHit.bounds.extents.x - (colliderHit.bounds.extents.x * 1.5f), colliderHit.bounds.extents.y - (colliderHit.bounds.extents.y * 1.5f), colliderHit.bounds.extents.z - (colliderHit.bounds.extents.z * 1.5f)), Vector3.down, out playerContainerHit, Quaternion.identity, playerContainerLayerMask);
-
+        bool playerContainerHitBool = Physics.BoxCast(colliderHit.bounds.center, new Vector3(colliderHit.bounds.extents.x, colliderHit.bounds.extents.y, colliderHit.bounds.extents.z), Vector3.down, out playerContainerHit, Quaternion.identity, playerContainerLayerMask);
+        RaycastHit hit;
+        bool hitDetected = Physics.BoxCast(colliderHit.bounds.center, new Vector3(colliderHit.bounds.extents.x, colliderHit.bounds.extents.y, colliderHit.bounds.extents.z), Vector3.down, out hit, Quaternion.identity, Mathf.Infinity);
+        
+        
         if (playerContainerHitBool)
         {
             Transform targetToMove = hit.transform;
@@ -75,6 +77,7 @@ public class Deck : MonoBehaviour
                 playerToAddCardTo.AddCardToHand(this.gameObject);
                 return;
             }
+            return;
         }
         if (hitDetected)
         {
