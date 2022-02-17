@@ -331,9 +331,10 @@ public class MovableObjectStateMachine : MonoBehaviour
     }
     private void FingerReleased(Vector3 position, int index)
     {
+        
         Debug.Log(idList.Count);
         if (!idList.Contains(index)) return;
-        if (idList[0] == index)
+        if (idList.Count == 1)
         {
             UnsubscribeToDelegates();
             if (state == State.Indeterminate)
