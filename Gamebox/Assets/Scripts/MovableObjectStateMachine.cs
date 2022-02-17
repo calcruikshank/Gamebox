@@ -26,6 +26,7 @@ public class MovableObjectStateMachine : MonoBehaviour
     Vector3 fingerMovePosition2;
     PlayerContainer playerOwningCard;
     Vector3 targetRotation;
+    Vector3 startingRotation;
     public enum State
     {
         Idle,
@@ -91,18 +92,42 @@ public class MovableObjectStateMachine : MonoBehaviour
     {
         if (idList.Count >= 2)
         {
+            startingRotation = transform.GetChild(0).forward;
             state = State.Rotating;
         }
     }
 
     private void HandleRotating()
     {
-        if (idList.Count >= 2)
+
+        /*if (idList.Count >= 2)
         {
-            targetRotation = new Vector3(transform.GetChild(0).localEulerAngles.x, fingerMovePosition2.x, transform.GetChild(0).localEulerAngles.z) - new Vector3(0, fingerMovePosition.x, 0);
+            Vector3 worldPosition = Camera.main.WorldToScreenPoint(transform.GetChild(0).position);
+            Vector3 normalizedChildPosition = (fingerMovePosition - worldPosition).normalized;
+            targetRotation = new Vector3(transform.GetChild(0).localEulerAngles.x, normalizedChildPosition.y, transform.GetChild(0).localEulerAngles.z);
+            Debug.Log(fingerMovePosition2 + " " + targetRotation);
+        }*/
+        float speed = 1;
+        //transform.GetChild(0).localEulerAngles = targetRotation;
+        // Determine which direction to rotate towards
+        if (fingerMovePosition2 != Vector3.zero)
+        {
+            Vector3 targetDirection = new Vector3(Camera.main.ScreenToWorldPoint(fingerMovePosition2).x - transform.GetChild(0).position.x, Camera.main.ScreenToWorldPoint(fingerMovePosition2).y - transform.GetChild(0).position.y, Camera.main.ScreenToWorldPoint(fingerMovePosition2).z - transform.GetChild(0).position.z);
+            // The step size is equal to speed times frame time.
+            float singleStep = speed * Time.deltaTime;
+
+            // Draw a ray pointing at our target in
+            //Vector3 newDirection = Vector3.RotateTowards(transform.GetChild(0).forward, targetDirection, singleStep, 0.0f);
+            // Calculate a rotation a step closer to the target and applies rotation to this object
+            if (faceUp)
+            {
+                transform.GetChild(0).forward = new Vector3(targetDirection.x, targetDirection.y * -1, targetDirection.z);
+            }
+            if (!faceUp)
+            {
+                transform.GetChild(0).forward = new Vector3(targetDirection.x, targetDirection.y, targetDirection.z);
+            }
         }
-        transform.GetChild(0).localEulerAngles = targetRotation;
-        Debug.Log(targetRotation);
     }
 
     void HandleFlipCard()
@@ -127,24 +152,21 @@ public class MovableObjectStateMachine : MonoBehaviour
         if (!this.idList.Contains(id))
         {
             this.idList.Add(id);
-            if (this.idList.Count == 2)
-            {
-                startingTouchPositionFinger2 = positionSent;
-            }
         }
         if (state == State.Selected)
         {
             state = State.Idle;
         }
-        if (doubleTapTimer < doubleTapThreshold)
+        if (doubleTapTimer < doubleTapThreshold && idList.Count == 1)
         {
             FlipObject();
         }
-        doubleTapTimer = 0f;
+        
 
         if (state != State.Idle)
             return;
 
+        doubleTapTimer = 0f;
         if (playerOwningCard != null)
         {
             playerOwningCard.RemoveCardFromHand(this.gameObject);
@@ -323,6 +345,7 @@ public class MovableObjectStateMachine : MonoBehaviour
                 lowering = true;
                 snappingToThreeOnY = false;
                 state = State.Idle;
+                ResetRotationOnX();
             }
             if (deck != null)
             {
@@ -332,6 +355,17 @@ public class MovableObjectStateMachine : MonoBehaviour
 
 
         idList.Remove(index);
+    }
+    void ResetRotationOnX()
+    {
+        if (faceUp)
+        {
+            transform.GetChild(0).localEulerAngles = new Vector3(90, transform.GetChild(0).localEulerAngles.y, transform.GetChild(0).localEulerAngles.z);
+        }
+        if (!faceUp)
+        {
+            transform.GetChild(0).localEulerAngles = new Vector3(270, transform.GetChild(0).localEulerAngles.y, transform.GetChild(0).localEulerAngles.z);
+        }
     }
 
     private void FingerMoved(Vector3 position, int index)
@@ -344,7 +378,7 @@ public class MovableObjectStateMachine : MonoBehaviour
             }
         }
         if (idList[0] != index) return;
-       
+
         Ray ray = Camera.main.ScreenPointToRay(position);
         if (Physics.Raycast(ray, out RaycastHit raycastHit))
         {
