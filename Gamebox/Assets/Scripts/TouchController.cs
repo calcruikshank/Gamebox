@@ -41,6 +41,11 @@ public class TouchController : MonoBehaviour
                 //Vector3 offset = new Vector3(movableHit.transform.position.x - raycastHit.point.x, 0, movableHit.transform.position.z - raycastHit.point.z);
                 movableHit.SetTouched(index, raycastHit.point);
             }
+            if (raycastHit.transform.GetComponent<BoxSelection>() != null)
+            {
+                BoxSelection boxSelection = raycastHit.transform.GetComponent<BoxSelection>();
+                boxSelection.BeginDraggingGrid();
+            }
         }
     }
     public Transform GetFinalParent(RaycastHit raycastHit)

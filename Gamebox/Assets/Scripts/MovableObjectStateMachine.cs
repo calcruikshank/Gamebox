@@ -27,6 +27,9 @@ public class MovableObjectStateMachine : MonoBehaviour
     PlayerContainer playerOwningCard;
     Vector3 targetRotation;
     Vector3 startingRotation;
+
+    bool showSelectedWheel = false;
+    GameObject selectedWheelGO;
     public enum State
     {
         Idle,
@@ -53,7 +56,6 @@ public class MovableObjectStateMachine : MonoBehaviour
             deck = this.GetComponentInChildren<Deck>();
         }
         faceUp = true;
-        lowering = true;
         doubleTapTimer = doubleTapThreshold;
     }
 
@@ -144,6 +146,10 @@ public class MovableObjectStateMachine : MonoBehaviour
 
     void HandleSelected()
     {
+        Vector3 targetScale = Vector3.one;
+        if (showSelectedWheel)
+        {
+        }
     }
 
 
@@ -155,11 +161,12 @@ public class MovableObjectStateMachine : MonoBehaviour
         }
         if (state == State.Selected)
         {
+            HideSelectedWheel();
             state = State.Idle;
         }
         if (doubleTapTimer < doubleTapThreshold && idList.Count == 1)
         {
-            FlipObject();
+            SetSelected();
         }
         
 
@@ -303,10 +310,32 @@ public class MovableObjectStateMachine : MonoBehaviour
         }
     }
 
-    void QuickRelease()
+    void SetSelected()
     {
+        ShowSelectedWheel();
         state = State.Selected;
         Debug.Log(state);
+    }
+    void QuickRelease()
+    {
+        /*ShowSelectedWheel();
+        state = State.Selected;
+        Debug.Log(state);*/
+        state = State.Idle;
+    }
+    
+    void ShowSelectedWheel()
+    {
+        showSelectedWheel = true;
+        SpawnInNewSelectedWheelTransform(this.transform.GetChild(0));
+    }
+    void HideSelectedWheel()
+    {
+        if (showSelectedWheel)
+        {
+            DestroySpecificSelectedWheel(this.transform);
+            showSelectedWheel = false;
+        }
     }
 
     #region delegates
@@ -396,5 +425,13 @@ public class MovableObjectStateMachine : MonoBehaviour
     internal void GivePlayerOwnership(PlayerContainer playerContainer)
     {
         playerOwningCard = playerContainer;
+    }
+    public void SpawnInNewSelectedWheelTransform(Transform transformToSpawnOn)
+    {
+        selectedWheelGO = Instantiate(Crutilities.singleton.SelectedWheelTransform.gameObject, new Vector3(transformToSpawnOn.position.x, 4, transformToSpawnOn.position.z), Quaternion.identity);
+    }
+    public void DestroySpecificSelectedWheel(Transform transformToSpawnOn)
+    {
+        Destroy(selectedWheelGO);
     }
 }
