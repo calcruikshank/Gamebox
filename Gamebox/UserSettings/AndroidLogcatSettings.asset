@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "620102100500049",
         "name": "com.DefaultCompany.Gamebox",
-        "processId": 9643,
+        "processId": 4701,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -528,6 +528,18 @@
             "deviceId": "620102100500049",
             "name": "com.DefaultCompany.Gamebox",
             "processId": 9643,
+            "exited": false
+        },
+        {
+            "deviceId": "620102100500049",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 4571,
+            "exited": false
+        },
+        {
+            "deviceId": "620102100500049",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 4701,
             "exited": false
         }
     ],

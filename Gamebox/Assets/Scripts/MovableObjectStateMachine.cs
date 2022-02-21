@@ -434,4 +434,13 @@ public class MovableObjectStateMachine : MonoBehaviour
     {
         Destroy(selectedWheelGO);
     }
+
+    public void Highlight()
+    {
+        Debug.Log("Highlight this movable object " + " " + this.transform);
+    }
+    public void UnHighlight()
+    {
+        Debug.Log("UnHighlight this movable object " + " " + this.transform);
+    }
 }
