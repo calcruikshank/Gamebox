@@ -30,6 +30,8 @@ public class MovableObjectStateMachine : MonoBehaviour
 
     bool showSelectedWheel = false;
     GameObject selectedWheelGO;
+
+    public bool boxSelected = false;
     public enum State
     {
         Idle,
@@ -161,8 +163,7 @@ public class MovableObjectStateMachine : MonoBehaviour
         }
         if (state == State.Selected)
         {
-            HideSelectedWheel();
-            state = State.Idle;
+            SetUnselected();
         }
         if (doubleTapTimer < doubleTapThreshold && idList.Count == 1)
         {
@@ -314,7 +315,11 @@ public class MovableObjectStateMachine : MonoBehaviour
     {
         ShowSelectedWheel();
         state = State.Selected;
-        Debug.Log(state);
+    }
+    void SetUnselected()
+    {
+        HideSelectedWheel();
+        state = State.Idle;
     }
     void QuickRelease()
     {
@@ -437,10 +442,13 @@ public class MovableObjectStateMachine : MonoBehaviour
 
     public void Highlight()
     {
-        Debug.Log("Highlight this movable object " + " " + this.transform);
+        if (boxSelected) return;
+        ShowSelectedWheel();
+        boxSelected = true;
     }
     public void UnHighlight()
     {
-        Debug.Log("UnHighlight this movable object " + " " + this.transform);
+        HideSelectedWheel();
+        boxSelected = false;
     }
 }

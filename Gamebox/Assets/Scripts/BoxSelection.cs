@@ -41,6 +41,8 @@ public class BoxSelection : MonoBehaviour
     private void FingerReleased(Vector3 position, int index)
     {
         UnsubscribeToDelegates();
+
+        ShootRayCastToCheckForMovableObjects();
     }
 
     private void FingerMoved(Vector3 position, int index)
@@ -63,30 +65,27 @@ public class BoxSelection : MonoBehaviour
         selectionBox.localScale = new Vector3(MathF.Abs(width), MathF.Abs(height), 1);
         selectionBox.anchoredPosition3D = new Vector3(startingWorldPosition.x + width / 2, 1, startingWorldPosition.z + height / 2);
 
-        ShootRayCastToCheckForMovableObjects();
     }
 
     void ShootRayCastToCheckForMovableObjects()
     {
+        //foreach movableobject if it isnt in objectshit remove it from movableobjects
 
-        //check to see if an object in movable objects is not in 
-        RaycastHit[] objectsHitArray = Physics.BoxCastAll(selectionBox.position, new Vector3(selectionBox.localScale.x, selectionBox.localScale.y, selectionBox.localScale.z), Vector3.down, Quaternion.identity, Mathf.Infinity);
-        List<RaycastHit> objectsHit = new List<RaycastHit>();
-        foreach (RaycastHit objectHit in objectsHitArray)
-        {
-            objectsHit.Add(objectHit);
-        }
+        RaycastHit[] objectsHit = Physics.BoxCastAll(selectionBox.position, new Vector3(selectionBox.localScale.x / 2, selectionBox.localScale.z / 2 , selectionBox.localScale.y / 2), Vector3.down, Quaternion.identity, 10f);
+
+
         for (int j = 0; j < movableObjects.Count; j++)
         {
-            if (!objectsHit.Contains(movableObjects[j]))
+            if (!ArrayContains(objectsHit, movableObjects[j]))
             {
-                Transform finalPar = GetFinalParent(movableObjects[j].transform);
-                finalPar.GetComponentInChildren<MovableObjectStateMachine>().UnHighlight();
+                Transform finalParent = Crutilities.singleton.GetFinalParent(movableObjects[j].transform);
+                finalParent.GetComponentInChildren<MovableObjectStateMachine>().UnHighlight();
             }
         }
-        for (int i = 0; i < objectsHit.Count; i++)
+
+        for (int i = 0; i < objectsHit.Length; i++)
         {
-            Transform finalParent = objectsHit[i].transform;
+            Transform finalParent = Crutilities.singleton.GetFinalParent(objectsHit[i].transform);
             while (finalParent.parent != null)
             {
                 finalParent = finalParent.parent;
@@ -101,21 +100,17 @@ public class BoxSelection : MonoBehaviour
                 }
             }
         }
-
-
-        for (int j = 0; j < movableObjects.Count; j++)
-        {
-
-        }
     }
 
-    public Transform GetFinalParent(Transform transformSent)
+    bool ArrayContains(RaycastHit[] arraySent, RaycastHit rayToCheck)
     {
-        Transform finalParent = transformSent;
-        while (finalParent.parent != null)
+        foreach (RaycastHit ray in arraySent)
         {
-            finalParent = finalParent.parent;
+            if (rayToCheck.transform == ray.transform)
+            {
+                return true;
+            }
         }
-        return finalParent;
+        return false; 
     }
 }
