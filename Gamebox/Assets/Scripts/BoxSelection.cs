@@ -13,6 +13,10 @@ public class BoxSelection : MonoBehaviour
     float width;
     float height;
     List<RaycastHit> movableObjects = new List<RaycastHit>();
+
+    Vector3 raycastStartPos;
+
+    float distanceFromStartToCurrent;
     //Travis was here
     private void Awake()
     {
@@ -25,6 +29,7 @@ public class BoxSelection : MonoBehaviour
         startPosition = positionSent;
         SubscribeToDelegates();
         Debug.Log("Begin draggin Grid");
+        raycastStartPos = startPosition;
         UpdateSelectionBox();
     }
     void SubscribeToDelegates()
@@ -65,6 +70,12 @@ public class BoxSelection : MonoBehaviour
         selectionBox.localScale = new Vector3(MathF.Abs(width), MathF.Abs(height), 1);
         selectionBox.anchoredPosition3D = new Vector3(startingWorldPosition.x + width / 2, 1, startingWorldPosition.z + height / 2);
 
+        distanceFromStartToCurrent = Vector3.Distance(raycastStartPos, currentPosition);
+        if (distanceFromStartToCurrent > 10f)
+        {
+            ShootRayCastToCheckForMovableObjects();
+            raycastStartPos = currentPosition;
+        }
     }
 
     void ShootRayCastToCheckForMovableObjects()
@@ -79,7 +90,10 @@ public class BoxSelection : MonoBehaviour
             if (!ArrayContains(objectsHit, movableObjects[j]))
             {
                 Transform finalParent = Crutilities.singleton.GetFinalParent(movableObjects[j].transform);
-                finalParent.GetComponentInChildren<MovableObjectStateMachine>().UnHighlight();
+                if (finalParent != null)
+                {
+                    finalParent.GetComponentInChildren<MovableObjectStateMachine>().UnHighlight();
+                }
             }
         }
 

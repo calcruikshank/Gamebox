@@ -24,6 +24,10 @@ public class Crutilities : MonoBehaviour
     public Transform GetFinalParent(Transform transformSent)
     {
         Transform finalParent = transformSent;
+        if (finalParent == null) 
+        {
+            return null;
+        }
         if (finalParent.parent == null)
         {
             return finalParent;
