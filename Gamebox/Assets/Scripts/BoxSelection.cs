@@ -25,6 +25,11 @@ public class BoxSelection : MonoBehaviour
 
     public void BeginDraggingGrid(int indexSent, Vector3 positionSent)
     {
+        if (id != -1)
+        {
+            return;
+        }
+        id = indexSent;
         currentPosition = positionSent;
         startPosition = positionSent;
         SubscribeToDelegates();
@@ -45,6 +50,11 @@ public class BoxSelection : MonoBehaviour
 
     private void FingerReleased(Vector3 position, int index)
     {
+        if (id != index)
+        {
+            return;
+        }
+        id = -1;
         UnsubscribeToDelegates();
 
         ShootRayCastToCheckForMovableObjects();
@@ -52,6 +62,10 @@ public class BoxSelection : MonoBehaviour
 
     private void FingerMoved(Vector3 position, int index)
     {
+        if (id != index)
+        {
+            return;
+        }
         UpdateSelectionBox();
         currentPosition = position;
     }
@@ -109,7 +123,7 @@ public class BoxSelection : MonoBehaviour
             {
                 if (!movableObjects.Contains(objectsHit[i]))
                 {
-                    finalParent.GetComponentInChildren<MovableObjectStateMachine>().Highlight();
+                    finalParent.GetComponentInChildren<MovableObjectStateMachine>().SetBoxSelected();
                     movableObjects.Add(objectsHit[i]);
                 }
             }

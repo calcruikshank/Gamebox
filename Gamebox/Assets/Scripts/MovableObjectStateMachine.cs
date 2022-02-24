@@ -38,7 +38,8 @@ public class MovableObjectStateMachine : MonoBehaviour
         Indeterminate,
         Selected,
         Moving,
-        Rotating
+        Rotating,
+        BoxSelected
     }
     private void Awake()
     {
@@ -442,13 +443,13 @@ public class MovableObjectStateMachine : MonoBehaviour
 
     public void Highlight()
     {
-        if (boxSelected) return;
-        ShowSelectedWheel();
-        boxSelected = true;
     }
     public void UnHighlight()
     {
-        HideSelectedWheel();
-        boxSelected = false;
+    }
+
+    public void SetBoxSelected()
+    {
+        state = State.BoxSelected;
     }
 }
