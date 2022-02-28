@@ -14,12 +14,19 @@ public class BoxSelection : MonoBehaviour
     float height;
     List<RaycastHit> movableObjects = new List<RaycastHit>();
 
+    Vector3 fingerMovePosition;
+    Vector3 offset;
     Vector3 raycastStartPos;
 
     float distanceFromStartToCurrent;
+
+
+    bool moving = false;
+    public static BoxSelection singleton;
     //Travis was here
     private void Awake()
     {
+        singleton = this;
         cam = Camera.main;
     }
 
@@ -58,6 +65,19 @@ public class BoxSelection : MonoBehaviour
         UnsubscribeToDelegates();
 
         ShootRayCastToCheckForMovableObjects();
+        SelectAllMovableObjectsWithinList();
+    }
+
+    private void SelectAllMovableObjectsWithinList()
+    {
+        for (int i = 0; i < movableObjects.Count; i++)
+        {
+            Transform finalParent = Crutilities.singleton.GetFinalParent(movableObjects[i].transform);
+            if (finalParent != null)
+            {
+                finalParent.GetComponentInChildren<MovableObjectStateMachine>().SetBoxSelected(selectionBox.position);
+            }
+        }
     }
 
     private void FingerMoved(Vector3 position, int index)
@@ -66,8 +86,20 @@ public class BoxSelection : MonoBehaviour
         {
             return;
         }
-        UpdateSelectionBox();
-        currentPosition = position;
+        if (!moving)
+        {
+            UpdateSelectionBox();
+            currentPosition = position;
+        }
+        if (moving)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(position);
+            if (Physics.Raycast(ray, out RaycastHit raycastHit))
+            {
+                fingerMovePosition = raycastHit.point;
+            }
+            Move();
+        }
     }
 
     void UpdateSelectionBox()
@@ -96,7 +128,7 @@ public class BoxSelection : MonoBehaviour
     {
         //foreach movableobject if it isnt in objectshit remove it from movableobjects
 
-        RaycastHit[] objectsHit = Physics.BoxCastAll(selectionBox.position, new Vector3(selectionBox.localScale.x / 2, selectionBox.localScale.z / 2 , selectionBox.localScale.y / 2), Vector3.down, Quaternion.identity, 10f);
+        RaycastHit[] objectsHit = Physics.BoxCastAll(selectionBox.position, new Vector3(selectionBox.localScale.x / 2, selectionBox.localScale.z / 2, selectionBox.localScale.y / 2), Vector3.down, Quaternion.identity, 10f);
 
 
         for (int j = 0; j < movableObjects.Count; j++)
@@ -106,7 +138,7 @@ public class BoxSelection : MonoBehaviour
                 Transform finalParent = Crutilities.singleton.GetFinalParent(movableObjects[j].transform);
                 if (finalParent != null)
                 {
-                    finalParent.GetComponentInChildren<MovableObjectStateMachine>().UnHighlight();
+                    finalParent.GetComponentInChildren<MovableObjectStateMachine>().SetBoxUnselected();
                 }
             }
         }
@@ -123,7 +155,6 @@ public class BoxSelection : MonoBehaviour
             {
                 if (!movableObjects.Contains(objectsHit[i]))
                 {
-                    finalParent.GetComponentInChildren<MovableObjectStateMachine>().SetBoxSelected();
                     movableObjects.Add(objectsHit[i]);
                 }
             }
@@ -139,6 +170,31 @@ public class BoxSelection : MonoBehaviour
                 return true;
             }
         }
-        return false; 
+        return false;
+    }
+
+    void Move()
+    {
+        Debug.Log("Moving");
+        Vector3 targetPosition = new Vector3(fingerMovePosition.x, this.selectionBox.transform.position.y, fingerMovePosition.z);
+        targetPosition = targetPosition + offset;
+        selectionBox.transform.position = targetPosition;
+    }
+
+    public void MoveAllObjectsWithinSelection()
+    {
+
+        for (int i = 0; i < movableObjects.Count; i++)
+        {
+            Crutilities.singleton.GetFinalParent(movableObjects[i].transform).GetComponentInChildren<MovableObjectStateMachine>().transform.position = Vector3.zero;
+        }
+    }
+    public void SetBoxSelected(int index, Vector3 positionSent)
+    {
+        this.id = index;
+        SubscribeToDelegates();
+        offset = new Vector3(this.selectionBox.position.x - positionSent.x, 0, this.selectionBox.position.z - positionSent.z);
+        moving = true;
+        Debug.Log("SelectBox");
     }
 }

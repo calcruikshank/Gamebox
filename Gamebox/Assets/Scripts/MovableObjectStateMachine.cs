@@ -28,6 +28,8 @@ public class MovableObjectStateMachine : MonoBehaviour
     Vector3 targetRotation;
     Vector3 startingRotation;
 
+    Vector3 currentLocalEulerAngles;
+
     bool showSelectedWheel = false;
     GameObject selectedWheelGO;
 
@@ -60,6 +62,8 @@ public class MovableObjectStateMachine : MonoBehaviour
         }
         faceUp = true;
         doubleTapTimer = doubleTapThreshold;
+        targetRotation = this.transform.GetChild(0).transform.localEulerAngles;
+        currentLocalEulerAngles = this.transform.GetChild(0).localEulerAngles;
     }
 
     protected virtual void Update()
@@ -88,6 +92,8 @@ public class MovableObjectStateMachine : MonoBehaviour
                 HandleRaising();
                 HandleRotating();
                 break;
+            case State.BoxSelected:
+                break;
         }
 
         HandleFlipCard();
@@ -104,35 +110,22 @@ public class MovableObjectStateMachine : MonoBehaviour
 
     private void HandleRotating()
     {
-
-        /*if (idList.Count >= 2)
+        if (MathF.Abs(currentLocalEulerAngles.y - targetRotation.y) < 10f)
         {
-            Vector3 worldPosition = Camera.main.WorldToScreenPoint(transform.GetChild(0).position);
-            Vector3 normalizedChildPosition = (fingerMovePosition - worldPosition).normalized;
-            targetRotation = new Vector3(transform.GetChild(0).localEulerAngles.x, normalizedChildPosition.y, transform.GetChild(0).localEulerAngles.z);
-            Debug.Log(fingerMovePosition2 + " " + targetRotation);
-        }*/
-        float speed = 1;
-        //transform.GetChild(0).localEulerAngles = targetRotation;
-        // Determine which direction to rotate towards
-        if (fingerMovePosition2 != Vector3.zero)
-        {
-            Vector3 targetDirection = new Vector3(Camera.main.ScreenToWorldPoint(fingerMovePosition2).x - transform.GetChild(0).position.x, Camera.main.ScreenToWorldPoint(fingerMovePosition2).y - transform.GetChild(0).position.y, Camera.main.ScreenToWorldPoint(fingerMovePosition2).z - transform.GetChild(0).position.z);
-            // The step size is equal to speed times frame time.
-            float singleStep = speed * Time.deltaTime;
-
-            // Draw a ray pointing at our target in
-            //Vector3 newDirection = Vector3.RotateTowards(transform.GetChild(0).forward, targetDirection, singleStep, 0.0f);
-            // Calculate a rotation a step closer to the target and applies rotation to this object
-            if (faceUp)
-            {
-                transform.GetChild(0).forward = new Vector3(targetDirection.x, targetDirection.y * -1, targetDirection.z);
-            }
-            if (!faceUp)
-            {
-                transform.GetChild(0).forward = new Vector3(targetDirection.x, targetDirection.y, targetDirection.z);
-            }
+            currentLocalEulerAngles.y = targetRotation.y;
+            transform.GetChild(0).localEulerAngles = targetRotation;
+            return;
         }
+        if (currentLocalEulerAngles.y > targetRotation.y)
+        {
+            currentLocalEulerAngles.y -= 1500 * Time.deltaTime;
+        }
+        if (currentLocalEulerAngles.y < targetRotation.y)
+        {
+            currentLocalEulerAngles.y += 1500 * Time.deltaTime;
+        }
+        
+        transform.GetChild(0).localEulerAngles = new Vector3(transform.GetChild(0).localEulerAngles.x, currentLocalEulerAngles.y, transform.GetChild(0).localEulerAngles.z);
     }
 
     void HandleFlipCard()
@@ -212,6 +205,7 @@ public class MovableObjectStateMachine : MonoBehaviour
         {
             return;
         }
+        HideSelectedWheel();
         heldDownTimer += Time.deltaTime;
         Vector3 differenceBetweenStartingPositionAndMovePosition = startingTouchPosition - fingerMovePosition;
 
@@ -324,9 +318,6 @@ public class MovableObjectStateMachine : MonoBehaviour
     }
     void QuickRelease()
     {
-        /*ShowSelectedWheel();
-        state = State.Selected;
-        Debug.Log(state);*/
         state = State.Idle;
     }
     
@@ -350,19 +341,25 @@ public class MovableObjectStateMachine : MonoBehaviour
         TouchScript.touchMoved += FingerMoved;
         TouchScript.fingerReleased += FingerReleased;
         TouchScript.rotateRight += RotateRight;
+        TouchScript.rotateLeft += RotateLeft;
     }
 
     private void RotateRight(Vector3 position, int index)
     {
-        targetRotation = new Vector3(transform.GetChild(0).localEulerAngles.x, transform.GetChild(0).localEulerAngles.y + 90, transform.GetChild(0).localEulerAngles.z);
+        targetRotation = new Vector3(transform.GetChild(0).localEulerAngles.x, (targetRotation.y + 90) , transform.GetChild(0).localEulerAngles.z);
         state = State.Rotating;
     }
-
+    private void RotateLeft(Vector3 position, int index)
+    {
+        targetRotation = new Vector3(transform.GetChild(0).localEulerAngles.x, (targetRotation.y - 90), transform.GetChild(0).localEulerAngles.z);
+        state = State.Rotating;
+    }
     private void UnsubscribeToDelegates()
     {
         TouchScript.touchMoved -= FingerMoved;
         TouchScript.fingerReleased -= FingerReleased;
         TouchScript.rotateRight -= RotateRight;
+        TouchScript.rotateLeft -= RotateLeft;
     }
     private void FingerReleased(Vector3 position, int index)
     {
@@ -448,8 +445,15 @@ public class MovableObjectStateMachine : MonoBehaviour
     {
     }
 
-    public void SetBoxSelected()
+    public void SetBoxSelected(Vector3 positionOfBox)
     {
         state = State.BoxSelected;
+        offset = new Vector3(this.transform.position.x - positionOfBox.x, 0, this.transform.position.z - positionOfBox.z);
+        Highlight();
+    }
+    public void SetBoxUnselected()
+    {
+        state = State.Idle;
+        UnHighlight();
     }
 }
