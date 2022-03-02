@@ -456,4 +456,11 @@ public class MovableObjectStateMachine : MonoBehaviour
         state = State.Idle;
         UnHighlight();
     }
+
+    public void GridMove(Vector3 targetPositionSent)
+    {
+        Vector3 targetPosition = new Vector3(targetPositionSent.x, this.transform.position.y, targetPositionSent.z);
+        targetPosition = targetPosition + offset;
+        this.transform.position = targetPosition;
+    }
 }

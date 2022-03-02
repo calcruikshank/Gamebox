@@ -175,18 +175,18 @@ public class BoxSelection : MonoBehaviour
 
     void Move()
     {
-        Debug.Log("Moving");
         Vector3 targetPosition = new Vector3(fingerMovePosition.x, this.selectionBox.transform.position.y, fingerMovePosition.z);
         targetPosition = targetPosition + offset;
         selectionBox.transform.position = targetPosition;
+        MoveAllObjectsWithinSelection(targetPosition);
     }
 
-    public void MoveAllObjectsWithinSelection()
+    public void MoveAllObjectsWithinSelection(Vector3 targetPosition)
     {
 
         for (int i = 0; i < movableObjects.Count; i++)
         {
-            Crutilities.singleton.GetFinalParent(movableObjects[i].transform).GetComponentInChildren<MovableObjectStateMachine>().transform.position = Vector3.zero;
+            Crutilities.singleton.GetFinalParent(movableObjects[i].transform).GetComponentInChildren<MovableObjectStateMachine>().GridMove(targetPosition);
         }
     }
     public void SetBoxSelected(int index, Vector3 positionSent)
