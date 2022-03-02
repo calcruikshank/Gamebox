@@ -93,6 +93,8 @@ public class MovableObjectStateMachine : MonoBehaviour
                 HandleRotating();
                 break;
             case State.BoxSelected:
+                HandleRaising();
+                HandleLowering();
                 break;
         }
 
@@ -445,16 +447,29 @@ public class MovableObjectStateMachine : MonoBehaviour
     {
     }
 
-    public void SetBoxSelected(Vector3 positionOfBox)
+    public void SetBoxSelected()
     {
-        state = State.BoxSelected;
-        offset = new Vector3(this.transform.position.x - positionOfBox.x, 0, this.transform.position.z - positionOfBox.z);
         Highlight();
+        snappingToThreeOnY = true;
+        lowering = false;
+        boxSelected = true;
+        Debug.Log("Selected");
+        state = State.BoxSelected;
     }
-    public void SetBoxUnselected()
+    public void SetBoxDeselected()
     {
         state = State.Idle;
+        lowering = true;
+        snappingToThreeOnY = false;
+        boxSelected = false;
         UnHighlight();
+        SnapToLowestPointHit();
+        Debug.Log("Deselected");
+    }
+
+    public void SetGridOffset(Vector3 positionOfBox)
+    {
+        offset = new Vector3(this.transform.position.x - positionOfBox.x, 0, this.transform.position.z - positionOfBox.z);
     }
 
     public void GridMove(Vector3 targetPositionSent)

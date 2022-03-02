@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BoxSelection : MonoBehaviour
@@ -43,6 +44,7 @@ public class BoxSelection : MonoBehaviour
         Debug.Log("Begin draggin Grid");
         raycastStartPos = startPosition;
         UpdateSelectionBox();
+        moving = false;
     }
     void SubscribeToDelegates()
     {
@@ -64,19 +66,51 @@ public class BoxSelection : MonoBehaviour
         id = -1;
         UnsubscribeToDelegates();
 
-        ShootRayCastToCheckForMovableObjects();
-        SelectAllMovableObjectsWithinList();
+        ChangeRectSizeToFitAllMovableObjects();
     }
 
-    private void SelectAllMovableObjectsWithinList()
+    private void ChangeRectSizeToFitAllMovableObjects()
     {
-        for (int i = 0; i < movableObjects.Count; i++)
+        List<Collider> movableObjectColliders = new List<Collider>();
+        for (int i = 0; i < selectedMovableObjects.Count; i++)
         {
-            Transform finalParent = Crutilities.singleton.GetFinalParent(movableObjects[i].transform);
-            if (finalParent != null)
+            movableObjectColliders.Add(selectedMovableObjects[i].transform.GetComponentInChildren<Collider>());
+        }
+
+        float mostNegativeX = 0, mostPositiveX = 0, mostNegativeY = 0, mostPositiveY = 0;
+        for (int i = 0; i < movableObjectColliders.Count; i++)
+        {
+            //position on the x - halfwidth
+            float leftBounds = movableObjectColliders[i].transform.position.x - (movableObjectColliders[i].bounds.size.x / 2);
+            float rightBound = movableObjectColliders[i].transform.position.x + (movableObjectColliders[i].bounds.size.x / 2);
+            float topBounds = movableObjectColliders[i].transform.position.z + (movableObjectColliders[i].bounds.size.z / 2);
+            float bottomBounds = movableObjectColliders[i].transform.position.z - (movableObjectColliders[i].bounds.size.z / 2);
+
+            if (leftBounds < mostNegativeX || mostNegativeX == 0)
             {
-                finalParent.GetComponentInChildren<MovableObjectStateMachine>().SetBoxSelected(selectionBox.position);
+                mostNegativeX = leftBounds;
             }
+            if (rightBound > mostPositiveX || mostPositiveX == 0)
+            {
+                mostPositiveX = rightBound;
+            }
+            if (topBounds > mostPositiveY || mostPositiveY == 0)
+            {
+                mostPositiveY = topBounds;
+            }
+            if (bottomBounds < mostNegativeY || mostNegativeY == 0)
+            {
+                mostNegativeY = bottomBounds;
+            }
+        }
+        width = mostPositiveX - mostNegativeX;
+        height = mostPositiveY - mostNegativeY;
+
+        selectionBox.localScale = new Vector3(MathF.Abs(width), MathF.Abs(height), 1);
+        selectionBox.anchoredPosition3D = new Vector3(mostNegativeX + width / 2, 1, mostNegativeY + height / 2);
+        for (int i = 0; i < selectedMovableObjects.Count; i++)
+        {
+            selectedMovableObjects[i].SetGridOffset(this.selectionBox.position);
         }
     }
 
@@ -130,35 +164,84 @@ public class BoxSelection : MonoBehaviour
 
         RaycastHit[] objectsHit = Physics.BoxCastAll(selectionBox.position, new Vector3(selectionBox.localScale.x / 2, selectionBox.localScale.z / 2, selectionBox.localScale.y / 2), Vector3.down, Quaternion.identity, 10f);
 
-
-        for (int j = 0; j < movableObjects.Count; j++)
+        /*for (int j = 0; j < movableObjects.Count; j++)
         {
             if (!ArrayContains(objectsHit, movableObjects[j]))
             {
                 Transform finalParent = Crutilities.singleton.GetFinalParent(movableObjects[j].transform);
                 if (finalParent != null)
                 {
-                    finalParent.GetComponentInChildren<MovableObjectStateMachine>().SetBoxUnselected();
+                    if (selectedMovableObjects.Contains(finalParent.GetComponentInChildren<MovableObjectStateMachine>()))
+                    {
+                        if (selectedMovableObjects[j].boxSelected)
+                        {
+                            Debug.Log("Setting box unselected");
+                            finalParent.GetComponentInChildren<MovableObjectStateMachine>().SetBoxUnselected();
+                            selectedMovableObjects.Remove(finalParent.GetComponentInChildren<MovableObjectStateMachine>());
+                            movableObjects.Remove(movableObjects[j]);
+                        }
+                    }
                 }
             }
         }
-
         for (int i = 0; i < objectsHit.Length; i++)
         {
             Transform finalParent = Crutilities.singleton.GetFinalParent(objectsHit[i].transform);
             while (finalParent.parent != null)
             {
                 finalParent = finalParent.parent;
-
             }
-            if (finalParent.GetComponentInChildren<MovableObjectStateMachine>() != null)
+            if (finalParent.GetComponent<MovableObjectStateMachine>() != null)
             {
-                if (!movableObjects.Contains(objectsHit[i]))
+                if (!selectedMovableObjects.Contains(finalParent.GetComponentInChildren<MovableObjectStateMachine>()))
                 {
-                    movableObjects.Add(objectsHit[i]);
+                    if (!finalParent.GetComponentInChildren<MovableObjectStateMachine>().boxSelected)
+                    {
+                        movableObjects.Add(objectsHit[i]);
+                        selectedMovableObjects.Add(finalParent.GetComponentInChildren<MovableObjectStateMachine>());
+                        finalParent.GetComponentInChildren<MovableObjectStateMachine>().SetBoxSelected(selectionBox.transform.position);
+                    }
                 }
             }
+        }*/
+
+        List<MovableObjectStateMachine> newListOfMovablesToSelect = new List<MovableObjectStateMachine>();
+        for (int i = 0; i < objectsHit.Length; i++)
+        {
+            if (Crutilities.singleton.GetFinalParent(objectsHit[i].transform).GetComponent<MovableObjectStateMachine>() != null)
+            {
+                newListOfMovablesToSelect.Add(Crutilities.singleton.GetFinalParent(objectsHit[i].transform).GetComponent<MovableObjectStateMachine>());
+            }
         }
+
+
+        List<MovableObjectStateMachine> result = selectedMovableObjects.Except(newListOfMovablesToSelect).ToList<MovableObjectStateMachine>();
+
+        for (int i = 0; i < result.Count(); i++)
+        {
+            result[i].SetBoxDeselected();
+        }
+
+        selectedMovableObjects = newListOfMovablesToSelect;
+
+        for (int x = 0; x < selectedMovableObjects.Count; x++)
+        {
+            if (!selectedMovableObjects[x].boxSelected)
+            {
+                selectedMovableObjects[x].SetBoxSelected();
+            }
+        }
+        /*List<MovableObjectStateMachine> resultToAdd = newListOfMovablesToSelect.Except(selectedMovableObjects).ToList<MovableObjectStateMachine>();
+
+        for (int j = 0; j < resultToAdd.Count(); j++)
+        {
+            resultToAdd[j].SetBoxSelected(selectionBox.transform.position);
+            selectedMovableObjects.Add(resultToAdd[j]);
+        }*/
+
+
+
+
     }
 
     bool ArrayContains(RaycastHit[] arraySent, RaycastHit rayToCheck)
@@ -183,7 +266,6 @@ public class BoxSelection : MonoBehaviour
 
     public void MoveAllObjectsWithinSelection(Vector3 targetPosition)
     {
-
         for (int i = 0; i < movableObjects.Count; i++)
         {
             Crutilities.singleton.GetFinalParent(movableObjects[i].transform).GetComponentInChildren<MovableObjectStateMachine>().GridMove(targetPosition);
@@ -195,6 +277,5 @@ public class BoxSelection : MonoBehaviour
         SubscribeToDelegates();
         offset = new Vector3(this.selectionBox.position.x - positionSent.x, 0, this.selectionBox.position.z - positionSent.z);
         moving = true;
-        Debug.Log("SelectBox");
     }
 }
