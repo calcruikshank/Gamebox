@@ -164,46 +164,7 @@ public class BoxSelection : MonoBehaviour
 
         RaycastHit[] objectsHit = Physics.BoxCastAll(selectionBox.position, new Vector3(selectionBox.localScale.x / 2, selectionBox.localScale.z / 2, selectionBox.localScale.y / 2), Vector3.down, Quaternion.identity, 10f);
 
-        /*for (int j = 0; j < movableObjects.Count; j++)
-        {
-            if (!ArrayContains(objectsHit, movableObjects[j]))
-            {
-                Transform finalParent = Crutilities.singleton.GetFinalParent(movableObjects[j].transform);
-                if (finalParent != null)
-                {
-                    if (selectedMovableObjects.Contains(finalParent.GetComponentInChildren<MovableObjectStateMachine>()))
-                    {
-                        if (selectedMovableObjects[j].boxSelected)
-                        {
-                            Debug.Log("Setting box unselected");
-                            finalParent.GetComponentInChildren<MovableObjectStateMachine>().SetBoxUnselected();
-                            selectedMovableObjects.Remove(finalParent.GetComponentInChildren<MovableObjectStateMachine>());
-                            movableObjects.Remove(movableObjects[j]);
-                        }
-                    }
-                }
-            }
-        }
-        for (int i = 0; i < objectsHit.Length; i++)
-        {
-            Transform finalParent = Crutilities.singleton.GetFinalParent(objectsHit[i].transform);
-            while (finalParent.parent != null)
-            {
-                finalParent = finalParent.parent;
-            }
-            if (finalParent.GetComponent<MovableObjectStateMachine>() != null)
-            {
-                if (!selectedMovableObjects.Contains(finalParent.GetComponentInChildren<MovableObjectStateMachine>()))
-                {
-                    if (!finalParent.GetComponentInChildren<MovableObjectStateMachine>().boxSelected)
-                    {
-                        movableObjects.Add(objectsHit[i]);
-                        selectedMovableObjects.Add(finalParent.GetComponentInChildren<MovableObjectStateMachine>());
-                        finalParent.GetComponentInChildren<MovableObjectStateMachine>().SetBoxSelected(selectionBox.transform.position);
-                    }
-                }
-            }
-        }*/
+        
 
         List<MovableObjectStateMachine> newListOfMovablesToSelect = new List<MovableObjectStateMachine>();
         for (int i = 0; i < objectsHit.Length; i++)
