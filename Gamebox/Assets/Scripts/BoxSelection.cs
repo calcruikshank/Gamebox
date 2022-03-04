@@ -160,11 +160,7 @@ public class BoxSelection : MonoBehaviour
 
     void ShootRayCastToCheckForMovableObjects()
     {
-        //foreach movableobject if it isnt in objectshit remove it from movableobjects
-
         RaycastHit[] objectsHit = Physics.BoxCastAll(selectionBox.position, new Vector3(selectionBox.localScale.x / 2, selectionBox.localScale.z / 2, selectionBox.localScale.y / 2), Vector3.down, Quaternion.identity, 10f);
-
-        
 
         List<MovableObjectStateMachine> newListOfMovablesToSelect = new List<MovableObjectStateMachine>();
         for (int i = 0; i < objectsHit.Length; i++)
@@ -182,23 +178,14 @@ public class BoxSelection : MonoBehaviour
         {
             result[i].SetBoxDeselected();
         }
-
-        selectedMovableObjects = newListOfMovablesToSelect;
-
-        for (int x = 0; x < selectedMovableObjects.Count; x++)
-        {
-            if (!selectedMovableObjects[x].boxSelected)
-            {
-                selectedMovableObjects[x].SetBoxSelected();
-            }
-        }
-        /*List<MovableObjectStateMachine> resultToAdd = newListOfMovablesToSelect.Except(selectedMovableObjects).ToList<MovableObjectStateMachine>();
+        List<MovableObjectStateMachine> resultToAdd = newListOfMovablesToSelect.Except(selectedMovableObjects).ToList<MovableObjectStateMachine>();
 
         for (int j = 0; j < resultToAdd.Count(); j++)
         {
-            resultToAdd[j].SetBoxSelected(selectionBox.transform.position);
-            selectedMovableObjects.Add(resultToAdd[j]);
-        }*/
+            resultToAdd[j].SetBoxSelected();
+        }
+
+        selectedMovableObjects = newListOfMovablesToSelect;
 
 
 
@@ -227,9 +214,9 @@ public class BoxSelection : MonoBehaviour
 
     public void MoveAllObjectsWithinSelection(Vector3 targetPosition)
     {
-        for (int i = 0; i < movableObjects.Count; i++)
+        for (int i = 0; i < selectedMovableObjects.Count; i++)
         {
-            Crutilities.singleton.GetFinalParent(movableObjects[i].transform).GetComponentInChildren<MovableObjectStateMachine>().GridMove(targetPosition);
+            Crutilities.singleton.GetFinalParent(selectedMovableObjects[i].transform).GetComponentInChildren<MovableObjectStateMachine>().GridMove(targetPosition);
         }
     }
     public void SetBoxSelected(int index, Vector3 positionSent)
