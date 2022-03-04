@@ -19,6 +19,8 @@ public class BoxSelection : MonoBehaviour
     Vector3 offset;
     Vector3 raycastStartPos;
 
+    bool alreadySubscribed = false;
+
     float distanceFromStartToCurrent;
 
 
@@ -50,7 +52,15 @@ public class BoxSelection : MonoBehaviour
     {
         TouchScript.touchMoved += FingerMoved;
         TouchScript.fingerReleased += FingerReleased;
+        if (!alreadySubscribed)
+        {
+            TouchScript.rotateRight += RotateAllMovableObjectsSelected;
+            TouchScript.rotateLeft += RotateAllMovableObjectsLeft;
+            alreadySubscribed = true;
+        }
     }
+
+
     void UnsubscribeToDelegates()
     {
         TouchScript.touchMoved -= FingerMoved;
@@ -65,12 +75,18 @@ public class BoxSelection : MonoBehaviour
         }
         id = -1;
         UnsubscribeToDelegates();
-
+        if (selectedMovableObjects.Count == 0)
+        {
+            TouchScript.rotateRight -= RotateAllMovableObjectsSelected;
+            TouchScript.rotateLeft -= RotateAllMovableObjectsLeft;
+            alreadySubscribed = false;
+        }
         ChangeRectSizeToFitAllMovableObjects();
     }
 
-    private void ChangeRectSizeToFitAllMovableObjects()
+    public void ChangeRectSizeToFitAllMovableObjects()
     {
+
         List<Collider> movableObjectColliders = new List<Collider>();
         for (int i = 0; i < selectedMovableObjects.Count; i++)
         {
@@ -184,12 +200,7 @@ public class BoxSelection : MonoBehaviour
         {
             resultToAdd[j].SetBoxSelected();
         }
-
         selectedMovableObjects = newListOfMovablesToSelect;
-
-
-
-
     }
 
     bool ArrayContains(RaycastHit[] arraySent, RaycastHit rayToCheck)
@@ -225,5 +236,19 @@ public class BoxSelection : MonoBehaviour
         SubscribeToDelegates();
         offset = new Vector3(this.selectionBox.position.x - positionSent.x, 0, this.selectionBox.position.z - positionSent.z);
         moving = true;
+    }
+    private void RotateAllMovableObjectsSelected(Vector3 position, int index)
+    {
+        for (int i = 0; i < selectedMovableObjects.Count; i++)
+        {
+            Crutilities.singleton.GetFinalParent(selectedMovableObjects[i].transform).GetComponentInChildren<MovableObjectStateMachine>().BoxRotateRight();
+        }
+    }
+    private void RotateAllMovableObjectsLeft(Vector3 position, int index)
+    {
+        for (int i = 0; i < selectedMovableObjects.Count; i++)
+        {
+            Crutilities.singleton.GetFinalParent(selectedMovableObjects[i].transform).GetComponentInChildren<MovableObjectStateMachine>().BoxRotateLeft();
+        }
     }
 }

@@ -41,7 +41,8 @@ public class MovableObjectStateMachine : MonoBehaviour
         Selected,
         Moving,
         Rotating,
-        BoxSelected
+        BoxSelected, 
+        BoxRotation
     }
     private void Awake()
     {
@@ -96,6 +97,9 @@ public class MovableObjectStateMachine : MonoBehaviour
                 HandleRaising();
                 HandleLowering();
                 break;
+            case State.BoxRotation:
+                HandleRotating();
+                break;
         }
 
         HandleFlipCard();
@@ -112,10 +116,15 @@ public class MovableObjectStateMachine : MonoBehaviour
 
     private void HandleRotating()
     {
+        if (state == State.BoxRotation)
+        {
+            BoxSelection.singleton.ChangeRectSizeToFitAllMovableObjects();
+        }
         if (MathF.Abs(currentLocalEulerAngles.y - targetRotation.y) < 10f)
         {
             currentLocalEulerAngles.y = targetRotation.y;
             transform.GetChild(0).localEulerAngles = targetRotation;
+           
             return;
         }
         if (currentLocalEulerAngles.y > targetRotation.y)
@@ -346,7 +355,7 @@ public class MovableObjectStateMachine : MonoBehaviour
         TouchScript.rotateLeft += RotateLeft;
     }
 
-    private void RotateRight(Vector3 position, int index)
+    public void RotateRight(Vector3 position, int index)
     {
         targetRotation = new Vector3(transform.GetChild(0).localEulerAngles.x, (targetRotation.y + 90) , transform.GetChild(0).localEulerAngles.z);
         state = State.Rotating;
@@ -365,7 +374,6 @@ public class MovableObjectStateMachine : MonoBehaviour
     }
     private void FingerReleased(Vector3 position, int index)
     {
-        
         Debug.Log(idList.Count);
         if (!idList.Contains(index)) return;
         if (idList.Count == 1)
@@ -387,8 +395,6 @@ public class MovableObjectStateMachine : MonoBehaviour
                 deck.CheckToSeeIfDeckShouldBeAdded();
             }
         }
-
-
         idList.Remove(index);
     }
     void ResetRotationOnX()
@@ -453,7 +459,6 @@ public class MovableObjectStateMachine : MonoBehaviour
         snappingToThreeOnY = true;
         lowering = false;
         boxSelected = true;
-        Debug.Log("Selected");
         state = State.BoxSelected;
     }
     public void SetBoxDeselected()
@@ -464,7 +469,6 @@ public class MovableObjectStateMachine : MonoBehaviour
         boxSelected = false;
         UnHighlight();
         SnapToLowestPointHit();
-        Debug.Log("Deselected");
     }
 
     public void SetGridOffset(Vector3 positionOfBox)
@@ -477,5 +481,16 @@ public class MovableObjectStateMachine : MonoBehaviour
         Vector3 targetPosition = new Vector3(targetPositionSent.x, this.transform.position.y, targetPositionSent.z);
         targetPosition = targetPosition + offset;
         this.transform.position = targetPosition;
+    }
+
+    public void BoxRotateRight()
+    {
+        targetRotation = new Vector3(transform.GetChild(0).localEulerAngles.x, (targetRotation.y + 90), transform.GetChild(0).localEulerAngles.z);
+        state = State.BoxRotation;
+    }
+    public void BoxRotateLeft()
+    {
+        targetRotation = new Vector3(transform.GetChild(0).localEulerAngles.x, (targetRotation.y - 90), transform.GetChild(0).localEulerAngles.z);
+        state = State.BoxRotation;
     }
 }
