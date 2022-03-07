@@ -483,6 +483,7 @@ public class MovableObjectStateMachine : MonoBehaviour
             this.transform.GetComponentInChildren<CardTilter>().SetRotationToNotZero();
         }
         Highlight();
+        HideSelectedWheel();
         snappingToThreeOnY = true;
         lowering = false;
         boxSelected = true;

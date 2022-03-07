@@ -441,6 +441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectionBox: {fileID: 1555482047}
   closeButton: {fileID: 5901803169086856552, guid: a5105dde97673394ca44e5da2ec9a5bf, type: 3}
+  selectionWheelBox: {fileID: 2707454680480196699, guid: 2020f8ed0e207244bb7e70b7a3ce0130, type: 3}
 --- !u!1 &805103525
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,9 +1249,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92dc5a5520bf8aa4cb54f292744e52aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layerMask:
+  buttonLayerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 512
 --- !u!1001 &1407241167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1781,7 +1782,7 @@ RectTransform:
   m_GameObject: {fileID: 1555482046}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 15, y: 6, z: 1}
+  m_LocalScale: {x: 15, y: 6.0000005, z: 1.0000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1340937632}

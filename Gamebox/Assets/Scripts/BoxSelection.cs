@@ -27,8 +27,9 @@ public class BoxSelection : MonoBehaviour
     [SerializeField] GameObject closeButton;
     bool moving = false;
     public static BoxSelection singleton;
-    GameObject newCloseButton;
-    //Travis was here
+    GameObject newCloseButton, newSelectionWheel;
+
+    [SerializeField] GameObject selectionWheelBox;
     private void Awake()
     {
         singleton = this;
@@ -151,26 +152,52 @@ public class BoxSelection : MonoBehaviour
             //if seleceted movable object count is == 0 then call closeBox
             newCloseButton.transform.parent = selectionBox;
         }
-        if (startPosition.x < currentPosition.x && startPosition.y < currentPosition.y)
+        else if (startPosition.x < currentPosition.x && startPosition.y < currentPosition.y)
         {
             newCloseButton = Instantiate(closeButton, new Vector3(selectionBox.transform.position.x - width / 2, 7, selectionBox.transform.position.z + height / 2), Quaternion.identity);
             
             newCloseButton.transform.parent = selectionBox;
         }
-        if (startPosition.x > currentPosition.x && startPosition.y < currentPosition.y)
+        else if (startPosition.x > currentPosition.x && startPosition.y < currentPosition.y)
         {
             newCloseButton = Instantiate(closeButton, new Vector3(selectionBox.transform.position.x - width / 2, 7, selectionBox.transform.position.z - height / 2), Quaternion.identity);
         
             newCloseButton.transform.parent = selectionBox;
         }
-        if (startPosition.x > currentPosition.x && startPosition.y > currentPosition.y)
+        else if (startPosition.x > currentPosition.x && startPosition.y > currentPosition.y)
         {
             newCloseButton = Instantiate(closeButton, new Vector3(selectionBox.transform.position.x + width / 2, 7, selectionBox.transform.position.z - height / 2), Quaternion.identity);
             
             newCloseButton.transform.parent = selectionBox;
         }
-
+        else
+        {
+            //call this method when finger is released and selected movable objects.count > 0 
+            newCloseButton = Instantiate(closeButton, new Vector3(selectionBox.transform.position.x + width / 2, 7, selectionBox.transform.position.z + height / 2), Quaternion.identity);
+            //if seleceted movable object count is == 0 then call closeBox
+            newCloseButton.transform.parent = selectionBox;
+        }
+        if (newSelectionWheel == null)
+        {
+            newSelectionWheel = Instantiate(selectionWheelBox, new Vector3(selectionBox.transform.position.x, 7, selectionBox.transform.position.z), Quaternion.identity);
+            newSelectionWheel.transform.parent = selectionBox;
+            ButtonSelector[] buttonSelectors = newSelectionWheel.GetComponentsInChildren<ButtonSelector>();
+            for (int i = 0; i < buttonSelectors.Length; i++)
+            {
+                buttonSelectors[i].SetTargetTransform(selectionBox);
+            }
+        }
     }
+
+    public void FlipObject()
+    {
+        for (int i = 0; i < selectedMovableObjects.Count; i++)
+        {
+            Debug.Log("Flipping object !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            selectedMovableObjects[i].FlipObject();
+        }
+    }
+    
     public void CloseBox()
     {
         if (selectionBox.gameObject.activeInHierarchy)
@@ -183,6 +210,7 @@ public class BoxSelection : MonoBehaviour
         }
         selectedMovableObjects.Clear();
         Destroy(newCloseButton);
+        Destroy(newSelectionWheel);
     }
     private void FingerMoved(Vector3 position, int index)
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TouchController : MonoBehaviour
 {
-    [SerializeField] LayerMask layerMask;
+    [SerializeField] LayerMask buttonLayerMask;
     private void Awake()
     {
         TouchScript.touchedDown += FingerDown;
@@ -33,7 +33,6 @@ public class TouchController : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(position);
         if (Physics.Raycast(ray, out RaycastHit raycastHit, Mathf.Infinity))
         {
-            Debug.Log(raycastHit.transform);
             if (raycastHit.transform.GetComponent<ButtonSelector>() != null)
             {
                 raycastHit.transform.GetComponent<ButtonSelector>().Select();

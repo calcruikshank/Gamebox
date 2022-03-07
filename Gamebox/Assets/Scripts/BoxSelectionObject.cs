@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BoxSelectionObject : MonoBehaviour
 {
+   
     int id = -1;
     public void SelectBox(int index, Vector3 positonSent)
     {
@@ -12,6 +13,16 @@ public class BoxSelectionObject : MonoBehaviour
 
     public void Close()
     {   
+        BoxSelection.singleton.CloseBox();
+    }
+
+    public void FlipObject()
+    {
+        BoxSelection.singleton.FlipObject();
+    }
+
+    public void HideSelectedWheel()
+    {
         BoxSelection.singleton.CloseBox();
     }
 }

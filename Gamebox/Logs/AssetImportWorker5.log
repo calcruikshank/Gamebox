@@ -1,0 +1,2617 @@
+Using pre-set license
+Built from '2021.2/staging' branch; Version is '2021.2.9f1 (921b45a28ab6) revision 9575237'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19043) 64bit Core' Language: 'en' Physical Memory: 32718 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.2.9f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker5
+-projectPath
+C:/Users/calcr/Documents/GitHub/Gamebox/Gamebox
+-logFile
+Logs/AssetImportWorker5.log
+-srvPort
+64631
+Successfully changed project path to: C:/Users/calcr/Documents/GitHub/Gamebox/Gamebox
+C:/Users/calcr/Documents/GitHub/Gamebox/Gamebox
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 125.88 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.56 ms.
+Initialize engine version: 2021.2.9f1 (921b45a28ab6)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/calcr/Documents/GitHub/Gamebox/Gamebox/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon RX 5600 XT (ID=0x731f)
+    Vendor:   ATI
+    VRAM:     6103 MB
+    Driver:   30.0.13023.4001
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56456
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.007790 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 127.86 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.662 seconds
+Domain Reload Profiling:
+	ReloadAssembly (663ms)
+		BeginReloadAssembly (71ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (512ms)
+			LoadAssemblies (68ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (103ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (323ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (128ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (137ms)
+				ProcessInitializeOnLoadMethodAttributes (41ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.007158 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\calcr\Documents\GitHub\Gamebox\Gamebox\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\calcr\Documents\GitHub\Gamebox\Gamebox\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 107.59 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.652 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1653ms)
+		BeginReloadAssembly (94ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (1475ms)
+			LoadAssemblies (70ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (238ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (55ms)
+			SetupLoadedEditorAssemblies (1074ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (108ms)
+				BeforeProcessingInitializeOnLoad (159ms)
+				ProcessInitializeOnLoadAttributes (726ms)
+				ProcessInitializeOnLoadMethodAttributes (63ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 1.03 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 5224 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 43 unused Assets / (0.7 MB). Loaded Objects now: 5668.
+Memory consumption went from 202.1 MB to 201.4 MB.
+Total: 3.526500 ms (FindLiveObjects: 0.414400 ms CreateObjectMapping: 0.157200 ms MarkObjects: 2.708000 ms  DeleteObjects: 0.246200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 14912.724812 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/004.png
+  artifactKey: Guid(2af7b538335a003449b9755bbe92487a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/004.png using Guid(2af7b538335a003449b9755bbe92487a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24a6d484014f678433e3dd2a2de0ffc0') in 0.111698 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/046.png
+  artifactKey: Guid(ee31a11b8c799c44d83bb9e1159ad3ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/046.png using Guid(ee31a11b8c799c44d83bb9e1159ad3ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4102a6c220738d6224e2517d3f110ca1') in 0.017173 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/017.png
+  artifactKey: Guid(68df393833bd3594ca50861e98fdfab4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/017.png using Guid(68df393833bd3594ca50861e98fdfab4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f944ffe7fe0d76d51ce3e0806bf2cb8') in 0.015311 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/100.png
+  artifactKey: Guid(345d9c34d287a5242a9bf17736f71704) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/100.png using Guid(345d9c34d287a5242a9bf17736f71704) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84fc36349cce3ddcf883f15d7046cf22') in 0.018009 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/015.png
+  artifactKey: Guid(3b825e0c4f43616479bd5f8d58419225) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/015.png using Guid(3b825e0c4f43616479bd5f8d58419225) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9367bad21ca9b358621906e76128d514') in 0.017837 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/059.png
+  artifactKey: Guid(24d36f586b9ea604a888532586c294d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/059.png using Guid(24d36f586b9ea604a888532586c294d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa8c2f05c4766fd7fef5e3459df08f4b') in 0.014954 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/054.png
+  artifactKey: Guid(948437fd0f1c1f34bae432677fd4b972) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/054.png using Guid(948437fd0f1c1f34bae432677fd4b972) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef1bc46610a4d6fb5e4cf65a2349543b') in 0.015329 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/041.png
+  artifactKey: Guid(8c02e6e59d7e89b4a9be6db96d936b13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/041.png using Guid(8c02e6e59d7e89b4a9be6db96d936b13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd9886808569c6f5dbecb168d722bde5') in 0.013180 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/089.png
+  artifactKey: Guid(f2d81fbb930184a429ad25a2f7ea0366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/089.png using Guid(f2d81fbb930184a429ad25a2f7ea0366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca3b8e23e743642783bb1711b22eb00d') in 0.013331 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/081.png
+  artifactKey: Guid(1336f4acc470ca049a7d12cfdb252ae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/081.png using Guid(1336f4acc470ca049a7d12cfdb252ae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c5c3073492e76ca02e9e4c82a924853') in 0.014885 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/075.png
+  artifactKey: Guid(3db2710e95f84d841a79b4b5b86042b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/075.png using Guid(3db2710e95f84d841a79b4b5b86042b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e45b55e81035d0987f68d0f05ae71af') in 0.013387 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/005.png
+  artifactKey: Guid(487f7c0e5d3151b4c9a6cd47912a5d42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/005.png using Guid(487f7c0e5d3151b4c9a6cd47912a5d42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1adaef4498a615d91464b35d7ebd7dfc') in 0.014080 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/028.png
+  artifactKey: Guid(1cd0595ca2060524798e2ff19b66e09c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/028.png using Guid(1cd0595ca2060524798e2ff19b66e09c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da7ac703a7e48c6010b8d00031b16a84') in 0.013613 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/083.png
+  artifactKey: Guid(bd1f5b5716dd13c4d8c91f3b0c41c764) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/083.png using Guid(bd1f5b5716dd13c4d8c91f3b0c41c764) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fd3a126eef38f056155aaf6b8423b20') in 0.013036 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/057.png
+  artifactKey: Guid(5a2048a860d9a7d4da08daff7ef3b51f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/057.png using Guid(5a2048a860d9a7d4da08daff7ef3b51f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d134ca0b5ca989e9db8b22ef19dcb19') in 0.013181 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/092.png
+  artifactKey: Guid(4710d97dc067134469dcf10499b1429c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/092.png using Guid(4710d97dc067134469dcf10499b1429c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0acd235eac1fefcc0ad39758e1b650c5') in 0.012631 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/008.png
+  artifactKey: Guid(d768b617054685f489afcd1dd8dc5f8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/008.png using Guid(d768b617054685f489afcd1dd8dc5f8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3b9bc732b5d4163e88feab2cde97a7a') in 0.013934 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/012.png
+  artifactKey: Guid(f4e977d6e7f45944397fd5d0d58cac45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/012.png using Guid(f4e977d6e7f45944397fd5d0d58cac45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dad9cdf2956053e7a5f6ba75424fd049') in 0.014650 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/090.png
+  artifactKey: Guid(3a8881d71c008484ba6756c656f1f3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/090.png using Guid(3a8881d71c008484ba6756c656f1f3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb76c443ef4eeee5a3f99b5a00714ec8') in 0.012308 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/030.png
+  artifactKey: Guid(1545c12acb878c2458aff9ede4b7351d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/030.png using Guid(1545c12acb878c2458aff9ede4b7351d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b950af806c1b7ded61ab98ae4c024f9e') in 0.018082 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/038.png
+  artifactKey: Guid(e9c84f4acb6d9bf43a917307223f1a13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/038.png using Guid(e9c84f4acb6d9bf43a917307223f1a13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92ab8fdd0582c135d98777dc67782c51') in 0.013116 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/022.png
+  artifactKey: Guid(5d9b731d5441a354eba5264bca311106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/022.png using Guid(5d9b731d5441a354eba5264bca311106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecf6708b3b0e4c139e90b1a9ed142184') in 0.014439 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.001604 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/104.png
+  artifactKey: Guid(6ac7d4b94a557e84786d1f50f4bf2e3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/104.png using Guid(6ac7d4b94a557e84786d1f50f4bf2e3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d9d9f149514572f1d2b9b0a0cf1797f') in 0.014200 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/155.png
+  artifactKey: Guid(6aa38866e9a67cd4aa32997800822da4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/155.png using Guid(6aa38866e9a67cd4aa32997800822da4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb5858f0b17ff5668c98866f889a999e') in 0.017119 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/200.png
+  artifactKey: Guid(9d86133547e83be479782282db096b3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/200.png using Guid(9d86133547e83be479782282db096b3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a297961242f660b8a67dc851fd9aa02') in 0.014339 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/194.png
+  artifactKey: Guid(c6c7cdda33cd3e842a8623fdf7bd824d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/194.png using Guid(c6c7cdda33cd3e842a8623fdf7bd824d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31b27e9d643b6446765397b3c9c0bc21') in 0.014548 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/168.png
+  artifactKey: Guid(e56d80b1b901ca8438c379bf71464d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/168.png using Guid(e56d80b1b901ca8438c379bf71464d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0adaccc1336b27fdacfe1ec357d977a8') in 0.013183 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/174.png
+  artifactKey: Guid(c76f6b6ac401ad449ab4e891e9acdc2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/174.png using Guid(c76f6b6ac401ad449ab4e891e9acdc2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a39f7238ef89a55436d7d309352d6ce') in 0.013189 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/198.png
+  artifactKey: Guid(bf7f1a44d812501498f01e006df88cc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/198.png using Guid(bf7f1a44d812501498f01e006df88cc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58b099432ac2b4f833375e01c3f6b0b3') in 0.014926 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/182.png
+  artifactKey: Guid(2759f6a857b29be4e9e22edf96fcc828) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/182.png using Guid(2759f6a857b29be4e9e22edf96fcc828) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '043f1407edbf6e4e43bdd74d43645565') in 0.013841 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/125.png
+  artifactKey: Guid(def6ebaa88ea5014d9f11fb8c85441ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/125.png using Guid(def6ebaa88ea5014d9f11fb8c85441ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5e9c40aa745d82fe514b5b0c1b9b9ed') in 0.013397 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/144.png
+  artifactKey: Guid(081be2bbc56b9f7489444aa0c0ab05a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/144.png using Guid(081be2bbc56b9f7489444aa0c0ab05a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24af49a685dadeb09d78fafe8ad1b831') in 0.014980 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/187.png
+  artifactKey: Guid(60446bba2d68fba409a20aaae86f1f48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/187.png using Guid(60446bba2d68fba409a20aaae86f1f48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d57f11693b88abd1fb2fc1fd689bfd6') in 0.014444 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/124.png
+  artifactKey: Guid(7c0d8671e3c08fa44b2fe317a7eb343f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/124.png using Guid(7c0d8671e3c08fa44b2fe317a7eb343f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec9266f8a12a4c33bafae482853c6bce') in 0.013607 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/154.png
+  artifactKey: Guid(935a4f30b8c4b5a4b8ca3ff74e7e7e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/154.png using Guid(935a4f30b8c4b5a4b8ca3ff74e7e7e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67d77bffa207932a9fdfc93be32ca7d2') in 0.020122 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/119.png
+  artifactKey: Guid(d524c4aefcd4ce7458bdb4ceb33d8048) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/119.png using Guid(d524c4aefcd4ce7458bdb4ceb33d8048) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb52fe963eab868e2cbe7e6197015efe') in 0.037078 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/190.png
+  artifactKey: Guid(6c0b8221a4cd0c9408ffa9618ca155a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/190.png using Guid(6c0b8221a4cd0c9408ffa9618ca155a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4049835da764069c867973bf65085b6f') in 0.013484 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/192.png
+  artifactKey: Guid(7c11383e43d709044b407c73d74b2caa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/192.png using Guid(7c11383e43d709044b407c73d74b2caa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87aa983508a32d645c68a71440a7dd4a') in 0.046978 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/188.png
+  artifactKey: Guid(a2c8f83e2db1a834eaf29f800a4739c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/188.png using Guid(a2c8f83e2db1a834eaf29f800a4739c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5df56792e53925095ee9001a4b4c3307') in 0.013994 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/171.png
+  artifactKey: Guid(d33f82ae2a1cf794ca2385ce7e4baf20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/171.png using Guid(d33f82ae2a1cf794ca2385ce7e4baf20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b60a1361d84829423434b2ca53a25c3f') in 0.014447 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/184.png
+  artifactKey: Guid(a2c8c0ff9b610d941a4f71e5eaeb14b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/184.png using Guid(a2c8c0ff9b610d941a4f71e5eaeb14b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe41d4d190017cd8e84e70e0d223f719') in 0.013794 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/197.png
+  artifactKey: Guid(5d16609b75fcfde4e9b79ec3af03c15a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/197.png using Guid(5d16609b75fcfde4e9b79ec3af03c15a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e69c7fd11a582e2eb2f66f83ecec97ef') in 0.014628 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/116.png
+  artifactKey: Guid(51929f3d19c02e5438e6bfc3bdb07c7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/116.png using Guid(51929f3d19c02e5438e6bfc3bdb07c7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf1d3493ccaa949ee2e3dd57c57a69a8') in 0.014079 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/132.png
+  artifactKey: Guid(4b5ca873317f25349a135d71e304b0b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/132.png using Guid(4b5ca873317f25349a135d71e304b0b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f3dfe7022846660dafe9bd0f3bc05e8') in 0.013841 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/178.png
+  artifactKey: Guid(67565f6d35e20c540879c6516e5739fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/178.png using Guid(67565f6d35e20c540879c6516e5739fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48b4a9709f5350ab815ab0e2da2c7a98') in 0.014236 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/170.png
+  artifactKey: Guid(19ccc94d34e0c9c40b06770fc59d94b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/170.png using Guid(19ccc94d34e0c9c40b06770fc59d94b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14ef30d7a56c13376b544c821f85d332') in 0.014398 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/107.png
+  artifactKey: Guid(6f883b7161e34234684b1caeb9fa42ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/107.png using Guid(6f883b7161e34234684b1caeb9fa42ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee19c6d8cd0e91324be2868a91c25fd6') in 0.014724 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.723903 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/304.png
+  artifactKey: Guid(1b8b80cbd0186df42af815848d5bf554) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/304.png using Guid(1b8b80cbd0186df42af815848d5bf554) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4bb09814d12b290f6c7f1a3994f754a') in 0.013106 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/312.png
+  artifactKey: Guid(0f71c0ee9b5fadc4d8481b0a0a295ade) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/312.png using Guid(0f71c0ee9b5fadc4d8481b0a0a295ade) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47f135de3499afc44c2fa15575fbdb0a') in 0.013071 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/367.png
+  artifactKey: Guid(6c051880a2fda844a95c9b93fd1fa1ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/367.png using Guid(6c051880a2fda844a95c9b93fd1fa1ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f308ec6c8c51e7d0a6f865a174b180a4') in 0.012345 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/341.png
+  artifactKey: Guid(61acaa8dca9d79d4ab8bf26a2120c3ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/341.png using Guid(61acaa8dca9d79d4ab8bf26a2120c3ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75bcf1b4a029fcd6d109b7b909d5579b') in 0.012362 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/366.png
+  artifactKey: Guid(71bddd722bac72646b0e89f2905f6ac9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/366.png using Guid(71bddd722bac72646b0e89f2905f6ac9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '419b11fa66781367736739a5ac35f569') in 0.013963 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/330.png
+  artifactKey: Guid(1792fc651d69d954caddd60fbf38dd22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/330.png using Guid(1792fc651d69d954caddd60fbf38dd22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f23eb0a5de04ccad667074ac4e36197') in 0.012772 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/397.png
+  artifactKey: Guid(ccaf1fa9d850b954cb71f7bbceedcce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/397.png using Guid(ccaf1fa9d850b954cb71f7bbceedcce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36404e6a9030f2d20b93cf1f3353297a') in 0.012945 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/383.png
+  artifactKey: Guid(d3fd63d7b6aafa14299616b52fc4b1da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/383.png using Guid(d3fd63d7b6aafa14299616b52fc4b1da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d44cd1781f8f4424593b635c9c334e3') in 0.012979 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/352.png
+  artifactKey: Guid(df857bf6a240e864184ade742867bb49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/352.png using Guid(df857bf6a240e864184ade742867bb49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fef9e49dbea990ff9ef09e96a6b7038') in 0.012983 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/376.png
+  artifactKey: Guid(41824f106bd105b46abcd7159c137486) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/376.png using Guid(41824f106bd105b46abcd7159c137486) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7361b9a71af9895952c33a882f862de8') in 0.012735 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/391.png
+  artifactKey: Guid(5dd065a7fe962ce4aaffabf3784b25ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/391.png using Guid(5dd065a7fe962ce4aaffabf3784b25ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bf1d69b0915a6a4c63be16d422d9ae9') in 0.013316 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/377.png
+  artifactKey: Guid(04a80168bca8acc4ca351e5ad7c7f9aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/377.png using Guid(04a80168bca8acc4ca351e5ad7c7f9aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8db7b35ebd9e6ac6c7c5809bf54abada') in 0.014979 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/358.png
+  artifactKey: Guid(af603b14937e86746bf3c757844f6ac8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/358.png using Guid(af603b14937e86746bf3c757844f6ac8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4190a17aa68b38045e8a1914b556557') in 0.012229 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/307.png
+  artifactKey: Guid(0aaa889d80e67ba4f9bb24a268391503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/307.png using Guid(0aaa889d80e67ba4f9bb24a268391503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f8144c3de6167aefbf69c03b5537b15') in 0.012467 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/387.png
+  artifactKey: Guid(951331dbf684c1a4b8d40b64e742df69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/387.png using Guid(951331dbf684c1a4b8d40b64e742df69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3dd25b85b520d9f9f092940d8baf503') in 0.013430 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/357.png
+  artifactKey: Guid(317dd76fe0f2a6947bfb05a2b6f0d095) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/357.png using Guid(317dd76fe0f2a6947bfb05a2b6f0d095) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb1d4ec44e9a587c2219b081107894a7') in 0.015418 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/338.png
+  artifactKey: Guid(c6255204af652d14b8082ffc09e7edf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/338.png using Guid(c6255204af652d14b8082ffc09e7edf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baaeb1bc5d48c934ce9d78e8ea8fa74c') in 0.012935 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/314.png
+  artifactKey: Guid(c80762740eedc7347ba6721e32af791f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/314.png using Guid(c80762740eedc7347ba6721e32af791f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6312682cd7700f7c463cbde7034236d9') in 0.013124 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/337.png
+  artifactKey: Guid(7b35863898f00234eba71d6c5527e725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/337.png using Guid(7b35863898f00234eba71d6c5527e725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ecd92e2e5c4408d7c08c4b5a490a055') in 0.012385 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/325.png
+  artifactKey: Guid(47d8ed2ff75ea28418c9e4546c7fe09f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/325.png using Guid(47d8ed2ff75ea28418c9e4546c7fe09f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '392e6c7f56a8c0c48b352455d210f963') in 0.013621 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/332.png
+  artifactKey: Guid(029b780a36154f64f80be9ea77831e15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/332.png using Guid(029b780a36154f64f80be9ea77831e15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb022878e643c1fa75d2b0fdc2ef5477') in 0.012786 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/329.png
+  artifactKey: Guid(72352682ad7f154469a6ed14874df328) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/329.png using Guid(72352682ad7f154469a6ed14874df328) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f358a5d8e6900b4a185be7b281fc13c5') in 0.017249 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/384.png
+  artifactKey: Guid(139b77928f8c75b4995310cf89777f9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/384.png using Guid(139b77928f8c75b4995310cf89777f9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a78e40f0a4e8bb9cf29a5d4cf43095b') in 0.013069 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/382.png
+  artifactKey: Guid(47f7d6fe7f67054448c4318eb52593fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/382.png using Guid(47f7d6fe7f67054448c4318eb52593fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51afc0c6ca3eade71b5dd500369d603f') in 0.014142 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/324.png
+  artifactKey: Guid(c65e075e46c26ce4099f828a644e3d81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/324.png using Guid(c65e075e46c26ce4099f828a644e3d81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2c41808d7d2f751e21dd26f7f42ecb2') in 0.013390 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.112496 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/404.png
+  artifactKey: Guid(2ff5305ae92debc408e15156330f6f3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/404.png using Guid(2ff5305ae92debc408e15156330f6f3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a74e272b5864ac94fd6fd06ced6e28eb') in 0.013637 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/484.png
+  artifactKey: Guid(b9d0eb4616999fa4ba69c6051cf35d44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/484.png using Guid(b9d0eb4616999fa4ba69c6051cf35d44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cdfc689ff0284a9fc3d3b533fa42a6c') in 0.013965 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/487.png
+  artifactKey: Guid(13181650027d2c649a0881d9869b33c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/487.png using Guid(13181650027d2c649a0881d9869b33c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '129bf7f40c9b3ac34cd26b00cfc4194e') in 0.013664 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/467.png
+  artifactKey: Guid(fe33078f7cfaf4d47a6d12d5d7c8fb2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/467.png using Guid(fe33078f7cfaf4d47a6d12d5d7c8fb2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b498adee50f4c11c3984c525cf369b4c') in 0.013745 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.006919 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/490.png
+  artifactKey: Guid(e91fab2b51cf00e4292f4624be071890) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/490.png using Guid(e91fab2b51cf00e4292f4624be071890) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f253c87f151a628139d9166ba6cf0f6b') in 0.035712 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/460.png
+  artifactKey: Guid(9c654d809a09d374d86275340ab65061) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/460.png using Guid(9c654d809a09d374d86275340ab65061) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6c50369156e1b8b4c080e0906e68701') in 0.013623 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/457.png
+  artifactKey: Guid(ea3c6cd9d150149459054db1195a5c4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/457.png using Guid(ea3c6cd9d150149459054db1195a5c4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd8f98966ec76bb2a2cb49e215d83972') in 0.013336 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/500.png
+  artifactKey: Guid(2d226d6cfc304e4429b3da2716aafbec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/500.png using Guid(2d226d6cfc304e4429b3da2716aafbec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6119d7389ac21bbb24007915483a268d') in 0.013072 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/423.png
+  artifactKey: Guid(f8398ea07c3824a45b1cb04cacd9c020) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/423.png using Guid(f8398ea07c3824a45b1cb04cacd9c020) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad45757490e3d02f3d5bd5093db2ee2f') in 0.013419 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/406.png
+  artifactKey: Guid(5e76a19059648564fba1211c568c9fde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/406.png using Guid(5e76a19059648564fba1211c568c9fde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a308e0dddd7d2993436a29eeb1da3aa4') in 0.013400 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/492.png
+  artifactKey: Guid(e4b8beec4b0ba6941a7af61b03b1865b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/492.png using Guid(e4b8beec4b0ba6941a7af61b03b1865b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1c6d2042bd231dd4b4a3049d02da133') in 0.013176 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/426.png
+  artifactKey: Guid(18f8b8fc6f9495d4d845f578e20dd843) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/426.png using Guid(18f8b8fc6f9495d4d845f578e20dd843) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd1b87ee3ed3f470c418530f185d9a32') in 0.014123 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/430.png
+  artifactKey: Guid(65864dfa528a93b4bb798ce271fde1f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/430.png using Guid(65864dfa528a93b4bb798ce271fde1f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a637e21e4842d3e93314798ea2eaa13') in 0.013751 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/482.png
+  artifactKey: Guid(0402990444bbfa04c8e1caac2e1edfad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/482.png using Guid(0402990444bbfa04c8e1caac2e1edfad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9838a10254d6083a9c57c78076ba082') in 0.013899 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/496.png
+  artifactKey: Guid(abc006152e013ef48a1e60602c9ecd32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/496.png using Guid(abc006152e013ef48a1e60602c9ecd32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3bdc185851b03172a19ce3c0b648a8b') in 0.012937 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/412.png
+  artifactKey: Guid(8a7b6576e0881a34a8df5e2fce86ce6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/412.png using Guid(8a7b6576e0881a34a8df5e2fce86ce6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b468306c1b71ecb68bad1b58846f555') in 0.015881 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/488.png
+  artifactKey: Guid(36fca0528e72d3842b6180c8f431a0c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/488.png using Guid(36fca0528e72d3842b6180c8f431a0c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bcdfaed39714e1934b7a9e009710611') in 0.015883 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/445.png
+  artifactKey: Guid(b7a7858a31ecd0048811de14446af8cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/445.png using Guid(b7a7858a31ecd0048811de14446af8cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbe791395f0d320b51dfaeed91ab2161') in 0.013271 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/462.png
+  artifactKey: Guid(c5d07fdbd95aed44cb6d711f848f1acf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/462.png using Guid(c5d07fdbd95aed44cb6d711f848f1acf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3da92e98f160c8ccc2b89e9080765f48') in 0.012675 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/425.png
+  artifactKey: Guid(e6d38fdcf3fb58648a0c061818595581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/425.png using Guid(e6d38fdcf3fb58648a0c061818595581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64b77898e63be4284f51475a60269829') in 0.013263 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/442.png
+  artifactKey: Guid(7a65a787e2d51814db6884cb70dbfd28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/442.png using Guid(7a65a787e2d51814db6884cb70dbfd28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1b08d42c8e3d0c48f0d3a20e9ca4205') in 0.012901 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/418.png
+  artifactKey: Guid(9c0907a8d0cc88348b75292e21decf23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/418.png using Guid(9c0907a8d0cc88348b75292e21decf23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '662d1ce764791c29af9b1d9cfb724810') in 0.012809 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/454.png
+  artifactKey: Guid(dfbec410c977e3a4d99f5e3c5cfdbfd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/454.png using Guid(dfbec410c977e3a4d99f5e3c5cfdbfd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d50a36fd7cf980acdffbbcb377e99c4') in 0.013500 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/465.png
+  artifactKey: Guid(f59c67baa6c2d1540a2c2adbedfd19f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/465.png using Guid(f59c67baa6c2d1540a2c2adbedfd19f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '425a175ef6ab2f0b3ec31e4c3a3cc4dd') in 0.012853 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/481.png
+  artifactKey: Guid(70d6b50b5cc166048b5e7b8d70e1394d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/481.png using Guid(70d6b50b5cc166048b5e7b8d70e1394d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '584ab63ab4ef101f4e40f5b02861b059') in 0.013317 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.515550 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/204.png
+  artifactKey: Guid(0dea8e93fd690014fa4b808e85b8e1de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/204.png using Guid(0dea8e93fd690014fa4b808e85b8e1de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '903669590e3af0c899945a62f92649da') in 0.015956 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/288.png
+  artifactKey: Guid(433333ce32bbe104189326ebae88f801) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/288.png using Guid(433333ce32bbe104189326ebae88f801) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8d4251229273b44b0b5ece04e0ab343') in 0.015201 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/267.png
+  artifactKey: Guid(3315ad084f24cad4391d791b03c07210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/267.png using Guid(3315ad084f24cad4391d791b03c07210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd66e84b70e61825543ca9393e1a67926') in 0.014156 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/283.png
+  artifactKey: Guid(d7cb3d28cf9bbf649b64d2c00379f7da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/283.png using Guid(d7cb3d28cf9bbf649b64d2c00379f7da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a28537aaa0178ca589c124963144eb3c') in 0.014141 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/273.png
+  artifactKey: Guid(273be87bb2ff74546b7137d10a94eaf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/273.png using Guid(273be87bb2ff74546b7137d10a94eaf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '873ddbf960801a3ea98401b7bbc3012a') in 0.015427 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/297.png
+  artifactKey: Guid(8c18fdbcf9c75004e91fb94142b127ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/297.png using Guid(8c18fdbcf9c75004e91fb94142b127ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a174416f2b66f86feef0f28b217d7a15') in 0.014232 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/239.png
+  artifactKey: Guid(ea9084efd6c099d419a86ffce1da052b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/239.png using Guid(ea9084efd6c099d419a86ffce1da052b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ab05bfef95676ae41d971e773c64d02') in 0.013120 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/229.png
+  artifactKey: Guid(71d01cc29515f244dab9cc2c81ba7f35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/229.png using Guid(71d01cc29515f244dab9cc2c81ba7f35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b211c9e1231d1e2beac89019ad68ca7e') in 0.014516 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/230.png
+  artifactKey: Guid(ca8441bf3356f424f82910c8af48cb2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/230.png using Guid(ca8441bf3356f424f82910c8af48cb2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b34f31087984258fdbca71fd92bc221') in 0.014861 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/280.png
+  artifactKey: Guid(8cc15e2f009065942b296a3c0e2971ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/280.png using Guid(8cc15e2f009065942b296a3c0e2971ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b4f794f08fc9847c7729292df1d1b63') in 0.014070 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/224.png
+  artifactKey: Guid(95d152774d7903548ba4cf516ad14dc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/224.png using Guid(95d152774d7903548ba4cf516ad14dc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99c18945226f19dc78775663dafe9903') in 0.014706 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/226.png
+  artifactKey: Guid(a32d87c2e6ed8b4438e336352e50609b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/226.png using Guid(a32d87c2e6ed8b4438e336352e50609b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d1700e2f9da6433ea14f5ecf59d1eaf') in 0.014691 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/296.png
+  artifactKey: Guid(528933b3cbdb9694baf1e26c2eb48194) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/296.png using Guid(528933b3cbdb9694baf1e26c2eb48194) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65911dba6acf9d4be7afc82c72a98788') in 0.014777 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/258.png
+  artifactKey: Guid(0daddf9094f667041a144df0e38ca165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/258.png using Guid(0daddf9094f667041a144df0e38ca165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cacedc603630c1a6256122e8898f201c') in 0.015442 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/277.png
+  artifactKey: Guid(c3794a61d99693d4398dd73f68f0b1cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/277.png using Guid(c3794a61d99693d4398dd73f68f0b1cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d1c73e9d4f4a57c26d5282bbc609293') in 0.013912 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/265.png
+  artifactKey: Guid(878fd444627a2324b88463e619f8856c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/265.png using Guid(878fd444627a2324b88463e619f8856c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aec14dc7e8c910b331912ff543de8e26') in 0.013151 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/275.png
+  artifactKey: Guid(8f9c5eb354f33924b812f85d9a1ff0e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/275.png using Guid(8f9c5eb354f33924b812f85d9a1ff0e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd46fae19134ed4c2ee9b8f52a0ffebdb') in 0.014247 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/243.png
+  artifactKey: Guid(99fd599f06e69f64788bc2a0c24ef014) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/243.png using Guid(99fd599f06e69f64788bc2a0c24ef014) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81274b6c13c1aed7fa8aca0b40e9a660') in 0.013250 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/211.png
+  artifactKey: Guid(63798500cee94c1449c2b273b78dcd9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/211.png using Guid(63798500cee94c1449c2b273b78dcd9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e417cbdb51dc9d85a432f27b0aec31c1') in 0.013603 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/219.png
+  artifactKey: Guid(94b10d9e85df6c74a8d40991a3912d25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/219.png using Guid(94b10d9e85df6c74a8d40991a3912d25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d5568e62265385d53f8c574b745d459') in 0.014376 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/218.png
+  artifactKey: Guid(e7a6ac52b6e2c7b4ba289638c9b351b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/218.png using Guid(e7a6ac52b6e2c7b4ba289638c9b351b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b98e4652b11733622d1074b5847f130') in 0.014561 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/244.png
+  artifactKey: Guid(6ebc9d7d1704ce846bf0c2928ab4c269) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/244.png using Guid(6ebc9d7d1704ce846bf0c2928ab4c269) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd364a861a29e34588a7ff69b641939dc') in 0.014766 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/269.png
+  artifactKey: Guid(852da79071cec794ba11badbb1f2f791) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/269.png using Guid(852da79071cec794ba11badbb1f2f791) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b414b3c2116acca85e2115207fb370fb') in 0.015021 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/241.png
+  artifactKey: Guid(0e312c1cb488bdb42a5a8902d1c49776) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/241.png using Guid(0e312c1cb488bdb42a5a8902d1c49776) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cca38b3b3bc77a1ca72f61d0f1190cf1') in 0.014863 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/245.png
+  artifactKey: Guid(c371acaeb7c90c94b9aeaaaf54290618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/245.png using Guid(c371acaeb7c90c94b9aeaaaf54290618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f644e1917158823c2415327f0cdd9bcb') in 0.016278 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 31.204890 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/504.png
+  artifactKey: Guid(542bb565e9c68bf48aabcebe9af39913) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/504.png using Guid(542bb565e9c68bf48aabcebe9af39913) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb7f3bf1e0e9c304d04481b3a6e04394') in 0.012908 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/513.png
+  artifactKey: Guid(250cb0dc4d06b024fb5d53d9a86e03a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/513.png using Guid(250cb0dc4d06b024fb5d53d9a86e03a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '986fbe449544901c66df27a74afabef0') in 0.013466 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/557.png
+  artifactKey: Guid(db7fa0b0bcb167447bb7698a649b6bdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/557.png using Guid(db7fa0b0bcb167447bb7698a649b6bdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24c1227478bc1b50a629d10ebbae95cc') in 0.022079 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/532.png
+  artifactKey: Guid(fc25bb63bb5840142b3a078b5896c75d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/532.png using Guid(fc25bb63bb5840142b3a078b5896c75d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f1dbe4929d64b0536020cbbe9e81304') in 0.014301 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/570.png
+  artifactKey: Guid(73e42fc313551834c8ea8baa8496d6a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/570.png using Guid(73e42fc313551834c8ea8baa8496d6a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc181f9b6b45cd2df738192ad13d765b') in 0.013785 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/552.png
+  artifactKey: Guid(191a2359d7a1bdf4cac7ecf08d95b075) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/552.png using Guid(191a2359d7a1bdf4cac7ecf08d95b075) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6523fbc1107e53ef808582023bf16c8b') in 0.014304 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/569.png
+  artifactKey: Guid(e3ce6062d20cb714bbed853bcb16edfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/569.png using Guid(e3ce6062d20cb714bbed853bcb16edfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2d1a656d2cc74dbc507a5215a02b5ec') in 0.013452 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/514.png
+  artifactKey: Guid(7e60d7ae4759c6a4fb1da770712e7978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/514.png using Guid(7e60d7ae4759c6a4fb1da770712e7978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '869e1ebcc3e0c5394480fe7de0ab5210') in 0.012912 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/572.png
+  artifactKey: Guid(1902fd61a5be27147a14cb9696e35896) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/572.png using Guid(1902fd61a5be27147a14cb9696e35896) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d77195278a80db1c1f727e0a09f7499') in 0.012146 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/563.png
+  artifactKey: Guid(4d33d77a0b674ef4082a03909f40201e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/563.png using Guid(4d33d77a0b674ef4082a03909f40201e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '117ec653353f69a525e0fee208b16ec2') in 0.013043 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/534.png
+  artifactKey: Guid(79a499e360d2a3d4997b3b0ae783494d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/534.png using Guid(79a499e360d2a3d4997b3b0ae783494d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cff64a7ff2f9acd22e1902567cecd18') in 0.014795 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/586.png
+  artifactKey: Guid(d2badb4983e3b8f4a93f0b2c8d85fba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/586.png using Guid(d2badb4983e3b8f4a93f0b2c8d85fba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5626faf18241098600b6b3cc08ed60c') in 0.013192 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/584.png
+  artifactKey: Guid(59678a6a2ffed9c42a1e4c052fff1f04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/584.png using Guid(59678a6a2ffed9c42a1e4c052fff1f04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efb6f145dc351317b620c9e0d8bc7776') in 0.013919 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/575.png
+  artifactKey: Guid(6de4c611c4b24b64d835fa8bf7823df2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/575.png using Guid(6de4c611c4b24b64d835fa8bf7823df2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f20fcc0f608ef23f12b2835588e12a67') in 0.014664 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/549.png
+  artifactKey: Guid(3c16ec6a405f73f4b80f753231f5e144) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/549.png using Guid(3c16ec6a405f73f4b80f753231f5e144) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '788d886f3f57a6f2ebb5dc8838100563') in 0.013890 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/595.png
+  artifactKey: Guid(76852ebd6116705449bc54c015291119) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/595.png using Guid(76852ebd6116705449bc54c015291119) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ade13a3ddb34ae82183fff4c27ac176') in 0.014194 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/560.png
+  artifactKey: Guid(bc67d15faddbc984eace8e96b6cd7bcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/560.png using Guid(bc67d15faddbc984eace8e96b6cd7bcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf62a1ac5aed66c68a1d9b501d9a743f') in 0.013840 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/546.png
+  artifactKey: Guid(60e6724f4ad2fa9479d6e96621245abb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/546.png using Guid(60e6724f4ad2fa9479d6e96621245abb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9cb4bb7a252ae450df89a498e71e17f') in 0.015791 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/567.png
+  artifactKey: Guid(1495675c86f468c41be11c0989f1b953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/567.png using Guid(1495675c86f468c41be11c0989f1b953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97470d97f66237bdee67434816cbe140') in 0.015424 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/527.png
+  artifactKey: Guid(ad4fc7238e281054ebac7f692b8d6b82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/527.png using Guid(ad4fc7238e281054ebac7f692b8d6b82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e218b7f9a7737eaed585d4c1449581f') in 0.013077 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/581.png
+  artifactKey: Guid(fe55da66b40d52e4c830a8ac9b52c20c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/581.png using Guid(fe55da66b40d52e4c830a8ac9b52c20c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e3b5688f34249f19136be2d9859832d') in 0.013697 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/597.png
+  artifactKey: Guid(2b5cb610ac6e8ad4ca1896851de5ef5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/597.png using Guid(2b5cb610ac6e8ad4ca1896851de5ef5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f77fc93fd15d53cb99aa811e5137b888') in 0.014527 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/505.png
+  artifactKey: Guid(e130f7a816c0ab445b4e99bded6078ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/505.png using Guid(e130f7a816c0ab445b4e99bded6078ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4462bf7fb2e3a4bb0382d1f5a68212f5') in 0.013560 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/577.png
+  artifactKey: Guid(be405ecdd39d04641ad5325dfad34db2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/577.png using Guid(be405ecdd39d04641ad5325dfad34db2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57417a20b2a142f4623eb028699d6b1b') in 0.013622 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/517.png
+  artifactKey: Guid(2f480ccf59e0f6e42a319c1eaaf08b90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/517.png using Guid(2f480ccf59e0f6e42a319c1eaaf08b90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e0306e47f25604987700422d3deb3f1') in 0.014867 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006221 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\calcr\Documents\GitHub\Gamebox\Gamebox\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\calcr\Documents\GitHub\Gamebox\Gamebox\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.42 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Unable to allocate new scene culling mask
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 680]
+
+Performance warning: There are more than 100 preview scenes. There might be code not releasing the preview scene after creating it.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene (bool)
+UnityEditor.SceneManagement.EditorSceneManager:NewPreviewScene ()
+UnityEditor.PreviewScene:.ctor (string)
+UnityEditor.PreviewRenderUtility:.ctor ()
+UnityEditor.Texture3DPreview:InitPreviewUtility ()
+UnityEditor.Texture3DPreview:OnEnable ()
+
+[C:\buildslave\unity\build\Editor\Src\SceneManager\EditorSceneManager.cpp line 658]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.533 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1534ms)
+		BeginReloadAssembly (137ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (1309ms)
+			LoadAssemblies (72ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (260ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (580ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (155ms)
+				ProcessInitializeOnLoadAttributes (340ms)
+				ProcessInitializeOnLoadMethodAttributes (63ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (42ms)
+Platform modules already initialized, skipping
+A PreviewRenderUtility was not clean up properly before assembly reloading which lead to leaking this scene in the Editor. This can be caused by not calling Cleanup() (or its execution being interrupted) during the OnDisable of an Editor or an EditorWindow.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.PreviewRenderUtility:Finalize ()
+
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(0) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.17 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 5252 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 38 unused Assets / (0.7 MB). Loaded Objects now: 7877.
+Memory consumption went from 266.2 MB to 265.5 MB.
+Total: 3.710900 ms (FindLiveObjects: 0.608800 ms CreateObjectMapping: 0.140000 ms MarkObjects: 2.697700 ms  DeleteObjects: 0.263800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006277 seconds.
+Begin MonoManager ReloadAssembly
+
+=================================================================
+	Native Crash Reporting
+=================================================================
+Got a UNKNOWN while executing native code. This usually indicates
+a fatal error in the mono runtime or one of the native libraries 
+used by your application.
+=================================================================
+
+=================================================================
+	Managed Stacktrace:
+=================================================================
+	  at <unknown> <0xffffffff>
+	  at UnityEngine.Object:DestroyImmediate <0x000eb>
+	  at UnityEngine.Object:DestroyImmediate <0x000aa>
+	  at UnityEditor.PreviewScene:Dispose <0x00222>
+	  at UnityEditor.PreviewRenderUtility:Cleanup <0x003ea>
+	  at UnityEditor.Texture3DPreview:OnDisable <0x000fa>
+	  at System.Object:runtime_invoke_void__this__ <0x00187>
+=================================================================
+Received signal SIGSEGV
+Obtained 32 stack frames
+0x00007ff67b2f8e83 (Unity) Object_CUSTOM_DestroyImmediate
+0x0000026ff793bfdc (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Object:DestroyImmediate (UnityEngine.Object,bool)
+0x0000026ff793be7b (Mono JIT Code) UnityEngine.Object:DestroyImmediate (UnityEngine.Object)
+0x0000026ff793b863 (Mono JIT Code) UnityEditor.PreviewScene:Dispose ()
+0x0000026ff793b54b (Mono JIT Code) UnityEditor.PreviewRenderUtility:Cleanup ()
+0x0000026ff793b09b (Mono JIT Code) UnityEditor.Texture3DPreview:OnDisable ()
+0x000002704764f818 (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void__this__ (object,intptr,intptr,intptr)
+0x00007ff8ed33e034 (mono-2.0-bdwgc) [mini-runtime.c:3445] mono_jit_runtime_invoke 
+0x00007ff8ed27e724 (mono-2.0-bdwgc) [object.c:3064] do_runtime_invoke 
+0x00007ff8ed27e8bc (mono-2.0-bdwgc) [object.c:3111] mono_runtime_invoke 
+0x00007ff67c0e5804 (Unity) scripting_method_invoke
+0x00007ff67c0e0424 (Unity) ScriptingInvocation::Invoke
+0x00007ff67c0e050e (Unity) ScriptingInvocation::InvokeChecked
+0x00007ff67c159946 (Unity) SerializableManagedRef::CallMethod
+0x00007ff67c0bf1a6 (Unity) MonoBehaviour::WillUnloadScriptableObject
+0x00007ff67c0b729d (Unity) MonoManager::RemoveBehavioursFromManager
+0x00007ff67c0ad315 (Unity) MonoManager::BeginReloadAssembly
+0x00007ff67c0b6f97 (Unity) MonoManager::ReloadAssembly
+0x00007ff67cfcfba2 (Unity) LoadDomainAndUserAssemblies
+0x00007ff67cfd02d4 (Unity) LoadUserAssemblies
+0x00007ff67d45f7d8 (Unity) <lambda_c8aac203af85da22e031a8e6d38250eb>::operator()
+0x00007ff67d4f45b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff67d4f683d (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff67d4f9c5e (Unity) asio::io_service::run
+0x00007ff67d4f2a51 (Unity) IOService::Run
+0x00007ff67d48bfc8 (Unity) RunAssetImportWorkerClientV2
+0x00007ff67d48c09b (Unity) RunAssetImporterV2
+0x00007ff67ccd2da0 (Unity) Application::InitializeProject
+0x00007ff67d11e638 (Unity) WinMain
+0x00007ff67e42fa72 (Unity) __scrt_common_main_seh
+0x00007ff94a777034 (KERNEL32) BaseThreadInitThunk
+0x00007ff94b7c2651 (ntdll) RtlUserThreadStart
+

@@ -1,0 +1,1099 @@
+Using pre-set license
+Built from '2021.2/staging' branch; Version is '2021.2.9f1 (921b45a28ab6) revision 9575237'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19043) 64bit Core' Language: 'en' Physical Memory: 32718 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.2.9f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker4
+-projectPath
+C:/Users/calcr/Documents/GitHub/Gamebox/Gamebox
+-logFile
+Logs/AssetImportWorker4.log
+-srvPort
+64631
+Successfully changed project path to: C:/Users/calcr/Documents/GitHub/Gamebox/Gamebox
+C:/Users/calcr/Documents/GitHub/Gamebox/Gamebox
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 125.49 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.67 ms.
+Initialize engine version: 2021.2.9f1 (921b45a28ab6)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/calcr/Documents/GitHub/Gamebox/Gamebox/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon RX 5600 XT (ID=0x731f)
+    Vendor:   ATI
+    VRAM:     6103 MB
+    Driver:   30.0.13023.4001
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56572
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.009184 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 129.27 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.669 seconds
+Domain Reload Profiling:
+	ReloadAssembly (669ms)
+		BeginReloadAssembly (72ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (515ms)
+			LoadAssemblies (69ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (97ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (33ms)
+			SetupLoadedEditorAssemblies (329ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (129ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (144ms)
+				ProcessInitializeOnLoadMethodAttributes (39ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006794 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\calcr\Documents\GitHub\Gamebox\Gamebox\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\calcr\Documents\GitHub\Gamebox\Gamebox\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 105.93 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.645 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1645ms)
+		BeginReloadAssembly (94ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (1469ms)
+			LoadAssemblies (69ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (237ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (1072ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (106ms)
+				BeforeProcessingInitializeOnLoad (160ms)
+				ProcessInitializeOnLoadAttributes (725ms)
+				ProcessInitializeOnLoadMethodAttributes (63ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 1.13 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 5224 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 43 unused Assets / (0.7 MB). Loaded Objects now: 5668.
+Memory consumption went from 202.1 MB to 201.4 MB.
+Total: 3.619400 ms (FindLiveObjects: 0.430600 ms CreateObjectMapping: 0.137000 ms MarkObjects: 2.793300 ms  DeleteObjects: 0.257600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 14912.680944 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100
+  artifactKey: Guid(f61629b23d986a04a9ff281139ea9429) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100 using Guid(f61629b23d986a04a9ff281139ea9429) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d9dd09634b9525327eeef85ae141749') in 0.010842 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.025479 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/001.png
+  artifactKey: Guid(a252e99aef0e85c4bba64a28401631b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/001.png using Guid(a252e99aef0e85c4bba64a28401631b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '197ce89a5e06b5efb60f4e1bfb186732') in 0.113071 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/051.png
+  artifactKey: Guid(e3ae44d209ac96d4e8f5b0366ffffb94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/051.png using Guid(e3ae44d209ac96d4e8f5b0366ffffb94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '285f6cf891cd905132cc245c83d37cd2') in 0.018020 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/084.png
+  artifactKey: Guid(26a0a16e2d39d7b4cba1988e88a891a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/084.png using Guid(26a0a16e2d39d7b4cba1988e88a891a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32eeddce50e7de82ec074af8872885b0') in 0.013415 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/042.png
+  artifactKey: Guid(8928c8b183849b3479cd7f6bd4f6205b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/042.png using Guid(8928c8b183849b3479cd7f6bd4f6205b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e36ba68e073ef6f37d4cc9098d8131bb') in 0.014055 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/024.png
+  artifactKey: Guid(c2392bfde59ffab49947c371a034c0c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/024.png using Guid(c2392bfde59ffab49947c371a034c0c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1842c1b8e7fcc14cf7ab97d0d6bf91d') in 0.013694 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/093.png
+  artifactKey: Guid(03d6cb6cac2fbb2498022e8df1d38a3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/093.png using Guid(03d6cb6cac2fbb2498022e8df1d38a3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '648e107ec0caad757bef57262b4dbec3') in 0.012363 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/058.png
+  artifactKey: Guid(3259e8f3e10804349b35b9217661a115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/058.png using Guid(3259e8f3e10804349b35b9217661a115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '163c067305201d5595eb96157ebc37ec') in 0.013320 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/068.png
+  artifactKey: Guid(a4de1ebe819dd8944bfa6ee346445276) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/068.png using Guid(a4de1ebe819dd8944bfa6ee346445276) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f3d4d9313afefe413e0e439f2d54c37') in 0.012905 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/071.png
+  artifactKey: Guid(01b2a607d3db2784bb50d629605cb3a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/071.png using Guid(01b2a607d3db2784bb50d629605cb3a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79c3f4912b562e777183490990c59ee2') in 0.013538 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/056.png
+  artifactKey: Guid(557aea6c62dcb6b4391ed9b2709bef62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/056.png using Guid(557aea6c62dcb6b4391ed9b2709bef62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8266bd3cdec8eac7073f87f5a89ab7e7') in 0.013108 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/086.png
+  artifactKey: Guid(1ea5d867d367e0448a97c97ca19612f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/086.png using Guid(1ea5d867d367e0448a97c97ca19612f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '156a57991aaef6b22a29f502c2ca38b9') in 0.013059 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/040.png
+  artifactKey: Guid(af742ad023ddb5148a17644b55348d75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/040.png using Guid(af742ad023ddb5148a17644b55348d75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd435e667f20c89d1961716f755f1e08e') in 0.012645 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/048.png
+  artifactKey: Guid(7596525a8bcbe394db7cb44e091d6bef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/048.png using Guid(7596525a8bcbe394db7cb44e091d6bef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c9d8ca272ef2aa1cbb8e7c62dde2b9a') in 0.012858 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/047.png
+  artifactKey: Guid(ea989bd37f61c2d468eb14621d6fa82f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/047.png using Guid(ea989bd37f61c2d468eb14621d6fa82f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f792c19647dc2b1cab936d925e1ff227') in 0.013498 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/095.png
+  artifactKey: Guid(0751f35e9e71e404f885e9fb065161dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/095.png using Guid(0751f35e9e71e404f885e9fb065161dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79b92ccaa50001995ff06a60a87eb429') in 0.013322 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/031.png
+  artifactKey: Guid(f754dd0828523ab4b9786697311528a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/031.png using Guid(f754dd0828523ab4b9786697311528a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5ef965ed6a49d66141c4bc0b93a81ae') in 0.013811 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/073.png
+  artifactKey: Guid(4df3141a1d875b148a9219bfdc341757) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/073.png using Guid(4df3141a1d875b148a9219bfdc341757) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c8462e6e3c9cb2f78d3c37e2bd0e17a') in 0.013133 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/013.png
+  artifactKey: Guid(9d30c9bd170190d47a57c12aa5fbff14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/013.png using Guid(9d30c9bd170190d47a57c12aa5fbff14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f13468a902b15df510ec9d9807c1f92') in 0.013750 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/079.png
+  artifactKey: Guid(4d0bcbe493af3a541b7d5ebea864455b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/079.png using Guid(4d0bcbe493af3a541b7d5ebea864455b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c988b6704481c877c9a75f6a288b60b') in 0.013337 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/007.png
+  artifactKey: Guid(373fea16689a1ce4883146d46fa8f984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/007.png using Guid(373fea16689a1ce4883146d46fa8f984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd60a2a0eb4ae0f17e931b2384eb2494f') in 0.013707 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/009.png
+  artifactKey: Guid(ed11e537fcbac40429faf033b76d92cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/009.png using Guid(ed11e537fcbac40429faf033b76d92cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9465bdb2f10d57abfcce15692ccf4b90') in 0.013616 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000095 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/072.png
+  artifactKey: Guid(203e11d588ee9a842868579a18ae8b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/072.png using Guid(203e11d588ee9a842868579a18ae8b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf76de75dbcba493a3c2ea2e3b1675a7') in 0.013462 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/096.png
+  artifactKey: Guid(c5c914f11d1ae7845a6cc6c7987b3495) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/096.png using Guid(c5c914f11d1ae7845a6cc6c7987b3495) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8c47007c959dbc7c57b9a0ce43485ac') in 0.013311 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.466194 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200
+  artifactKey: Guid(d439f8688808d1b4ea83d809a2977aa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200 using Guid(d439f8688808d1b4ea83d809a2977aa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd45ae887f4a35f7137a22d831b6f52a') in 0.005397 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.519771 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/101.png
+  artifactKey: Guid(b90139c03ef4645498fbbb0cf8fdb7d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/101.png using Guid(b90139c03ef4645498fbbb0cf8fdb7d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b5720b7ed6e58fb3ebb06904412efa7') in 0.015558 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/146.png
+  artifactKey: Guid(cee32d597cdec024d94083aa2a567f8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/146.png using Guid(cee32d597cdec024d94083aa2a567f8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9c2c411957ca230e24ac96a0cb783f9') in 0.016089 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/135.png
+  artifactKey: Guid(c30e4af07c043b44aa51e3ffac717b01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/135.png using Guid(c30e4af07c043b44aa51e3ffac717b01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fde176a5dc3777055d266550890c1fdd') in 0.015383 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/147.png
+  artifactKey: Guid(41a9caad6b2a2874ca891c54d3f26e5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/147.png using Guid(41a9caad6b2a2874ca891c54d3f26e5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a86b291066a58fd8518fcf7ee77defd5') in 0.014126 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/169.png
+  artifactKey: Guid(774981364b6782549b59826876877832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/169.png using Guid(774981364b6782549b59826876877832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfeef9cc4f5969373a284f6253f34d52') in 0.013736 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/110.png
+  artifactKey: Guid(f9176859aaa677b43a7141ab7b1c1d54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/110.png using Guid(f9176859aaa677b43a7141ab7b1c1d54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b89ffcde24d286ab718c3f9dfaf71085') in 0.013585 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/180.png
+  artifactKey: Guid(4b84941a801bfdd4597b39da1cbdb491) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/180.png using Guid(4b84941a801bfdd4597b39da1cbdb491) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb36de7eb64d78c525126fa2a2db1ef3') in 0.013853 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/136.png
+  artifactKey: Guid(3597c14725e878e44bad34a0b5c91e9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/136.png using Guid(3597c14725e878e44bad34a0b5c91e9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b00d1f1196ad84ca2d9903996a46625') in 0.014491 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/122.png
+  artifactKey: Guid(b6e9af4ca58ad784390854570ba91d2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/122.png using Guid(b6e9af4ca58ad784390854570ba91d2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2754a60aafb792a2485bab5522cf62d1') in 0.013371 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/145.png
+  artifactKey: Guid(f62398d84e91ac4438290f6d5d29f2b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/145.png using Guid(f62398d84e91ac4438290f6d5d29f2b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e8fc9be1f4502268660c60f62ac3943') in 0.014640 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/195.png
+  artifactKey: Guid(59400c07db4dda1418b2e53e06d10b0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/195.png using Guid(59400c07db4dda1418b2e53e06d10b0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97ff7812b1e1d855fb01628ad90bdf5a') in 0.013663 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/164.png
+  artifactKey: Guid(f2485758fca603b46b925a4294c6618b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/164.png using Guid(f2485758fca603b46b925a4294c6618b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c601c3a2a13f46dd7679d009d529554a') in 0.014548 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/166.png
+  artifactKey: Guid(b6cedaae558258e45b3808781627488d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/166.png using Guid(b6cedaae558258e45b3808781627488d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bb972c9cfb59bd4454f7b867e8031b1') in 0.020715 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/191.png
+  artifactKey: Guid(d95ccb3c86dbfe14c96f22347fa6ea9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/191.png using Guid(d95ccb3c86dbfe14c96f22347fa6ea9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b7fe196ebf37f73f75a864c62e5ebdf') in 0.036312 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/159.png
+  artifactKey: Guid(c47e87e0ded52a94ea6422905d79affd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/159.png using Guid(c47e87e0ded52a94ea6422905d79affd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e53cb1ec85497e10042e0fea8f45dec') in 0.014150 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/127.png
+  artifactKey: Guid(2016fbde2085fb44e992f1d7bf53fdf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/127.png using Guid(2016fbde2085fb44e992f1d7bf53fdf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7046b80821866f34e3570733f49caef4') in 0.047510 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/160.png
+  artifactKey: Guid(0fc0ea782fd7b3c48a82cc87c6e96e13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/160.png using Guid(0fc0ea782fd7b3c48a82cc87c6e96e13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f40c8a3ccf9584999973a902c58a23ca') in 0.013653 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/105.png
+  artifactKey: Guid(b17ee7101b8ed6d4c82bb8f396b6a2a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/105.png using Guid(b17ee7101b8ed6d4c82bb8f396b6a2a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3aee949dba7319c48c8f899d1fea25c6') in 0.014723 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/112.png
+  artifactKey: Guid(5d30d91a53c544f44a4ad2c2df59ee71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/112.png using Guid(5d30d91a53c544f44a4ad2c2df59ee71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bd1b71d29cc27c802fe2f7414ef1b1b') in 0.014222 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/121.png
+  artifactKey: Guid(521a1859d263e7746b207a27f6aba02c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/121.png using Guid(521a1859d263e7746b207a27f6aba02c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c4b471dbf0c85159577322f01728075') in 0.013869 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/137.png
+  artifactKey: Guid(fb73ddeeefa3c0942902faa65463d436) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/137.png using Guid(fb73ddeeefa3c0942902faa65463d436) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e922f8a781a6816c91630ae3a895022f') in 0.014746 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/183.png
+  artifactKey: Guid(c6d5fc370be07e943a4eb25b155a6580) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/183.png using Guid(c6d5fc370be07e943a4eb25b155a6580) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f878356389617c857e59a7841735ba0') in 0.013440 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/120.png
+  artifactKey: Guid(a58ca9dfbef0ebc428c439ae93224f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/120.png using Guid(a58ca9dfbef0ebc428c439ae93224f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '664e76a6f3c9a64999db0794bf7ebb72') in 0.015015 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/129.png
+  artifactKey: Guid(341af5b7a8937ac498979718b1cfbbd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/129.png using Guid(341af5b7a8937ac498979718b1cfbbd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73acdbb880c69c9bfdffa3620e172fe2') in 0.012985 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/142.png
+  artifactKey: Guid(7b37062e6a82580459be80bfb66a39e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/101-200/142.png using Guid(7b37062e6a82580459be80bfb66a39e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcba11e7831166d1dfa336611b7c2924') in 0.014678 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.688131 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400
+  artifactKey: Guid(bb05e0e45c3245b4984bfd1158c3bb17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400 using Guid(bb05e0e45c3245b4984bfd1158c3bb17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb6b64c0b2d495bc69740c1654622fad') in 0.004650 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.025052 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/301.png
+  artifactKey: Guid(400791f310136eb4c894a338e5f5f1d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/301.png using Guid(400791f310136eb4c894a338e5f5f1d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a343ec9acf05101bda4b67082f1fb837') in 0.013312 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/388.png
+  artifactKey: Guid(f425beb739f309342a046a800c4fc8b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/388.png using Guid(f425beb739f309342a046a800c4fc8b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b4bb7d93c711d1404422e8b6280270b') in 0.013725 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/311.png
+  artifactKey: Guid(74def8dfb1e6a6f4bb85e2cbb42fbec3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/311.png using Guid(74def8dfb1e6a6f4bb85e2cbb42fbec3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50ce0a11f5e5b172eadc245376dacd08') in 0.013657 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/389.png
+  artifactKey: Guid(4cf6a9718a9cafd4ea1802139cdc1b93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/389.png using Guid(4cf6a9718a9cafd4ea1802139cdc1b93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '088a1cc31490d1e366c34bfb545da1aa') in 0.012464 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/308.png
+  artifactKey: Guid(07d0f1c5a0efb5f4e96a45ce5908d690) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/308.png using Guid(07d0f1c5a0efb5f4e96a45ce5908d690) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6298c7dd79d07045a14762d31e155278') in 0.012619 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/392.png
+  artifactKey: Guid(2e8c362fd43366d488defa13c161a940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/392.png using Guid(2e8c362fd43366d488defa13c161a940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '405c7e431dce52f4bf9f4f5069f59465') in 0.012348 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/361.png
+  artifactKey: Guid(411a20f28dc375f4096142bfee615b1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/361.png using Guid(411a20f28dc375f4096142bfee615b1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa45827b6a7447d505faae621f639a8a') in 0.013233 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/399.png
+  artifactKey: Guid(4263e3b0bbad2184eb71d1088ebf5ff7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/399.png using Guid(4263e3b0bbad2184eb71d1088ebf5ff7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d165e5b5a1362c1ee84e80b95569985') in 0.013845 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/345.png
+  artifactKey: Guid(6d34c22a17706e544bb1da7abeae19b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/345.png using Guid(6d34c22a17706e544bb1da7abeae19b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '945fc77ed031f2a2f57cb6ae8dd9236e') in 0.013376 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/349.png
+  artifactKey: Guid(29daefd9e200e5d488fa213ebc7245b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/349.png using Guid(29daefd9e200e5d488fa213ebc7245b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a839a5862fbbd56aa469382fb46172e') in 0.013206 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/331.png
+  artifactKey: Guid(756f8a0452b8de449a02c007accf8fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/331.png using Guid(756f8a0452b8de449a02c007accf8fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34b9d5bb58a56ab07e72e4d53fdadf4b') in 0.013206 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/320.png
+  artifactKey: Guid(73bf5bfcd08b1044697b1d02952522b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/320.png using Guid(73bf5bfcd08b1044697b1d02952522b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a57b4cbc8317507da7c70e2095b5e7b') in 0.014250 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/385.png
+  artifactKey: Guid(5b87261d61b376349be1c9741ad76666) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/385.png using Guid(5b87261d61b376349be1c9741ad76666) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0b72d2aeffb13017da5547f483338cb') in 0.012455 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/359.png
+  artifactKey: Guid(738ab542fc2b5d842be857a61e6d7ff5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/359.png using Guid(738ab542fc2b5d842be857a61e6d7ff5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27b9b7a91c2cd0dcbc2adb855a68922f') in 0.013216 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/343.png
+  artifactKey: Guid(a32824eae8795174db70d42de3f3537b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/343.png using Guid(a32824eae8795174db70d42de3f3537b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5003f01c4b6bcc1fc75a5d1eba8c90ac') in 0.012676 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/400.png
+  artifactKey: Guid(3be437a034a370549b96b978f54e1d93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/400.png using Guid(3be437a034a370549b96b978f54e1d93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90bf400c252820ee735356215de6647a') in 0.014636 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/335.png
+  artifactKey: Guid(d0f9dff8f3bac0741ad00ad756ac9b70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/335.png using Guid(d0f9dff8f3bac0741ad00ad756ac9b70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8799e4a4b0d7a17e2ee8e57092913f48') in 0.013837 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/328.png
+  artifactKey: Guid(e67633a54f18f7c4fbba5fdd50b3c548) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/328.png using Guid(e67633a54f18f7c4fbba5fdd50b3c548) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e9eaf62bb2d0cf44777591da1686bda') in 0.012726 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/356.png
+  artifactKey: Guid(180cbf4d6f099db48bbee5e8661c74d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/356.png using Guid(180cbf4d6f099db48bbee5e8661c74d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5f82c00e88b8e9af306302ad5eb14e4') in 0.013343 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/305.png
+  artifactKey: Guid(3da3f2bf6141f144580e717e5cf2ef4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/305.png using Guid(3da3f2bf6141f144580e717e5cf2ef4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e3c3cd309e973121dfc8bb0c5ca3d2c') in 0.012783 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/381.png
+  artifactKey: Guid(42eed5972f4d56142ac8c62c4b900e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/381.png using Guid(42eed5972f4d56142ac8c62c4b900e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fc9174f5b52a568d9dfd3b5703886a5') in 0.013074 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/351.png
+  artifactKey: Guid(bfb3a90a94dceb1489e2e736f9e55f87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/351.png using Guid(bfb3a90a94dceb1489e2e736f9e55f87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30b069efb4b24ed253825e2cfc4a2549') in 0.017396 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/379.png
+  artifactKey: Guid(ff5a99f585ab9ea4bb8e35e710f5e79d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/379.png using Guid(ff5a99f585ab9ea4bb8e35e710f5e79d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b29ed34c2116fc0d84961311cc99f9d9') in 0.014206 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/386.png
+  artifactKey: Guid(3c85534fec185354385004ca1579f5b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/386.png using Guid(3c85534fec185354385004ca1579f5b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f0b0ac853a1d5d34b8babab6b96b471') in 0.012844 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/346.png
+  artifactKey: Guid(e7c6370373d0273439ad24a2309dfcc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/301-400/346.png using Guid(e7c6370373d0273439ad24a2309dfcc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc275e4da21dd6ecf375cd279eaf09fc') in 0.013622 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.029824 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500
+  artifactKey: Guid(f21299f29bf61c946a528f63b392681f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500 using Guid(f21299f29bf61c946a528f63b392681f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '293ae03ae1b251d38d01924584538b11') in 0.004762 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.070015 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/401.png
+  artifactKey: Guid(4824966d3299bd1459479a08a8212e3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/401.png using Guid(4824966d3299bd1459479a08a8212e3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '247cb91f6ef203b13bdfedae4ac74a90') in 0.014400 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/463.png
+  artifactKey: Guid(86c064afd34c6824cb93775f6cb12c8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/463.png using Guid(86c064afd34c6824cb93775f6cb12c8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '613cae98c981df2d956d1cb45643ecf9') in 0.014662 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/420.png
+  artifactKey: Guid(5c773665d0c86524ba51db3d29873bb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/420.png using Guid(5c773665d0c86524ba51db3d29873bb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '856cac933a6b76bea4b0f5378d4c1d7f') in 0.013460 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/417.png
+  artifactKey: Guid(d67320dff9472b147960db83fcec6a26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/417.png using Guid(d67320dff9472b147960db83fcec6a26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f48bca22a0fc9fa9e0d230b75c63416') in 0.013271 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/458.png
+  artifactKey: Guid(78849875ebb4f4743bc57e0c6ad9428f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/458.png using Guid(78849875ebb4f4743bc57e0c6ad9428f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3302b4f5583b6ffee377930a660fad4e') in 0.046677 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/468.png
+  artifactKey: Guid(82e79d2e46ae8f34ea5bc643a9095ead) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/468.png using Guid(82e79d2e46ae8f34ea5bc643a9095ead) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6df80d2085cba65c263b70ca85786af') in 0.014065 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/408.png
+  artifactKey: Guid(bd889fa1202dfe1478a311b1112c1762) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/408.png using Guid(bd889fa1202dfe1478a311b1112c1762) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81bd49765908fc2c910df8642f8a2600') in 0.013766 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/453.png
+  artifactKey: Guid(5390b064f73c2bb4ba9fd780bbb63c58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/453.png using Guid(5390b064f73c2bb4ba9fd780bbb63c58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfa4d11e295db37d2ee6762b6ab6daa0') in 0.013932 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/473.png
+  artifactKey: Guid(f41b3c9a9ffc96443b890ab747b553b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/473.png using Guid(f41b3c9a9ffc96443b890ab747b553b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2241ece93952745b72c6f000426c8639') in 0.013030 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/498.png
+  artifactKey: Guid(63c451548d963d949a1b9a7de8f4d548) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/498.png using Guid(63c451548d963d949a1b9a7de8f4d548) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd13b3977493b0a097c296ffad2e86c4') in 0.013526 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/409.png
+  artifactKey: Guid(674e88a08d161844896ca2662bbccf0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/409.png using Guid(674e88a08d161844896ca2662bbccf0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6c8cf4939eaaa4e01dcb639847b95e8') in 0.013957 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/477.png
+  artifactKey: Guid(c3d2d03d4732cf742825a509ad32700a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/477.png using Guid(c3d2d03d4732cf742825a509ad32700a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6e99351c386de72e6b37a7f33a3bce4') in 0.012589 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/485.png
+  artifactKey: Guid(d95010daf0a817a4a91fcd24b63b2c56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/485.png using Guid(d95010daf0a817a4a91fcd24b63b2c56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a1d44b4db848d03e2bc226ebf387a6f') in 0.013541 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/451.png
+  artifactKey: Guid(1796d7acb2a24d840b24823e6f4c0618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/451.png using Guid(1796d7acb2a24d840b24823e6f4c0618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af1507394fc5df34eea4389c45300cf1') in 0.013245 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/444.png
+  artifactKey: Guid(15599d1d7fcbab249ba8d8a42a769663) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/444.png using Guid(15599d1d7fcbab249ba8d8a42a769663) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6136e99ba3fde4aaebe8e848038d5cd') in 0.012762 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/469.png
+  artifactKey: Guid(2e4f307d54bf69c48b851fd0ce75efa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/469.png using Guid(2e4f307d54bf69c48b851fd0ce75efa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '397d8d98f08adf9ef47e1c563467241c') in 0.014951 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/441.png
+  artifactKey: Guid(8482e6871e767864191d212fa2d44a06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/441.png using Guid(8482e6871e767864191d212fa2d44a06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3b51531b81c983b9e40da623298affb') in 0.015369 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/427.png
+  artifactKey: Guid(8dcf8b144eb9a9d4cb35d92429004585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/427.png using Guid(8dcf8b144eb9a9d4cb35d92429004585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc9332edd0b6b36ad2824adb40035cfb') in 0.014455 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/448.png
+  artifactKey: Guid(da99652b5365b0f47b40a641d6f1d9ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/448.png using Guid(da99652b5365b0f47b40a641d6f1d9ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17f750ad91aaaf860cd1c642947e7c60') in 0.014293 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/479.png
+  artifactKey: Guid(e2cccd891dd227143bbd97d62832af8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/479.png using Guid(e2cccd891dd227143bbd97d62832af8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed812f4dd0c80c15e3ac8b320fe81358') in 0.013302 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/435.png
+  artifactKey: Guid(03b658026ceb5944c92b85f122e82ff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/435.png using Guid(03b658026ceb5944c92b85f122e82ff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d45c941725d07b1d6da82bce42c0ea8') in 0.012700 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/422.png
+  artifactKey: Guid(b1716c684baf6d243bfa682baf1b368c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/422.png using Guid(b1716c684baf6d243bfa682baf1b368c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ae3cda7d1902bd75ae4d121df5ef91e') in 0.012763 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/413.png
+  artifactKey: Guid(f333c8739e34639439407c70ad64187e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/413.png using Guid(f333c8739e34639439407c70ad64187e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d561ba8627af7dd148bc60bbf6a51c9') in 0.012641 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/495.png
+  artifactKey: Guid(a592e61244224364f92890f505eeeadf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/495.png using Guid(a592e61244224364f92890f505eeeadf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00d4ade7943c00309223b0b23f490e9a') in 0.014213 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/431.png
+  artifactKey: Guid(91bde2a56a9536a4faf398335071fd42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/401-500/431.png using Guid(91bde2a56a9536a4faf398335071fd42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c2a48953a656c1f81ab9b0386b00611') in 0.013509 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.875201 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (80 Х 80)
+  artifactKey: Guid(28295f199c74cde4c99dbd3d8f62448d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (80 Х 80) using Guid(28295f199c74cde4c99dbd3d8f62448d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2c4ea8c5b57e88fc22c5ebb0c3b3430') in 0.004909 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.923349 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (150 Х 150)
+  artifactKey: Guid(a9fc6d73865a23a4092831bc1e7f0a57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (150 Х 150) using Guid(a9fc6d73865a23a4092831bc1e7f0a57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9aeebd4d6ff67bb0d7eda1fd3bd08eb') in 0.004949 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.613955 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300
+  artifactKey: Guid(62ef048b1c246f14998ed9f0cbecc05e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300 using Guid(62ef048b1c246f14998ed9f0cbecc05e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68a57d0d67222f516abccd1b8eb993c6') in 0.006659 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.065765 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/201.png
+  artifactKey: Guid(d1bcc61357083954699b26fe379f3616) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/201.png using Guid(d1bcc61357083954699b26fe379f3616) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8aa9acd233ed0255868dc0b770a6ff89') in 0.017512 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/231.png
+  artifactKey: Guid(e1d4b26cc9201bb428dee33dca105c5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/231.png using Guid(e1d4b26cc9201bb428dee33dca105c5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e448cb144775ce19216fb6216bfa4d44') in 0.014656 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/232.png
+  artifactKey: Guid(a72bedc1a63fc5a4ebd35824d30680e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/232.png using Guid(a72bedc1a63fc5a4ebd35824d30680e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fb0661f1e3bbf27ff6193ff7c4d8dd2') in 0.014416 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/208.png
+  artifactKey: Guid(4902d0651fd221c4ebbdb86bff0dd47e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/208.png using Guid(4902d0651fd221c4ebbdb86bff0dd47e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dc6c9a8f4b39fb7eef4694f88b3db1f') in 0.013786 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/276.png
+  artifactKey: Guid(46545d35f492a774c86f18d71a17812b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/276.png using Guid(46545d35f492a774c86f18d71a17812b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1536bfe099ab0c77c066735693dcd865') in 0.014259 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/266.png
+  artifactKey: Guid(c43c434d165123941886ac8c94b59599) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/266.png using Guid(c43c434d165123941886ac8c94b59599) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1ce07ed76d7726f864f2243196e22d3') in 0.014330 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/270.png
+  artifactKey: Guid(bf4aa6bdd0322c04d9d5f49c3807c271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/270.png using Guid(bf4aa6bdd0322c04d9d5f49c3807c271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f75e9e9d2e35004f9b16f7e488f460c') in 0.013799 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/282.png
+  artifactKey: Guid(1dfe21ae47ae05546a43fc831030589e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/282.png using Guid(1dfe21ae47ae05546a43fc831030589e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce665921ff6ca16141e705d88388651c') in 0.013541 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/205.png
+  artifactKey: Guid(569b14bcf6600174cae45d2c3e2c7efc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/205.png using Guid(569b14bcf6600174cae45d2c3e2c7efc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64b35322f7195088b000a829b4f45d9a') in 0.014719 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/233.png
+  artifactKey: Guid(979e6d163192cf64bbf057b0d9f85f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/233.png using Guid(979e6d163192cf64bbf057b0d9f85f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfaf21e51e49f19128d005bd92045ae5') in 0.014044 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/262.png
+  artifactKey: Guid(53e1299aebb382946912f87330b4fe33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/262.png using Guid(53e1299aebb382946912f87330b4fe33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7147a0ce3ea9a6280d60e3ce5872b745') in 0.015298 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/268.png
+  artifactKey: Guid(4362d68fdd133d248a80a57bd09c6502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/268.png using Guid(4362d68fdd133d248a80a57bd09c6502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '059b9d33216128cd9a470e220cc3839e') in 0.014289 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/291.png
+  artifactKey: Guid(8815da2e11456aa4494d33c6bf674904) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/291.png using Guid(8815da2e11456aa4494d33c6bf674904) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a00fe519bea692c8941d4853fa0b8d43') in 0.014828 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/216.png
+  artifactKey: Guid(9429baf439b84d74395b6fcd6777395c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/216.png using Guid(9429baf439b84d74395b6fcd6777395c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f373508ea951b7296a82d3e34ce9fe57') in 0.014028 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/263.png
+  artifactKey: Guid(b43420c24de1c854ab5facc729d2d052) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/263.png using Guid(b43420c24de1c854ab5facc729d2d052) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb547e997126f94462d2587cfc26163a') in 0.013423 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/285.png
+  artifactKey: Guid(130cdede80097f64583f98d6b8ba0139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/285.png using Guid(130cdede80097f64583f98d6b8ba0139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ed471b3871936fd49ce70fe9d87a684') in 0.014846 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/252.png
+  artifactKey: Guid(4a3ba5384a66a1641b4fe9a28a7b3903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/252.png using Guid(4a3ba5384a66a1641b4fe9a28a7b3903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4eec04f823859c0494324236a2d1810') in 0.013775 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/278.png
+  artifactKey: Guid(a31a65317b6906a4dbd5f7c7d72d11ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/278.png using Guid(a31a65317b6906a4dbd5f7c7d72d11ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7786c1881169329e2d3092bddea4710') in 0.014727 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/221.png
+  artifactKey: Guid(bdc01aba4e404dc4e93cf360e1b32f8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/221.png using Guid(bdc01aba4e404dc4e93cf360e1b32f8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2942a140051560ab00a055bb199b2692') in 0.013281 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/287.png
+  artifactKey: Guid(016706fa4388d664cb7cf4911e9468c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/287.png using Guid(016706fa4388d664cb7cf4911e9468c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d5df5ff6308cc795146b24dacf91c2f') in 0.014077 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/225.png
+  artifactKey: Guid(d9a2ad4e39084784288ce54a0f5a32ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/225.png using Guid(d9a2ad4e39084784288ce54a0f5a32ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2917af1ca44e78ad01ed92099ca57b02') in 0.014613 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/228.png
+  artifactKey: Guid(0b209769953b9ec40a517c181f1ac035) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/228.png using Guid(0b209769953b9ec40a517c181f1ac035) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fba21e91ee7267b78e783018f8730385') in 0.014286 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/253.png
+  artifactKey: Guid(e43cad2413a2ff54a9392ec6d8e74eee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/253.png using Guid(e43cad2413a2ff54a9392ec6d8e74eee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c0b85ee2f2ca61b1686ff3736ad7216') in 0.015645 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/209.png
+  artifactKey: Guid(d796c39e9f6dc0348875e40bf26e6627) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/209.png using Guid(d796c39e9f6dc0348875e40bf26e6627) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9176a455329433abddc81dd80e8b423') in 0.014362 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/298.png
+  artifactKey: Guid(b12d1b20c0658ae41b13c5471418c17e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/201-300/298.png using Guid(b12d1b20c0658ae41b13c5471418c17e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6fde911ffbf110bfd9f782ba9c0970e') in 0.015248 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 31.143793 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600
+  artifactKey: Guid(9dc6fa76f98232a4484bb4df130d0fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600 using Guid(9dc6fa76f98232a4484bb4df130d0fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64eb4258e25a881732f93e0a0d157621') in 0.005161 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.047889 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/501.png
+  artifactKey: Guid(c5869b10f8c73db4c95d1a848ab3480e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/501.png using Guid(c5869b10f8c73db4c95d1a848ab3480e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f33c911d40bf23937125578c35a1335a') in 0.014160 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/536.png
+  artifactKey: Guid(7cd904a5cbb869b4ba0f2283d5aa6dd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/536.png using Guid(7cd904a5cbb869b4ba0f2283d5aa6dd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f91d3cba7a4560c36a786a3d489b6357') in 0.013019 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/548.png
+  artifactKey: Guid(c167ed335324ee6478bc0b416cf22811) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/548.png using Guid(c167ed335324ee6478bc0b416cf22811) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50f47c13b87320fdc4856a2c58e214da') in 0.021734 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/589.png
+  artifactKey: Guid(93ed6b50a6cdfef4daf278df732963ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/589.png using Guid(93ed6b50a6cdfef4daf278df732963ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b0ca46c46f8b94257e3fc75d8c54aa8') in 0.015498 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/583.png
+  artifactKey: Guid(237523ec38dd563459fb72c1042053d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/583.png using Guid(237523ec38dd563459fb72c1042053d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1815d573b5d2bb856a5ee8786b5f3db') in 0.012776 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/579.png
+  artifactKey: Guid(5c4f1797f87382c4e9a907980520c111) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/579.png using Guid(5c4f1797f87382c4e9a907980520c111) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '973d2eb59f3e1ee1c9723d0088b5d947') in 0.014275 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/522.png
+  artifactKey: Guid(65bcf91f088b44d4e8dd236eb0cb18f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/522.png using Guid(65bcf91f088b44d4e8dd236eb0cb18f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3fc4eb9aba286003af39c78b0618eab') in 0.013818 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/558.png
+  artifactKey: Guid(baf1f54774c123b45a032dfe3dfadb43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/558.png using Guid(baf1f54774c123b45a032dfe3dfadb43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ab45b54151c0add338e955531e70e8e') in 0.013718 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/542.png
+  artifactKey: Guid(407d47633ea82ea448652c90ab1ddfba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/542.png using Guid(407d47633ea82ea448652c90ab1ddfba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c20c8dfe689bdd3466d0953b95962e0') in 0.012969 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/515.png
+  artifactKey: Guid(e81414b23de5324429eeda58a80805c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/515.png using Guid(e81414b23de5324429eeda58a80805c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95522850b4996aa0bfc5a8c2cc7e43ab') in 0.015215 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/598.png
+  artifactKey: Guid(9a79f75abb7918242803207021a9459a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/598.png using Guid(9a79f75abb7918242803207021a9459a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e70aa430d88ddfbc78b39115c67af0e4') in 0.013008 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/574.png
+  artifactKey: Guid(de06618903dc0af4a815af9f7b772267) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/574.png using Guid(de06618903dc0af4a815af9f7b772267) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b138e24c9ae98961e09e36995d83aae2') in 0.013400 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/545.png
+  artifactKey: Guid(3e78e7a214fbdfb4f8fdb77d94758515) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/545.png using Guid(3e78e7a214fbdfb4f8fdb77d94758515) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d9e99bdd8718f381f70c431802a49fb') in 0.013659 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/510.png
+  artifactKey: Guid(fd0ee6d1d512acc4abb3a4d4fed38e3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/510.png using Guid(fd0ee6d1d512acc4abb3a4d4fed38e3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbf8089ca35803a5b8b6d308be729b62') in 0.013969 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/564.png
+  artifactKey: Guid(ace2251425f4574479f82859de549e42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/564.png using Guid(ace2251425f4574479f82859de549e42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19443156cca75c7f14ba7accf5a461f8') in 0.013697 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/571.png
+  artifactKey: Guid(d42f6953a7ef1c7489ff85c750858efc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/571.png using Guid(d42f6953a7ef1c7489ff85c750858efc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87247659c3162b80fc355b7eafb4b915') in 0.014375 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/554.png
+  artifactKey: Guid(02fe9cf7e20786b48ad0b223d79f66ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/554.png using Guid(02fe9cf7e20786b48ad0b223d79f66ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cf1cf58f43b2f336658a0ecda73faf0') in 0.015021 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/533.png
+  artifactKey: Guid(afba25a67b7fa5e419ce8aeb13735c41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/533.png using Guid(afba25a67b7fa5e419ce8aeb13735c41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbcfe9eb2e55c7fc52ea7a7ed7246d02') in 0.014988 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/530.png
+  artifactKey: Guid(f5c244263410912439886f7dbe788567) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/530.png using Guid(f5c244263410912439886f7dbe788567) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0e547c826c1e8f5847a258889cf7f73') in 0.014764 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/537.png
+  artifactKey: Guid(5ee024e7983e0c941b5d8f5528a6a1fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/537.png using Guid(5ee024e7983e0c941b5d8f5528a6a1fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc3ff0d016420bd2c685c3ae6e5c4262') in 0.015050 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/540.png
+  artifactKey: Guid(c03fbe2973ec6aa41b29769f46154008) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/540.png using Guid(c03fbe2973ec6aa41b29769f46154008) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e8128429711429984da7ba3d4651133') in 0.013622 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/525.png
+  artifactKey: Guid(eba0bf22aed653547b46ca46906f8d08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/525.png using Guid(eba0bf22aed653547b46ca46906f8d08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a19097d78ab5a009d101b2c6ec10df15') in 0.012897 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/524.png
+  artifactKey: Guid(70da1f5a9dc3d4b49b70830ce88f09b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/524.png using Guid(70da1f5a9dc3d4b49b70830ce88f09b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a467a6f06cf3176459bfe682b7ea0f75') in 0.014196 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/585.png
+  artifactKey: Guid(450d2c95266d3a742bfeaa7210ad24ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/585.png using Guid(450d2c95266d3a742bfeaa7210ad24ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cb2ec94bb4854005237f4d1fbf0a8d5') in 0.013050 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/518.png
+  artifactKey: Guid(961e512ee8db647499b7438faf954466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/501-600/518.png using Guid(961e512ee8db647499b7438faf954466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3e54f6598bd6e2b447f1659b16b6c23') in 0.014415 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
