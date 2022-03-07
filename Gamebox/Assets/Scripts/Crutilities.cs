@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Crutilities : MonoBehaviour
 {
-    public Transform SelectedWheelTransform;
+    public GameObject SelectedWheelTransform;
     public static Crutilities singleton;
     List<MovableObjectStateMachine> movableObjectsTiedTo = new List<MovableObjectStateMachine>();
 

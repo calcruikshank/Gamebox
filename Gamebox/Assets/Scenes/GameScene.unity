@@ -1942,7 +1942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72880c3680b09bb43aa44319bdccc9d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelectedWheelTransform: {fileID: 1046996580491333359, guid: 6b7b631679edf7a4087c8b79aacffb97, type: 3}
+  SelectedWheelTransform: {fileID: 2707454680480196699, guid: 2020f8ed0e207244bb7e70b7a3ce0130, type: 3}
 --- !u!1 &1707513860
 GameObject:
   m_ObjectHideFlags: 0

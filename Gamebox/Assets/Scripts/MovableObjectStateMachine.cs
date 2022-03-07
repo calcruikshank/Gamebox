@@ -120,7 +120,7 @@ public class MovableObjectStateMachine : MonoBehaviour
         {
             BoxSelection.singleton.ChangeRectSizeToFitAllMovableObjects();
         }
-        if (MathF.Abs(currentLocalEulerAngles.y - targetRotation.y) < 10f)
+        if (MathF.Abs(currentLocalEulerAngles.y - targetRotation.y) < 25f)
         {
             currentLocalEulerAngles.y = targetRotation.y;
             transform.GetChild(0).localEulerAngles = targetRotation;
@@ -149,6 +149,7 @@ public class MovableObjectStateMachine : MonoBehaviour
     }
     public void HandleIdle()
     {
+
     }
 
     void HandleSelected()
@@ -156,6 +157,7 @@ public class MovableObjectStateMachine : MonoBehaviour
         Vector3 targetScale = Vector3.one;
         if (showSelectedWheel)
         {
+
         }
     }
 
@@ -301,7 +303,19 @@ public class MovableObjectStateMachine : MonoBehaviour
             return -.9f;
         }
     }
-
+    public void FlipObject(Vector3 position, int index)
+    {
+        if (faceUp)
+        {
+            transform.GetChild(0).localEulerAngles = new Vector3(270, targetRotation.y, targetRotation.z);
+            faceUp = false;
+        }
+        else
+        {
+            transform.GetChild(0).localEulerAngles = new Vector3(90, targetRotation.y, targetRotation.z);
+            faceUp = true;
+        }
+    }
     public void LongPress()
     {
         state = State.Moving;
@@ -343,6 +357,10 @@ public class MovableObjectStateMachine : MonoBehaviour
         {
             DestroySpecificSelectedWheel(this.transform);
             showSelectedWheel = false;
+            if (state != State.Idle)
+            {
+                state = State.Idle;
+            }
         }
     }
 
@@ -360,6 +378,11 @@ public class MovableObjectStateMachine : MonoBehaviour
         targetRotation = new Vector3(transform.GetChild(0).localEulerAngles.x, (targetRotation.y + 90) , transform.GetChild(0).localEulerAngles.z);
         state = State.Rotating;
     }
+    public void RotateRightFromButton()
+    {
+        targetRotation = new Vector3(transform.GetChild(0).localEulerAngles.x, (targetRotation.y + 90), transform.GetChild(0).localEulerAngles.z);
+        state = State.Rotating;
+    }
     private void RotateLeft(Vector3 position, int index)
     {
         targetRotation = new Vector3(transform.GetChild(0).localEulerAngles.x, (targetRotation.y - 90), transform.GetChild(0).localEulerAngles.z);
@@ -374,7 +397,6 @@ public class MovableObjectStateMachine : MonoBehaviour
     }
     private void FingerReleased(Vector3 position, int index)
     {
-        Debug.Log(idList.Count);
         if (!idList.Contains(index)) return;
         if (idList.Count == 1)
         {
@@ -405,7 +427,7 @@ public class MovableObjectStateMachine : MonoBehaviour
         }
         if (!faceUp)
         {
-            transform.GetChild(0).localEulerAngles = new Vector3(270, transform.GetChild(0).localEulerAngles.y, transform.GetChild(0).localEulerAngles.z);
+            transform.GetChild(0).localEulerAngles = new Vector3(270, transform.GetChild(0).localEulerAngles.y, transform.GetChild(0).localEulerAngles.z);  
         }
     }
 
@@ -439,7 +461,8 @@ public class MovableObjectStateMachine : MonoBehaviour
     }
     public void SpawnInNewSelectedWheelTransform(Transform transformToSpawnOn)
     {
-        selectedWheelGO = Instantiate(Crutilities.singleton.SelectedWheelTransform.gameObject, new Vector3(transformToSpawnOn.position.x, 4, transformToSpawnOn.position.z), Quaternion.identity);
+        selectedWheelGO = Instantiate(Crutilities.singleton.SelectedWheelTransform, new Vector3(this.transform.position.x, 1, this.transform.position.z) , this.transform.rotation);
+        selectedWheelGO.transform.parent = this.transform;
     }
     public void DestroySpecificSelectedWheel(Transform transformToSpawnOn)
     {
@@ -455,6 +478,10 @@ public class MovableObjectStateMachine : MonoBehaviour
 
     public void SetBoxSelected()
     {
+        if (this.transform.GetComponentInChildren<CardTilter>() != null)
+        {
+            this.transform.GetComponentInChildren<CardTilter>().SetRotationToNotZero();
+        }
         Highlight();
         snappingToThreeOnY = true;
         lowering = false;
@@ -493,4 +520,26 @@ public class MovableObjectStateMachine : MonoBehaviour
         targetRotation = new Vector3(transform.GetChild(0).localEulerAngles.x, (targetRotation.y - 90), transform.GetChild(0).localEulerAngles.z);
         state = State.BoxRotation;
     }
+
+    public void ShuffleDeck()
+    {
+        if (deck != null)
+        {
+            deck.ShuffleDeck(this.offset, -1);
+        }
+    }
+
+    public void PickUpTopCardOfDeckFromButton()
+    {
+        deck.PickUpCards(1);
+    }
+
+
+    public void MoveWholeDeckButton()
+    {
+        SubscribeToDelegates();
+        HideSelectedWheel();
+        state = State.Moving;
+    }
+  
 }

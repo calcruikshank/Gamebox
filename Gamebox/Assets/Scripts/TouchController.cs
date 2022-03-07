@@ -33,6 +33,13 @@ public class TouchController : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(position);
         if (Physics.Raycast(ray, out RaycastHit raycastHit, Mathf.Infinity))
         {
+            Debug.Log(raycastHit.transform);
+            if (raycastHit.transform.GetComponentInChildren<ButtonSelector>() != null)
+            {
+                raycastHit.transform.GetComponentInChildren<ButtonSelector>().Select();
+                Debug.Log("Hit Button Selector");
+                return;
+            }
             if (GetFinalParent(raycastHit).GetComponent<MovableObjectStateMachine>() != null)
             {
                 //if a movable was hit set position to target position and add movable to the dictionary
@@ -51,6 +58,7 @@ public class TouchController : MonoBehaviour
                 BoxSelectionObject boxSelection = raycastHit.transform.GetComponent<BoxSelectionObject>();
                 boxSelection.SelectBox (index, raycastHit.point);
             }
+            
         }
     }
     public Transform GetFinalParent(RaycastHit raycastHit)
