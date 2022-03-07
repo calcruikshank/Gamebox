@@ -440,6 +440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectionBox: {fileID: 1555482047}
+  closeButton: {fileID: 5901803169086856552, guid: a5105dde97673394ca44e5da2ec9a5bf, type: 3}
 --- !u!1 &805103525
 GameObject:
   m_ObjectHideFlags: 0

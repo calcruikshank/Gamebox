@@ -9,11 +9,12 @@ public class BoxSelection : MonoBehaviour
     [SerializeField] private RectTransform selectionBox;
     private List<MovableObjectStateMachine> selectedMovableObjects = new List<MovableObjectStateMachine>();
     Vector3 startPosition, currentPosition;
+
+
     private Camera cam;
     int id = -1;
     float width;
     float height;
-    List<RaycastHit> movableObjects = new List<RaycastHit>();
 
     Vector3 fingerMovePosition;
     Vector3 offset;
@@ -23,9 +24,10 @@ public class BoxSelection : MonoBehaviour
 
     float distanceFromStartToCurrent;
 
-
+    [SerializeField] GameObject closeButton;
     bool moving = false;
     public static BoxSelection singleton;
+    GameObject newCloseButton;
     //Travis was here
     private void Awake()
     {
@@ -36,6 +38,10 @@ public class BoxSelection : MonoBehaviour
     public void BeginDraggingGrid(int indexSent, Vector3 positionSent)
     {
         if (id != -1)
+        {
+            return;
+        }
+        if (selectedMovableObjects.Count >= 1)
         {
             return;
         }
@@ -82,6 +88,7 @@ public class BoxSelection : MonoBehaviour
             alreadySubscribed = false;
         }
         ChangeRectSizeToFitAllMovableObjects();
+        
     }
 
     public void ChangeRectSizeToFitAllMovableObjects()
@@ -128,8 +135,55 @@ public class BoxSelection : MonoBehaviour
         {
             selectedMovableObjects[i].SetGridOffset(this.selectionBox.position);
         }
+        if (newCloseButton == null)
+        {
+            SpawnInCloseButton(width, height);
+        }
     }
 
+    public void SpawnInCloseButton(float width, float height)
+    {
+        //if start position.x < currentposition.x && startposition.z < currentPosition.z
+        if (startPosition.x < currentPosition.x && startPosition.y > currentPosition.y)
+        {
+            //call this method when finger is released and selected movable objects.count > 0 
+            newCloseButton = Instantiate(closeButton, new Vector3(selectionBox.transform.position.x + width / 2, 7, selectionBox.transform.position.z + height / 2), Quaternion.identity);
+            //if seleceted movable object count is == 0 then call closeBox
+            newCloseButton.transform.parent = selectionBox;
+        }
+        if (startPosition.x < currentPosition.x && startPosition.y < currentPosition.y)
+        {
+            newCloseButton = Instantiate(closeButton, new Vector3(selectionBox.transform.position.x - width / 2, 7, selectionBox.transform.position.z + height / 2), Quaternion.identity);
+            
+            newCloseButton.transform.parent = selectionBox;
+        }
+        if (startPosition.x > currentPosition.x && startPosition.y < currentPosition.y)
+        {
+            newCloseButton = Instantiate(closeButton, new Vector3(selectionBox.transform.position.x - width / 2, 7, selectionBox.transform.position.z - height / 2), Quaternion.identity);
+        
+            newCloseButton.transform.parent = selectionBox;
+        }
+        if (startPosition.x > currentPosition.x && startPosition.y > currentPosition.y)
+        {
+            newCloseButton = Instantiate(closeButton, new Vector3(selectionBox.transform.position.x + width / 2, 7, selectionBox.transform.position.z - height / 2), Quaternion.identity);
+            
+            newCloseButton.transform.parent = selectionBox;
+        }
+
+    }
+    public void CloseBox()
+    {
+        if (selectionBox.gameObject.activeInHierarchy)
+        {
+            selectionBox.gameObject.SetActive(false);
+        }
+        for (int i = 0; i < selectedMovableObjects.Count; i++)
+        {
+            selectedMovableObjects[i].SetBoxDeselected();
+        }
+        selectedMovableObjects.Clear();
+        Destroy(newCloseButton);
+    }
     private void FingerMoved(Vector3 position, int index)
     {
         if (id != index)
