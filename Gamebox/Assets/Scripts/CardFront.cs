@@ -6,8 +6,9 @@ public class CardFront : MonoBehaviour
 {
     public void ChangeCardFront(GameObject cardFrontSent)
     {
-        Debug.Log(cardFrontSent + " card front sent");
-        Instantiate(cardFrontSent, this.transform.parent);
+        
+        GameObject newCard = Instantiate(cardFrontSent, this.transform.parent);
+        newCard.transform.SetAsFirstSibling();
         Destroy(this.gameObject);
     }
 }

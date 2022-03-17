@@ -181,7 +181,7 @@ public class Deck : MonoBehaviour
     public void ShuffleDeck(Vector3 offset, int id)
     {
         Shuffle(cardsInDeck);
-        SetCurrentCardShowing(cardsInDeck[cardsInDeck.Count - 1]);
+        UpdateDeckInfo();
     }
 
     public void Shuffle<GameObject>(List<GameObject> listToShuffle)
