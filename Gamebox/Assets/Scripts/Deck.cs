@@ -18,7 +18,7 @@ public class Deck : MonoBehaviour
         InitializeDeck();
         UpdateDeckInfo();
     }
-
+    
     public void SetSelected(int id, Vector3 offset)
     {
         TouchScript.shuffleInitiated += ShuffleDeck;
@@ -36,8 +36,8 @@ public class Deck : MonoBehaviour
     public void UpdateDeckInfo()
     {
         SetSize(new Vector3(this.transform.localScale.x, cardsInDeck.Count, this.transform.localScale.z));
-        SetCurrentCardShowing(cardsInDeck[cardsInDeck.Count - 1]);
         SetTopCard(cardsInDeck[0]);
+        SetCurrentCardShowing(cardsInDeck[cardsInDeck.Count - 1]);
     }
 
     public void AddToDeck(List<GameObject> cardsSents)
@@ -172,7 +172,6 @@ public class Deck : MonoBehaviour
     public void SetCurrentCardShowing(GameObject cardSent)
     {
         GetComponentInChildren<CardFront>().ChangeCardFront(cardSent.GetComponentInChildren<CardFront>().gameObject);
-
         currentCardShowing = GetComponentInChildren<CardFront>().gameObject;
         if (currentCardShowing.GetComponent<CardTilter>() != null)
         {
@@ -213,6 +212,7 @@ public class Deck : MonoBehaviour
             PickUpCardsFromTop(numOfCardsToPickUp);
         }
     }
+    
 
     public void PickUpCardsFromBottom(int numOfCardsToPickUp)
     {
@@ -235,6 +235,7 @@ public class Deck : MonoBehaviour
     {
         GameObject newDeck;
         newDeck = Instantiate(this.gameObject, transform.position, Quaternion.identity);
+        newDeck.GetComponent<MovableObjectStateMachine>().faceUp = false;
         int iniatedI = cardsInDeck.Count;
         cardsInDeck.Clear();
         for (int i = 0; i <= numOfCardsToPickUp - 1; i++)

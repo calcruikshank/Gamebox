@@ -193,7 +193,6 @@ public class BoxSelection : MonoBehaviour
     {
         for (int i = 0; i < selectedMovableObjects.Count; i++)
         {
-            Debug.Log("Flipping object !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             selectedMovableObjects[i].FlipObject();
         }
     }
@@ -269,7 +268,6 @@ public class BoxSelection : MonoBehaviour
             }
         }
 
-
         List<MovableObjectStateMachine> result = selectedMovableObjects.Except(newListOfMovablesToSelect).ToList<MovableObjectStateMachine>();
 
         for (int i = 0; i < result.Count(); i++)
@@ -332,5 +330,48 @@ public class BoxSelection : MonoBehaviour
         {
             Crutilities.singleton.GetFinalParent(selectedMovableObjects[i].transform).GetComponentInChildren<MovableObjectStateMachine>().BoxRotateLeft();
         }
+    }
+   
+    public void Shuffle()
+    {
+        for (int i = 0; i < selectedMovableObjects.Count; i++)
+        {
+            Crutilities.singleton.GetFinalParent(selectedMovableObjects[i].transform).GetComponentInChildren<MovableObjectStateMachine>().ShuffleDeck();
+        }
+    }
+
+    public void GroupAllSimilarObjects()
+    {
+        //choose a master object to add all other objects to i[0]
+        bool hasChosenMasterObject = false;
+        Deck deckToAddTo = new Deck();
+        MovableObjectStateMachine deckToAddToMovable = new MovableObjectStateMachine();
+        for (int i = 0; i < selectedMovableObjects.Count; i++)
+        {
+            if (selectedMovableObjects[i].transform.GetComponentInChildren<Deck>() != null)
+            {
+                if (hasChosenMasterObject)
+                {
+                    if (selectedMovableObjects[i].faceUp)
+                    {
+                        if (deckToAddTo != null)
+                        {
+                            deckToAddTo.AddToDeck(selectedMovableObjects[i].GetComponentInChildren<Deck>().cardsInDeck);
+                            selectedMovableObjects[i].GetComponentInChildren<Deck>().UpdateDeckInfo();
+                            Destroy(selectedMovableObjects[i].gameObject);
+                        }
+                    }
+                }
+                if (!hasChosenMasterObject)
+                {
+                    hasChosenMasterObject = true;
+                    deckToAddTo = selectedMovableObjects[i].GetComponentInChildren<Deck>(); deckToAddToMovable = selectedMovableObjects[i];
+                }
+                
+                
+            }
+        }
+
+        CloseBox();
     }
 }

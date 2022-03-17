@@ -41,7 +41,6 @@ public class ButtonSelector : MonoBehaviour
                 Debug.Log("Invoking " + methodToCall);
             }
         }
-
     }
 
     public void SetTargetTransform(RectTransform selectionBox)

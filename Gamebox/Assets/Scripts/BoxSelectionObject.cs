@@ -25,4 +25,12 @@ public class BoxSelectionObject : MonoBehaviour
     {
         BoxSelection.singleton.CloseBox();
     }
+    public void ShuffleDeck()
+    {
+        BoxSelection.singleton.Shuffle();
+    }
+    public void GroupAllSimilarMovableObjects()
+    {
+        BoxSelection.singleton.GroupAllSimilarObjects();
+    }
 }

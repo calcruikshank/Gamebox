@@ -33,7 +33,12 @@ public class MovableObjectStateMachine : MonoBehaviour
     bool showSelectedWheel = false;
     GameObject selectedWheelGO;
 
+    float shakeTimer = 0f;
+    float shakeTimerThreshold = 0f;
+
     public bool boxSelected = false;
+
+    Vector3 previousInitialMoveDirection;
     public enum State
     {
         Idle,
@@ -41,7 +46,7 @@ public class MovableObjectStateMachine : MonoBehaviour
         Selected,
         Moving,
         Rotating,
-        BoxSelected, 
+        BoxSelected,
         BoxRotation
     }
     private void Awake()
@@ -87,6 +92,7 @@ public class MovableObjectStateMachine : MonoBehaviour
                 Move();
                 HandleRaising();
                 CheckToSeeIfShouldBeginRotating();
+                CheckForShuffle();
                 break;
             case State.Rotating:
                 Move();
@@ -124,7 +130,7 @@ public class MovableObjectStateMachine : MonoBehaviour
         {
             currentLocalEulerAngles.y = targetRotation.y;
             transform.GetChild(0).localEulerAngles = targetRotation;
-           
+
             return;
         }
         if (currentLocalEulerAngles.y > targetRotation.y)
@@ -135,7 +141,7 @@ public class MovableObjectStateMachine : MonoBehaviour
         {
             currentLocalEulerAngles.y += 1500 * Time.deltaTime;
         }
-        
+
         transform.GetChild(0).localEulerAngles = new Vector3(transform.GetChild(0).localEulerAngles.x, currentLocalEulerAngles.y, transform.GetChild(0).localEulerAngles.z);
     }
 
@@ -151,7 +157,19 @@ public class MovableObjectStateMachine : MonoBehaviour
     {
 
     }
+    void CheckForShuffle()
+    {
 
+        Vector3 initialMoveDirection = fingerMovePosition - startingTouchPosition;
+
+        if (initialMoveDirection.x > previousInitialMoveDirection.x)
+        {
+            shakeTimer += Time.deltaTime;
+        }
+
+        previousInitialMoveDirection = initialMoveDirection;
+
+    }
     void HandleSelected()
     {
         Vector3 targetScale = Vector3.one;
@@ -176,7 +194,7 @@ public class MovableObjectStateMachine : MonoBehaviour
         {
             SetSelected();
         }
-        
+
 
         if (state != State.Idle)
             return;
@@ -293,15 +311,9 @@ public class MovableObjectStateMachine : MonoBehaviour
             {
                 return hit.transform.GetComponent<Collider>().bounds.extents.y + hit.transform.position.y + this.transform.GetComponentInChildren<Collider>().bounds.extents.y;
             }
-            else
-            {
-                return -.9f;
-            }
+
         }
-        else
-        {
-            return -.9f;
-        }
+        return -.9f;
     }
     public void FlipObject(Vector3 position, int index)
     {
@@ -345,7 +357,7 @@ public class MovableObjectStateMachine : MonoBehaviour
     {
         state = State.Idle;
     }
-    
+
     void ShowSelectedWheel()
     {
         showSelectedWheel = true;
@@ -375,7 +387,7 @@ public class MovableObjectStateMachine : MonoBehaviour
 
     public void RotateRight(Vector3 position, int index)
     {
-        targetRotation = new Vector3(transform.GetChild(0).localEulerAngles.x, (targetRotation.y + 90) , transform.GetChild(0).localEulerAngles.z);
+        targetRotation = new Vector3(transform.GetChild(0).localEulerAngles.x, (targetRotation.y + 90), transform.GetChild(0).localEulerAngles.z);
         state = State.Rotating;
     }
     public void RotateRightFromButton()
@@ -427,7 +439,7 @@ public class MovableObjectStateMachine : MonoBehaviour
         }
         if (!faceUp)
         {
-            transform.GetChild(0).localEulerAngles = new Vector3(270, transform.GetChild(0).localEulerAngles.y, transform.GetChild(0).localEulerAngles.z);  
+            transform.GetChild(0).localEulerAngles = new Vector3(270, transform.GetChild(0).localEulerAngles.y, transform.GetChild(0).localEulerAngles.z);
         }
     }
 
@@ -461,7 +473,7 @@ public class MovableObjectStateMachine : MonoBehaviour
     }
     public void SpawnInNewSelectedWheelTransform(Transform transformToSpawnOn)
     {
-        selectedWheelGO = Instantiate(Crutilities.singleton.SelectedWheelTransform, new Vector3(this.transform.position.x, 1, this.transform.position.z) , this.transform.rotation);
+        selectedWheelGO = Instantiate(Crutilities.singleton.SelectedWheelTransform, new Vector3(this.transform.position.x, 1, this.transform.position.z), this.transform.rotation);
         selectedWheelGO.transform.parent = this.transform;
     }
     public void DestroySpecificSelectedWheel(Transform transformToSpawnOn)
@@ -542,5 +554,5 @@ public class MovableObjectStateMachine : MonoBehaviour
         HideSelectedWheel();
         state = State.Moving;
     }
-  
+
 }

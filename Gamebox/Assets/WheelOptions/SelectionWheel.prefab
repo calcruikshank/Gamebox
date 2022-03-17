@@ -1286,7 +1286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2b7c22d2b4b5d4fa28f494635e6a4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  methodToCall: MoveWholeDeckButton
+  methodToCall: GroupAllSimilarMovableObjects
   transformToCallMethodFrom: {fileID: 0}
 --- !u!1 &2707454680800693827
 GameObject:

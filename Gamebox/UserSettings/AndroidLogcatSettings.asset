@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "620102100500049",
+    "m_SelectedDeviceId": "10.1.10.144:5555",
     "m_SelectedPackage": {
-        "deviceId": "620102100500049",
-        "name": "com.DefaultCompany.Gamebox",
-        "processId": 4912,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -690,6 +690,24 @@
             "deviceId": "620102100500049",
             "name": "com.DefaultCompany.Gamebox",
             "processId": 4912,
+            "exited": false
+        },
+        {
+            "deviceId": "10.1.10.144:5555",
+            "name": "com.lastgameboard.gameboardlauncher",
+            "processId": 4143,
+            "exited": true
+        },
+        {
+            "deviceId": "10.1.10.144:5555",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 5876,
+            "exited": true
+        },
+        {
+            "deviceId": "10.1.10.144:5555",
+            "name": "com.asmodeedigital.terraformingmarzzzz",
+            "processId": 5464,
             "exited": false
         }
     ],
