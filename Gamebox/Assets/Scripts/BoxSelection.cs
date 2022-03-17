@@ -356,6 +356,7 @@ public class BoxSelection : MonoBehaviour
                     {
                         if (deckToAddTo != null)
                         {
+                            deckToAddTo.transform.position = selectionBox.transform.position;
                             deckToAddTo.AddToDeck(selectedMovableObjects[i].GetComponentInChildren<Deck>().cardsInDeck);
                             selectedMovableObjects[i].GetComponentInChildren<Deck>().UpdateDeckInfo();
                             Destroy(selectedMovableObjects[i].gameObject);
