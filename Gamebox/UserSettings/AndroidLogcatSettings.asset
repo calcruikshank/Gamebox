@@ -1,5 +1,5 @@
 {
-    "m_SelectedDeviceId": "10.1.10.144:5555",
+    "m_SelectedDeviceId": "10.1.10.101:5555",
     "m_SelectedPackage": {
         "deviceId": "",
         "name": "",
@@ -708,6 +708,12 @@
             "deviceId": "10.1.10.144:5555",
             "name": "com.asmodeedigital.terraformingmarzzzz",
             "processId": 5464,
+            "exited": false
+        },
+        {
+            "deviceId": "10.1.10.101:5555",
+            "name": "com.android.settings",
+            "processId": 6544,
             "exited": false
         }
     ],

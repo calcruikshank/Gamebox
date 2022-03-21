@@ -63,9 +63,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  id: 0
-  distanceThreshold: 1
+  idList: 
   faceUp: 0
+  boxSelected: 0
 --- !u!1001 &6613674515900435454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -133,6 +133,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 678cc3b2e44a90942b698a59f1f59ad1, type: 2}
+    - target: {fileID: -5046312555091878470, guid: 8e5d4e074dd931e459896739bb3505f6, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -2595413393582501724, guid: 8e5d4e074dd931e459896739bb3505f6, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -148,6 +152,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8e5d4e074dd931e459896739bb3505f6, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2502575823895902357, guid: 8e5d4e074dd931e459896739bb3505f6, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2502575823895902357, guid: 8e5d4e074dd931e459896739bb3505f6, type: 3}
       propertyPath: m_LocalPosition.x

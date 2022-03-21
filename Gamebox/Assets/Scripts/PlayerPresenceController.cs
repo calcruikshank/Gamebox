@@ -18,13 +18,16 @@ namespace Gameboard.Utilities
         // Start is called before the first frame update
         void Start()
         {
-            if (singleton != null)
-            {
-                Destroy(this);
-            }
-            singleton = this;
-            userPresenceTool = FindObjectOfType<UserPresenceTool>();
-            userPresenceTool.RequestUserPresenceUpdate();
+            // The User Presence Tool doesn't initialize itself in the Editor, so you can skip trying to search for it
+#if !UNITY_EDITOR
+    StartCoroutine(RequestFirstUserPresence);
+#endif
+        }
+
+        IEnumerator RequestFirstUserPresence()
+        {
+            while (UserPresenceTool.singleton is null) yield return new WaitForEndOfFrame();
+            UserPresenceTool.singleton.RequestUserPresenceUpdate();
         }
 
 
