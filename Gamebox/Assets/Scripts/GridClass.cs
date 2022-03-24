@@ -23,7 +23,7 @@ public class GridClass
         {
             for (int y = 0; y < gridArray.GetLength(1); y++)
             {
-                Testing.singleton.SpawnTile(GetWorldPosition(x, y) + new Vector3(cellSize, cellSize) * .5f);
+                Testing.singleton.SpawnTile(GetWorldPosition(x, y) + new Vector3(cellSize, 0, cellSize) * .5f);
                 Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x, y + 1), Color.white, 100f);
                 Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x + 1, y), Color.white, 100f);
             }
@@ -35,7 +35,7 @@ public class GridClass
 
     private Vector3 GetWorldPosition(int x, int y)
     {
-        return new Vector3(x, y) * cellSize + originPosition;
+        return new Vector3((x * cellSize + originPosition.x), 0, (y * cellSize + originPosition.y));
     }
     public void GetXY(Vector3 worldPosition, out int x, out int y)
     {

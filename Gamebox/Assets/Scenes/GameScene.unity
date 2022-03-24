@@ -1557,7 +1557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b154ec2f5d61a74696d1a2f7185b313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whiteSquare: {fileID: 4351624239677121835, guid: dfd516991834bad42ae01770ee9c4a18, type: 3}
+  whiteSquare: {fileID: 8856639399594175519, guid: 44889fa911f44144fafe0abb6e7a9108, type: 3}
   boostTilePrefab: {fileID: 0}
   doubleCashTilePrefab: {fileID: 0}
   autoHarvestTilePrefab: {fileID: 0}

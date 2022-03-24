@@ -22,9 +22,9 @@ public class Testing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GridClass grid = new GridClass(12, 5, 1, new Vector3(-6, -6, 0));
+        GridClass grid = new GridClass(12, 12, 1, new Vector3(-6, -6, 0));
 
-        GridClass newGrid = new GridClass(12, 5, 1, new Vector3(-6, 1, 0));
+        //GridClass newGrid = new GridClass(12, 5, 1, new Vector3(-6, 1, 0));
     }
 
     // Update is called once per frame
