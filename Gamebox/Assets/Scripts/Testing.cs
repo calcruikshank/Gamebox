@@ -9,7 +9,12 @@ public class Testing : MonoBehaviour
     [SerializeField] GameObject doubleCashTilePrefab;
     [SerializeField] GameObject autoHarvestTilePrefab;
 
+    [SerializeField] GameObject objectToMakeTileSize;
+
+    float cellSize = 1f;
+
     public static Testing singleton;
+    int x, y;
 
     private void Awake()
     {
@@ -18,11 +23,18 @@ public class Testing : MonoBehaviour
             Destroy(this);
         }
         singleton = this;
+
+        if (objectToMakeTileSize != null)
+        {
+            SetTileSizeToObject();
+        }
     }
     // Start is called before the first frame update
     void Start()
     {
-        GridClass grid = new GridClass(12, 12, 1, new Vector3(-6, -6, 0));
+        x = 12;
+        y = 12;
+        GridClass grid = new GridClass(x, y, cellSize, new Vector3(x / -2 * cellSize, y / -2 * cellSize, 0));
 
         //GridClass newGrid = new GridClass(12, 5, 1, new Vector3(-6, 1, 0));
     }
@@ -51,5 +63,11 @@ public class Testing : MonoBehaviour
     {
         GameObject doubleCashTile = Instantiate(autoHarvestTilePrefab, spawnPosition, Quaternion.identity, this.transform);
         return doubleCashTile;
+    }
+
+    public void SetTileSizeToObject()
+    {
+        cellSize = objectToMakeTileSize.GetComponentInChildren<MeshRenderer>().bounds.size.z;
+        Debug.Log(cellSize);
     }
 }
