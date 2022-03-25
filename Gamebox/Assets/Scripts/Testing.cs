@@ -11,13 +11,17 @@ public class Testing : MonoBehaviour
 
     [SerializeField] GameObject objectToMakeTileSize;
 
-    float cellSize = 1f;
+    float cellSizeX = 1f;
+    float cellSizeY = 1f;
 
     public static Testing singleton;
     int x, y;
 
+    [SerializeField] bool gridEnabled = false;
+
     private void Awake()
     {
+        if (!gridEnabled ) return;
         if (singleton != null)
         {
             Destroy(this);
@@ -32,9 +36,10 @@ public class Testing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        x = 12;
+        if (!gridEnabled) return;
+        x = 18;
         y = 12;
-        GridClass grid = new GridClass(x, y, cellSize, new Vector3(x / -2 * cellSize, y / -2 * cellSize, 0));
+        GridClass grid = new GridClass(x, y, cellSizeX, cellSizeY, new Vector3(x / -2 * cellSizeX, y / -2 * cellSizeY, 0));
 
         //GridClass newGrid = new GridClass(12, 5, 1, new Vector3(-6, 1, 0));
     }
@@ -48,6 +53,7 @@ public class Testing : MonoBehaviour
     public void SpawnTile(Vector3 spawnPosition)
     {
         GameObject newTile = Instantiate(whiteSquare, spawnPosition, Quaternion.identity, this.transform);
+        newTile.transform.localScale = new Vector3(cellSizeX, newTile.transform.localScale.y, cellSizeY);
     }
     public GameObject SpawnBoostTile(Vector3 spawnPosition)
     {
@@ -67,7 +73,7 @@ public class Testing : MonoBehaviour
 
     public void SetTileSizeToObject()
     {
-        cellSize = objectToMakeTileSize.GetComponentInChildren<MeshRenderer>().bounds.size.z;
-        Debug.Log(cellSize);
+        cellSizeX = objectToMakeTileSize.GetComponentInChildren<MeshRenderer>().bounds.size.x;
+        cellSizeY = objectToMakeTileSize.GetComponentInChildren<MeshRenderer>().bounds.size.z;
     }
 }

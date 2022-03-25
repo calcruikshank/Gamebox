@@ -26,7 +26,7 @@ public class MovableObjectStateMachine : MonoBehaviour
     Vector3 fingerMovePosition2;
     PlayerContainer playerOwningCard;
     Vector3 targetRotation;
-    Vector3 startingRotation;
+    float startingXRotation;
 
     Vector3 currentLocalEulerAngles;
 
@@ -56,6 +56,7 @@ public class MovableObjectStateMachine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        startingXRotation = this.currentLocalEulerAngles.x;
     }
 
     private void InitializeMovableObject()
@@ -68,8 +69,11 @@ public class MovableObjectStateMachine : MonoBehaviour
         }
         faceUp = true;
         doubleTapTimer = doubleTapThreshold;
-        targetRotation = this.transform.GetChild(0).transform.localEulerAngles;
-        currentLocalEulerAngles = this.transform.GetChild(0).localEulerAngles;
+        if (this.transform.childCount != 0)
+        {
+            targetRotation = this.transform.GetChild(0).transform.localEulerAngles;
+            currentLocalEulerAngles = this.transform.GetChild(0).localEulerAngles;
+        }
     }
 
     protected virtual void Update()
@@ -115,7 +119,6 @@ public class MovableObjectStateMachine : MonoBehaviour
     {
         if (idList.Count >= 2)
         {
-            startingRotation = transform.GetChild(0).forward;
             state = State.Rotating;
         }
     }
@@ -239,7 +242,6 @@ public class MovableObjectStateMachine : MonoBehaviour
         HideSelectedWheel();
         heldDownTimer += Time.deltaTime;
         Vector3 differenceBetweenStartingPositionAndMovePosition = startingTouchPosition - fingerMovePosition;
-
         //if held down timer is greater than helddowntimerthreshold then start moving entire entity
         if (heldDownTimer >= heldDownThreshold)
         {
@@ -319,12 +321,12 @@ public class MovableObjectStateMachine : MonoBehaviour
     {
         if (faceUp)
         {
-            transform.GetChild(0).localEulerAngles = new Vector3(270, targetRotation.y, targetRotation.z);
+            transform.GetChild(0).localEulerAngles = new Vector3(startingXRotation + 180, targetRotation.y, targetRotation.z);
             faceUp = false;
         }
         else
         {
-            transform.GetChild(0).localEulerAngles = new Vector3(90, targetRotation.y, targetRotation.z);
+            transform.GetChild(0).localEulerAngles = new Vector3(startingXRotation, targetRotation.y, targetRotation.z);
             faceUp = true;
         }
     }
@@ -339,6 +341,10 @@ public class MovableObjectStateMachine : MonoBehaviour
         if (deck != null)
         {
             deck.PickUpCards(1);
+            state = State.Moving;
+        }
+        if (deck == null)
+        {
             state = State.Moving;
         }
     }
@@ -435,11 +441,11 @@ public class MovableObjectStateMachine : MonoBehaviour
     {
         if (faceUp)
         {
-            transform.GetChild(0).localEulerAngles = new Vector3(90, transform.GetChild(0).localEulerAngles.y, transform.GetChild(0).localEulerAngles.z);
+            transform.GetChild(0).localEulerAngles = new Vector3(startingXRotation, transform.GetChild(0).localEulerAngles.y, transform.GetChild(0).localEulerAngles.z);
         }
         if (!faceUp)
         {
-            transform.GetChild(0).localEulerAngles = new Vector3(270, transform.GetChild(0).localEulerAngles.y, transform.GetChild(0).localEulerAngles.z);
+            transform.GetChild(0).localEulerAngles = new Vector3(startingXRotation +180, transform.GetChild(0).localEulerAngles.y, transform.GetChild(0).localEulerAngles.z);
         }
     }
 
