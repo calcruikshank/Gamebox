@@ -73,18 +73,9 @@ public class Deck : MonoBehaviour
                 return;
             }
         }
-        for (int i = 0; i < hits.Length; i++)
-        {
-            if (Crutilities.singleton.GetFinalParent(hits[i].transform).GetComponentInChildren<PlacementObject>() != null)
-            {
-                if (Crutilities.singleton.GetFinalParent(hits[i].transform).GetComponentInChildren<PlacementObject>().ListContainsString(this.name))
-                {
-                    Debug.Log("The name of this component is " + hits[i].transform.name);
-                    this.transform.position = hits[i].transform.position;
-                }
-                return;
-            }
-        }
+
+        
+
         //this for loop is to check for any decks hit to add to
         for (int j = 0; j < hits.Length; j++)
         {
@@ -115,6 +106,16 @@ public class Deck : MonoBehaviour
                 }
                 targetHit = null;
                 PlayerContainer playerToAddCardTo = hits[j].transform.GetComponentInChildren<PlayerContainer>();
+                return;
+            }
+        }
+        for (int i = 0; i < hits.Length; i++)
+        {
+            var placementObj = Crutilities.singleton.GetFinalParent(hits[i].transform).GetComponentInChildren<PlacementObject>();
+            if (placementObj != null && placementObj.ListContainsString(this.name))
+            {
+                Debug.Log("The name of this component is " + hits[i].transform.name);
+                this.transform.position = hits[i].transform.position;
                 return;
             }
         }
