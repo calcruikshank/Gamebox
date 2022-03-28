@@ -1841,7 +1841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa57260c6c4b9f54c82633fd4556b22b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  writePresenceUpdatesToLog: 1
+  writePresenceUpdatesToLog: 0
 --- !u!1 &1838842065
 GameObject:
   m_ObjectHideFlags: 0

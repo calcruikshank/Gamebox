@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "10.1.10.12:5555",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "10.1.10.12:5555",
+        "name": "com.DefaultCompany.Gamebox",
+        "processId": 5746,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -750,6 +750,36 @@
             "deviceId": "10.1.10.12:5555",
             "name": "com.lastgameboard.gameboardlauncher",
             "processId": 4149,
+            "exited": false
+        },
+        {
+            "deviceId": "10.1.10.12:5555",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 4877,
+            "exited": false
+        },
+        {
+            "deviceId": "10.1.10.12:5555",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 5079,
+            "exited": false
+        },
+        {
+            "deviceId": "10.1.10.12:5555",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 5379,
+            "exited": false
+        },
+        {
+            "deviceId": "10.1.10.12:5555",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 4738,
+            "exited": false
+        },
+        {
+            "deviceId": "10.1.10.12:5555",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 5746,
             "exited": false
         }
     ],
