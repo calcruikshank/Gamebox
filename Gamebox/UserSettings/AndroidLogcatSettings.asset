@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "10.1.10.12:5555",
     "m_SelectedPackage": {
-        "deviceId": "10.1.10.12:5555",
-        "name": "com.DefaultCompany.Gamebox",
-        "processId": 5654,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -719,30 +719,6 @@
         {
             "deviceId": "10.1.10.12:5555",
             "name": "com.DefaultCompany.Gamebox",
-            "processId": 4564,
-            "exited": true
-        },
-        {
-            "deviceId": "10.1.10.12:5555",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 4748,
-            "exited": true
-        },
-        {
-            "deviceId": "10.1.10.12:5555",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 4920,
-            "exited": true
-        },
-        {
-            "deviceId": "10.1.10.12:5555",
-            "name": "com.DefaultCompany.Gamebox",
-            "processId": 5118,
-            "exited": true
-        },
-        {
-            "deviceId": "10.1.10.12:5555",
-            "name": "com.DefaultCompany.Gamebox",
             "processId": 5274,
             "exited": true
         },
@@ -750,18 +726,30 @@
             "deviceId": "10.1.10.12:5555",
             "name": "com.lastgameboard.gameboardlauncher",
             "processId": 4147,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "10.1.10.12:5555",
             "name": "com.DefaultCompany.Gamebox",
             "processId": 5470,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "10.1.10.12:5555",
             "name": "com.DefaultCompany.Gamebox",
             "processId": 5654,
+            "exited": true
+        },
+        {
+            "deviceId": "10.1.10.12:5555",
+            "name": "com.DefaultCompany.Gamebox",
+            "processId": 5842,
+            "exited": true
+        },
+        {
+            "deviceId": "10.1.10.12:5555",
+            "name": "com.lastgameboard.gameboardlauncher",
+            "processId": 4149,
             "exited": false
         }
     ],

@@ -26,6 +26,7 @@ namespace Gameboard.Examples{
         protected override void PlayerRemoved()
         {
             Debug.Log("Player Removed");
+            Destroy(this.gameObject);
         }
         protected override void PlayerNameChanged()
         {

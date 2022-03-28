@@ -32,6 +32,7 @@ public class UserPresenceTest : MonoBehaviour
                 {
                     gameboardId = userPresence.userId
                 };*/
+                
                 GameObject scenePrefab = Instantiate(playerPresenceSceneObject, userPresence.boardUserPosition.screenPosition, Quaternion.identity);
 
 
