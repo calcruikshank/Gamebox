@@ -1,6 +1,4 @@
-﻿using static Gameboard.DataTypes;
-
-namespace Gameboard.EventArgs
+﻿namespace Gameboard.EventArgs
 {
     public class CompanionMessageResponseArgs
     {
@@ -11,5 +9,9 @@ namespace Gameboard.EventArgs
         // These are locally defined
         public bool wasSuccessful { get { return errorId == 0 && errorResponse == null; } }
         public CompanionErrorResponse errorResponse;
+        public string ownerId;
+
+        // NOTE: userId is a placeholder item to cover some edge cases in the companion. These are all being turned into ownerId, and this will get removed.
+        public string userId;
     }
 }

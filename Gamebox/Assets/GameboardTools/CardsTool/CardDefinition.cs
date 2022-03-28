@@ -40,6 +40,16 @@ namespace Gameboard.Tools
         public string CurrentCardLocation { get; private set; }
 
         /// <summary>
+        /// The actual front texture used on this card, for Unity-level access. Only exists after calling LoadCardTextures.
+        /// </summary>
+        public Texture2D cardFrontTexture { get; private set; }
+
+        /// <summary>
+        /// The actual back texture used on this card, for Unity-level access. Only exists after calling LoadCardTextures.
+        /// </summary>
+        public Texture2D cardBackTexture { get; private set; }
+
+        /// <summary>
         /// A List for the ID values of all User companions that this card has been loaded into.
         /// </summary>
         private List<string> UserIDsLoadedInto = new List<string>();
@@ -48,6 +58,16 @@ namespace Gameboard.Tools
 
         public CardDefinition(string inCardFrontTexturePath, byte[] inFrontTextureBytes, string inCardBackTexturePath, byte[] inBackTextureBytes, int inCardWidth, int inCardHeight)
         {
+            if(string.IsNullOrEmpty(inCardFrontTexturePath) && inFrontTextureBytes != null)
+            {
+                Debug.LogWarning("--- When FrontTextureBytes are used, the CardFrontTexturePath must be populated so the code has a reference to find these bytes!");
+            }
+
+            if (string.IsNullOrEmpty(inCardBackTexturePath) && inBackTextureBytes != null)
+            {
+                Debug.LogWarning("--- When BackTextureBytes are used, the CardBackTexturePath must be populated so the code has a reference to find these bytes!");
+            }
+
             cardGuid = Guid.NewGuid().ToString();
             
             cardFrontBytes = inFrontTextureBytes;
@@ -124,12 +144,12 @@ namespace Gameboard.Tools
         /// </summary>
         public void LoadCardBytesFromPaths()
         {
-            if(!string.IsNullOrEmpty(cardFrontTexturePath))
+            if(cardFrontBytes == null || cardFrontBytes.Length == 0 && !string.IsNullOrEmpty(cardFrontTexturePath))
             {
                 cardFrontBytes = GameboardHelperMethods.LoadByteArrayFromPath(cardFrontTexturePath);
             }
 
-            if (!string.IsNullOrEmpty(cardBackTexturePath))
+            if (cardBackBytes == null || cardBackBytes.Length == 0 && !string.IsNullOrEmpty(cardBackTexturePath))
             {
                 cardBackBytes = GameboardHelperMethods.LoadByteArrayFromPath(cardBackTexturePath);
             }
@@ -138,10 +158,35 @@ namespace Gameboard.Tools
         /// <summary>
         /// Deletes the images used for the Front and Back textures for this card from Gameboard memory. Does not remove them from Companion memory.
         /// </summary>
-        public void UnloadCardTextures()
+        public void UnloadCardTextureBytes()
         {
             cardFrontBytes = null;
             cardBackBytes = null;
+        }
+
+        /// <summary>
+        /// Loads the textures for this card into memory.
+        /// </summary>
+        public void LoadCardTextures()
+        {
+            if(cardFrontTexture == null && string.IsNullOrEmpty(cardFrontTexturePath))
+            {
+                cardFrontTexture = GameboardHelperMethods.LoadTextureFromPath(cardFrontTexturePath);
+            }
+
+            if (cardBackTexture == null && string.IsNullOrEmpty(cardBackTexturePath))
+            {
+                cardBackTexture = GameboardHelperMethods.LoadTextureFromPath(cardBackTexturePath);
+            }
+        }
+
+        /// <summary>
+        /// Unloads the textures for this card from memory.
+        /// </summary>
+        public void UnloadCardTextures()
+        {
+            cardFrontTexture = null;
+            cardBackTexture = null;
         }
         #endregion
 
@@ -189,6 +234,15 @@ namespace Gameboard.Tools
         public void CardWasUnLoadedFromCompanion(string inUserId)
         {
             UserIDsLoadedInto.Remove(inUserId);
+        }
+
+        /// <summary>
+        /// This card has been unloaded from all companions.
+        /// </summary>
+        /// <param name="inUserId"></param>
+        public void CardWasUnLoadedFromAllCompanions()
+        {
+            UserIDsLoadedInto.Clear();
         }
 
         /// <summary>

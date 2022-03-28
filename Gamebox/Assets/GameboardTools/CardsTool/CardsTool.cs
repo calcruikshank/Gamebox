@@ -18,6 +18,11 @@ namespace Gameboard.Tools
         private Dictionary<string, List<string>> CardHandIdDict = new Dictionary<string, List<string>>();
 
         /// <summary>
+        /// Dictionary of what CardHand is currently displayed for each Player.
+        /// </summary>
+        private Dictionary<string, string> CurrentDisplayedHandIDForPlayers = new Dictionary<string, string>();
+
+        /// <summary>
         /// A list of every card that has been created in this game.
         /// </summary>
         private List<CardDefinition> FullCardLibrary = new List<CardDefinition>();
@@ -68,10 +73,30 @@ namespace Gameboard.Tools
         public void WipeAllCardsData()
         {
             CardHandIdDict.Clear();
-            FullCardLibrary.ForEach(s => s.SetCardLocation(""));
+            CurrentDisplayedHandIDForPlayers.Clear();
+            FullCardLibrary.ForEach(s =>
+            {
+                s.ClearCardLocation();
+                s.CardWasUnLoadedFromAllCompanions();
+            });
         }
 
         #region Hand Display Management
+        /// <summary>
+        /// Returns the GUID of the CardHandDisplay currently shown for a specific Companion, or a blank string if none are currently displayed.
+        /// </summary>
+        /// <param name="inPlayerId"></param>
+        /// <returns></returns>
+        public string GetCardHandDisplayedForPlayer(string inPlayerId)
+        {
+            if (!CurrentDisplayedHandIDForPlayers.ContainsKey(inPlayerId))
+            {
+                CurrentDisplayedHandIDForPlayers.Add(inPlayerId, "");
+            }
+
+            return CurrentDisplayedHandIDForPlayers[inPlayerId];
+        }
+
         public async Task<string> CreateCardHandOnPlayer(string playerId)
         {
             if (!CardHandIdDict.ContainsKey(playerId))
@@ -121,10 +146,30 @@ namespace Gameboard.Tools
             CardHandIdDict.Remove(playerId);
         }
 
+        /// <summary>
+        /// Entirely deletes a Card Hand Display on a Player's Companion.
+        /// </summary>
+        /// <param name="playerId"></param>
+        /// <param name="inCardHandId"></param>
+        /// <param name="alsoUnloadCardsFromCompanion"></param>
+        /// <returns></returns>
         public async Task DeleteCardHandForPlayer(string playerId, string inCardHandId, bool alsoUnloadCardsFromCompanion = false)
         {
             // NOTE: Currently this only deletes the CardHand locally, and removes all cards that are in this CardHand on the player. We don't have a call currently to full-out delete a CardHand.
+            if(!CardHandIdDict.ContainsKey(playerId))
+            {
+                return;
+            }
             CardHandIdDict[playerId].Remove(inCardHandId);
+
+            if (CurrentDisplayedHandIDForPlayers.ContainsKey(playerId))
+            {
+                // If this is the displayed card hand, set the displayed hand as 'nothing'.
+                if (CurrentDisplayedHandIDForPlayers[playerId] == inCardHandId)
+                {
+                    CurrentDisplayedHandIDForPlayers[playerId] = "";
+                }
+            }
 
             List<CardDefinition> cardsInHandList = GetAllCardsInCardHand(inCardHandId);
             foreach(CardDefinition thisCardDef in cardsInHandList)
@@ -135,6 +180,32 @@ namespace Gameboard.Tools
                 {
                     await TakeCardFromPlayer(playerId, thisCardDef);
                 }
+            }
+        }
+
+        /// <summary>
+        /// Changes the Card Hand Display currently in-view on a Player's Companion.
+        /// </summary>
+        /// <param name="inPlayerId"></param>
+        /// <param name="inCardHandId"></param>
+        /// <returns>bool wasSuccessful</returns>
+        public async Task<bool> ShowHandDisplay(string inPlayerId, string inCardHandId)
+        {
+            if (!CurrentDisplayedHandIDForPlayers.ContainsKey(inPlayerId))
+            {
+                CurrentDisplayedHandIDForPlayers.Add(inPlayerId, "");
+            }
+
+            CompanionMessageResponseArgs responseArgs = await Gameboard.singleton.companionController.ShowCompanionHandDisplay(inPlayerId, inCardHandId);
+            if (responseArgs.wasSuccessful)
+            {
+                CurrentDisplayedHandIDForPlayers[inPlayerId] = inCardHandId;
+                return true;
+            }
+            else
+            {
+                GameboardLogging.LogMessage($"--- Failed to change the shown CompanionHandDIsplay on companion {inPlayerId} to CompanionHandDisplay {inCardHandId} due to error {responseArgs.errorResponse.ErrorValue}: {responseArgs.errorResponse.Message}", GameboardLogging.MessageTypes.Error);
+                return false;
             }
         }
         #endregion
@@ -149,6 +220,12 @@ namespace Gameboard.Tools
 
         public async Task<bool> PlaceCardInPlayerHand_Async(string playerId, string handId, CardDefinition inCardDef)
         {
+            if(inCardDef.CurrentCardLocation == handId)
+            {
+                // Card is already placed in this player's hand, so don't place it again or else it refreshes the hand display.
+                return true;
+            }
+
             // Make sure the player has this card before we give it to them.
             await GiveCardToPlayer(playerId, inCardDef);
 
@@ -180,7 +257,7 @@ namespace Gameboard.Tools
             CompanionMessageResponseArgs responseArgs = await Gameboard.singleton.companionController.RemoveCardFromHandDisplay(playerId, handId, cardDef.cardGuid);
             if (responseArgs.wasSuccessful)
             {
-                cardDef.SetCardLocation("");
+                cardDef.ClearCardLocation();
                 return;
             }
             else
@@ -190,36 +267,31 @@ namespace Gameboard.Tools
             }
         }
 
-        public void RemoveAllCardsFromPlayerHand(string playerId, string handId)
+        public async Task RemoveAllCardsFromPlayerHand(string playerId, string handId)
         {
 #pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
-            RemoveAllCardsFromPlayerHand_Async(playerId, handId);
+            await RemoveAllCardsFromPlayerHand_Async(playerId, handId);
 #pragma warning restore CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
         }
 
         public async Task RemoveAllCardsFromPlayerHand_Async(string playerId, string handId)
         {
-            // NOTE: This is currently placeholder until the actual removeAllCardsFromHand endpoint exists in the companion.
-            List<CardDefinition> allCardsInHand = GetAllCardsInCardHand(handId);
-            foreach(CardDefinition thisCardDef in allCardsInHand)
-            {
-                await RemoveCardFromPlayerHand_Async(playerId, handId, thisCardDef);
-            }
-
-            return;
-
             // NOTE: Need to also update cardDef.SetCardLocation(""); with this!!
 
-            /*CompanionMessageResponseArgs responseArgs = await Gameboard.singleton.companionController.RemoveAllCardsFromHandDisplay(playerId, handId);
+            CompanionMessageResponseArgs responseArgs = await Gameboard.singleton.companionController.RemoveAllCardsFromHandDisplay(playerId, handId);
             if (responseArgs.wasSuccessful)
             {
-                return true;
+                // Companion removal was successful, therefore remove all cards from the player's hand here in the CardsTool.
+                List<CardDefinition> cardsInPlayerHand = GetAllCardsInCardHand(handId);
+                cardsInPlayerHand.ForEach(s => s.ClearCardLocation());
+
+                return;
             }
             else
             {
                 GameboardLogging.LogMessage($"--- Failed to remove all cards from Card Hand {handId} on companion {playerId} due to error {responseArgs.errorResponse.ErrorValue}: {responseArgs.errorResponse.Message}", GameboardLogging.MessageTypes.Error);
-                return false;
-            }*/
+                return;
+            }
         }
         #endregion
 
@@ -237,6 +309,14 @@ namespace Gameboard.Tools
             if(inCardDef.IsCardLoadedIntoCompanion(playerId))
             {
                 return inCardDef.cardGuid;
+            }
+
+            // Check if the card textures were loaded when we got here. If they were, do nothing, as the Creator is handling this. If they weren't, load them, and flag that we'll unload them as well.
+            bool didTextureLoad = false;
+            if (inCardDef.cardFrontBytes == null || inCardDef.cardFrontBytes.Length == 0)
+            {
+                inCardDef.LoadCardBytesFromPaths();
+                didTextureLoad = true;
             }
 
             LoadedCompanionAsset frontLoadedAsset = null;
@@ -258,6 +338,11 @@ namespace Gameboard.Tools
             else
             {
                 GameboardLogging.LogMessage("--- Card front texture null! Continuing.", GameboardLogging.MessageTypes.Log);
+            }
+
+            if (didTextureLoad)
+            {
+                inCardDef.UnloadCardTextureBytes();
             }
 
             LoadedCompanionAsset backLoadedAsset = null;
@@ -383,7 +468,7 @@ namespace Gameboard.Tools
 
                 if (thisCardDef.cardFrontBytes != null && thisCardDef.cardFrontBytes.Length > 0)
                 {
-                    if (thisCardDef.cardFrontTextureGUID != null &&!loadDict.ContainsKey(thisCardDef.cardFrontTextureGUID))
+                    if (thisCardDef.cardFrontTextureGUID != null && !loadDict.ContainsKey(thisCardDef.cardFrontTexturePath))
                     {
                         loadDict.Add(thisCardDef.cardFrontTexturePath, thisCardDef.cardFrontBytes);
                     }
@@ -416,7 +501,7 @@ namespace Gameboard.Tools
             // Now unload the card textures
             foreach(CardDefinition thisCardDef in inCardDefList)
             {
-                thisCardDef.UnloadCardTextures();
+                thisCardDef.UnloadCardTextureBytes();
             }
 
             return true;

@@ -16,10 +16,17 @@ namespace Gameboard.EventArgs
         public float startedTime { get; private set; }
         public float endedTime { get; private set; }
         public bool wasCancelled { get { return eventState == DataTypes.EventQueueStates.Cancelled; } }
+
+        // NOTE: timeSinceEnded only gets called from an Update in timeSinceEnded, therefore it's okay to use Time.time as it's on the main thread.
         public float timeSinceEnded { get { return Time.time - endedTime; } }
 
         /// <summary>
-        /// How long this event took to process. If it is still processing, then will return how long it has been processing. If the event has not yet begun, it will return 0.
+        /// How long this event took to complete.
+        /// </summary>
+        public float eventTime { get { return eventState == DataTypes.EventQueueStates.Completed ? endedTime - startedTime : Time.time - startedTime; } }
+
+        /// <summary>
+        /// How long this event took to process. If it is still processing, then will return how long it has been processing. If the event has not yet begun, it will return 0. ONLY call this on the main Unity thread!
         /// </summary>
         public float eventProcessingTime
         {

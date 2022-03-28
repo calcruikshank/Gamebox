@@ -52,6 +52,7 @@ namespace Gameboard.Companion
             companionHandler.CardPlayedEvent += DigestEvent_CardPlayedReceived;
             companionHandler.CompanionButtonPressedEvent += DigestEvent_CompanionButtonPressed;
             companionHandler.CompanionCardsButtonPressedEvent += DigestEvent_CompanionCardsButtonPressed;
+            Debug.Log("--- CompanionCardsButtonPressedEvent ASSIGNED!");
         }
 
         void RemoveHandlerListeners()
@@ -108,6 +109,7 @@ namespace Gameboard.Companion
 
         void DigestEvent_UserPresenceUpdated(GameboardUserPresenceEventArgs inEventArgs)
         {
+            Debug.Log("--- DIGESTING USER PRESENCE CHANGE EVENT");
             UserPresenceUpdated?.Invoke(this, inEventArgs);
         }
         #endregion
@@ -290,9 +292,10 @@ namespace Gameboard.Companion
             {
                 CompanionDiceRollEventArgs eventArgs = new CompanionDiceRollEventArgs()
                 {
-                    userIdWhoRolled = diceRolledEventArgs.userIdWhoRolled,
-                    diceSizesRolled = diceRolledEventArgs.diceSizesRolledList,
-                    addedModifier = diceRolledEventArgs.addedModifier
+                    diceSizesRolledList = diceRolledEventArgs.diceSizesRolledList,
+                    addedModifier = diceRolledEventArgs.addedModifier,
+                    diceNotation = diceRolledEventArgs.diceNotation,
+                    ownerId = diceRolledEventArgs.ownerId,
                 };
 
                 DiceRolled(this, eventArgs);
@@ -430,6 +433,18 @@ namespace Gameboard.Companion
             CompanionMessageResponseArgs responseArgs = await companionHandler.RemoveAllCardsFromHand(1, userId, handDisplayId);
             return responseArgs;
         }
+
+        /// <summary>
+        /// Changes the Hand Display shown for a specific user.
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="handDisplayId"></param>
+        /// <returns></returns>
+        public async Task<CompanionMessageResponseArgs> ShowCompanionHandDisplay(string userId, string handDisplayId)
+        {
+            CompanionMessageResponseArgs responseArgs = await companionHandler.ShowCompanionHandDisplay(1, userId, handDisplayId);
+            return responseArgs;
+        }
         #endregion
 
         #region Companion Dialogs
@@ -491,6 +506,7 @@ namespace Gameboard.Companion
 
         void DigestEvent_CompanionCardsButtonPressed(GameboardCompanionCardsButtonPressedEventArgs inEventArgs)
         {
+            Debug.Log("--- DigestEvent_CompanionCardsButtonPressed");
             CompanionCardsButtonPressed?.Invoke(this, inEventArgs);
         }
         #endregion

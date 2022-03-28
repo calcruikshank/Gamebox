@@ -10,15 +10,34 @@ namespace Gameboard.Examples{
 
     public class PlayerPresenceDrawer : UserPresenceSceneObject
     {
-        // Start is called before the first frame update
-        void Start()
+        protected override void ScenePositionUpdated(Vector3 inNewPosition) 
         {
-           // userPresenceObserver.OnUserPresence += OnUserPresence;
+            this.transform.position = inNewPosition;
+            Debug.Log("UpdatedPosition = " + inNewPosition);
+        }
+        protected override void LocalEulerAnglesUpdated(Vector3 inNewEulers)
+        {
+            this.transform.localEulerAngles = inNewEulers;
+        }
+        protected override void PlayerAdded() 
+        {
+            Debug.Log("Adding Player");
+        }
+        protected override void PlayerRemoved()
+        {
+            Debug.Log("Player Removed");
+        }
+        protected override void PlayerNameChanged()
+        {
+
+            Debug.Log("Player name changed");
+        }
+        protected override void PlayerColorChanged() 
+        {
+            Debug.Log("Player Color Changed ");
         }
 
-        void OnUserPresence(GameboardUserPresenceEventArgs userPresence)
-        {
-            // Handle User Presence here.
-        }
     }
+
+
 }

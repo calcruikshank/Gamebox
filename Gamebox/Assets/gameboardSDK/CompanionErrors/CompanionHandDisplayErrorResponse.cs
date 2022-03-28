@@ -2,7 +2,7 @@
 {
     public class CompanionHandDisplayErrorResponse : CompanionErrorResponse
     {
-        public enum MatErrorTypes
+        public enum CompanionHandDisplayErrorTypes
         {
             NoError = 0,
             CardAlreadyExistsInHandDisplay = 1, // Card with UID already exists in Hand Display with UID {UID} 

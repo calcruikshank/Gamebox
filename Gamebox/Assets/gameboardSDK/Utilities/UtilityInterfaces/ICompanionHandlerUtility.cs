@@ -44,6 +44,7 @@ namespace Gameboard.Utilities
         Task<CompanionMessageResponseArgs> AddCardToHand(int versionTag, string userId, string cardHandDisplayId, string cardId);
         Task<CompanionMessageResponseArgs> RemoveCardFromHand(int versionTag, string userId, string cardHandDisplayId, string cardId);
         Task<CompanionMessageResponseArgs> RemoveAllCardsFromHand(int versionTag, string userId, string cardHandDisplayId);
+        Task<CompanionMessageResponseArgs> ShowCompanionHandDisplay(int versionTag, string userId, string cardHandDisplayId);
         Task<CompanionCreateObjectEventArgs> CreateCompanionDialog(int versionTag, string userId);
         Task<CompanionMessageResponseArgs> AddObjectToDialog(int versionTag, string userId, string dialogId, string objectToAddId, Vector2 attachPosition);
         Task<CompanionCreateObjectEventArgs> CreateCompanionButton(int versionTag, string userId, string buttonText, string inButtonDownTextureId, string inButtonUpTextureId);

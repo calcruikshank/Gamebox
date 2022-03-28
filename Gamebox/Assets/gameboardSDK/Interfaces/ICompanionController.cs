@@ -83,6 +83,7 @@ namespace Gameboard.Companion
         Task<CompanionMessageResponseArgs> AddCardToHandDisplay(string userId, string handDisplayId, string cardId);
         Task<CompanionMessageResponseArgs> RemoveCardFromHandDisplay(string userId, string handDisplayId, string cardId);
         Task<CompanionMessageResponseArgs> RemoveAllCardsFromHandDisplay(string userId, string handDisplayId);
+        Task<CompanionMessageResponseArgs> ShowCompanionHandDisplay(string userId, string handDisplayId);
         #endregion
 
         #region Companion Dialogs

@@ -41,19 +41,20 @@ namespace Gameboard.Tools
                     singleton = this;
                     setupCompleted = true;
 
-                    Debug.Log("Gameboard Companion Template Tool is ready!");
+                    Debug.Log("--- Gameboard Companion Template Tool is ready!");
                 }
             }
         }
 
         private void CompanionController_CompanionButtonPressed(object sender, EventArgs.GameboardCompanionButtonPressedEventArgs e)
         {
-            ButtonPressed?.Invoke(e.connectionId, e.callbackMethod);
+            ButtonPressed?.Invoke(e.ownerId, e.callbackMethod);
         }
 
         private void CompanionController_CompanionCardsButtonPressed(object sender, EventArgs.GameboardCompanionCardsButtonPressedEventArgs e)
         {
-            CardsButtonPressed?.Invoke(e.connectionId, e.callbackMethod, e.selectedCardId);
+            Debug.Log("--- CompanionController_CompanionCardsButtonPressed reached");
+            CardsButtonPressed?.Invoke(e.ownerId, e.callbackMethod, e.selectedCardId);
         }
     }
 }

@@ -1,8 +1,7 @@
 ﻿namespace Gameboard.EventArgs
 {
-    public class GameboardCompanionButtonPressedEventArgs
+    public class GameboardCompanionButtonPressedEventArgs : GameboardIncomingEventArg
     {
-        public string connectionId;
         public string buttonId;
         public string callbackMethod;
     }

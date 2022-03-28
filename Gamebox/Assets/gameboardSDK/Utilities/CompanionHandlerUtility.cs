@@ -91,60 +91,54 @@ namespace Gameboard.Utilities
             string toStripEndpoint = deserializedPayload.deserializedArgs.endpoint.Remove(targetSlashIndex + 1);
             string actualEndpoint = targetSlashIndex == -1 ? deserializedPayload.deserializedArgs.endpoint : deserializedPayload.deserializedArgs.endpoint.Replace(toStripEndpoint, "");
 
-            try
+            Debug.Log("--- Digesting endpoint " + actualEndpoint + " from " + deserializedPayload.deserializedArgs.from + " with body " + deserializedPayload.deserializedArgs.body);
+
+            switch (actualEndpoint)
             {
-                switch (actualEndpoint)
-                {
-                    case "buttonPressed":
-                        ManageIncomingEvent<GameboardButtonPressedEventArgs>(ButtonPressedEvent, deserializedPayload.deserializedArgs);
-                        break;
+                case "buttonPressed":
+                    ManageIncomingEvent<GameboardButtonPressedEventArgs>(ButtonPressedEvent, deserializedPayload.deserializedArgs, actualEndpoint);
+                    break;
 
-                    case "dropdownSelectionChanged":
-                        ManageIncomingEvent<GameboardDropdownChangedEventArgs>(DropdownSelectionChangedEvent, deserializedPayload.deserializedArgs);
-                        break;
+                case "dropdownSelectionChanged":
+                    ManageIncomingEvent<GameboardDropdownChangedEventArgs>(DropdownSelectionChangedEvent, deserializedPayload.deserializedArgs, actualEndpoint);
+                    break;
 
-                    case "matZoneDropOccured":
-                        ManageIncomingEvent<GameboardMatZoneDropOccuredEventArgs>(MatZoneDropOccuredEvent, deserializedPayload.deserializedArgs);
-                        break;
+                case "matZoneDropOccured":
+                    ManageIncomingEvent<GameboardMatZoneDropOccuredEventArgs>(MatZoneDropOccuredEvent, deserializedPayload.deserializedArgs, actualEndpoint);
+                    break;
 
-                    case "tickBoxStateChanged":
-                        ManageIncomingEvent<GameboardTickBoxStateChangedEventArgs>(TickboxStateChangedEvent, deserializedPayload.deserializedArgs);
-                        break;
+                case "tickBoxStateChanged":
+                    ManageIncomingEvent<GameboardTickBoxStateChangedEventArgs>(TickboxStateChangedEvent, deserializedPayload.deserializedArgs, actualEndpoint);
+                    break;
 
-                    case "diceRolled":
-                        ManageIncomingEvent<GameboardDiceRolledEventArgs>(DiceRolledEvent, deserializedPayload.deserializedArgs);
-                        break;
+                case "diceRolled":
+                    ManageIncomingEvent<GameboardDiceRolledEventArgs>(DiceRolledEvent, deserializedPayload.deserializedArgs, actualEndpoint);
+                    break;
 
-                    case "cardPlayed":
-                        ManageIncomingEvent<GameboardCardPlayedEventArgs>(CardPlayedEvent, deserializedPayload.deserializedArgs);
-                        break;
+                case "cardPlayed":
+                    ManageIncomingEvent<GameboardCardPlayedEventArgs>(CardPlayedEvent, deserializedPayload.deserializedArgs, actualEndpoint);
+                    break;
 
-                    case "userPresenceChange":
-                        ManageIncomingEvent<GameboardUserPresenceEventArgs>(UserPresenceChangedEvent, deserializedPayload.deserializedArgs);
-                        break;
+                case "userPresenceChange":
+                    ManageIncomingEvent<GameboardUserPresenceEventArgs>(UserPresenceChangedEvent, deserializedPayload.deserializedArgs, actualEndpoint);
+                    break;
 
-                    case "companionButtonPressed":
-                        ManageIncomingEvent<GameboardCompanionButtonPressedEventArgs>(CompanionButtonPressedEvent, deserializedPayload.deserializedArgs);
-                        break;
+                case "companionButtonPressed":
+                    ManageIncomingEvent<GameboardCompanionButtonPressedEventArgs>(CompanionButtonPressedEvent, deserializedPayload.deserializedArgs, actualEndpoint);
+                    break;
 
-                    case "cardsButtonPressed":
-                        ManageIncomingEvent<GameboardCompanionCardsButtonPressedEventArgs>(CompanionCardsButtonPressedEvent, deserializedPayload.deserializedArgs);
-                        break;
+                case "cardsButtonPressed":
+                    ManageIncomingEvent<GameboardCompanionCardsButtonPressedEventArgs>(CompanionCardsButtonPressedEvent, deserializedPayload.deserializedArgs, actualEndpoint);
+                    break;
 
-                    default:
-                        GameboardLogging.LogMessage($"Unmanaged Endpoint Ingestion! Attempted Endpoint was {deserializedPayload.deserializedArgs.endpoint}", GameboardLogging.MessageTypes.Error);
-                        break;
-                }
-            }
-            catch (Exception e)
-            {
-                GameboardLogging.LogMessage($"ManageIncomingEventBody failed for EndPoint {actualEndpoint}. Message: {e.Message}. Exception: {e.InnerException}", GameboardLogging.MessageTypes.Error);
+                default:
+                    GameboardLogging.LogMessage($"Unmanaged Endpoint Ingestion! Attempted Endpoint was {deserializedPayload.deserializedArgs.endpoint}", GameboardLogging.MessageTypes.Error);
+                    break;
             }
         }
         #endregion
 
         #region Helper Methods
-
         #region Event Arg Construction
         /// <summary>
         /// Send a message to a specific User.
@@ -266,6 +260,8 @@ namespace Gameboard.Utilities
                 {
                     GameboardLogging.LogMessage($"=== Companion processing queue completion mismatch! UserID {inUserId} completed event with ID {inEventId} however was waiting for the event ID {companionProcessingDict[inUserId].eventGuid}", GameboardLogging.MessageTypes.Error);
                 }
+
+                companionProcessingDict[inUserId] = null;
             }
 
             return responseObject;
@@ -285,6 +281,8 @@ namespace Gameboard.Utilities
                 {
                     GameboardLogging.LogMessage($"=== Companion processing queue completion mismatch! GameboardID {inGameboardId} completed event with ID {inEventId} however was waiting for the event ID {gameboardProcessingDict[inGameboardId].eventGuid}", GameboardLogging.MessageTypes.Error);
                 }
+
+                gameboardProcessingDict[inGameboardId] = null;
             }
 
             return responseObject;
@@ -537,7 +535,18 @@ namespace Gameboard.Utilities
 
         private async void SendMessageToCompanionWithRetry(string inEventId, int retriesLeft, string inJsonPayload, byte[] inByteArray)
         {
-            communicationsUtility.SendMessageToCompanionServer("m", inEventId, inJsonPayload, inByteArray);
+            if (Application.isEditor)
+            {
+                // As we currently have no actual companions in the editor, create a manual response.
+                // Doing this here also retains the same pipeline for editor and Gameboard.
+                CreateMessageResponseForEditor(inEventId);
+            }
+            else
+            {
+                // Not in the editor, so send it off to the Companion Service.
+                communicationsUtility.SendMessageToCompanionServer("m", inEventId, inJsonPayload, inByteArray);
+            }
+
             Task awaitEventCompletion = WaitForEventCompletion(inEventId);
             if (await Task.WhenAny(awaitEventCompletion, Task.Delay(gameboardConfig.eventTimeoutLength)) == awaitEventCompletion)
             {
@@ -618,10 +627,6 @@ namespace Gameboard.Utilities
             }
             else if (inEvent.targetDeviceType == DataTypes.DeviceTypes.Companion)
             {
-                lock (companionProcessingDict)
-                {
-                    companionProcessingDict[inEvent.targetDestinationId] = null;
-                }
             }
             else
             {
@@ -789,8 +794,24 @@ namespace Gameboard.Utilities
             JsonUtilityDeserializeResponse<CompanionMessageResponseArgs> deserializedBody = jsonUtility.DeserializeObject<CompanionMessageResponseArgs>(inResponse.eventArgs.body);
             if (deserializedBody.success)
             {
-                deserializedBody.deserializedArgs.errorResponse = CreateErrorResponseIfNeeded<T>(deserializedBody.deserializedArgs.errorId);
-                return deserializedBody.deserializedArgs;
+                //------------------------------------------------------------------------------------------------------------------
+                // This is placeholder code to cover userId being used in some cases in place of ownerId. When all userIds are changed to ownerId, this will be removed.
+                if(string.IsNullOrEmpty(deserializedBody.deserializedArgs.ownerId) && !string.IsNullOrEmpty(deserializedBody.deserializedArgs.userId))
+                {
+                    deserializedBody.deserializedArgs.ownerId = deserializedBody.deserializedArgs.userId;
+                }
+                //------------------------------------------------------------------------------------------------------------------
+
+                try
+                {
+                    deserializedBody.deserializedArgs.errorResponse = CreateErrorResponseIfNeeded<T>(deserializedBody.deserializedArgs.errorId);
+                    return deserializedBody.deserializedArgs;
+                }
+                catch(Exception e)
+                {
+                    GameboardLogging.LogMessage("CreateCompanionMessageResponseArgs failed with exception " + e.Message + " / " + e.InnerException, GameboardLogging.MessageTypes.Error);
+                    return BuildMessageErrorResponseFromErrorMessage("exception occured when processing companion response body.");
+                }
             }
             else
             {
@@ -823,6 +844,14 @@ namespace Gameboard.Utilities
             JsonUtilityDeserializeResponse<CompanionCreateObjectEventArgs> createEventArgs = jsonUtility.DeserializeObject<CompanionCreateObjectEventArgs>(inResponse.eventArgs.body);
             if(createEventArgs.success)
             {
+                //------------------------------------------------------------------------------------------------------------------
+                // This is placeholder code to cover userId being used in some cases in place of ownerId. When all userIds are changed to ownerId, this will be removed.
+                if (string.IsNullOrEmpty(createEventArgs.deserializedArgs.ownerId) && !string.IsNullOrEmpty(createEventArgs.deserializedArgs.userId))
+                {
+                    createEventArgs.deserializedArgs.ownerId = createEventArgs.deserializedArgs.userId;
+                }
+                //------------------------------------------------------------------------------------------------------------------
+
                 createEventArgs.deserializedArgs.errorResponse = CreateErrorResponseIfNeeded<T>(createEventArgs.deserializedArgs.errorId);
                 return createEventArgs.deserializedArgs;
             }
@@ -854,6 +883,23 @@ namespace Gameboard.Utilities
             {
                 return BuildMessageErrorResponseFromErrorMessage("Unable to deserialize companion response body to player presence list.") as CompanionUserPresenceEventArgs;
             }
+        }
+
+        /// <summary>
+        /// Fabricates a Companion Service response, to allow proper cleaner Companion testing while in the editor.
+        /// </summary>
+        /// <param name="inVersion"></param>
+        /// <param name="inEventId"></param>
+        private void CreateMessageResponseForEditor(string inEventId)
+        {
+            QueuedEvent targetEvent = CurrentEvents.Find(s => s.eventGuid == inEventId);
+            ServerMessageCompletionObject completionObject = new ServerMessageCompletionObject()
+            {
+                eventId = inEventId,
+                message = "{\"responseStatus\":\"200\",\"body\":\"{\\\"ownerId\\\":\\\"" + targetEvent.targetDestinationId + "\\\"}\"}",
+            };
+
+            CompanionServerAckReceived(this, completionObject);
         }
         #endregion
 
@@ -1023,6 +1069,12 @@ namespace Gameboard.Utilities
             SendMessageToCompanionServiceResponse companionResponse = await AwaitQueuedCompanionEvent(userId, eventId);
 
             CompanionCreateObjectEventArgs createObjectEventArgs = CreateCompanionObjectResponseArgs<CompanionHandDisplayErrorResponse>(companionResponse);
+
+            if(Application.isEditor)
+            {
+                createObjectEventArgs.newObjectUid = createHandDisplayArgs.id;
+            }
+
             return createObjectEventArgs;
         }
 
@@ -1038,7 +1090,7 @@ namespace Gameboard.Utilities
             string eventId = AddEventToCompanionQueue(userId, eventArgs, cardHandArgs);
             SendMessageToCompanionServiceResponse companionResponse = await AwaitQueuedCompanionEvent(userId, eventId);
 
-            return CreateCompanionMessageResponseArgs<CompanionHandDisplayErrorResponse.MatErrorTypes>(companionResponse);
+            return CreateCompanionMessageResponseArgs<CompanionHandDisplayErrorResponse.CompanionHandDisplayErrorTypes>(companionResponse);
         }
 
         public async Task<CompanionMessageResponseArgs> RemoveCardFromHand(int versionTag, string userId, string inCardHandDisplayId, string inRemoveCardId)
@@ -1053,7 +1105,7 @@ namespace Gameboard.Utilities
             string eventId = AddEventToCompanionQueue(userId, eventArgs, removeCardFromHandArgs);
             SendMessageToCompanionServiceResponse companionResponse = await AwaitQueuedCompanionEvent(userId, eventId);
 
-            return CreateCompanionMessageResponseArgs<CompanionHandDisplayErrorResponse.MatErrorTypes>(companionResponse);
+            return CreateCompanionMessageResponseArgs<CompanionHandDisplayErrorResponse.CompanionHandDisplayErrorTypes>(companionResponse);
         }
 
         public async Task<CompanionMessageResponseArgs> RemoveAllCardsFromHand(int versionTag, string userId, string cardHandDisplayId)
@@ -1067,7 +1119,21 @@ namespace Gameboard.Utilities
             string eventId = AddEventToCompanionQueue(userId, eventArgs, removeAllCardsFromHandArgs);
             SendMessageToCompanionServiceResponse companionResponse = await AwaitQueuedCompanionEvent(userId, eventId);
 
-            return CreateCompanionMessageResponseArgs<CompanionHandDisplayErrorResponse.MatErrorTypes>(companionResponse);
+            return CreateCompanionMessageResponseArgs<CompanionHandDisplayErrorResponse.CompanionHandDisplayErrorTypes>(companionResponse);
+        }
+
+        public async Task<CompanionMessageResponseArgs> ShowCompanionHandDisplay(int versionTag, string userId, string cardHandDisplayId)
+        {
+            EventArgsToCompanionServer eventArgs = BuildEventArgsToTargetUser(versionTag, userId, "showCompanionHandDisplay");
+            EventArgShowCompanionHandDisplay showHandDisplayEventArgs = new EventArgShowCompanionHandDisplay()
+            {
+                id = cardHandDisplayId
+            };
+
+            string eventId = AddEventToCompanionQueue(userId, eventArgs, showHandDisplayEventArgs);
+            SendMessageToCompanionServiceResponse companionResponse = await AwaitQueuedCompanionEvent(userId, eventId);
+
+            return CreateCompanionMessageResponseArgs<CompanionHandDisplayErrorResponse.CompanionHandDisplayErrorTypes>(companionResponse);
         }
         #endregion
 
@@ -1079,8 +1145,9 @@ namespace Gameboard.Utilities
             {
                 diceSizesToRoll = inDiceSizesToRoll,
                 addedModifier = inAddedModifier,
-                diceTintHexColor = ColorUtility.ToHtmlStringRGBA(inDiceTint),
+                diceTintHexColor = $"#{ColorUtility.ToHtmlStringRGBA(inDiceTint)}",
                 diceNotation = inDiceNotation,
+                ownerId = gameboardConfig.gameboardId,
                 //orderedDiceTextureUIDs // Phase 2
                 //customDiceUIDs // Phase 4
             };
@@ -1088,7 +1155,7 @@ namespace Gameboard.Utilities
             string eventId = AddEventToCompanionQueue(userId, eventArgs, rollDiceEventArgs);
             SendMessageToCompanionServiceResponse companionResponse = await AwaitQueuedCompanionEvent(userId, eventId);
 
-            return CreateCompanionObjectResponseArgs<CompanionDiceRollErrorResponse>(companionResponse);
+            return CreateCompanionMessageResponseArgs<CompanionDiceRollErrorResponse>(companionResponse);
         }
         #endregion
 
@@ -1335,19 +1402,45 @@ namespace Gameboard.Utilities
             throw new System.NotImplementedException();
         }
 
-        void ManageIncomingEvent<T>(IncomingEventDelegate<T> inEvent, EventArgsToGameboard inEventArgs)
+        void ManageIncomingEvent<T>(IncomingEventDelegate<T> inEvent, EventArgsToGameboard inEventArgs, string inEndpoint)
         {
             if(inEvent == null)
             {
+                GameboardLogging.LogMessage("No event was supplied to ManageIncomingEvent!", GameboardLogging.MessageTypes.Error);
+                return;
+            }
+
+            if(inEvent.GetInvocationList().Length == 0)
+            {
+                GameboardLogging.LogMessage("The supplied event for ManageIncomingEvent has no listeners!", GameboardLogging.MessageTypes.Warning);
+                return;
+            }
+
+            if (inEventArgs == null)
+            {
+                GameboardLogging.LogMessage("EventArgs were null for ManageIncomingEvent!", GameboardLogging.MessageTypes.Error);
+                return;
+            }
+
+            if (inEventArgs.body == null)
+            {
+                GameboardLogging.LogMessage("EventArgs.Body was null for ManageIncomingEvent!", GameboardLogging.MessageTypes.Error);
                 return;
             }
 
             JsonUtilityDeserializeResponse<T> deserializedIncomingArgs = jsonUtility.DeserializeObject<T>(inEventArgs.body);
             if (deserializedIncomingArgs.success)
             {
-                (deserializedIncomingArgs.deserializedArgs as GameboardIncomingEventArg).connectionId = inEventArgs.from;
-                Debug.Log("--- Incoming Connection ID: " + (deserializedIncomingArgs.deserializedArgs as GameboardIncomingEventArg).connectionId + " / " + inEventArgs.from);
-                inEvent.Invoke(deserializedIncomingArgs.deserializedArgs);
+                GameboardIncomingEventArg eventArgs = (deserializedIncomingArgs.deserializedArgs as GameboardIncomingEventArg);
+                //------------------------------------------------------------------------------------------------------------------
+                // This is placeholder code to cover userId being used in some cases in place of ownerId. When all userIds are changed to ownerId, this will be removed.
+                if (string.IsNullOrEmpty(eventArgs.ownerId) && !string.IsNullOrEmpty(eventArgs.userId))
+                {
+                    eventArgs.ownerId = eventArgs.userId;
+                }
+                //------------------------------------------------------------------------------------------------------------------
+
+                inEvent?.Invoke(deserializedIncomingArgs.deserializedArgs);
             }
             else
             {

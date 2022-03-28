@@ -31,7 +31,7 @@ namespace Gameboard
 
         public GameboardConfig(string mockGameboardId = "")
         {
-            SDKVersion = new Version(0, 0, 1056);
+            SDKVersion = new Version(0, 0, 1065);
             gameboardConnectPort = 3333;
             deviceResolution = new Vector2(1920, 1920); //TODO: dynamically figure out resolution, but in our case the GB-1 is always 1920x1920         
 

@@ -26,12 +26,12 @@ namespace Gameboard.Tools
             // Do the setup here in Update so we can just do a Singleton lookup on Gameboard, and not worry about race-conditions in using Start.
             if (!setupCompleted)
             {
-                if (Gameboard.singleton.companionController.isConnected)
+                if (Gameboard.singleton.companionController.isConnected || Application.isEditor)
                 {
                     singleton = this;
                     setupCompleted = true;
 
-                    GameboardLogging.LogMessage("Gameboard Companion Assets Tool is ready!", GameboardLogging.MessageTypes.Log);
+                    GameboardLogging.LogMessage("--- Gameboard Companion Assets Tool is ready!", GameboardLogging.MessageTypes.Log);
                 }
             }
         }
@@ -57,7 +57,6 @@ namespace Gameboard.Tools
 
             if(inTextureDict == null || inTextureDict.Count == 0)
             {
-                Debug.Log("--- LoadTextureListToCompanion had nothing to load!");
                 return;
             }
 
@@ -85,7 +84,7 @@ namespace Gameboard.Tools
             LoadedCompanionAsset loadedTextureAsset = LoadedCompanionAssetDict[playerId].Find(s => s.assetPath == inTexturePath);
             if (loadedTextureAsset != null)
             {
-                //Debug.Log("--- Texture " + inTexture.name + " was already loaded to companion " + playerId + ". Finished!");
+                //Debug.Log("--- Texture " + inTexturePath + " was already loaded to companion " + playerId + ". Finished!");
                 return loadedTextureAsset;
             }
             else
@@ -128,6 +127,18 @@ namespace Gameboard.Tools
         /// <returns></returns>
         private async Task<LoadedCompanionAsset> LoadTextureOnCompanion(string playerId, string inTexturePath, byte[] textureByteArray)
         {
+            if(string.IsNullOrEmpty(inTexturePath))
+            {
+                GameboardLogging.LogMessage($"Failed to LoadTextureOnCompanion because the inTexturePath was blank!", GameboardLogging.MessageTypes.Error);
+                return null;
+            }
+
+            if (textureByteArray == null || textureByteArray.Length == 0)
+            {
+                GameboardLogging.LogMessage($"Failed to LoadTextureOnCompanion because the textureByteArray was empty!", GameboardLogging.MessageTypes.Error);
+                return null;
+            }
+
             CompanionCreateObjectEventArgs objectEventArgs = await Gameboard.singleton.companionController.LoadAsset(playerId, textureByteArray);
             if (objectEventArgs.wasSuccessful)
             {

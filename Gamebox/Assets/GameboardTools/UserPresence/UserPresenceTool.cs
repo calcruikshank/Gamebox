@@ -64,7 +64,7 @@ namespace Gameboard.Tools
                     singleton = this;
                     setupCompleted = true;
 
-                    Debug.Log("Gameboard User Presence tool is ready!");
+                    Debug.Log("--- Gameboard User Presence tool is ready!");
 
                     RequestUserPresenceUpdate();
                 }
@@ -109,64 +109,59 @@ namespace Gameboard.Tools
                     return;
                 }
 
-                lock (presenceUpdates)
+                foreach (GameboardUserPresenceEventArgs playerObject in userPresence.playerPresenceList)
                 {
-                    foreach (GameboardUserPresenceEventArgs playerObject in userPresence.playerPresenceList)
+                    if (writePresenceUpdatesToLog)
                     {
-                        if (writePresenceUpdatesToLog)
+                        string updateFeatures = "";
+                        if(playerObject.boardUserPosition != null)
                         {
-                            string updateFeatures = "";
-                            if(playerObject.boardUserPosition != null)
-                            {
-                                updateFeatures += "Position: " + playerObject.boardUserPosition.screenPosition + ". ";
-                            }
-
-                            if (playerObject.tokenColor != null)
-                            {
-                                updateFeatures += "Color: " + playerObject.tokenColor + ". ";
-                            }
-
-                            if(!string.IsNullOrEmpty(playerObject.userName))
-                            {
-                                updateFeatures += "Name: " + playerObject.userName + ". ";
-                            }
-
-                            Debug.Log($"USER PRESENCE - ENQUEUING PRESENCE UPDATE. UserID: {playerObject.userId}, ChangeValue: {playerObject.changeValue}. {updateFeatures}");
+                            updateFeatures += "Position: " + playerObject.boardUserPosition.screenPosition + ". ";
                         }
 
-                        switch (playerObject.changeValue)
+                        if (playerObject.tokenColor != null)
                         {
-                            case DataTypes.UserPresenceChangeTypes.UNKNOWN:
-                            break;
-                            
-                            case DataTypes.UserPresenceChangeTypes.ADD:
-                                // User was just added. Clear their PlayPanel to make sure it's fresh.
-
-#pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
-                                Gameboard.singleton.companionController.ResetPlayPanel(playerObject.userId);
-#pragma warning restore CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
-                                break;
-                            
-                            case DataTypes.UserPresenceChangeTypes.REMOVE:
-                                // User was removed, so clear any events the game was waiting on.
-                                Gameboard.singleton.companionController.ClearQueueForPlayer(playerObject.userId);
-                            break;
-                            
-                            case DataTypes.UserPresenceChangeTypes.CHANGE:
-                            break;
-                            
-                            case DataTypes.UserPresenceChangeTypes.CHANGE_POSITION:
-                            break;
+                            updateFeatures += "Color: " + playerObject.tokenColor + ". ";
                         }
 
+                        if(!string.IsNullOrEmpty(playerObject.userName))
+                        {
+                            updateFeatures += "Name: " + playerObject.userName + ". ";
+                        }
+
+                        Debug.Log($"USER PRESENCE - ENQUEUING PRESENCE UPDATE. UserID: {playerObject.userId}, ChangeValue: {playerObject.changeValue}. {updateFeatures}");
+                    }
+
+                    switch (playerObject.changeValue)
+                    {
+                        case DataTypes.UserPresenceChangeTypes.UNKNOWN:
+                        break;
+                            
+                        case DataTypes.UserPresenceChangeTypes.ADD:
+                            // User was just added. Clear their PlayPanel to make sure it's fresh.
+                            await Gameboard.singleton.companionController.ResetPlayPanel(playerObject.userId);
+                        break;
+                            
+                        case DataTypes.UserPresenceChangeTypes.REMOVE:
+                            // User was removed, so clear any events the game was waiting on for this player.
+                            Gameboard.singleton.companionController.ClearQueueForPlayer(playerObject.userId);
+                        break;
+                            
+                        case DataTypes.UserPresenceChangeTypes.CHANGE:
+                        break;
+                            
+                        case DataTypes.UserPresenceChangeTypes.CHANGE_POSITION:
+                        break;
+                    }
+
+                    lock (presenceUpdates)
+                    {
                         presenceUpdates.Enqueue(playerObject);
                     }
                 }
             }
             else
             {
-                Debug.LogError("PRESENCE: Timed out.");
-
                 // Since this timed out, let's request it again.
                 RequestUserPresenceUpdate();
                 return;
@@ -182,7 +177,9 @@ namespace Gameboard.Tools
         /// <param name="eventArgs"></param>
         public void CompanionController_UserPresenceUpdated(object sender, GameboardUserPresenceEventArgs eventArgs)
         {
+            Debug.Log("--- USER PRESENCE TOOL RECEIVED USER PRESENCE UPDATE " + eventArgs.companionId);
             presenceUpdates.Enqueue(eventArgs);
+
         }
 
         /// <summary>

@@ -1,6 +1,6 @@
 ﻿namespace Gameboard.EventArgs
 {
-    public class GameboardButtonPressedEventArgs : System.EventArgs
+    public class GameboardButtonPressedEventArgs : GameboardIncomingEventArg
     {
         public string buttonId;
     }
