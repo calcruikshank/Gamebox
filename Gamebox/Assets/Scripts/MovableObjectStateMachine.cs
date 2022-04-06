@@ -224,12 +224,12 @@ public class MovableObjectStateMachine : MonoBehaviour
     {
         if (faceUp)
         {
-            transform.GetChild(0).localEulerAngles = new Vector3(270, transform.GetChild(0).localEulerAngles.y, transform.GetChild(0).localEulerAngles.z);
+            transform.GetChild(0).localEulerAngles = new Vector3(startingXRotation + 180, transform.GetChild(0).localEulerAngles.y, transform.GetChild(0).localEulerAngles.z);
             faceUp = false;
         }
-        else
+        if(!faceUp)
         {
-            transform.GetChild(0).localEulerAngles = new Vector3(90, transform.GetChild(0).localEulerAngles.y, transform.GetChild(0).localEulerAngles.z);
+            transform.GetChild(0).localEulerAngles = new Vector3(startingXRotation, transform.GetChild(0).localEulerAngles.y, transform.GetChild(0).localEulerAngles.z);
             faceUp = true;
         }
     }
@@ -317,19 +317,7 @@ public class MovableObjectStateMachine : MonoBehaviour
         }
         return -.9f;
     }
-    public void FlipObject(Vector3 position, int index)
-    {
-        if (faceUp)
-        {
-            transform.GetChild(0).localEulerAngles = new Vector3(startingXRotation + 180, targetRotation.y, targetRotation.z);
-            faceUp = false;
-        }
-        else
-        {
-            transform.GetChild(0).localEulerAngles = new Vector3(startingXRotation, targetRotation.y, targetRotation.z);
-            faceUp = true;
-        }
-    }
+   
     public void LongPress()
     {
         state = State.Moving;
@@ -439,6 +427,7 @@ public class MovableObjectStateMachine : MonoBehaviour
     }
     void ResetRotationOnX()
     {
+       /*Debug.Log("FlipObject!!!!!!!!!!!!!!");
         if (faceUp)
         {
             transform.GetChild(0).localEulerAngles = new Vector3(startingXRotation, transform.GetChild(0).localEulerAngles.y, transform.GetChild(0).localEulerAngles.z);
@@ -446,7 +435,7 @@ public class MovableObjectStateMachine : MonoBehaviour
         if (!faceUp)
         {
             transform.GetChild(0).localEulerAngles = new Vector3(startingXRotation +180, transform.GetChild(0).localEulerAngles.y, transform.GetChild(0).localEulerAngles.z);
-        }
+        }*/
     }
 
     private void FingerMoved(Vector3 position, int index)

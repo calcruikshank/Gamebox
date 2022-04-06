@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2021.2/staging' branch; Version is '2021.2.9f1 (921b45a28ab6) revision 9575237'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22000) 64bit Core' Language: 'en' Physical Memory: 32694 MB
+OS: 'Windows 10  (10.0.19043) 64bit Core' Language: 'en' Physical Memory: 32718 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2021.2.9f1\Editor\Unity.exe
 -name
 AssetImportWorker1
 -projectPath
-C:/Users/cocru/Documents/GitHub/Gamebox/Gamebox
+C:/Users/calcr/Documents/GitHub/Gamebox/Gamebox
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-62977
-Successfully changed project path to: C:/Users/cocru/Documents/GitHub/Gamebox/Gamebox
-C:/Users/cocru/Documents/GitHub/Gamebox/Gamebox
+51323
+Successfully changed project path to: C:/Users/calcr/Documents/GitHub/Gamebox/Gamebox
+C:/Users/calcr/Documents/GitHub/Gamebox/Gamebox
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,105 +47,105 @@ C:/Users/cocru/Documents/GitHub/Gamebox/Gamebox
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 149.83 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.85 ms.
+Refreshing native plugins compatible for Editor in 110.55 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.50 ms.
 Initialize engine version: 2021.2.9f1 (921b45a28ab6)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/cocru/Documents/GitHub/Gamebox/Gamebox/Assets
+[Subsystems] Discovering subsystems at path C:/Users/calcr/Documents/GitHub/Gamebox/Gamebox/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3080 Ti (ID=0x2208)
-    Vendor:   NVIDIA
-    VRAM:     12108 MB
-    Driver:   30.0.15.1179
+    Renderer: AMD Radeon RX 5600 XT (ID=0x731f)
+    Vendor:   ATI
+    VRAM:     6103 MB
+    Driver:   30.0.13023.4001
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56636
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56692
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004287 seconds.
+Registered in 0.006738 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 132.99 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+Refreshing native plugins compatible for Editor in 112.34 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.635 seconds
+- Completed reload, in  0.594 seconds
 Domain Reload Profiling:
-	ReloadAssembly (635ms)
-		BeginReloadAssembly (65ms)
+	ReloadAssembly (594ms)
+		BeginReloadAssembly (64ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (497ms)
-			LoadAssemblies (63ms)
+		EndReloadAssembly (458ms)
+			LoadAssemblies (62ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (92ms)
+			SetupTypeCache (89ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (27ms)
-			SetupLoadedEditorAssemblies (323ms)
+			SetupLoadedEditorAssemblies (294ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (14ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (133ms)
+				RefreshPlugins (112ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (131ms)
-				ProcessInitializeOnLoadMethodAttributes (44ms)
+				ProcessInitializeOnLoadAttributes (127ms)
+				ProcessInitializeOnLoadMethodAttributes (40ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006684 seconds.
+Registered in 0.006815 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\cocru\Documents\GitHub\Gamebox\Gamebox\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\cocru\Documents\GitHub\Gamebox\Gamebox\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\calcr\Documents\GitHub\Gamebox\Gamebox\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\calcr\Documents\GitHub\Gamebox\Gamebox\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 104.85 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.05 ms.
+Refreshing native plugins compatible for Editor in 109.56 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.474 seconds
+- Completed reload, in  1.808 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1475ms)
-		BeginReloadAssembly (84ms)
+	ReloadAssembly (1809ms)
+		BeginReloadAssembly (101ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (16ms)
-		EndReloadAssembly (1310ms)
-			LoadAssemblies (59ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (1618ms)
+			LoadAssemblies (84ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (246ms)
+			SetupTypeCache (268ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (48ms)
-			SetupLoadedEditorAssemblies (919ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (1170ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
+				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (105ms)
-				BeforeProcessingInitializeOnLoad (123ms)
-				ProcessInitializeOnLoadAttributes (616ms)
-				ProcessInitializeOnLoadMethodAttributes (61ms)
-				AfterProcessingInitializeOnLoad (5ms)
+				RefreshPlugins (110ms)
+				BeforeProcessingInitializeOnLoad (160ms)
+				ProcessInitializeOnLoadAttributes (821ms)
+				ProcessInitializeOnLoadMethodAttributes (62ms)
+				AfterProcessingInitializeOnLoad (8ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 1.19 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.11 ms.
+Refreshing native plugins compatible for Editor in 1.09 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
 Unloading 5233 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 43 unused Assets / (0.7 MB). Loaded Objects now: 5675.
-Memory consumption went from 203.8 MB to 203.1 MB.
-Total: 3.620100 ms (FindLiveObjects: 0.431000 ms CreateObjectMapping: 0.132900 ms MarkObjects: 2.768200 ms  DeleteObjects: 0.286600 ms)
+Unloading 43 unused Assets / (0.7 MB). Loaded Objects now: 5677.
+Memory consumption went from 202.4 MB to 201.7 MB.
+Total: 3.985800 ms (FindLiveObjects: 0.474700 ms CreateObjectMapping: 0.385800 ms MarkObjects: 2.855600 ms  DeleteObjects: 0.268600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -159,119 +159,257 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 877042.566831 seconds.
-  path: Assets/felt_table.png
-  artifactKey: Guid(47cf5a4c6c3b97746ab5448963961375) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/felt_table.png using Guid(47cf5a4c6c3b97746ab5448963961375) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79ae7de85a59719234589e905786f688') in 0.086594 seconds 
+  Time since last request: 157766.792528 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/001.png
+  artifactKey: Guid(cd1bbd6799cc2a3458fa5331d45deaef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/001.png using Guid(cd1bbd6799cc2a3458fa5331d45deaef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e4bd709352ff974fcde6749ce942a18') in 0.105536 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005188 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\cocru\Documents\GitHub\Gamebox\Gamebox\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\cocru\Documents\GitHub\Gamebox\Gamebox\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.85 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.04 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.011 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1012ms)
-		BeginReloadAssembly (110ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (33ms)
-		EndReloadAssembly (825ms)
-			LoadAssemblies (63ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (243ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (37ms)
-			SetupLoadedEditorAssemblies (439ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (99ms)
-				ProcessInitializeOnLoadAttributes (268ms)
-				ProcessInitializeOnLoadMethodAttributes (55ms)
-				AfterProcessingInitializeOnLoad (7ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.29 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.05 ms.
-Unloading 5111 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 39 unused Assets / (0.7 MB). Loaded Objects now: 5693.
-Memory consumption went from 201.5 MB to 200.8 MB.
-Total: 3.597000 ms (FindLiveObjects: 0.435400 ms CreateObjectMapping: 0.130200 ms MarkObjects: 2.761500 ms  DeleteObjects: 0.268800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/006.png
+  artifactKey: Guid(31baee49866632745a6e36bd7d02491a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/006.png using Guid(31baee49866632745a6e36bd7d02491a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e41176ebec16dade037d96a9680f045e') in 0.017695 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006029 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\cocru\Documents\GitHub\Gamebox\Gamebox\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\cocru\Documents\GitHub\Gamebox\Gamebox\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.06 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.05 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.087 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1087ms)
-		BeginReloadAssembly (113ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (31ms)
-		EndReloadAssembly (886ms)
-			LoadAssemblies (64ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (257ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (40ms)
-			SetupLoadedEditorAssemblies (476ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (107ms)
-				ProcessInitializeOnLoadAttributes (289ms)
-				ProcessInitializeOnLoadMethodAttributes (64ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.40 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.06 ms.
-Unloading 5110 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 38 unused Assets / (0.7 MB). Loaded Objects now: 5695.
-Memory consumption went from 201.5 MB to 200.8 MB.
-Total: 3.849800 ms (FindLiveObjects: 0.474800 ms CreateObjectMapping: 0.122800 ms MarkObjects: 2.897200 ms  DeleteObjects: 0.353600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/005.png
+  artifactKey: Guid(f6de3592197196046b1b9092121d448e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/005.png using Guid(f6de3592197196046b1b9092121d448e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '502a43403986f741657a317cf4455f48') in 0.015555 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/026.png
+  artifactKey: Guid(35075bb8157961c44ae6cef04370b895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/026.png using Guid(35075bb8157961c44ae6cef04370b895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b98f1213d56f9b85969a8a1521ba0af2') in 0.014916 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/025.png
+  artifactKey: Guid(b18d09685be29644ebb94183f5afa82c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/025.png using Guid(b18d09685be29644ebb94183f5afa82c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '656b600c28ce23bbc16f8e4b8aaeada6') in 0.016416 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/012.png
+  artifactKey: Guid(98990e6225e628445acf144c0c4853e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/012.png using Guid(98990e6225e628445acf144c0c4853e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bab676bfcd2380c2d440772af2db66b') in 0.013989 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/017.png
+  artifactKey: Guid(68df393833bd3594ca50861e98fdfab4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/017.png using Guid(68df393833bd3594ca50861e98fdfab4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd66f37584e6b5e03c203cce8fc28639f') in 0.015549 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/028.png
+  artifactKey: Guid(006633b99cf317949be51fa45e2d1d51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/028.png using Guid(006633b99cf317949be51fa45e2d1d51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd965a14a26fdcac400ef36fdd6175d70') in 0.013875 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/009.png
+  artifactKey: Guid(be8cb9d56e251a64ea0d4efc56596dc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/009.png using Guid(be8cb9d56e251a64ea0d4efc56596dc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1a1ed787464378c7e5b34167dce1121') in 0.015687 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/019.png
+  artifactKey: Guid(3d6e1c6474ab666428d245e585b75bf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/019.png using Guid(3d6e1c6474ab666428d245e585b75bf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '611e4c0ad7db5c80f2f18dc385aa8d66') in 0.013938 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/024.png
+  artifactKey: Guid(c2392bfde59ffab49947c371a034c0c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/024.png using Guid(c2392bfde59ffab49947c371a034c0c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9325ec202862905763b7ace8061ac2fc') in 0.015152 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/018.png
+  artifactKey: Guid(67aa39823df705e448274a8783c5d14e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/018.png using Guid(67aa39823df705e448274a8783c5d14e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de96b337172c72964ea2c8e4707c7072') in 0.014897 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/029.png
+  artifactKey: Guid(de7d2b556633e714fa22e8c022a289b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/029.png using Guid(de7d2b556633e714fa22e8c022a289b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd39b4355be15a647d465d2a1c37a2911') in 0.014683 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/002.png
+  artifactKey: Guid(b405441e88b2ce941b5fc48057c6845f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/002.png using Guid(b405441e88b2ce941b5fc48057c6845f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4c1b8c0158188565ef9e3152bf15030') in 0.013764 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/023.png
+  artifactKey: Guid(56f4e84699d062e42b727c2535710a07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/023.png using Guid(56f4e84699d062e42b727c2535710a07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e7515997792d52ceca51b65d18bceb2') in 0.015543 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/009.png
+  artifactKey: Guid(4ac959dec03c62346ab2db274fcd285b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/009.png using Guid(4ac959dec03c62346ab2db274fcd285b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03ea03562e2eabec3077ca6968ce4b2c') in 0.014768 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/006.png
+  artifactKey: Guid(5092e52255306334c8ae6a8cf3a575e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/006.png using Guid(5092e52255306334c8ae6a8cf3a575e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e491c16bf5b1c69c2ac51e8bf1b1e85') in 0.015185 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/012.png
+  artifactKey: Guid(5f40f9316cfa27347b4004bb87a4037a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/012.png using Guid(5f40f9316cfa27347b4004bb87a4037a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfb8e7a9c1fb16b212ed5b1b13baa946') in 0.015295 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/014.png
+  artifactKey: Guid(db81afaeeedf7a84eb7abd0dcd0be7fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/014.png using Guid(db81afaeeedf7a84eb7abd0dcd0be7fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1da3648a1e7a787a920d340cc5031d72') in 0.013367 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/014.png
+  artifactKey: Guid(def1fa16c7de6144fb1c016b53fcc094) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/014.png using Guid(def1fa16c7de6144fb1c016b53fcc094) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ab9ea867468b83c07a46a47f5d31f10') in 0.015896 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/013.png
+  artifactKey: Guid(c84313810669fb249b118259f4d97c8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/013.png using Guid(c84313810669fb249b118259f4d97c8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4390f03fa9c4d789d6b33ef7fb8d42c5') in 0.014965 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/002.png
+  artifactKey: Guid(a6eae8391c6904948aa25a0f9a46969e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/002.png using Guid(a6eae8391c6904948aa25a0f9a46969e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7774e0b95202d7d99cfbebd2dc8c563c') in 0.014784 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/013.png
+  artifactKey: Guid(ce81f80ad363a914c849505fee451484) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/013.png using Guid(ce81f80ad363a914c849505fee451484) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89ddc029d77376e5cda56d6c1c5b5b57') in 0.016122 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/005.png
+  artifactKey: Guid(487f7c0e5d3151b4c9a6cd47912a5d42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/005.png using Guid(487f7c0e5d3151b4c9a6cd47912a5d42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2840912fca8ed04fad2093098ea3cb69') in 0.016080 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/025.png
+  artifactKey: Guid(19eee38db5d57ba4b9506334d1fc555e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/025.png using Guid(19eee38db5d57ba4b9506334d1fc555e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b28535f789e8a9c960396cf7449305f9') in 0.012808 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/004.png
+  artifactKey: Guid(2af7b538335a003449b9755bbe92487a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/004.png using Guid(2af7b538335a003449b9755bbe92487a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e0f9149a801d32f43b5bc8f039fbf35') in 0.015303 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/028.png
+  artifactKey: Guid(d203babc28ab00c41be8ad6714797304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/028.png using Guid(d203babc28ab00c41be8ad6714797304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c830b9cc47a60627d9ecd5e26bb5d8ed') in 0.014846 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/025.png
+  artifactKey: Guid(48f2b227fa96ff1409c08504c1c847f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/025.png using Guid(48f2b227fa96ff1409c08504c1c847f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '690f7954f986cbe8bfbc6c17bf2854b7') in 0.013565 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/005.png
+  artifactKey: Guid(28db3b6811b5f6d468c918f87664d636) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/005.png using Guid(28db3b6811b5f6d468c918f87664d636) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f2ef38d1a24803466d6f488e5687ee9') in 0.012810 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/007.png
+  artifactKey: Guid(da6a5864b2f5da54a96e338dbf462c1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/007.png using Guid(da6a5864b2f5da54a96e338dbf462c1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e514410e20de0a4ae7ce4fe9c7c8560') in 0.015690 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/008.png
+  artifactKey: Guid(90e81c1beb95ea54fa51dc0bc86115e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/008.png using Guid(90e81c1beb95ea54fa51dc0bc86115e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a88671955ffaf556986b860cd243476') in 0.014548 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/008.png
+  artifactKey: Guid(d768b617054685f489afcd1dd8dc5f8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/008.png using Guid(d768b617054685f489afcd1dd8dc5f8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e08c8e1fb96af15825a9fc024826875') in 0.015200 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/013.png
+  artifactKey: Guid(9d30c9bd170190d47a57c12aa5fbff14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/013.png using Guid(9d30c9bd170190d47a57c12aa5fbff14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e97726efaab315f58c71f6f941c4b51d') in 0.014703 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/011.png
+  artifactKey: Guid(14b890495ab9f534eb9b6140283e2406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/011.png using Guid(14b890495ab9f534eb9b6140283e2406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '312efbed39704d03ece6621e7f4fd628') in 0.016030 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/016.png
+  artifactKey: Guid(32f519c0b5611b4469db4666a4bd1bbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/016.png using Guid(32f519c0b5611b4469db4666a4bd1bbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f4b5aa4018d89928a27df1c4899abfe') in 0.016708 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/015.png
+  artifactKey: Guid(078ab02e3d78799498d6390a0a9d2c43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/015.png using Guid(078ab02e3d78799498d6390a0a9d2c43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bf6e42096f5ba6e2548cf215e534d3b') in 0.013683 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/004.png
+  artifactKey: Guid(dd29969bc3e3d6b488a38be230d4aa34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/004.png using Guid(dd29969bc3e3d6b488a38be230d4aa34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd55dd344ad6a7807a338e8e641d08548') in 0.014008 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/027.png
+  artifactKey: Guid(39e831281a503e64ca446711b03d8a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (80 Х 80)/1-100/027.png using Guid(39e831281a503e64ca446711b03d8a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c64e67d7de9fef29986204001cdf793a') in 0.013315 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/009.png
+  artifactKey: Guid(ed11e537fcbac40429faf033b76d92cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/009.png using Guid(ed11e537fcbac40429faf033b76d92cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd98282bceb9e590762bd8d9bc14fad62') in 0.014001 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/001.png
+  artifactKey: Guid(e82bf3bc197ef9f42bf5fb09a3787dc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/001.png using Guid(e82bf3bc197ef9f42bf5fb09a3787dc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b8a02b38051a49ea1da022153d2daa3') in 0.013961 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/029.png
+  artifactKey: Guid(868e0806da12c2b4ebbbb398a56d5cd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (150 Х 150)/1-100/029.png using Guid(868e0806da12c2b4ebbbb398a56d5cd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f64caaafc64ec0290de392bf19c403ff') in 0.016242 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/020.png
+  artifactKey: Guid(8053bf2175c4400408c165ddb82b9a89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/guiiconspack1/icon set 700/icon (260 Х 260)/1-100/020.png using Guid(8053bf2175c4400408c165ddb82b9a89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edd104393a7f6a756eb1550df58a9e48') in 0.014995 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
