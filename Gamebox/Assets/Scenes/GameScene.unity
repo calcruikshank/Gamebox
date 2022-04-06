@@ -373,7 +373,7 @@ Transform:
   m_GameObject: {fileID: 312461647}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalScale: {x: 7, y: 1, z: 7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1023769900}
@@ -856,7 +856,7 @@ Transform:
   m_GameObject: {fileID: 922949314}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalScale: {x: 7, y: 1, z: 7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1489907136}
@@ -2388,7 +2388,7 @@ Transform:
   m_GameObject: {fileID: 1640247243}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalScale: {x: 7, y: 1, z: 7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6508864}
@@ -2858,7 +2858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardsInDeck:
-  - {fileID: 8942986124643188718, guid: a1d9377e84fbf8e4d917f93830a467a0, type: 3}
+  - {fileID: 8942986124643188718, guid: 9788230cdbbbe634f9cb815e3745eb0c, type: 3}
   playerContainerLayerMask:
     serializedVersion: 2
     m_Bits: 256

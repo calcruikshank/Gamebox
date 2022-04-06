@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 3111625270760129107}
   - component: {fileID: 477829773394339882}
   m_Layer: 0
-  m_Name: Tile
+  m_Name: GoldenBone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
