@@ -179,7 +179,6 @@ namespace Gameboard.Tools
         {
             Debug.Log("--- USER PRESENCE TOOL RECEIVED USER PRESENCE UPDATE " + eventArgs.companionId);
             presenceUpdates.Enqueue(eventArgs);
-
         }
 
         /// <summary>

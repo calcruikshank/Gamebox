@@ -169,12 +169,12 @@ namespace Gameboard.Tools
         /// </summary>
         public void LoadCardTextures()
         {
-            if(cardFrontTexture == null && string.IsNullOrEmpty(cardFrontTexturePath))
+            if(cardFrontTexture == null && !string.IsNullOrEmpty(cardFrontTexturePath))
             {
                 cardFrontTexture = GameboardHelperMethods.LoadTextureFromPath(cardFrontTexturePath);
             }
 
-            if (cardBackTexture == null && string.IsNullOrEmpty(cardBackTexturePath))
+            if (cardBackTexture == null && !string.IsNullOrEmpty(cardBackTexturePath))
             {
                 cardBackTexture = GameboardHelperMethods.LoadTextureFromPath(cardBackTexturePath);
             }

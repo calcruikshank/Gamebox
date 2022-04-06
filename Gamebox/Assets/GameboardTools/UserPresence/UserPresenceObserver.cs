@@ -31,11 +31,16 @@ public class UserPresenceObserver : MonoBehaviour
             return;
         }
 
+        if (OnUserPresence == null)
+        {
+            return;
+        }
         // Acquire any presence updates that the UserPresenceTool has acquired since our last update. This will also
         // clear the list on the UserPresenceTool, so any new presence updates it receives are entirely new.
         Queue<GameboardUserPresenceEventArgs> drainedQueue = UserPresenceTool.singleton.DrainQueue();
         while (drainedQueue.Count > 0)
         {
+            Debug.Log(drainedQueue.Count + "Drain q count");
             GameboardUserPresenceEventArgs eventArg = drainedQueue.Dequeue();
             OnUserPresence?.Invoke(eventArg);
         }

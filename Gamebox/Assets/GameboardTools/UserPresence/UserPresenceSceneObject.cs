@@ -16,8 +16,6 @@ namespace Gameboard.Tools
 
         void Start()
         {
-
-            Debug.Log("Creating userPresenceSceneObject");
 #if UNITY_EDITOR
             Gameboard.singleton.GameboardShutdownBegun += EditorOnly_HaveUserLeaveGame;
 #endif
@@ -123,7 +121,7 @@ namespace Gameboard.Tools
             }
         }
 
-        protected virtual void UpdatePlayerPositionIfNeeded()
+        private void UpdatePlayerPositionIfNeeded()
         {
             playerSceneDrawerPosition = GameboardHelperMethods.GameboardScreenPointToScenePoint(Camera.main, playerScreenPosition);
 

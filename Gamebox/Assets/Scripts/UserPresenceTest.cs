@@ -20,19 +20,21 @@ public class UserPresenceTest : MonoBehaviour
 
     void OnUserPresence(GameboardUserPresenceEventArgs userPresence)
     {
-
         PlayerPresenceDrawer myObject = playerList.Find(s => s.userId == userPresence.userId);
         if (myObject == null)
         {
+            Debug.Log("my object is not null");
             // Add it here, and when adding also populate myObject
             // If the user doesn't exist in our player list, add them now.
             if (playerList.Find(s => s.userId == userPresence.userId) == null)
             {
+
+                Debug.Log(userPresence.userId + " user presence id");
                 /*UserPresencePlayer testPlayer = new UserPresencePlayer()
                 {
                     gameboardId = userPresence.userId
                 };*/
-                
+
                 GameObject scenePrefab = Instantiate(playerPresenceSceneObject, userPresence.boardUserPosition.screenPosition, Quaternion.identity);
 
 
