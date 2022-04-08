@@ -7,12 +7,19 @@ using UnityEngine;
 
 public class UserPresenceTest : MonoBehaviour
 {
-    private List<PlayerPresenceDrawer> playerList = new List<PlayerPresenceDrawer>();
+    public List<PlayerPresenceDrawer> playerList = new List<PlayerPresenceDrawer>();
     private List<string> onScreenLog = new List<string>();
     [SerializeField]GameObject playerPresenceSceneObject;
 
+    public static UserPresenceTest singleton;
+
     void Start()
     {
+        if (singleton != null)
+        {
+            Destroy(this);
+        }
+        singleton = this;
         GameObject presenceObserverObj = GameObject.FindWithTag("UserPresenceObserver");
         UserPresenceObserver userPresenceObserver = presenceObserverObj.GetComponent<UserPresenceObserver>();
         userPresenceObserver.OnUserPresence += OnUserPresence;
@@ -28,7 +35,6 @@ public class UserPresenceTest : MonoBehaviour
             // If the user doesn't exist in our player list, add them now.
             if (playerList.Find(s => s.userId == userPresence.userId) == null)
             {
-
                 Debug.Log(userPresence.userId + " user presence id");
                 /*UserPresencePlayer testPlayer = new UserPresencePlayer()
                 {
@@ -40,6 +46,13 @@ public class UserPresenceTest : MonoBehaviour
 
                 myObject = scenePrefab.GetComponent<PlayerPresenceDrawer>();
                 myObject.InjectDependencies(userPresence);
+
+
+                //this checks if the game is zu tiles and if it is then adds a zu tile player script to myobject has to be a better way to do this
+                if (ZuTilesSetup.singleton != null)
+                {
+                    ZuTilesSetup.singleton.AddZuTilePlayer(myObject);
+                }
 
                 if (!string.IsNullOrEmpty(userPresence.userId))
                 {
@@ -73,5 +86,7 @@ public class UserPresenceTest : MonoBehaviour
             GUILayout.Label(thisString);
         }
     }
+
+   
 
 }

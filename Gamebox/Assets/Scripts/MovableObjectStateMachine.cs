@@ -374,6 +374,10 @@ public class MovableObjectStateMachine : MonoBehaviour
     private void SubscribeToDelegates()
     {
         TouchScript.touchMoved += FingerMoved;
+        for (int i = 0; i < this.GetComponentsInChildren<MonoBehaviour>().Length; i++)
+        {
+            this.GetComponentsInChildren<MonoBehaviour>()[i].Invoke("HaveChildSubscribeToDelegates", 0f);
+        }
         TouchScript.fingerReleased += FingerReleased;
         TouchScript.rotateRight += RotateRight;
         TouchScript.rotateLeft += RotateLeft;

@@ -38,6 +38,11 @@ namespace Gameboard.Examples{
             Debug.Log("Player Color Changed ");
         }
 
+
+        public void DrawCard(GameObject cardToDraw)
+        {
+            this.gameObject.GetComponent<PlayerContainer>().AddCardToHand(cardToDraw);
+        }
     }
 
 
