@@ -511,3 +511,31 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2119.329608 seconds.
+  path: Assets/Chess/image (2).png
+  artifactKey: Guid(f9cc833cf498d924dabf6dab6f9d3508) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Chess/image (2).png using Guid(f9cc833cf498d924dabf6dab6f9d3508) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb2528338ef4d579ec8b59f7805e7dd7') in 0.062373 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Chess/image (8).png
+  artifactKey: Guid(32289c498e2b4b9439c914d6494ae579) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Chess/image (8).png using Guid(32289c498e2b4b9439c914d6494ae579) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a283e90a79751c2193ae8aaff62bf875') in 0.012465 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Chess/image (9).png
+  artifactKey: Guid(f6c1ca76c8002a645a5b82afe7018a99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Chess/image (9).png using Guid(f6c1ca76c8002a645a5b82afe7018a99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0813484445d3a50b0c9a05afc068247') in 0.012371 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Chess/image (3).png
+  artifactKey: Guid(58872257c1ddcaf4d81472e5c9669c21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Chess/image (3).png using Guid(58872257c1ddcaf4d81472e5c9669c21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be788ca23b36b47aed91a008339873f7') in 0.020781 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
