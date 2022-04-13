@@ -48,6 +48,7 @@ public class UserPresenceObserver : MonoBehaviour
         // Make sure we always do one initial request to get the starting setup.
         if(noRequestMade)
         {
+            UserPresenceTool.singleton.playerPresenceRequestActive = false;
             UserPresenceTool.singleton.RequestUserPresenceUpdate();
             noRequestMade = false;
         }

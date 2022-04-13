@@ -36,7 +36,7 @@ namespace Gameboard.Tools
         /// <summary>
         /// If true, then we are waiting for a getUserPresenceList response.
         /// </summary>
-        private bool playerPresenceRequestActive;
+        public bool playerPresenceRequestActive;
 
         private bool setupCompleted;
 
@@ -164,6 +164,7 @@ namespace Gameboard.Tools
             {
                 // Since this timed out, let's request it again.
                 RequestUserPresenceUpdate();
+                playerPresenceRequestActive = false;
                 return;
             }
 
