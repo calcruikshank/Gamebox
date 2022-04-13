@@ -49,7 +49,7 @@ public class UserPresenceObserver : MonoBehaviour
         if(noRequestMade)
         {
             UserPresenceTool.singleton.playerPresenceRequestActive = false;
-            UserPresenceTool.singleton.RequestUserPresenceUpdate();
+            UserPresenceTool.singleton.RequestUserPresenceUpdate();  
             noRequestMade = false;
         }
     }
