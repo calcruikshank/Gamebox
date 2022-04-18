@@ -43,7 +43,6 @@ public class UserPresenceTest : MonoBehaviour
 
                 GameObject scenePrefab = Instantiate(playerPresenceSceneObject, userPresence.boardUserPosition.screenPosition, Quaternion.identity);
 
-
                 myObject = scenePrefab.GetComponent<PlayerPresenceDrawer>();
                 myObject.InjectDependencies(userPresence);
 

@@ -532,7 +532,7 @@ public class MovableObjectStateMachine : MonoBehaviour
         targetRotation = new Vector3(transform.GetChild(0).localEulerAngles.x, (targetRotation.y - 90), transform.GetChild(0).localEulerAngles.z);
         state = State.BoxRotation;
     }
-
+     
     public void ShuffleDeck()
     {
         if (deck != null)

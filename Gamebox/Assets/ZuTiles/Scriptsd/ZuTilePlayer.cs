@@ -32,8 +32,13 @@ public class ZuTilePlayer : MonoBehaviour
     {
         Debug.Log("Instantiating deck  " + deckToInstantiate);
         ChosenDeck = deckToInstantiate;
-        GameObject newDeck = Instantiate(deckToInstantiate, this.transform.position, Quaternion.identity);
+        SetupZuTilePlayer(deckToInstantiate);
 
         //lock the choice in here but instantiate the deck on game start instead
+    }
+
+    private void SetupZuTilePlayer(GameObject deckToInstantiate)
+    {
+        GameObject newDeck = Instantiate(deckToInstantiate, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + 10f), Quaternion.identity);
     }
 }

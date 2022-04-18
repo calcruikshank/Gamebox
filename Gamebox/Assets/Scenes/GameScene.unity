@@ -123,6 +123,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &26358601
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 26358602}
+  - component: {fileID: 26358603}
+  m_Layer: 0
+  m_Name: CardsTool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &26358602
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26358601}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2055457867}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &26358603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26358601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e0a3204d04384646b3430a85b60b891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &72191846
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,6 +856,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &179147228
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 179147229}
+  - component: {fileID: 179147230}
+  m_Layer: 0
+  m_Name: CardHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &179147229
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179147228}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &179147230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179147228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef53ca5296565b1448c3231552b376a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonUpImage: {fileID: 2800000, guid: 405b9f4615c76a0438b0da02242ae47f, type: 3}
+  buttonDownImage: {fileID: 0}
+  cardImageList:
+  - {fileID: 2800000, guid: 85efb6151d699bc428f77ba339226f30, type: 3}
+  - {fileID: 2800000, guid: 405b9f4615c76a0438b0da02242ae47f, type: 3}
+  - {fileID: 2800000, guid: d5d00a7cd35a9524091a41afe2fe9a2d, type: 3}
+  - {fileID: 2800000, guid: aab197de420ce064a8c458fa12b7a071, type: 3}
 --- !u!1 &208832143
 GameObject:
   m_ObjectHideFlags: 0
@@ -7564,6 +7659,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeckSelectionDog
       objectReference: {fileID: 0}
+    - target: {fileID: 1421860925513984273, guid: 309c83466d9c18449a4ad666ce8631e6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1421860925513984285, guid: 309c83466d9c18449a4ad666ce8631e6, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -9026,6 +9125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   writePresenceUpdatesToLog: 0
+  playerPresenceRequestActive: 0
 --- !u!1 &1710813058
 GameObject:
   m_ObjectHideFlags: 0
@@ -9386,6 +9486,10 @@ PrefabInstance:
     - target: {fileID: 1421860925513984273, guid: 8eb12da741dad5549b6f04132850653a, type: 3}
       propertyPath: m_Name
       value: DeckSelectionHorse
+      objectReference: {fileID: 0}
+    - target: {fileID: 1421860925513984273, guid: 8eb12da741dad5549b6f04132850653a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1421860925513984285, guid: 8eb12da741dad5549b6f04132850653a, type: 3}
       propertyPath: m_RootOrder
@@ -11243,6 +11347,7 @@ Transform:
   - {fileID: 1293430839}
   - {fileID: 510466848}
   - {fileID: 1914323102}
+  - {fileID: 26358602}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
