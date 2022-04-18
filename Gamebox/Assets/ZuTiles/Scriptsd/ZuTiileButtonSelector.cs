@@ -31,10 +31,15 @@ public class ZuTiileButtonSelector : MonoBehaviour
             {
                 PlayerContainer playerToAddCardTo = hits[i].transform.GetComponentInChildren<PlayerContainer>();
                 Debug.Log(deckToInstantiate);
-                Crutilities.singleton.GetFinalParent(playerToAddCardTo.transform).transform.GetComponentInChildren<ZuTilePlayer>().SetDeckToDeckToInstantiate(deckToInstantiate);
-                return;
+                Crutilities.singleton.GetFinalParent(playerToAddCardTo.transform).transform.GetComponentInChildren<ZuTilePlayer>().SetDeckToDeckToInstantiate(deckToInstantiate, this.gameObject);
             }
         }
+        UnsubFromDelegates();
+    }
+
+    private void UnsubFromDelegates()
+    {
+        TouchScript.fingerReleased -= FingerReleased;
     }
 
     private void FingerMoved(Vector3 position, int index)

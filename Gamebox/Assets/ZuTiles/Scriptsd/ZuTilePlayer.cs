@@ -28,17 +28,19 @@ public class ZuTilePlayer : MonoBehaviour
         }
     }
 
-    internal void SetDeckToDeckToInstantiate(GameObject deckToInstantiate)
+    internal void SetDeckToDeckToInstantiate(GameObject deckToInstantiate, GameObject deckSelected)
     {
         Debug.Log("Instantiating deck  " + deckToInstantiate);
         ChosenDeck = deckToInstantiate;
-        SetupZuTilePlayer(deckToInstantiate);
+        // SetupZuTilePlayer(deckToInstantiate);
+        deckSelected.transform.position = new Vector3(this.transform.GetComponentInChildren<PlayerContainer>().transform.position.x, this.transform.GetComponentInChildren<PlayerContainer>().transform.position.y + 1f, this.transform.GetComponentInChildren<PlayerContainer>().transform.position.z);
+        deckSelected.transform.rotation = this.transform.rotation;
 
         //lock the choice in here but instantiate the deck on game start instead
     }
 
     private void SetupZuTilePlayer(GameObject deckToInstantiate)
     {
-        GameObject newDeck = Instantiate(deckToInstantiate, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + 10f), Quaternion.identity);
+        
     }
 }
