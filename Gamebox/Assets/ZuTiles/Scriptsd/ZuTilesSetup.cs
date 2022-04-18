@@ -1,4 +1,5 @@
 using Gameboard.Examples;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -38,5 +39,34 @@ public class ZuTilesSetup : MonoBehaviour
         ZuTilePlayer ztp = ppd.gameObject.AddComponent<ZuTilePlayer>();
 
         //ztp.ShowPlayerDeckToChooseFrom(decksToChooseFrom);
+    }
+
+    public void CheckToSeeIfShouldStartGame()
+    {
+        bool decksAreNotNull = true;
+        foreach (PlayerPresenceDrawer player in UserPresenceTest.singleton.playerList)
+        {
+            GameObject deckToSpawn = player.GetComponentInChildren<ZuTilePlayer>().ChosenDeck;
+            if (deckToSpawn == null)
+            {
+                decksAreNotNull = false;
+                return;
+            }
+            
+        }
+        if (decksAreNotNull)
+        {
+            SetupGame();
+        }
+    }
+
+    private void SetupGame()
+    {
+        foreach (PlayerPresenceDrawer player in UserPresenceTest.singleton.playerList)
+        {
+            GameObject deckToSpawn = player.GetComponentInChildren<ZuTilePlayer>().ChosenDeck;
+            Instantiate(deckToSpawn);
+
+        }
     }
 }

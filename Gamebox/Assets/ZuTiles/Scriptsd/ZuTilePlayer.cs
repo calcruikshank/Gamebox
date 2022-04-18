@@ -7,7 +7,8 @@ using UnityEngine;
 public class ZuTilePlayer : MonoBehaviour
 {
 
-    GameObject ChosenDeck;
+    public GameObject ChosenDeck;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +37,13 @@ public class ZuTilePlayer : MonoBehaviour
         deckSelected.transform.position = new Vector3(this.transform.GetComponentInChildren<PlayerContainer>().transform.position.x, this.transform.GetComponentInChildren<PlayerContainer>().transform.position.y + 1f, this.transform.GetComponentInChildren<PlayerContainer>().transform.position.z);
         deckSelected.transform.rotation = this.transform.rotation;
 
+        ZuTilesSetup.singleton.CheckToSeeIfShouldStartGame();
         //lock the choice in here but instantiate the deck on game start instead
+    }
+
+    public void RemoveDeckSelection()
+    {
+        ChosenDeck = null;
     }
 
     private void SetupZuTilePlayer(GameObject deckToInstantiate)
