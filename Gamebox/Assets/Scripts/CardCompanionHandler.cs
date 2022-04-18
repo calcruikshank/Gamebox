@@ -108,6 +108,7 @@ public class CardCompanionHandler : MonoBehaviour
             cardIdList.Add(newCardDef);
 
             await CardsTool.singleton.GiveCardToPlayer(inPlayer.gameboardId, newCardDef);
+            await CardsTool.singleton.PlaceCardInPlayerHand_Async(inPlayer.gameboardId, cardHandId, newCardDef);
         }
     }
     public  Texture2D DeCompress(Texture2D source)

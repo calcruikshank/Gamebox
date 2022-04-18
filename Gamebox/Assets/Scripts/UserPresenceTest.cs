@@ -1,3 +1,4 @@
+using Gameboard;
 using Gameboard.EventArgs;
 using Gameboard.Examples;
 using Gameboard.Tools;
@@ -12,6 +13,9 @@ public class UserPresenceTest : MonoBehaviour
     [SerializeField]GameObject playerPresenceSceneObject;
 
     public static UserPresenceTest singleton;
+
+
+    public List<Texture2D> cardImageList = new List<Texture2D>();
 
     void Start()
     {
@@ -58,6 +62,7 @@ public class UserPresenceTest : MonoBehaviour
                     myObject.InjectUserId(userPresence.userId);
                 }
 
+                AddButtonsToPlayer(myObject);
 
                 playerList.Add(myObject);
                 AddToLog("--- === New player added: " + userPresence.userId);
@@ -85,7 +90,68 @@ public class UserPresenceTest : MonoBehaviour
             GUILayout.Label(thisString);
         }
     }
+    private async void AddButtonsToPlayer(PlayerPresenceDrawer inPlayer)
+    {
+        // NOTE: Currently not awaiting the LoadAsset as the companion simulator doesn't respond for Asset loads.
+        //CompanionCreateObjectEventArgs downImgEventArgs = await Gameboard.Gameboard.singleton.companionController.LoadAsset(inPlayer.gameboardId, buttonDownImage);
 
-   
+        await Gameboard.Gameboard.singleton.companionController.ChangeObjectDisplayState(inPlayer.userId, "1", DataTypes.ObjectDisplayStates.Displayed);
+        await Gameboard.Gameboard.singleton.companionController.SetCompanionButtonValues(inPlayer.userId, "1", "Button A", "ButtonAPressed");
+        AddToLog("--- Added Button A to " + inPlayer.userId);
+
+        await Gameboard.Gameboard.singleton.companionController.ChangeObjectDisplayState(inPlayer.userId, "2", DataTypes.ObjectDisplayStates.Displayed);
+        await Gameboard.Gameboard.singleton.companionController.SetCompanionButtonValues(inPlayer.userId, "2", "Button B", "ButtonBPressed");
+        AddToLog("--- Added Button B " + inPlayer.userId);
+
+        await Gameboard.Gameboard.singleton.companionController.ChangeObjectDisplayState(inPlayer.userId, "3", DataTypes.ObjectDisplayStates.Displayed);
+        await Gameboard.Gameboard.singleton.companionController.SetCompanionButtonValues(inPlayer.userId, "3", "Button C", "ButtonCPressed");
+        AddToLog("--- Added Button C " + inPlayer.userId);
+
+        string cardHandId = await CardsTool.singleton.CreateCardHandOnPlayer(inPlayer.userId);
+        AddToLog("--- Card Hand created with ID " + cardHandId + " on " + inPlayer.userId);
+
+        List<CardDefinition> cardIdList = new List<CardDefinition>();
+        for (int i = 0; i < cardImageList.Count; i++)
+        {
+            byte[] textureArray = DeCompress(cardImageList[i]).EncodeToPNG();
+
+            CardDefinition newCardDef = new CardDefinition(cardImageList[i].name, textureArray, "", null, cardImageList[i].width / 2, cardImageList[i].height / 2);
+            Debug.Log(cardImageList[i].width / 2);
+            cardIdList.Add(newCardDef);
+
+            await CardsTool.singleton.GiveCardToPlayer(inPlayer.userId, newCardDef);
+            await CardsTool.singleton.PlaceCardInPlayerHand_Async(inPlayer.userId, cardHandId, newCardDef);
+        }
+    }
+    public Texture2D DeCompress(Texture2D source)
+    {
+        RenderTexture renderTex = RenderTexture.GetTemporary(
+                    source.width,
+                    source.height,
+                    0,
+                    RenderTextureFormat.Default,
+                    RenderTextureReadWrite.Linear);
+
+        Graphics.Blit(source, renderTex);
+        RenderTexture previous = RenderTexture.active;
+        RenderTexture.active = renderTex;
+        Texture2D readableText = new Texture2D(source.width, source.height);
+        readableText.ReadPixels(new Rect(0, 0, renderTex.width, renderTex.height), 0, 0);
+        readableText.Apply();
+        RenderTexture.active = previous;
+        RenderTexture.ReleaseTemporary(renderTex);
+        return readableText;
+    }
+
+    void CompanionButtonPressed(string inGameboardUserId, string inCallbackMethod)
+    {
+        AddToLog("--- Companion Button Pressed with callback: " + inCallbackMethod);
+    }
+
+    void CardsButtonPressed(string inGameboardUserId, string inCallbackMethod, string inCardsId)
+    {
+        AddToLog("--- Cards Button Pressed with callback: " + inCallbackMethod + " and card ID " + inCardsId);
+    }
+
 
 }
