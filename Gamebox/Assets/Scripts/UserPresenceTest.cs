@@ -107,12 +107,12 @@ public class UserPresenceTest : MonoBehaviour
         AddToLog("--- Added Button C " + inPlayer.userId);
 
         string cardHandId = await CardsTool.singleton.CreateCardHandOnPlayer(inPlayer.userId);
+        await CardsTool.singleton.ShowHandDisplay(inPlayer.userId, cardHandId);
         AddToLog("--- Card Hand created with ID " + cardHandId + " on " + inPlayer.userId);
 
         cardImageList.Clear();
         for (int i = 0; i < deckToGivePlayer.GetComponent<Deck>().cardsInDeck.Count; i++)
         {
-            Debug.Log("Adding " + (Texture2D)deckToGivePlayer.GetComponent<Deck>().cardsInDeck[i].GetComponentInChildren<Renderer>().material.mainTexture);
             cardImageList.Add((Texture2D)deckToGivePlayer.GetComponent<Deck>().cardsInDeck[i].GetComponentInChildren<Renderer>().material.mainTexture);
         }
 
@@ -127,7 +127,6 @@ public class UserPresenceTest : MonoBehaviour
             cardIdList.Add(newCardDef);
 
             await CardsTool.singleton.GiveCardToPlayer(inPlayer.userId, newCardDef);
-            await CardsTool.singleton.PlaceCardInPlayerHand_Async(inPlayer.userId, cardHandId, newCardDef);
         }
     }
     public Texture2D DeCompress(Texture2D source)

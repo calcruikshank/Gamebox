@@ -91,9 +91,9 @@ namespace Gameboard.Tools
         {
             if (!CurrentDisplayedHandIDForPlayers.ContainsKey(inPlayerId))
             {
+                Debug.Log(CurrentDisplayedHandIDForPlayers[inPlayerId] + " CurrentHand id");
                 CurrentDisplayedHandIDForPlayers.Add(inPlayerId, "");
             }
-
             return CurrentDisplayedHandIDForPlayers[inPlayerId];
         }
 
@@ -255,6 +255,7 @@ namespace Gameboard.Tools
         public async Task RemoveCardFromPlayerHand_Async(string playerId, string handId, CardDefinition cardDef)
         {
             CompanionMessageResponseArgs responseArgs = await Gameboard.singleton.companionController.RemoveCardFromHandDisplay(playerId, handId, cardDef.cardGuid);
+
             if (responseArgs.wasSuccessful)
             {
                 cardDef.ClearCardLocation();

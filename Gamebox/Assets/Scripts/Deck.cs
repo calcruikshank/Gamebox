@@ -1,3 +1,4 @@
+using Gameboard.Tools;
 using Shared.UI.Helpers;
 using System;
 using System.Collections;
@@ -11,6 +12,7 @@ public class Deck : MonoBehaviour
     public List<GameObject> cardsInDeck = new List<GameObject>();
     MovableObjectStateMachine movableObject;
     GameObject currentCardShowing;
+    public CardDefinition CardCompanionDefiniiton;
 
     [SerializeField] LayerMask playerContainerLayerMask;
     void Start()
