@@ -81,11 +81,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardsInDeck:
   - {fileID: 8942986124643188718, guid: a1d9377e84fbf8e4d917f93830a467a0, type: 3}
+  - {fileID: 8942986124643188718, guid: 9788230cdbbbe634f9cb815e3745eb0c, type: 3}
   - {fileID: 8942986124643188718, guid: a1d9377e84fbf8e4d917f93830a467a0, type: 3}
+  - {fileID: 8942986124643188718, guid: 9788230cdbbbe634f9cb815e3745eb0c, type: 3}
   - {fileID: 8942986124643188718, guid: a1d9377e84fbf8e4d917f93830a467a0, type: 3}
-  - {fileID: 8942986124643188718, guid: a1d9377e84fbf8e4d917f93830a467a0, type: 3}
-  - {fileID: 8942986124643188718, guid: a1d9377e84fbf8e4d917f93830a467a0, type: 3}
-  - {fileID: 8942986124643188718, guid: a1d9377e84fbf8e4d917f93830a467a0, type: 3}
+  - {fileID: 8942986124643188718, guid: 9788230cdbbbe634f9cb815e3745eb0c, type: 3}
   playerContainerLayerMask:
     serializedVersion: 2
     m_Bits: 256
