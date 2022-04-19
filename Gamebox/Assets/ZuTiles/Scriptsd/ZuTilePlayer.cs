@@ -37,6 +37,7 @@ public class ZuTilePlayer : MonoBehaviour
         deckSelected.transform.position = new Vector3(this.transform.GetComponentInChildren<PlayerContainer>().transform.position.x, this.transform.GetComponentInChildren<PlayerContainer>().transform.position.y + 1f, this.transform.GetComponentInChildren<PlayerContainer>().transform.position.z);
         deckSelected.transform.rotation = this.transform.rotation;
 
+        UserPresenceTest.singleton.AddButtonsToPlayer(this.transform.GetComponentInChildren<PlayerPresenceDrawer>(), ChosenDeck);
         ZuTilesSetup.singleton.CheckToSeeIfShouldStartGame();
         //lock the choice in here but instantiate the deck on game start instead
     }

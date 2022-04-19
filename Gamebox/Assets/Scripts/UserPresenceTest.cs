@@ -15,7 +15,7 @@ public class UserPresenceTest : MonoBehaviour
     public static UserPresenceTest singleton;
 
 
-    public List<Texture2D> cardImageList = new List<Texture2D>();
+    List<Texture2D> cardImageList = new List<Texture2D>();
 
     void Start()
     {
@@ -62,7 +62,6 @@ public class UserPresenceTest : MonoBehaviour
                     myObject.InjectUserId(userPresence.userId);
                 }
 
-                AddButtonsToPlayer(myObject);
 
                 playerList.Add(myObject);
                 AddToLog("--- === New player added: " + userPresence.userId);
@@ -90,7 +89,7 @@ public class UserPresenceTest : MonoBehaviour
             GUILayout.Label(thisString);
         }
     }
-    private async void AddButtonsToPlayer(PlayerPresenceDrawer inPlayer)
+    public async void AddButtonsToPlayer(PlayerPresenceDrawer inPlayer, GameObject deckToGivePlayer)
     {
         // NOTE: Currently not awaiting the LoadAsset as the companion simulator doesn't respond for Asset loads.
         //CompanionCreateObjectEventArgs downImgEventArgs = await Gameboard.Gameboard.singleton.companionController.LoadAsset(inPlayer.gameboardId, buttonDownImage);
@@ -110,9 +109,17 @@ public class UserPresenceTest : MonoBehaviour
         string cardHandId = await CardsTool.singleton.CreateCardHandOnPlayer(inPlayer.userId);
         AddToLog("--- Card Hand created with ID " + cardHandId + " on " + inPlayer.userId);
 
+        cardImageList.Clear();
+        for (int i = 0; i < deckToGivePlayer.GetComponent<Deck>().cardsInDeck.Count; i++)
+        {
+            Debug.Log("Adding " + (Texture2D)deckToGivePlayer.GetComponent<Deck>().cardsInDeck[i].GetComponentInChildren<Renderer>().material.mainTexture);
+            cardImageList.Add((Texture2D)deckToGivePlayer.GetComponent<Deck>().cardsInDeck[i].GetComponentInChildren<Renderer>().material.mainTexture);
+        }
+
         List<CardDefinition> cardIdList = new List<CardDefinition>();
         for (int i = 0; i < cardImageList.Count; i++)
         {
+            Debug.Log(cardImageList[i]);
             byte[] textureArray = DeCompress(cardImageList[i]).EncodeToPNG();
 
             CardDefinition newCardDef = new CardDefinition(cardImageList[i].name, textureArray, "", null, cardImageList[i].width / 2, cardImageList[i].height / 2);

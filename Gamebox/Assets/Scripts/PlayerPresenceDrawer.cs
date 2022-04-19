@@ -43,6 +43,9 @@ namespace Gameboard.Examples{
         {
             this.gameObject.GetComponent<PlayerContainer>().AddCardToHand(cardToDraw);
         }
+
+        
+
     }
 
 
