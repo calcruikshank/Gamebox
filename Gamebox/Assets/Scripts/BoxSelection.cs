@@ -6,10 +6,20 @@ using UnityEngine;
 
 public class BoxSelection : MonoBehaviour
 {
+    public State state; public List<int> idList = new List<int>();
     [SerializeField] private RectTransform selectionBox;
     private List<MovableObjectStateMachine> selectedMovableObjects = new List<MovableObjectStateMachine>();
     Vector3 startPosition, currentPosition;
-
+    public enum State
+    {
+        Idle,
+        Indeterminate,
+        Selected,
+        Moving,
+        Rotating,
+        BoxSelected,
+        BoxRotation
+    }
 
     private Camera cam;
     int id = -1;
@@ -34,6 +44,44 @@ public class BoxSelection : MonoBehaviour
     {
         singleton = this;
         cam = Camera.main;
+        this.state = State.Idle;
+    }
+
+    private void Update()
+    {
+        /*switch (state)
+        {
+            case State.Idle:
+                HandleIdle();
+                HandleLowering();
+                break;
+            case State.Indeterminate:
+                CheckForInputCommands();
+                CheckToSeeIfShouldBeginRotating();
+                break;
+            case State.Selected:
+                HandleSelected();
+                HandleLowering();
+                break;
+            case State.Moving:
+                Move();
+                HandleRaising();
+                CheckToSeeIfShouldBeginRotating();
+                CheckForShuffle();
+                break;
+            case State.Rotating:
+                Move();
+                HandleRaising();
+                HandleRotating();
+                break;
+            case State.BoxSelected:
+                HandleRaising();
+                HandleLowering();
+                break;
+            case State.BoxRotation:
+                HandleRotating();
+                break;
+        }*/
     }
 
     public void BeginDraggingGrid(int indexSent, Vector3 positionSent)
@@ -375,4 +423,7 @@ public class BoxSelection : MonoBehaviour
 
         CloseBox();
     }
+
 }
+
+
