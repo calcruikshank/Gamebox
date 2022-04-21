@@ -20,8 +20,10 @@ public class PlayerContainer : MonoBehaviour
     public void AddCardToHand(GameObject cardToAdd)
     {
         //position = (this.transform.bounds.x - this.transform.bounds.x + padding)
-        cardToAdd.transform.position = new Vector3(((this.transform.position.x + 2f - (this.transform.GetComponent<Collider>().bounds.size.x / 2)) + (cardToAdd.transform.GetComponentInChildren<Collider>().bounds.size.x * cardsInHand.Count) + movableObjectPadding * cardsInHand.Count), cardToAdd.transform.position.y, this.transform.position.z);
+        //cardToAdd.transform.position = new Vector3(((this.transform.position.x + (this.transform.GetComponent<Collider>().bounds.size.x / 2) - (this.transform.GetComponent<Collider>().bounds.size.x / 2)) + (cardToAdd.transform.GetComponentInChildren<Collider>().bounds.size.x * cardsInHand.Count) + movableObjectPadding * cardsInHand.Count), cardToAdd.transform.position.y, this.transform.position.z);
+        cardToAdd.transform.rotation = this.transform.rotation;
         cardsInHand.Add(cardToAdd);
+        UpdateCardPositions();
         cardToAdd.GetComponent<MovableObjectStateMachine>().GivePlayerOwnership(this);
         AddToCompanion(cardToAdd);
     }
@@ -62,7 +64,7 @@ public class PlayerContainer : MonoBehaviour
     {
         for (int i = 0; i < cardsInHand.Count; i++)
         {
-            cardsInHand[i].transform.position = new Vector3(((this.transform.position.x + 2f - (this.transform.GetComponent<Collider>().bounds.size.x / 2)) + (cardsInHand[i].transform.GetComponentInChildren<Collider>().bounds.size.x * i) + movableObjectPadding * i), cardsInHand[i].transform.position.y, this.transform.position.z);
+            cardsInHand[i].transform.position = new Vector3((this.transform.position.x + (cardsInHand[i].transform.GetComponentInChildren<Collider>().bounds.size.x * i) + movableObjectPadding * i), cardsInHand[i].transform.position.y, this.transform.position.z);
         }
     }
     public Texture2D DeCompress(Texture2D source)

@@ -152,6 +152,7 @@ public class UserPresenceTest : MonoBehaviour
     void CompanionButtonPressed(string inGameboardUserId, string inCallbackMethod)
     {
         AddToLog("--- Companion Button Pressed with callback: " + inCallbackMethod);
+        
     }
 
     void CardsButtonPressed(string inGameboardUserId, string inCallbackMethod, string inCardsId)

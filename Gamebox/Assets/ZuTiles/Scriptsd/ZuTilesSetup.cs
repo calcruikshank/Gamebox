@@ -65,8 +65,8 @@ public class ZuTilesSetup : MonoBehaviour
         foreach (PlayerPresenceDrawer player in UserPresenceTest.singleton.playerList)
         {
             GameObject deckToSpawn = player.GetComponentInChildren<ZuTilePlayer>().ChosenDeck;
-            Instantiate(deckToSpawn);
-
+            GameObject instantiatedDeck = Instantiate(deckToSpawn);
+            instantiatedDeck.GetComponent<Deck>().ShuffleDeck(Vector3.zero, 0);
         }
     }
 }
